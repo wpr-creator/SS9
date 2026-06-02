@@ -3,447 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>9TH GRADE SOCIAL SCIENCE — OCS SUMMER SCHOOL</title>
+<title>ETHNIC STUDIES — OCS SUMMER SCHOOL</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!--
-  HEADER IMAGE — WORLD GEOGRAPHY SIDE
-  FILENAME: header_geo.jpg
+  HEADER IMAGE
+  FILENAME: header_eth.jpg
   PLACE IN: images/
-  FIND: NASA "Blue Marble" photograph of Earth from space, 2002. Full hemisphere view showing Africa, Europe, and the Arabian Peninsula. One of the most reproduced photographs in history.
-  WIKIMEDIA: https://commons.wikimedia.org/wiki/File:The_Blue_Marble.jpg
-  Download full-size and save as header_geo.jpg in your images/ folder.
-
-  HEADER IMAGE — ETHNIC STUDIES SIDE
-  FILENAME: header_ethnic.jpg
-  PLACE IN: images/
-  FIND: "The Problem We All Live With" — Norman Rockwell, 1964. Painting of Ruby Bridges being escorted to school by U.S. Marshals. Wide horizontal crop showing the full scene.
+  FIND: "The Problem We All Live With" — Norman Rockwell, 1964. Painting of Ruby Bridges being escorted to school by U.S. Marshals. Wide horizontal crop showing the full scene. One of the most recognized civil rights paintings in American history.
   WIKIMEDIA: https://commons.wikimedia.org/wiki/File:The_Problem_We_All_Live_With.jpg
-  Download full-size and save as header_ethnic.jpg in your images/ folder.
+  Download full-size and save as header_eth.jpg in your images/ folder.
 -->
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Geography palette */
-  --geo-deep:    #0a2240;
-  --geo-ocean:   #1a4a6e;
-  --geo-teal:    #1e7a6e;
-  --geo-green:   #2d6e4a;
-  --geo-light:   #e8f4f0;
-  --geo-sand:    #f0e8d4;
-  --geo-gold:    #c8a84b;
-  --geo-white:   #f4f8f6;
-
-  /* Ethnic Studies palette */
-  --eth-earth:   #2a1a0e;
-  --eth-brown:   #5a3020;
-  --eth-terra:   #c05030;
-  --eth-gold:    #d4883a;
-  --eth-cream:   #f5ead8;
-  --eth-warm:    #ede0c8;
-  --eth-purple:  #3a1a4a;
-  --eth-sage:    #4a6a3a;
-
-  --text-dark:   #1a1a1a;
-  --text-muted:  #5a5a6a;
+  --earth:       #1e1208;
+  --brown-deep:  #2a1a0e;
+  --brown-mid:   #5a3020;
+  --terra:       #c05030;
+  --terra-light: #d4663a;
+  --gold:        #d4883a;
+  --gold-light:  #e8a850;
+  --cream:       #f5ead8;
+  --cream-mid:   #ede0c8;
+  --sage:        #4a6a3a;
+  --card-bg:     #fffaf4;
+  --text:        #1e1208;
+  --text-muted:  #6a4a3a;
+  --rule:        rgba(192,80,48,0.2);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Source Sans 3', sans-serif;
-  background: #f2efe8;
-  color: var(--text-dark);
+  background: var(--cream);
+  color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════════
-   SPLIT HERO
-══════════════════════════════════════════ */
-.split-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  min-height: 520px;
-}
-
-/* ── GEO HERO PANEL ── */
-.hero-geo {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: hidden;
-  min-height: 520px;
-}
-
-.hero-geo-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, rgba(10,34,64,0.5) 0%, rgba(26,74,110,0.75) 50%, rgba(10,34,64,0.9) 100%),
-    url('images/header_geo.jpg') center center / cover no-repeat;
-  background-color: var(--geo-deep);
-}
-
-/* Animated coordinate grid */
-.geo-grid {
-  position: absolute;
+/* Subtle texture overlay */
+body::before {
+  content: '';
+  position: fixed;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
-}
-.geo-line-h {
-  position: absolute;
-  left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(30,122,110,0.2) 30%, rgba(30,122,110,0.2) 70%, transparent 100%);
-  animation: geoLinePulse ease-in-out infinite;
-}
-.geo-line-v {
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent 0%, rgba(200,168,75,0.15) 40%, rgba(200,168,75,0.15) 60%, transparent 100%);
-  animation: geoLinePulse ease-in-out infinite;
-}
-.geo-line-h:nth-child(1) { top: 20%; animation-duration: 9s;  animation-delay: 0s; }
-.geo-line-h:nth-child(2) { top: 45%; animation-duration: 13s; animation-delay: 3s; }
-.geo-line-h:nth-child(3) { top: 70%; animation-duration: 11s; animation-delay: 6s; }
-.geo-line-v:nth-child(4) { left: 25%; animation-duration: 10s; animation-delay: 1s; }
-.geo-line-v:nth-child(5) { left: 50%; animation-duration: 15s; animation-delay: 4s; }
-.geo-line-v:nth-child(6) { left: 75%; animation-duration: 8s;  animation-delay: 2s; }
-@keyframes geoLinePulse {
-  0%, 100% { opacity: 0.2; }
-  50%       { opacity: 0.9; }
+  z-index: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  opacity: 0.5;
 }
 
-.hero-geo-content {
+/* ── HERO ── */
+.hero {
   position: relative;
-  z-index: 2;
-  padding: 2.5rem 2.5rem 3rem;
-  text-align: center;
-}
-
-.eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 0.9rem;
-}
-
-.eyebrow-geo  { color: var(--geo-gold); }
-.eyebrow-eth  { color: var(--eth-gold); }
-
-.hero-geo h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  line-height: 1.05;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.6);
-}
-
-.hero-geo h2 span { color: var(--geo-gold); }
-
-.hero-rule-geo {
-  width: 50px; height: 2px;
-  background: linear-gradient(90deg, var(--geo-teal), var(--geo-gold));
-  margin: 1rem auto;
-  border: none;
-}
-
-.hero-sub-geo {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.65);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.hero-geo-bar {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--geo-deep), var(--geo-teal), var(--geo-green), var(--geo-teal), var(--geo-deep));
-}
-
-/* ── ETHNIC STUDIES HERO PANEL ── */
-.hero-eth {
-  position: relative;
+  width: 100%;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  min-height: 520px;
 }
 
-.hero-eth-bg {
+.hero-img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(42,26,14,0.45) 0%, rgba(90,48,32,0.72) 50%, rgba(42,26,14,0.92) 100%),
-    url('images/header_ethnic.jpg') center 40% / cover no-repeat;
-  background-color: var(--eth-earth);
+    linear-gradient(to bottom,
+      rgba(30,18,8,0.3) 0%,
+      rgba(58,24,16,0.65) 55%,
+      rgba(30,18,8,0.92) 100%),
+    url('images/header_eth.jpg') center 35% / cover no-repeat;
+  background-color: var(--brown-deep);
 }
 
 /* Animated flowing lines */
-.eth-flow {
+.hero-flow {
   position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
 }
-.eth-wave {
+
+.flow-line {
   position: absolute;
   left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212,136,58,0.18), transparent);
-  animation: ethWave linear infinite;
-}
-.eth-wave:nth-child(1) { top: 22%; animation-duration: 16s; animation-delay: 0s; }
-.eth-wave:nth-child(2) { top: 44%; animation-duration: 22s; animation-delay: 5s; }
-.eth-wave:nth-child(3) { top: 66%; animation-duration: 18s; animation-delay: 9s; }
-@keyframes ethWave {
-  0%   { opacity: 0; transform: translateX(-80%); }
-  15%  { opacity: 1; }
-  85%  { opacity: 1; }
-  100% { opacity: 0; transform: translateX(80%); }
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(212,136,58,0.15) 25%,
+    rgba(212,136,58,0.15) 75%,
+    transparent 100%);
+  animation: flowDrift linear infinite;
 }
 
-.hero-eth-content {
+.flow-line:nth-child(1) { top: 18%; animation-duration: 20s; animation-delay: 0s; }
+.flow-line:nth-child(2) { top: 38%; animation-duration: 28s; animation-delay: 6s; }
+.flow-line:nth-child(3) { top: 58%; animation-duration: 22s; animation-delay: 12s; }
+.flow-line:nth-child(4) { top: 78%; animation-duration: 25s; animation-delay: 4s; }
+
+@keyframes flowDrift {
+  0%   { opacity: 0; transform: translateX(-60%); }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(60%); }
+}
+
+/* Floating orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  animation: orbPulse ease-in-out infinite;
+}
+.orb-1 { width: 380px; height: 380px; background: radial-gradient(circle, rgba(192,80,48,0.18), transparent); top: -80px; right: -60px; animation-duration: 16s; }
+.orb-2 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(212,136,58,0.14), transparent); bottom: 0; left: 5%; animation-duration: 22s; animation-delay: 7s; }
+
+@keyframes orbPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(1.12); }
+}
+
+.hero-content {
   position: relative;
   z-index: 2;
-  padding: 2.5rem 2.5rem 3rem;
+  padding: 0 2rem 4rem;
   text-align: center;
 }
 
-.hero-eth h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  font-weight: 900;
-  color: var(--eth-cream);
+.course-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.45em;
   text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900;
+  color: var(--cream);
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   line-height: 1.05;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.7);
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.7);
 }
 
-.hero-eth h2 em {
+.hero h1 em {
   font-style: italic;
-  color: var(--eth-gold);
+  color: var(--gold-light);
 }
 
-.hero-rule-eth {
-  width: 50px; height: 2px;
-  background: linear-gradient(90deg, var(--eth-terra), var(--eth-gold));
-  margin: 1rem auto;
+.hero-rule {
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--terra), var(--gold));
+  margin: 1.2rem auto;
   border: none;
 }
 
-.hero-sub-eth {
-  font-size: 0.82rem;
-  color: rgba(245,234,216,0.6);
-  letter-spacing: 0.15em;
+.hero-sub {
+  font-size: 0.95rem;
+  color: rgba(245,234,216,0.62);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-.hero-eth-bar {
+.hero-bar {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--eth-earth), var(--eth-terra), var(--eth-gold), var(--eth-terra), var(--eth-earth));
+  height: 6px;
+  background: linear-gradient(90deg,
+    var(--earth) 0%,
+    var(--terra) 25%,
+    var(--gold) 50%,
+    var(--terra) 75%,
+    var(--earth) 100%);
 }
 
-/* Center divider */
-.hero-divider {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: 3px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3), transparent);
-  z-index: 10;
-  pointer-events: none;
-}
-
-/* ══════════════════════════════════════════
-   MAIN CONTENT
-══════════════════════════════════════════ */
+/* ── MAIN ── */
 .page-wrap {
-  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 2rem 5rem;
 }
 
-/* ── SEMESTER BLOCKS ── */
-.semester-block { margin-top: 4rem; }
+/* ── SEMESTER HEADER ── */
+.sem-block { margin-top: 4rem; }
 
-/* Geo semester header */
-.sem-hdr-geo {
+.sem-hdr {
   display: flex;
   align-items: center;
   gap: 1.2rem;
   margin-bottom: 0.4rem;
 }
 
-.sem-title-geo {
+.sem-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--geo-deep);
+  letter-spacing: 0.08em;
+  color: var(--brown-deep);
   white-space: nowrap;
 }
 
-.sem-rule-geo {
+.sem-rule {
   flex: 1;
   height: 2px;
-  background: linear-gradient(90deg, var(--geo-teal) 0%, rgba(26,74,110,0.1) 100%);
+  background: linear-gradient(90deg, var(--terra) 0%, rgba(192,80,48,0.08) 100%);
 }
 
-.sem-sub-geo {
+.sem-sub {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--geo-ocean);
+  color: var(--brown-mid);
   margin-bottom: 2rem;
   font-weight: 600;
-  opacity: 0.7;
-}
-
-/* Eth semester header */
-.sem-hdr-eth {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  margin-bottom: 0.4rem;
-}
-
-.sem-title-eth {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--eth-brown);
-  white-space: nowrap;
-}
-
-.sem-rule-eth {
-  flex: 1;
-  height: 2px;
-  background: linear-gradient(90deg, var(--eth-terra) 0%, rgba(192,80,48,0.1) 100%);
-}
-
-.sem-sub-eth {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--eth-brown);
-  margin-bottom: 2rem;
-  font-weight: 600;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 /* ── CARDS ── */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
+  gap: 1.3rem;
 }
 
-/* Geography cards */
-.day-card-geo {
+.day-card {
   display: block;
   text-decoration: none;
   color: inherit;
-  background: #ffffff;
-  border: 1px solid rgba(26,74,110,0.12);
-  border-top: 3px solid var(--geo-ocean);
-  padding: 1.5rem 1.4rem 1.4rem;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
-  overflow: hidden;
-}
-
-.day-card-geo::after {
-  content: '→';
-  position: absolute;
-  bottom: 1.1rem; right: 1.2rem;
-  font-size: 1rem;
-  color: var(--geo-teal);
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.day-card-geo:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(10,34,64,0.12);
-  border-top-color: var(--geo-teal);
-}
-
-.day-card-geo:hover::after { opacity: 1; transform: translateX(0); }
-
-/* Ethnic studies cards */
-.day-card-eth {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  background: #fffaf4;
+  background: var(--card-bg);
   border: 1px solid rgba(90,48,32,0.14);
-  border-top: 3px solid var(--eth-brown);
+  border-top: 3px solid var(--brown-mid);
   padding: 1.5rem 1.4rem 1.4rem;
   position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-top-color 0.22s ease;
   overflow: hidden;
 }
 
-.day-card-eth::after {
+.day-card::after {
   content: '→';
   position: absolute;
-  bottom: 1.1rem; right: 1.2rem;
+  bottom: 1.1rem;
+  right: 1.2rem;
   font-size: 1rem;
-  color: var(--eth-terra);
+  color: var(--terra);
   opacity: 0;
   transform: translateX(-6px);
-  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
-.day-card-eth:hover {
+.day-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(42,26,14,0.14);
-  border-top-color: var(--eth-terra);
+  box-shadow: 0 12px 32px rgba(42,26,14,0.15);
+  border-top-color: var(--terra);
 }
 
-.day-card-eth:hover::after { opacity: 1; transform: translateX(0); }
+.day-card:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
 
-/* Shared card internals */
-.day-num-geo {
+.day-num {
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--geo-teal);
-  margin-bottom: 0.7rem;
-}
-
-.day-num-eth {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--eth-terra);
+  color: var(--terra);
   margin-bottom: 0.7rem;
 }
 
@@ -451,63 +290,44 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.02rem;
   font-weight: 700;
+  color: var(--brown-deep);
   line-height: 1.35;
   margin-bottom: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
-.card-title-geo { color: var(--geo-deep); }
-.card-title-eth { color: var(--eth-earth); }
-
 .card-eq {
   font-size: 0.86rem;
+  color: var(--text-muted);
   font-style: italic;
   line-height: 1.55;
 }
 
-.card-eq-geo  { color: #4a5a6a; }
-.card-eq-eth  { color: #6a4a3a; }
-
 .card-std {
   margin-top: 1rem;
   padding-top: 0.75rem;
+  border-top: 1px solid rgba(90,48,32,0.1);
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--brown-mid);
   font-weight: 600;
-}
-
-.card-std-geo {
-  border-top: 1px solid rgba(26,74,110,0.1);
-  color: var(--geo-ocean);
   opacity: 0.65;
-}
-
-.card-std-eth {
-  border-top: 1px solid rgba(90,48,32,0.1);
-  color: var(--eth-brown);
-  opacity: 0.65;
-}
-
-/* ── SECTION DIVIDER ── */
-.section-divider {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(100,80,60,0.2), transparent);
-  margin: 5rem 0 0;
 }
 
 /* ── FOOTER ── */
 footer {
-  border-top: 2px solid rgba(42,26,14,0.15);
+  border-top: 2px solid rgba(90,48,32,0.15);
   margin-top: 4rem;
   padding: 1.5rem 0;
   text-align: center;
-  font-size: 0.72rem;
-  letter-spacing: 0.3em;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--text-muted);
+  opacity: 0.6;
 }
 
 /* ── FADE IN ── */
@@ -527,200 +347,104 @@ footer {
 
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-@media (max-width: 760px) {
-  .split-hero { grid-template-columns: 1fr; }
-  .hero-divider { display: none; }
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.4rem; }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .page-wrap { padding: 0 1rem 3rem; }
 }
-@media (max-width: 440px) {
+@media (max-width: 420px) {
   .cards-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- SPLIT HERO -->
-<div class="split-hero">
-
-  <!-- GEO SIDE -->
-  <div class="hero-geo">
-    <div class="hero-geo-bg"></div>
-    <div class="geo-grid">
-      <div class="geo-line-h"></div>
-      <div class="geo-line-h"></div>
-      <div class="geo-line-h"></div>
-      <div class="geo-line-v"></div>
-      <div class="geo-line-v"></div>
-      <div class="geo-line-v"></div>
-    </div>
-    <div class="hero-geo-content">
-      <p class="eyebrow eyebrow-geo">OCS Summer School &nbsp;·&nbsp; 9th Grade</p>
-      <h2>WORLD <span>GEOGRAPHY</span></h2>
-      <hr class="hero-rule-geo">
-      <p class="hero-sub-geo">Semester 1 &nbsp;·&nbsp; Regions, Systems &amp; People</p>
-    </div>
-    <div class="hero-geo-bar"></div>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-flow">
+    <div class="flow-line"></div>
+    <div class="flow-line"></div>
+    <div class="flow-line"></div>
+    <div class="flow-line"></div>
   </div>
-
-  <!-- ETH SIDE -->
-  <div class="hero-eth">
-    <div class="hero-eth-bg"></div>
-    <div class="eth-flow">
-      <div class="eth-wave"></div>
-      <div class="eth-wave"></div>
-      <div class="eth-wave"></div>
-    </div>
-    <div class="hero-eth-content">
-      <p class="eyebrow eyebrow-eth">OCS Summer School &nbsp;·&nbsp; 9th Grade</p>
-      <h2>ETHNIC <em>STUDIES</em></h2>
-      <hr class="hero-rule-eth">
-      <p class="hero-sub-eth">Semester 2 &nbsp;·&nbsp; Identity, Power &amp; Narrative</p>
-    </div>
-    <div class="hero-eth-bar"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="hero-content">
+    <p class="course-eyebrow">OCS Summer School &nbsp;·&nbsp; Social Science</p>
+    <h1>Ethnic <em>Studies</em></h1>
+    <hr class="hero-rule">
+    <p class="hero-sub">CA Ethnic Studies Model Curriculum &nbsp;·&nbsp; Identity, Power &amp; Narrative</p>
   </div>
-
-  <div class="hero-divider"></div>
-</div>
+  <div class="hero-bar"></div>
+</header>
 
 <!-- MAIN -->
 <main class="page-wrap">
 
-  <!-- WORLD GEOGRAPHY — SEMESTER 1 -->
-  <section class="semester-block">
-    <div class="sem-hdr-geo">
-      <h2 class="sem-title-geo">Semester 1: World Geography</h2>
-      <div class="sem-rule-geo"></div>
+  <section class="sem-block">
+    <div class="sem-hdr">
+      <h2 class="sem-title">Course Lessons</h2>
+      <div class="sem-rule"></div>
     </div>
-    <p class="sem-sub-geo">Geographic Skills &nbsp;·&nbsp; Physical &amp; Human Geography &nbsp;·&nbsp; Regional Studies</p>
+    <p class="sem-sub">Standards: CA Ethnic Studies Model Curriculum &nbsp;·&nbsp; 8 Lessons + Final</p>
 
     <div class="cards-grid">
 
-      <a class="day-card-geo fade-in" href="SS9_S1L01.html">
-        <div class="day-num-geo">Day 1</div>
-        <div class="card-title card-title-geo">Reading the World: Maps and Geographic Tools</div>
-        <div class="card-eq card-eq-geo">How do geographers read the world, and why does the way we draw maps matter?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 1, 2</div>
+      <a class="day-card fade-in" href="SS9_L01.html">
+        <div class="day-num">Day 1</div>
+        <div class="card-title">What Is Ethnic Studies and Why Does It Exist?</div>
+        <div class="card-eq">Who gets to tell the story of America, and what happens when whole communities are left out?</div>
+        <div class="card-std">CA ES Framework — Units 1 &amp; 2</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L02.html">
-        <div class="day-num-geo">Day 2</div>
-        <div class="card-title card-title-geo">Physical Geography: The Earth Beneath Our Feet</div>
-        <div class="card-eq card-eq-geo">How do landforms, climate, and natural resources determine where people settle and how they survive?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 3, 4, 7</div>
+      <a class="day-card fade-in" href="SS9_L02.html">
+        <div class="day-num">Day 2</div>
+        <div class="card-title">Native American Peoples: Sovereignty, Survival, and Presence</div>
+        <div class="card-eq">How did Indigenous peoples survive colonization, and how do they assert their sovereignty today?</div>
+        <div class="card-std">CA ES Framework — Native American Studies</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L03.html">
-        <div class="day-num-geo">Day 3</div>
-        <div class="card-title card-title-geo">Human Geography: People, Place, and Movement</div>
-        <div class="card-eq card-eq-geo">Why do people move, and how does migration reshape the places people leave and the places they arrive?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 9, 12, 17</div>
+      <a class="day-card fade-in" href="SS9_L03.html">
+        <div class="day-num">Day 3</div>
+        <div class="card-title">African American Experience: From Enslavement to Power</div>
+        <div class="card-eq">How did enslaved people and their descendants resist, survive, and transform American democracy from the inside?</div>
+        <div class="card-std">CA ES Framework — African American Studies</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L04.html">
-        <div class="day-num-geo">Day 4</div>
-        <div class="card-title card-title-geo">Africa and the Middle East</div>
-        <div class="card-eq card-eq-geo">How has geography shaped the conflict, culture, and wealth of Africa and the Middle East?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 4, 10, 13</div>
+      <a class="day-card fade-in" href="SS9_L04.html">
+        <div class="day-num">Day 4</div>
+        <div class="card-title">Chicano and Latino Identity: Border, Culture, and Power</div>
+        <div class="card-eq">How has the history of the U.S.-Mexico border shaped the lives, culture, and political power of Latino communities?</div>
+        <div class="card-std">CA ES Framework — Chicana/o/x &amp; Latina/o/x Studies</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L05.html">
-        <div class="day-num-geo">Day 5</div>
-        <div class="card-title card-title-geo">Asia and the Pacific</div>
-        <div class="card-eq card-eq-geo">How has geography made Asia the center of the world's population, production, and power?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 4, 9, 11</div>
+      <a class="day-card fade-in" href="SS9_L05.html">
+        <div class="day-num">Day 5</div>
+        <div class="card-title">Asian American and Pacific Islander Experience</div>
+        <div class="card-eq">How did Asian immigrants build American infrastructure, face systematic exclusion, and fight for belonging over two centuries?</div>
+        <div class="card-std">CA ES Framework — AAPI Studies</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L06.html">
-        <div class="day-num-geo">Day 6</div>
-        <div class="card-title card-title-geo">Europe and Russia</div>
-        <div class="card-eq card-eq-geo">How has geography shaped war, cooperation, and economic power in Europe and Russia?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 4, 13, 17</div>
+      <a class="day-card fade-in" href="SS9_L06.html">
+        <div class="day-num">Day 6</div>
+        <div class="card-title">Intersectionality: When Identities Overlap</div>
+        <div class="card-eq">How do race, gender, class, and other parts of identity combine to shape a person's experience of power and opportunity?</div>
+        <div class="card-std">CA ES Framework — Units 3 &amp; 4</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L07.html">
-        <div class="day-num-geo">Day 7</div>
-        <div class="card-title card-title-geo">The Americas</div>
-        <div class="card-eq card-eq-geo">How does geography connect and divide North, Central, and South America?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 4, 9, 12</div>
+      <a class="day-card fade-in" href="SS9_L07.html">
+        <div class="day-num">Day 7</div>
+        <div class="card-title">Resistance, Social Movements, and the Power of Organizing</div>
+        <div class="card-eq">How have communities of color organized, protested, and permanently changed American laws and culture?</div>
+        <div class="card-std">CA ES Framework — Unit 5</div>
       </a>
 
-      <a class="day-card-geo fade-in" href="SS9_S1L08.html">
-        <div class="day-num-geo">Day 8</div>
-        <div class="card-title card-title-geo">Globalization and Geographic Change</div>
-        <div class="card-eq card-eq-geo">How are climate change, mass migration, and economic integration remaking the world's map right now?</div>
-        <div class="card-std card-std-geo">Nat. Geo. Standards 14, 16, 18</div>
-      </a>
-
-    </div>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ETHNIC STUDIES — SEMESTER 2 -->
-  <section class="semester-block">
-    <div class="sem-hdr-eth">
-      <h2 class="sem-title-eth">Semester 2: Ethnic Studies</h2>
-      <div class="sem-rule-eth"></div>
-    </div>
-    <p class="sem-sub-eth">CA Ethnic Studies Model Curriculum &nbsp;·&nbsp; Identity, Power, Narrative &amp; Resistance</p>
-
-    <div class="cards-grid">
-
-      <a class="day-card-eth fade-in" href="SS9_S2L01.html">
-        <div class="day-num-eth">Day 1</div>
-        <div class="card-title card-title-eth">What Is Ethnic Studies and Why Does It Exist?</div>
-        <div class="card-eq card-eq-eth">Who gets to tell the story of America, and what happens when whole communities are left out?</div>
-        <div class="card-std card-std-eth">CA ES Framework — Units 1 &amp; 2</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L02.html">
-        <div class="day-num-eth">Day 2</div>
-        <div class="card-title card-title-eth">Native American Peoples: Sovereignty, Survival, and Presence</div>
-        <div class="card-eq card-eq-eth">How did Indigenous peoples survive colonization, and how do they assert their sovereignty today?</div>
-        <div class="card-std card-std-eth">CA ES Framework — Native American Studies</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L03.html">
-        <div class="day-num-eth">Day 3</div>
-        <div class="card-title card-title-eth">African American Experience: From Enslavement to Power</div>
-        <div class="card-eq card-eq-eth">How did enslaved people and their descendants resist, survive, and transform American democracy from the inside?</div>
-        <div class="card-std card-std-eth">CA ES Framework — African American Studies</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L04.html">
-        <div class="day-num-eth">Day 4</div>
-        <div class="card-title card-title-eth">Chicano and Latino Identity: Border, Culture, and Power</div>
-        <div class="card-eq card-eq-eth">How has the history of the U.S.-Mexico border shaped the lives, culture, and political power of Latino communities?</div>
-        <div class="card-std card-std-eth">CA ES Framework — Chicana/o/x &amp; Latina/o/x Studies</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L05.html">
-        <div class="day-num-eth">Day 5</div>
-        <div class="card-title card-title-eth">Asian American and Pacific Islander Experience</div>
-        <div class="card-eq card-eq-eth">How did Asian immigrants build American infrastructure, face systematic exclusion, and fight for belonging over two centuries?</div>
-        <div class="card-std card-std-eth">CA ES Framework — AAPI Studies</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L06.html">
-        <div class="day-num-eth">Day 6</div>
-        <div class="card-title card-title-eth">Intersectionality: When Identities Overlap</div>
-        <div class="card-eq card-eq-eth">How do race, gender, class, and other parts of identity combine to shape a person's experience of power and opportunity?</div>
-        <div class="card-std card-std-eth">CA ES Framework — Units 3 &amp; 4</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L07.html">
-        <div class="day-num-eth">Day 7</div>
-        <div class="card-title card-title-eth">Resistance, Social Movements, and the Power of Organizing</div>
-        <div class="card-eq card-eq-eth">How have communities of color organized, protested, and permanently changed American laws and culture?</div>
-        <div class="card-std card-std-eth">CA ES Framework — Unit 5</div>
-      </a>
-
-      <a class="day-card-eth fade-in" href="SS9_S2L08.html">
-        <div class="day-num-eth">Day 8</div>
-        <div class="card-title card-title-eth">Ethnic Studies Today: Narrative, Power, and Your Story</div>
-        <div class="card-eq card-eq-eth">What does it mean to have power over your own story, and how does that connect to who you are becoming?</div>
-        <div class="card-std card-std-eth">CA ES Framework — Unit 6</div>
+      <a class="day-card fade-in" href="SS9_L08.html">
+        <div class="day-num">Day 8</div>
+        <div class="card-title">Ethnic Studies Today: Narrative, Power, and Your Story</div>
+        <div class="card-eq">What does it mean to have power over your own story, and how does that connect to who you are becoming?</div>
+        <div class="card-std">CA ES Framework — Unit 6</div>
       </a>
 
     </div>
@@ -729,7 +453,7 @@ footer {
 </main>
 
 <footer>
-  9th Grade Social Science &nbsp;·&nbsp; OCS Summer School &nbsp;·&nbsp; SS9
+  Ethnic Studies &nbsp;·&nbsp; OCS Summer School &nbsp;·&nbsp; SS9
 </footer>
 
 </body>
