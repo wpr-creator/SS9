@@ -3,19 +3,795 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS9 — COMING SOON</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<title>SS9 L01 — What Is Ethnic Studies and Why Does It Exist?</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Source Sans 3',sans-serif;background:#2a1a0e;color:#f5ead8;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
-h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#d4883a;margin-bottom:1rem}
-p{font-size:0.9rem;color:rgba(245,234,216,0.55);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:2rem}
-a{color:#c05030;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(192,80,48,0.35);padding-bottom:2px}
+  :root {
+    --deep-brown: #2c1a0e;
+    --warm-brown: #5c3317;
+    --mid-brown: #7a4526;
+    --terracotta: #b5511e;
+    --gold: #c8922a;
+    --bright-gold: #e8a93a;
+    --parchment: #f5ead8;
+    --light-parchment: #fdf6ea;
+    --cream: #faf3e6;
+    --text-dark: #1e0f05;
+    --text-body: #2e1a0a;
+    --accent-red: #b03030;
+    --section-bg: #f7efe0;
+    --card-bg: #efe4cc;
+    --divider: #c8922a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--text-body);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  /* ======= HEADER ======= */
+  header {
+    position: relative;
+    background-color: var(--deep-brown);
+    overflow: hidden;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+
+  .header-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.32;
+  }
+
+  <!--
+    FILENAME: header_eth.jpg
+    PLACE IN: images/
+    FIND: Already placed in repo — community mural or faces representing the four core communities, full color
+    SEARCH: California ethnic studies students community mural Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/File:East_Los_Angeles_-_barrio_mural.jpg (suggested, not guaranteed)
+  -->
+  .header-bg {
+    background-image: url('images/header_eth.jpg');
+  }
+
+  .header-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .course-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bright-gold);
+    margin-bottom: 18px;
+  }
+
+  h1.page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(38px, 6vw, 62px);
+    font-weight: 900;
+    color: var(--parchment);
+    line-height: 1.15;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+  }
+
+  .eq-banner {
+    background: var(--terracotta);
+    border-left: 6px solid var(--bright-gold);
+    border-right: 6px solid var(--bright-gold);
+    padding: 18px 30px;
+    display: inline-block;
+    max-width: 780px;
+  }
+
+  .eq-label {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+
+  .eq-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(17px, 2.6vw, 24px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    font-style: italic;
+  }
+
+  /* ======= NAV BAR ======= */
+  nav.section-nav {
+    background: var(--warm-brown);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.35);
+  }
+
+  nav.section-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0;
+  }
+
+  nav.section-nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  nav.section-nav ul li a:hover {
+    background: var(--mid-brown);
+    border-bottom-color: var(--bright-gold);
+    color: var(--bright-gold);
+  }
+
+  /* ======= MAIN CONTENT ======= */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* ======= INTRO ======= */
+  .intro-block {
+    background: var(--light-parchment);
+    border-left: 5px solid var(--terracotta);
+    padding: 36px 36px 30px;
+    margin: 48px 0 0;
+    font-size: 19px;
+    line-height: 1.9;
+  }
+
+  /* ======= DIVIDER ======= */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 56px 0 40px;
+    color: var(--gold);
+  }
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .section-divider span {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  /* ======= CONTENT SECTIONS ======= */
+  section {
+    margin-bottom: 16px;
+  }
+
+  h2.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+    color: var(--warm-brown);
+    margin-bottom: 22px;
+    line-height: 1.25;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  /* ======= VOCAB ======= */
+  .vocab {
+    color: var(--accent-red);
+    text-decoration: underline dotted var(--accent-red);
+    cursor: help;
+    position: relative;
+    font-weight: 600;
+  }
+  .vocab .tip {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a2e;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 1.55;
+    z-index: 200;
+    font-style: normal;
+    font-weight: 400;
+    pointer-events: none;
+    max-width: 290px;
+    white-space: normal;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+  }
+  .vocab:hover .tip,
+  .vocab.active .tip {
+    display: block;
+  }
+
+  /* ======= IMAGES ======= */
+  figure {
+    margin: 32px 0;
+  }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid var(--card-bg);
+    box-shadow: 0 4px 20px rgba(44,26,14,0.25);
+  }
+  figure.inset-left {
+    float: left;
+    width: 42%;
+    margin: 6px 28px 18px 0;
+  }
+  figure.inset-right {
+    float: right;
+    width: 42%;
+    margin: 6px 0 18px 28px;
+  }
+  figure.paired {
+    display: inline-block;
+    width: calc(50% - 10px);
+    vertical-align: top;
+  }
+  .paired-wrap {
+    display: flex;
+    gap: 18px;
+    margin: 32px 0;
+  }
+  .paired-wrap figure {
+    flex: 1;
+    margin: 0;
+  }
+  figcaption {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--mid-brown);
+    margin-top: 8px;
+    line-height: 1.55;
+    text-align: center;
+  }
+  .clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  /* ======= PRIMARY SOURCE ======= */
+  .primary-source {
+    background: var(--card-bg);
+    border-left: 6px solid var(--terracotta);
+    padding: 28px 32px 24px;
+    margin: 40px 0;
+  }
+  .primary-source blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    line-height: 1.65;
+    color: var(--deep-brown);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .primary-source .attribution {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--mid-brown);
+    margin-bottom: 12px;
+  }
+  .primary-source .narrator {
+    font-size: 16px;
+    color: var(--text-body);
+    border-top: 1px solid var(--gold);
+    padding-top: 12px;
+    line-height: 1.7;
+  }
+  .primary-source .student-questions {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--gold);
+  }
+  .primary-source .student-questions p {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: var(--deep-brown);
+  }
+  .primary-source .student-questions strong {
+    color: var(--terracotta);
+  }
+
+  /* ======= CALLOUT CARD ======= */
+  .callout-card {
+    background: var(--deep-brown);
+    color: var(--parchment);
+    padding: 32px 36px;
+    margin: 40px 0;
+    border-top: 4px solid var(--bright-gold);
+    border-bottom: 4px solid var(--bright-gold);
+  }
+  .callout-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--bright-gold);
+    margin-bottom: 16px;
+  }
+  .callout-card p {
+    color: var(--parchment);
+    font-size: 17px;
+  }
+  .callout-card .callout-detail {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--bright-gold);
+    margin-top: 12px;
+  }
+
+  /* ======= HOW THIS STILL MATTERS ======= */
+  #still-matters {
+    background: var(--deep-brown);
+    color: var(--parchment);
+    padding: 48px 40px;
+    margin: 56px -20px 0;
+  }
+  #still-matters h2 {
+    color: var(--bright-gold);
+    border-bottom-color: var(--terracotta);
+  }
+  .still-matters-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 3vw, 27px);
+    font-weight: 700;
+    color: var(--bright-gold);
+    line-height: 1.4;
+    margin: 24px 0 28px;
+  }
+  .news-links {
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .news-links li a {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--bright-gold);
+    text-decoration: underline;
+    line-height: 1.45;
+    transition: color 0.2s;
+  }
+  .news-links li a:hover {
+    color: #fff;
+  }
+  .closing-question {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(19px, 2.8vw, 24px);
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1.6;
+    border-top: 2px solid var(--terracotta);
+    padding-top: 28px;
+    margin-top: 32px;
+  }
+  #still-matters p {
+    color: var(--parchment);
+    opacity: 0.9;
+  }
+
+  /* ======= FOOTER ======= */
+  footer {
+    background: var(--deep-brown);
+    border-top: 3px solid var(--gold);
+    padding: 22px 20px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--bright-gold);
+    text-transform: uppercase;
+  }
+
+  /* ======= RESPONSIVE ======= */
+  @media (max-width: 600px) {
+    figure.inset-left,
+    figure.inset-right {
+      float: none;
+      width: 100%;
+      margin: 24px 0;
+    }
+    .paired-wrap {
+      flex-direction: column;
+    }
+    #still-matters {
+      margin: 56px -20px 0;
+      padding: 36px 24px;
+    }
+    .intro-block {
+      padding: 24px 20px;
+    }
+    .primary-source {
+      padding: 20px 18px;
+    }
+  }
 </style>
 </head>
 <body>
-<h1>Ethnic Studies</h1>
-<p>This lesson is coming soon</p>
-<a href="index.html">← Back to Course</a>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header>
+  <!--
+    FILENAME: header_eth.jpg
+    PLACE IN: images/
+    FIND: Already in repo — community mural, faces, or gathering representing ethnic diversity in California
+    SEARCH: California multicultural community mural public art Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/File:East_Los_Angeles_-_barrio_mural.jpg (suggested, not guaranteed)
+  -->
+  <div class="header-bg"></div>
+  <div class="header-inner">
+    <p class="course-label">Ethnic Studies &mdash; Lesson 01</p>
+    <h1 class="page-title">What Is Ethnic Studies and Why Does It Exist?</h1>
+    <div class="eq-banner">
+      <p class="eq-label">Essential Question</p>
+      <p class="eq-text">Who gets to tell the story of America, and what happens when whole communities are left out?</p>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav class="section-nav" aria-label="Section navigation">
+  <ul>
+    <li><a href="#what-is-it">What Is Ethnic Studies?</a></li>
+    <li><a href="#textbooks">Who Decides the Story?</a></li>
+    <li><a href="#four-communities">Four Communities, One Course</a></li>
+    <li><a href="#your-story">Your Story Matters</a></li>
+    <li><a href="#still-matters">How This Still Matters Today</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p>In 1970, a young woman named Dolores Huerta stood in front of a crowd of farmworkers in California and said something that people were not used to hearing: that their story deserved to be told. Most of these workers had grown up in schools where their families, their languages, and their history were never mentioned. It was as if they did not exist in the story of this country. This course exists because that invisibility has a real cost — and because stories that get left out do not disappear. They wait.</p>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1 — WHAT IS ETHNIC STUDIES?
+  ============================================================ -->
+  <div class="section-divider"><span>&#9670;</span></div>
+  <section id="what-is-it">
+    <h2 class="section-heading">What Is Ethnic Studies?</h2>
+
+    <!--
+      FILENAME: L01_DoloresHuerta.jpg
+      PLACE IN: images/L01/
+      FIND: Dolores Huerta speaking or with farmworkers, circa 1960s–1970s, public domain
+      SEARCH: Dolores Huerta farmworkers United Farm Workers Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/File:Dolores_Huerta_2.jpg (suggested, not guaranteed)
+    -->
+    <figure class="inset-right">
+      <img src="images/L01/L01_DoloresHuerta.jpg" alt="Dolores Huerta speaking to farmworkers">
+      <figcaption>Dolores Huerta, co-founder of the United Farm Workers, ca. 1970s. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <div class="clearfix">
+      <p><span class="vocab">Ethnic studies<span class="tip">The study of the histories, cultures, and experiences of communities of color, especially those whose stories have been left out of standard history classes.</span></span> is not just another history class. It is a course that asks a bigger question: whose experiences get included in the story of a country, and whose get pushed to the side?</p>
+
+      <p>In a typical history class, you might spend weeks on presidents, wars, and laws. That information matters. But a lot of people lived through those same events and never got mentioned. Farmworkers, enslaved people, immigrants, and Indigenous communities all shaped this country. Their voices and choices helped build what America is today. Ethnic studies brings those stories back into the room.</p>
+
+      <p>This course focuses on four big ideas: <span class="vocab">identity<span class="tip">The way a person understands who they are, including their family background, culture, language, and community.</span></span>, power, <span class="vocab">narrative<span class="tip">The story that gets told about a group of people or a historical event, and who decides what that story says.</span></span>, and resistance. Those four words will come up again and again all semester. Together, they help explain how communities have survived, fought back, and shaped the world around them.</p>
+
+      <p>Think about a story you know about your own family or community. Now think: where did you learn that story? Was it in a classroom, or somewhere else? That question is exactly what this course is about.</p>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — WHO DECIDES THE STORY?
+  ============================================================ -->
+  <div class="section-divider"><span>&#9670;</span></div>
+  <section id="textbooks">
+    <h2 class="section-heading">Who Decides the Story?</h2>
+
+    <!--
+      FILENAME: L01_TextbookShelf.jpg
+      PLACE IN: images/L01/
+      FIND: Row of American history textbooks on a school shelf or desk, public domain or CC licensed
+      SEARCH: American history textbooks school classroom Wikimedia Commons Library of Congress
+      LINK: https://commons.wikimedia.org/wiki/File:Textbooks.jpg (suggested, not guaranteed)
+    -->
+    <figure class="inset-left">
+      <img src="images/L01/L01_TextbookShelf.jpg" alt="Stack of American history textbooks">
+      <figcaption>American history textbooks, 20th century. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <div class="clearfix">
+      <p>Every textbook is a set of choices. Someone decided what to include and what to leave out. Someone chose which events were important enough to get a full chapter and which ones got one sentence or none at all.</p>
+
+      <p>For most of American history, those decisions were made by people who did not represent the full range of communities in this country. That meant the stories of Black Americans, Latino communities, Native peoples, and Asian Americans were often shrunk down, simplified, or skipped entirely. This is called <span class="vocab">representation<span class="tip">Whether a group of people is included and accurately shown in media, textbooks, or public life.</span></span>: who gets to appear in the story, and how they are shown when they do appear.</p>
+
+      <p>When students only see certain kinds of people in their textbooks, it sends a message. It says: some lives matter more than others. Some histories are worth studying. Others are not. Those messages affect how students see themselves and how they see each other.</p>
+
+      <p>Changing what is taught in schools is not a simple task. In 2021, California passed a law making ethnic studies a required course for all high school students. That law came after years of organizing by students, teachers, and community members who argued that schools had an obligation to tell a fuller, more honest story. You are here, in part, because of that work.</p>
+    </div>
+
+    <!-- PRIMARY SOURCE 1 -->
+    <div class="primary-source">
+      <blockquote>"The history of America is not complete without the history of its colored peoples."</blockquote>
+      <p class="attribution">W.E.B. Du Bois, <em>Black Reconstruction in America</em>, 1935.</p>
+      <p class="narrator">Du Bois was a Black scholar who spent his life arguing that the contributions of African Americans had been deliberately erased from the history books — and that erasing them made it impossible to truly understand the country.</p>
+      <div class="student-questions">
+        <p><strong>Question 1:</strong> What do you think Du Bois meant when he said the history of America is "not complete"? What might be missing?</p>
+        <p><strong>Question 2:</strong> How does this quote connect to the essential question: who gets to tell the story of America, and what happens when whole communities are left out?</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — FOUR COMMUNITIES
+  ============================================================ -->
+  <div class="section-divider"><span>&#9670;</span></div>
+  <section id="four-communities">
+    <h2 class="section-heading">Four Communities, One Course</h2>
+
+    <p>California's ethnic studies framework centers on four communities. Each one has a long, complex history in this country. Each one has faced serious harm. And each one has organized, created, resisted, and built. This course will study all four.</p>
+
+    <!--
+      FILENAME: L01_NativeAmericanChildren.jpg
+      PLACE IN: images/L01/
+      FIND: Indigenous children or Native American community gathering, pre-1923 or freely licensed
+      SEARCH: Native American children photograph Library of Congress 1900s
+      LINK: https://www.loc.gov/photos/?q=native+american (suggested, not guaranteed)
+    -->
+
+    <!--
+      FILENAME: L01_AfricanAmericanMarch.jpg
+      PLACE IN: images/L01/
+      FIND: African American civil rights march or community event, public domain
+      SEARCH: African American civil rights march Washington 1963 Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/File:March_on_Washington_edit.jpg (suggested, not guaranteed)
+    -->
+
+    <div class="paired-wrap">
+      <figure>
+        <img src="images/L01/L01_NativeAmericanChildren.jpg" alt="Native American children, early 1900s">
+        <figcaption>Native American children, early 1900s. Source: Library of Congress.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/L01/L01_AfricanAmericanMarch.jpg" alt="Civil rights march, Washington D.C., 1963">
+        <figcaption>March on Washington, 1963. Source: Wikimedia Commons.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Native American communities</strong> were the first peoples of this land. Their nations had governments, languages, and complex societies long before European settlers arrived. This course will look at what was taken from them and how their communities have fought to survive and reclaim their identity.</p>
+
+    <p><strong>African American communities</strong> built this country's economy under slavery, then spent generations fighting for the rights and recognition they were always owed. From the Harlem Renaissance to the civil rights movement to Black Lives Matter, Black Americans have never stopped demanding a full place in American life.</p>
+
+    <!--
+      FILENAME: L01_ChicanoMural.jpg
+      PLACE IN: images/L01/
+      FIND: Chicano movement mural or activist gathering, California, public domain or CC licensed
+      SEARCH: Chicano movement mural East Los Angeles Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Chicano_murals (suggested, not guaranteed)
+    -->
+
+    <!--
+      FILENAME: L01_AsianAmericanProtest.jpg
+      PLACE IN: images/L01/
+      FIND: Asian American community protest or cultural gathering, public domain or CC licensed
+      SEARCH: Asian American protest civil rights community Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Asian_Americans (suggested, not guaranteed)
+    -->
+
+    <div class="paired-wrap">
+      <figure>
+        <img src="images/L01/L01_ChicanoMural.jpg" alt="Chicano movement mural, East Los Angeles">
+        <figcaption>Chicano movement mural, East Los Angeles. Source: Wikimedia Commons.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/L01/L01_AsianAmericanProtest.jpg" alt="Asian American community gathering">
+        <figcaption>Asian American community organizing, 20th century. Source: Wikimedia Commons.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Latino and Chicano communities</strong> have deep roots in California that go back centuries. Many of today's California cities sit on land that was once part of Mexico. This course will trace the history of labor, immigration, and resistance that has shaped the Latino experience here and across the country.</p>
+
+    <p><strong>Asian American and Pacific Islander communities</strong> have been part of California's story since the Gold Rush. They built railroads, farmed the land, fought in U.S. wars, and were still told they did not belong. Their story is one of contribution, exclusion, and persistence.</p>
+
+    <p>All four of these communities have something in common: their stories were part of America from the beginning. They just were not always included in the books.</p>
+
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 — YOUR STORY MATTERS
+  ============================================================ -->
+  <div class="section-divider"><span>&#9670;</span></div>
+  <section id="your-story">
+    <h2 class="section-heading">Your Story Matters</h2>
+
+    <!--
+      FILENAME: L01_StudentClassroom.jpg
+      PLACE IN: images/L01/
+      FIND: Diverse students in a California classroom or engaged in discussion, public domain or CC licensed
+      SEARCH: diverse high school students classroom California discussion Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Students (suggested, not guaranteed)
+    -->
+    <figure>
+      <img src="images/L01/L01_StudentClassroom.jpg" alt="Diverse students in a classroom discussion">
+      <figcaption>Students engage in classroom discussion. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <p>This course is not just about other people's stories. It is about yours too. Every student in this room has a <span class="vocab">community<span class="tip">A group of people connected by shared culture, background, neighborhood, or experience.</span></span>. Every student has a history that stretches back further than they know.</p>
+
+    <p>One of the goals of this course is to help you see that your background is not separate from history. It is part of history. The choices your family made, the places they came from, the languages they spoke: all of it connects to larger events and forces that shaped this country and the world.</p>
+
+    <p>This course will ask you to think, write, and talk about your own identity. That can feel uncomfortable sometimes. It can also feel powerful. You do not need to share anything you do not want to share. But we will ask you to think carefully about who you are and where your story fits in the bigger picture.</p>
+
+    <!-- PRIMARY SOURCE 2 -->
+    <div class="primary-source">
+      <blockquote>"We didn't cross the border. The border crossed us."</blockquote>
+      <p class="attribution">Chicano community saying, widely used during the Chicano Movement, late 1960s–1970s.</p>
+      <p class="narrator">This phrase captures the experience of Mexican American families in the Southwest who found themselves on the U.S. side of the border after the Mexican-American War of 1848, without ever leaving their homes.</p>
+      <div class="student-questions">
+        <p><strong>Question 1:</strong> What do you think this phrase is trying to say about who belongs in America and who gets to decide?</p>
+        <p><strong>Question 2:</strong> How does this connect to the essential question: who gets to tell the story of America?</p>
+      </div>
+    </div>
+
+    <!-- LOCAL HISTORY CALLOUT -->
+    <div class="callout-card">
+
+      <!--
+        FILENAME: L01_SanDiegoBorderSign.jpg
+        PLACE IN: images/L01/
+        FIND: US-Mexico border sign or San Diego border crossing, public domain
+        SEARCH: US Mexico border San Diego Tijuana Wikimedia Commons Library of Congress
+        LINK: https://commons.wikimedia.org/wiki/Category:United_States%E2%80%93Mexico_border (suggested, not guaranteed)
+      -->
+
+      <h3>&#127968; Local History Connection: San Diego and the Border</h3>
+      <p>San Diego sits fewer than 20 miles from Tijuana, Mexico. This region was part of Mexico until the Treaty of Guadalupe Hidalgo in 1848. Many families in this area have roots on both sides of a border that was drawn through their homeland. The Kumeyaay people, whose territory spanned what is now San Diego County and northern Baja California, still live on both sides of that line today.</p>
+      <p class="callout-detail">The Kumeyaay Nation has 12 federally recognized bands in San Diego County alone. Their history is one of the oldest and deepest connections to this land in the region.</p>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 — HOW THIS STILL MATTERS TODAY
+  ============================================================ -->
+  <div class="section-divider"><span>&#9670;</span></div>
+  <section id="still-matters">
+    <h2 class="section-heading" style="color: var(--bright-gold); border-bottom-color: var(--terracotta);">How This Still Matters Today</h2>
+
+    <p class="still-matters-headline">The fight over whose story gets told in schools is happening right now, in classrooms across the country.</p>
+
+    <p>Debates about what to teach in history class are not new. But in the last few years, they have become a major national argument. Some states have moved to ban or restrict the teaching of ethnic studies. Others, like California, have made it a graduation requirement. The question of whose story belongs in a classroom is one of the most contested questions in American education right now.</p>
+
+    <ul class="news-links">
+      <li><a href="https://news.google.com/search?q=ethnic+studies+California+high+school+requirement" target="_blank" rel="noopener">California Makes Ethnic Studies a High School Graduation Requirement</a></li>
+      <li><a href="https://news.google.com/search?q=history+curriculum+debate+schools+what+to+teach" target="_blank" rel="noopener">History Curriculum Debates: Who Decides What Students Learn?</a></li>
+      <li><a href="https://news.google.com/search?q=Kumeyaay+nation+San+Diego+sovereignty+land" target="_blank" rel="noopener">Kumeyaay Nation: Indigenous Sovereignty and Land Rights in San Diego</a></li>
+    </ul>
+
+    <!--
+      FILENAME: L01_EthnicStudiesProtest.jpg
+      PLACE IN: images/L01/
+      FIND: Students or community members advocating for ethnic studies curriculum, public domain or CC licensed, recent
+      SEARCH: ethnic studies students advocacy protest curriculum Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Ethnic_studies (suggested, not guaranteed)
+    -->
+    <figure>
+      <img src="images/L01/L01_EthnicStudiesProtest.jpg" alt="Students advocating for ethnic studies in curriculum">
+      <figcaption>Students and community members advocate for ethnic studies in public schools. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <p class="closing-question">If the history you were taught in school left out your community's story, what would you want someone to know? And who would you trust to tell it?</p>
+
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  Ethnic Studies &mdash; Lesson 01 &mdash; What Is Ethnic Studies and Why Does It Exist?
+</footer>
+
+<!-- ============================================================
+     VOCAB TAP SUPPORT
+============================================================ -->
+<script>
+document.querySelectorAll('.vocab').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.querySelectorAll('.vocab.active').forEach(function(v) {
+      if (v !== el) v.classList.remove('active');
+    });
+    el.classList.toggle('active');
+  });
+});
+document.addEventListener('click', function() {
+  document.querySelectorAll('.vocab.active').forEach(function(v) {
+    v.classList.remove('active');
+  });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
 </body>
 </html>
+
+<!-- ============================================================
+IMAGE CHECKLIST FOR SS9_L01.html
+1. header_eth.jpg — header background: community mural or diverse faces representing California ethnic communities — Suggested link: https://commons.wikimedia.org/wiki/File:East_Los_Angeles_-_barrio_mural.jpg
+2. L01_DoloresHuerta.jpg — Dolores Huerta speaking, ca. 1970s — Suggested link: https://commons.wikimedia.org/wiki/File:Dolores_Huerta_2.jpg
+3. L01_TextbookShelf.jpg — stack or shelf of American history textbooks — Suggested link: https://commons.wikimedia.org/wiki/File:Textbooks.jpg
+4. L01_NativeAmericanChildren.jpg — Native American children, early 1900s — Suggested link: https://www.loc.gov/photos/?q=native+american+children
+5. L01_AfricanAmericanMarch.jpg — March on Washington, 1963 — Suggested link: https://commons.wikimedia.org/wiki/File:March_on_Washington_edit.jpg
+6. L01_ChicanoMural.jpg — Chicano movement mural, East Los Angeles — Suggested link: https://commons.wikimedia.org/wiki/Category:Chicano_murals
+7. L01_AsianAmericanProtest.jpg — Asian American community organizing — Suggested link: https://commons.wikimedia.org/wiki/Category:Asian_Americans
+8. L01_StudentClassroom.jpg — diverse students in classroom discussion — Suggested link: https://commons.wikimedia.org/wiki/Category:Students
+9. L01_SanDiegoBorderSign.jpg — US-Mexico border / San Diego–Tijuana crossing — Suggested link: https://commons.wikimedia.org/wiki/Category:United_States%E2%80%93Mexico_border
+10. L01_EthnicStudiesProtest.jpg — students advocating for ethnic studies curriculum — Suggested link: https://commons.wikimedia.org/wiki/Category:Ethnic_studies
+============================================================ -->
