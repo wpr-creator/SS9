@@ -3,19 +3,811 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS9 — COMING SOON</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<title>SS9 L05 — Asian American and Pacific Islander Experience: Building, Exclusion, and Belonging</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Source Sans 3',sans-serif;background:#2a1a0e;color:#f5ead8;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
-h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#d4883a;margin-bottom:1rem}
-p{font-size:0.9rem;color:rgba(245,234,216,0.55);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:2rem}
-a{color:#c05030;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(192,80,48,0.35);padding-bottom:2px}
+  :root {
+    --ink:          #0a0c10;
+    --deep-navy:    #0e1620;
+    --navy:         #1a2a40;
+    --steel:        #2c3e54;
+    --iron:         #4a5c6e;
+    --red:          #8c1c1c;
+    --crimson:      #b82020;
+    --gold:         #c8940e;
+    --pale-gold:    #e8c060;
+    --ivory:        #f4eed8;
+    --light-ivory:  #faf6ea;
+    --cream:        #f6f2e8;
+    --accent-red:   #b03030;
+    --text:         #0e1010;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: relative;
+    background: var(--deep-navy);
+    overflow: hidden;
+    padding: 66px 24px 54px;
+    text-align: center;
+  }
+  .header-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 40%;
+    opacity: 0.30;
+  }
+  .header-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .course-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--pale-gold);
+    margin-bottom: 20px;
+  }
+  h1.page-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(30px, 5.8vw, 58px);
+    font-weight: 700;
+    color: var(--ivory);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 0 3px 22px rgba(0,0,0,0.7);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .eq-banner {
+    background: var(--red);
+    border-left: 6px solid var(--pale-gold);
+    border-right: 6px solid var(--pale-gold);
+    padding: 18px 32px;
+    display: inline-block;
+    max-width: 780px;
+    width: 100%;
+  }
+  .eq-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--pale-gold);
+    opacity: 0.85;
+    margin-bottom: 6px;
+  }
+  .eq-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(14px, 2.3vw, 20px);
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.52;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── NAV ── */
+  nav.section-nav {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.5);
+  }
+  nav.section-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  nav.section-nav ul li a {
+    display: block;
+    padding: 13px 14px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
+  }
+  nav.section-nav ul li a:hover {
+    background: var(--steel);
+    border-bottom-color: var(--pale-gold);
+    color: var(--pale-gold);
+  }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 22px 70px;
+  }
+
+  /* ── INTRO ── */
+  .intro-block {
+    background: var(--light-ivory);
+    border-left: 6px solid var(--crimson);
+    padding: 36px 38px 30px;
+    margin: 50px 0 0;
+    font-size: 19px;
+    line-height: 1.9;
+  }
+
+  /* ── DIVIDER ── */
+  /* Ink-brush inspired horizontal rule */
+  .divider {
+    position: relative;
+    margin: 62px 0 46px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    background: linear-gradient(to right,
+      transparent 0%,
+      var(--navy) 8%,
+      var(--crimson) 40%,
+      var(--crimson) 60%,
+      var(--navy) 92%,
+      transparent 100%
+    );
+    transform: translateY(-50%);
+  }
+  .divider-diamond {
+    position: relative;
+    z-index: 2;
+    background: var(--cream);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .divider-diamond::before,
+  .divider-diamond::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: var(--crimson);
+    transform: rotate(45deg);
+  }
+  .divider-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+
+  /* ── SECTIONS ── */
+  h2.section-heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(22px, 3.8vw, 34px);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 24px;
+    line-height: 1.18;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--gold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  /* ── VOCAB ── */
+  .vocab {
+    color: var(--accent-red);
+    text-decoration: underline dotted var(--accent-red);
+    cursor: help;
+    position: relative;
+    font-weight: 700;
+  }
+  .vocab .tip {
+    display: none;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a2e;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 1.55;
+    z-index: 300;
+    font-style: normal;
+    font-weight: 400;
+    pointer-events: none;
+    max-width: 300px;
+    white-space: normal;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .vocab:hover .tip, .vocab.active .tip { display: block; }
+
+  /* ── IMAGES ── */
+  figure { margin: 32px 0; }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid #c8d0d8;
+    box-shadow: 0 4px 22px rgba(10,12,16,0.3);
+  }
+  figure.inset-left  { float: left;  width: 41%; margin: 4px 28px 16px 0; }
+  figure.inset-right { float: right; width: 41%; margin: 4px 0 16px 28px; }
+  .paired-wrap { display: flex; gap: 18px; margin: 32px 0; }
+  .paired-wrap figure { flex: 1; margin: 0; }
+  figcaption {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--steel);
+    margin-top: 8px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .clearfix::after { content: ''; display: table; clear: both; }
+
+  /* ── PRIMARY SOURCE ── */
+  .primary-source {
+    background: #e8eef4;
+    border-left: 6px solid var(--navy);
+    padding: 28px 34px 24px;
+    margin: 42px 0;
+  }
+  .primary-source blockquote {
+    font-family: 'Noto Serif', serif;
+    font-size: 22px;
+    line-height: 1.7;
+    color: var(--deep-navy);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .primary-source .attribution {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--steel);
+    margin-bottom: 12px;
+  }
+  .primary-source .narrator {
+    font-size: 16px;
+    color: var(--text);
+    border-top: 1px solid var(--gold);
+    padding-top: 12px;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .primary-source .student-questions {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--gold);
+  }
+  .primary-source .student-questions p {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: var(--deep-navy);
+  }
+  .primary-source .student-questions strong { color: var(--crimson); }
+
+  /* ── COMMUNITY CARDS ── */
+  .community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 32px 0;
+  }
+  .community-card {
+    background: var(--deep-navy);
+    border-top: 4px solid var(--gold);
+    padding: 20px 22px 18px;
+  }
+  .community-card .card-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pale-gold);
+    margin-bottom: 6px;
+    opacity: 0.75;
+  }
+  .community-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--pale-gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+  }
+  .community-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ivory);
+    opacity: 0.92;
+    margin: 0;
+  }
+
+  /* ── CALLOUT CARD ── */
+  .callout-card {
+    background: var(--deep-navy);
+    color: var(--ivory);
+    padding: 30px 36px;
+    margin: 42px 0;
+    border-top: 4px solid var(--pale-gold);
+    border-bottom: 4px solid var(--pale-gold);
+  }
+  .callout-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--pale-gold);
+    margin-bottom: 14px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .callout-card p { color: var(--ivory); font-size: 17px; }
+  .callout-card .detail {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--pale-gold);
+    margin-top: 12px;
+  }
+
+  /* ── STILL MATTERS ── */
+  #still-matters {
+    background: var(--deep-navy);
+    padding: 50px 40px 48px;
+    margin: 58px -22px 0;
+  }
+  #still-matters h2 {
+    color: var(--pale-gold);
+    border-bottom-color: var(--crimson);
+  }
+  .sm-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(17px, 2.8vw, 24px);
+    font-weight: 700;
+    color: var(--pale-gold);
+    line-height: 1.42;
+    margin: 26px 0 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  #still-matters p { color: var(--ivory); opacity: 0.92; margin-bottom: 20px; }
+  .news-links { list-style: none; padding: 0; margin: 0 0 34px; display: flex; flex-direction: column; gap: 12px; }
+  .news-links li a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--pale-gold);
+    text-decoration: underline;
+    line-height: 1.5;
+    transition: color 0.18s;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .news-links li a:hover { color: #fff; }
+  .closing-q {
+    font-family: 'Noto Serif', serif;
+    font-size: clamp(18px, 2.8vw, 23px);
+    font-style: italic;
+    color: var(--ivory);
+    line-height: 1.65;
+    border-top: 2px solid var(--crimson);
+    padding-top: 28px;
+    margin-top: 32px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep-navy);
+    border-top: 3px solid var(--gold);
+    padding: 22px 20px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--pale-gold);
+    text-transform: uppercase;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 620px) {
+    figure.inset-left, figure.inset-right { float: none; width: 100%; margin: 24px 0; }
+    .paired-wrap { flex-direction: column; }
+    .community-grid { grid-template-columns: 1fr; }
+    #still-matters { margin: 58px -22px 0; padding: 36px 22px 40px; }
+    .intro-block { padding: 24px 20px; }
+    .primary-source { padding: 20px 18px; }
+    .callout-card { padding: 24px 20px; }
+  }
 </style>
 </head>
 <body>
-<h1>Ethnic Studies</h1>
-<p>This lesson is coming soon</p>
-<a href="index.html">← Back to Course</a>
+
+<!-- ══════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════ -->
+<header>
+  <!--
+    FILENAME: L05_HeaderBG.jpg
+    PLACE IN: images/L05/
+    FIND: Chinese workers laying track on the transcontinental railroad, Sierra Nevada, 1860s — the famous Cape Horn or tunnel construction photographs. Or a wide landscape shot of the Sierra Nevada railroad cuts. Public domain.
+    SEARCH: Chinese workers transcontinental railroad Sierra Nevada 1860s Library of Congress Wikimedia Commons
+    LINK: https://www.loc.gov/photos/?q=chinese+workers+railroad+sierra+nevada (suggested, not guaranteed)
+  -->
+  <div class="header-bg" style="background-image: url('images/L05/L05_HeaderBG.jpg');"></div>
+  <div class="header-inner">
+    <p class="course-label">Ethnic Studies &mdash; Lesson 05</p>
+    <h1 class="page-title">Asian American and Pacific Islander Experience:<br>Building, Exclusion, and Belonging</h1>
+    <div class="eq-banner">
+      <p class="eq-label">Essential Question</p>
+      <p class="eq-text">How did Asian immigrants build American infrastructure, face systematic exclusion, and fight for belonging over two centuries?</p>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════ -->
+<nav class="section-nav" aria-label="Page sections">
+  <ul>
+    <li><a href="#builders">They Built It</a></li>
+    <li><a href="#exclusion">Exclusion by Law</a></li>
+    <li><a href="#resistance">Resistance and Survival</a></li>
+    <li><a href="#belonging">The Fight for Belonging</a></li>
+    <li><a href="#still-matters">How This Still Matters Today</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     MAIN
+══════════════════════════════════════════════ -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p>In 1865, a Chinese worker named Hung Wah stood at the edge of a 1,400-foot cliff in the Sierra Nevada mountains. He and thousands of men like him were drilling into solid granite, packing explosives, blasting through the mountain one inch at a time, and building the railroad that would connect the United States from coast to coast. They did it for less pay than white workers. They were not allowed to be photographed with the crews at the famous completion ceremony. When the railroad was done, the country celebrated its achievement. The men who made it possible were barely mentioned. This lesson is about changing that.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 1 — THEY BUILT IT
+  ══════════════════════════════════════════════ -->
+  <div class="divider">
+    <div class="divider-diamond">
+      <div class="divider-dot"></div>
+    </div>
+  </div>
+
+  <section id="builders">
+    <h2 class="section-heading">They Built It: Chinese Workers and the Transcontinental Railroad</h2>
+
+    <!--
+      FILENAME: L05_RailroadWorkers.jpg
+      PLACE IN: images/L05/
+      FIND: Chinese workers on the transcontinental railroad, 1860s — Cape Horn embankment work, tunnel crew, or snow shed construction. The Alfred Hart photographs are the most historically significant. Public domain.
+      SEARCH: Chinese railroad workers transcontinental 1860s Alfred Hart photograph Wikimedia Commons Library of Congress
+      LINK: https://commons.wikimedia.org/wiki/Category:Construction_of_the_First_Transcontinental_Railroad (suggested, not guaranteed)
+    -->
+    <figure>
+      <img src="images/L05/L05_RailroadWorkers.jpg" alt="Chinese workers constructing the transcontinental railroad, Sierra Nevada, 1860s">
+      <figcaption>Chinese workers constructing the Central Pacific line through the Sierra Nevada, ca. 1866. They made up approximately 80 percent of the workforce. Source: Wikimedia Commons / Alfred Hart photograph.</figcaption>
+    </figure>
+
+    <p>The transcontinental railroad was one of the greatest engineering projects in American history. It connected the East Coast to the West Coast, opened up commerce and settlement across the continent, and transformed the United States into a modern economic power. Chinese workers built it. Between 1863 and 1869, approximately 20,000 Chinese workers did the most dangerous work on the Central Pacific line: blasting tunnels through granite mountains, hanging from ropes on sheer cliffs, and working through winter snowstorms that buried the Sierra Nevada in 40-foot drifts.</p>
+
+    <p>They were paid about 26 dollars a month, roughly two-thirds of what white workers received for the same work. They were responsible for buying their own food and tents. When they went on strike in 1867 to demand equal pay, the company cut off their food supply until they returned to work. Their demands were never met.</p>
+
+    <p>When the two railroad lines met at Promontory Summit, Utah, on May 10, 1869, a famous photograph was taken. Executives and engineers shook hands. Champagne was poured. A golden spike was driven in to mark the completion. The Chinese workers who had made it possible were not in the photograph. That absence was not an accident. It was a preview of what was coming.</p>
+
+    <p>Chinese immigrants had also played a central role in building California's agricultural economy, constructing its irrigation systems, and running many of its small businesses. Their labor was essential. Their presence, apparently, was not.</p>
+
+    <!-- PRIMARY SOURCE 1 -->
+    <div class="primary-source">
+      <blockquote>"Without them, it would be impossible to complete the western portion of this great national enterprise within the time required by the Acts of Congress."</blockquote>
+      <p class="attribution">Charles Crocker, Central Pacific Railroad superintendent, letter to company directors, 1865.</p>
+      <p class="narrator">Crocker was one of the men who ran the Central Pacific Railroad, and he wrote this letter to argue for hiring more Chinese workers — which means the people running the railroad knew exactly how essential they were, even as those same workers were being paid less and denied equal rights.</p>
+      <div class="student-questions">
+        <p><strong>Question 1:</strong> Crocker admits that the railroad could not be finished without Chinese workers. How does that fact connect to what happened to those workers after the railroad was built?</p>
+        <p><strong>Question 2:</strong> How does this primary source connect to the essential question about building, exclusion, and belonging?</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 2 — EXCLUSION BY LAW
+  ══════════════════════════════════════════════ -->
+  <div class="divider">
+    <div class="divider-diamond">
+      <div class="divider-dot"></div>
+    </div>
+  </div>
+
+  <section id="exclusion">
+    <h2 class="section-heading">Exclusion by Law: From the Chinese Exclusion Act to Internment</h2>
+
+    <!--
+      FILENAME: L05_ChineseExclusionAct.jpg
+      PLACE IN: images/L05/
+      FIND: The Chinese Exclusion Act of 1882 original document or an anti-Chinese political cartoon from Harper's Weekly or Puck magazine, 1870s–1880s, public domain
+      SEARCH: Chinese Exclusion Act 1882 document anti-Chinese political cartoon Wikimedia Commons Library of Congress
+      LINK: https://commons.wikimedia.org/wiki/Category:Chinese_Exclusion_Act (suggested, not guaranteed)
+    -->
+    <figure class="inset-right">
+      <img src="images/L05/L05_ChineseExclusionAct.jpg" alt="Chinese Exclusion Act document or anti-Chinese political cartoon, 1882">
+      <figcaption>The Chinese Exclusion Act of 1882: the first U.S. federal law to ban immigration based on race and national origin. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <div class="clearfix">
+      <p>In 1882, Congress passed the Chinese Exclusion Act. It was the first federal law in American history to ban immigration based on race and national origin. It banned Chinese laborers from entering the United States. Chinese immigrants already here were barred from becoming citizens. Families were separated. The law was not repealed until 1943, and only then because China was a wartime ally against Japan.</p>
+
+      <p><span class="vocab">Exclusion<span class="tip">Being legally or systematically kept out of a country, community, or opportunity because of who you are; the Chinese Exclusion Act was the first federal law to exclude an entire ethnic group by name.</span></span> did not stop at the border. Laws in California made it illegal for Chinese and other Asian immigrants to own land, testify in court against white people, marry white Americans, or attend white public schools. These were not informal prejudices. They were written laws, enforced by courts, designed to make permanent residence impossible.</p>
+
+      <p>Then came December 7, 1941. Japan bombed Pearl Harbor, and within months the U.S. government made one of the worst civil liberties decisions in its history. President Roosevelt signed Executive Order 9066 in February 1942, forcing approximately 120,000 Japanese Americans: two-thirds of whom were U.S. citizens: into <span class="vocab">internment<span class="tip">The forced removal and imprisonment of a group of people by a government, usually during wartime; Japanese American internment during World War II forced 120,000 people into camps without trial or charges.</span></span> camps. They were given days to sell or abandon everything they owned. Businesses, farms, homes, and community organizations built over generations were lost.</p>
+    </div>
+
+    <!--
+      FILENAME: L05_ManazanarCamp.jpg
+      PLACE IN: images/L05/
+      FIND: Manzanar internment camp photograph — barracks, guard tower, or families arriving, Ansel Adams or Dorothea Lange photographs are the most famous, public domain
+      SEARCH: Manzanar internment camp photograph Ansel Adams Dorothea Lange Library of Congress Wikimedia Commons
+      LINK: https://www.loc.gov/photos/?q=manzanar+internment+camp (suggested, not guaranteed)
+    -->
+    <figure>
+      <img src="images/L05/L05_ManazanarCamp.jpg" alt="Manzanar Japanese American internment camp, California, 1942–1945">
+      <figcaption>Manzanar War Relocation Center, Owens Valley, California, 1942. Home to over 10,000 Japanese Americans imprisoned without trial. Photograph by Ansel Adams or Dorothea Lange. Source: Library of Congress.</figcaption>
+    </figure>
+
+    <p>The camps had guard towers, barbed wire, and armed soldiers. Families lived in converted horse stalls or hastily built barracks. The stated reason was military necessity. The actual reason, as later investigations confirmed, was racial prejudice: German Americans and Italian Americans were not mass-imprisoned despite the United States being at war with Germany and Italy. The government knew there was no evidence that Japanese Americans were disloyal. It imprisoned them anyway.</p>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 3 — RESISTANCE AND SURVIVAL
+  ══════════════════════════════════════════════ -->
+  <div class="divider">
+    <div class="divider-diamond">
+      <div class="divider-dot"></div>
+    </div>
+  </div>
+
+  <section id="resistance">
+    <h2 class="section-heading">Resistance and Survival</h2>
+
+    <!--
+      FILENAME: L05_FredKorematsu.jpg
+      PLACE IN: images/L05/
+      FIND: Portrait of Fred Korematsu, Japanese American civil rights activist — the famous ACLU photograph or a later portrait, public domain or CC licensed
+      SEARCH: Fred Korematsu portrait civil rights Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/File:Fred_Korematsu.jpg (suggested, not guaranteed)
+    -->
+
+    <!--
+      FILENAME: L05_FilipineFarmworkers.jpg
+      PLACE IN: images/L05/
+      FIND: Filipino farmworkers in California fields, 1960s, or Larry Itliong at a United Farm Workers event — public domain or CC licensed
+      SEARCH: Filipino farmworkers California 1960s Larry Itliong United Farm Workers Wikimedia Commons Library of Congress
+      LINK: https://commons.wikimedia.org/wiki/Category:Filipino_Americans (suggested, not guaranteed)
+    -->
+
+    <div class="paired-wrap">
+      <figure>
+        <img src="images/L05/L05_FredKorematsu.jpg" alt="Portrait of Fred Korematsu, Japanese American civil rights activist">
+        <figcaption>Fred Korematsu, who refused internment and took his case to the Supreme Court. In 1998 he received the Presidential Medal of Freedom. Source: Wikimedia Commons.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/L05/L05_FilipineFarmworkers.jpg" alt="Filipino farmworkers in California, 1960s">
+        <figcaption>Filipino farmworkers in California, ca. 1960s. Larry Itliong and Filipino workers launched the Delano grape strike that became the foundation of the United Farm Workers. Source: Wikimedia Commons.</figcaption>
+      </figure>
+    </div>
+
+    <p>Fred Korematsu refused to go. When Executive Order 9066 was issued, Korematsu did not report for internment. He was arrested, convicted of violating a military order, and sent to a camp anyway. But he took his case all the way to the Supreme Court. In 1944, the court ruled against him in <em>Korematsu v. United States</em>, upholding the internment as a wartime necessity. It was one of the worst Supreme Court decisions in American history.</p>
+
+    <p>Korematsu did not give up. Forty years later, in 1983, a federal court overturned his conviction after government documents were discovered that showed officials had knowingly withheld evidence from the Supreme Court. In 2018, the Supreme Court formally repudiated the 1944 ruling. Korematsu spent his life making that moment possible. His case remains one of the most important civil rights legal fights in American history. <span class="vocab">Resistance<span class="tip">Fighting back against an unjust system through legal challenges, protests, organizing, cultural preservation, or everyday acts of defiance.</span></span> sometimes takes decades to succeed.</p>
+
+    <p>The story of AAPI resistance includes another chapter that most students never hear: the founding of the United Farm Workers. The story is usually told around Cesar Chavez. But the Delano grape strike that launched the UFW was actually started in September 1965 by Filipino farmworkers, led by an organizer named Larry Itliong. Filipino workers had been organizing in California fields for decades. When they called the strike, they asked Chavez and the Mexican American workers to join them. Together, the two communities built one of the most successful labor movements in California history. Larry Itliong's name belongs next to Cesar Chavez's in that story.</p>
+
+    <p>Southeast Asian <span class="vocab">refugee<span class="tip">A person forced to flee their home country because of war, persecution, or disaster, and who is seeking safety somewhere else.</span></span> communities are another chapter of AAPI history that rarely appears in textbooks. After the Vietnam War ended in 1975, over 1 million Vietnamese, Cambodian, Laotian, and Hmong refugees came to the United States. Many had been allies of the U.S. government during the war. They arrived with almost nothing, often in communities that were not prepared to receive them. They built new lives, started businesses, raised children in American schools, and became one of the fastest-growing parts of the American population. Their story is not a story of failure. It is a story of extraordinary determination.</p>
+
+    <!-- PRIMARY SOURCE 2 -->
+    <div class="primary-source">
+      <blockquote>"I was an American citizen, and I had done nothing wrong. I thought my case might get to the Supreme Court and that they would back me up."</blockquote>
+      <p class="attribution">Fred Korematsu, interview, <em>Civil Liberties Act hearings</em>, 1981.</p>
+      <p class="narrator">Korematsu said this while testifying in favor of the Civil Liberties Act, which eventually passed in 1988 and provided formal apologies and reparations to Japanese Americans who had been interned — nearly 45 years after the internment camps closed.</p>
+      <div class="student-questions">
+        <p><strong>Question 1:</strong> Korematsu said he "had done nothing wrong." What does it tell us that citizenship alone was not enough to protect him?</p>
+        <p><strong>Question 2:</strong> It took 45 years for the U.S. government to formally apologize for internment. How does that timeline connect to the essential question about the fight for belonging?</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 4 — THE FIGHT FOR BELONGING
+  ══════════════════════════════════════════════ -->
+  <div class="divider">
+    <div class="divider-diamond">
+      <div class="divider-dot"></div>
+    </div>
+  </div>
+
+  <section id="belonging">
+    <h2 class="section-heading">The Fight for Belonging: AAPI Communities Today</h2>
+
+    <!--
+      FILENAME: L05_CivilLibertiesAct.jpg
+      PLACE IN: images/L05/
+      FIND: President Reagan signing the Civil Liberties Act of 1988, OR Japanese American families receiving reparations checks, public domain
+      SEARCH: Civil Liberties Act 1988 Reagan signing Japanese American reparations Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Civil_Liberties_Act_of_1988 (suggested, not guaranteed)
+    -->
+    <figure class="inset-left">
+      <img src="images/L05/L05_CivilLibertiesAct.jpg" alt="Signing of the Civil Liberties Act of 1988, providing reparations to Japanese American internment survivors">
+      <figcaption>President Reagan signs the Civil Liberties Act of 1988, providing formal apologies and $20,000 in <span style="color:var(--accent-red);font-weight:700;">reparations</span> to surviving Japanese American internment camp prisoners. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <div class="clearfix">
+      <p>In 1988, Congress passed the Civil Liberties Act. It formally apologized to Japanese Americans for internment and provided <span class="vocab">reparations<span class="tip">Compensation paid to people for serious harm done to them by a government or institution; the Civil Liberties Act paid $20,000 to each living Japanese American who had been interned.</span></span> of 20,000 dollars to each surviving internee. It was the first time the U.S. government had paid reparations for a racial injustice. Fred Korematsu was alive to see it. So were approximately 82,000 survivors.</p>
+
+      <p>Today, AAPI communities make up approximately 6 percent of the U.S. population. They are the fastest-growing racial group in the country. They include hundreds of distinct ethnic communities: Chinese, Filipino, Vietnamese, Korean, Japanese, South Asian, Pacific Islander, and many others: each with their own languages, histories, and relationships with the United States. The term "AAPI" covers enormous diversity. A Hmong refugee family in Fresno and a fifth-generation Japanese American family in Los Angeles have very different stories. What they share is a history of being defined by the country around them rather than by themselves.</p>
+
+      <p>Pacific Islander communities are often the least-visible part of the AAPI designation. Hawaiian, Samoan, Chamorro, and Tongan peoples have their own distinct histories of <span class="vocab" style="color:var(--accent-red);text-decoration: underline dotted var(--accent-red);">colonization<span class="tip" style="font-weight:400;">When a more powerful country takes control of another people's land, resources, and government, often by force.</span></span> — the United States overthrew the Hawaiian Kingdom in 1893 and annexed it in 1898. Native Hawaiian sovereignty has been a live political issue ever since. Guam and American Samoa remain U.S. territories today, meaning their residents are U.S. nationals but do not have full voting rights.</p>
+
+      <p>AAPI political power has grown significantly in recent decades. Kamala Harris, the daughter of Indian and Jamaican immigrants, became the first AAPI Vice President in 2021. Daniel Inouye of Hawaii, a Japanese American World War II veteran who lost his arm in combat, served as a U.S. Senator for 50 years. These individual stories exist within a longer fight for representation and belonging that stretches back to the Chinese workers who were not photographed at Promontory Summit in 1869.</p>
+    </div>
+
+    <p>Here are some of the AAPI communities whose stories are part of this history:</p>
+
+    <div class="community-grid">
+      <div class="community-card">
+        <div class="card-label">1860s onward</div>
+        <h3>Chinese Americans</h3>
+        <p>Built the transcontinental railroad and California's agriculture. Targeted by the Exclusion Act of 1882. Built Chinatowns as survival communities. Won citizenship rights only in 1943.</p>
+      </div>
+      <div class="community-card">
+        <div class="card-label">1900s onward</div>
+        <h3>Japanese Americans</h3>
+        <p>Built farms and businesses across California and Hawaii. Imprisoned during WWII internment. Fought for and won formal apology and reparations in 1988. Fred Korematsu's legal fight lasted 40 years.</p>
+      </div>
+      <div class="community-card">
+        <div class="card-label">1900s onward</div>
+        <h3>Filipino Americans</h3>
+        <p>Came to California as farmworkers after the Philippines became a U.S. territory in 1898. Larry Itliong led the strike that launched the United Farm Workers. The second-largest Asian American group in the U.S.</p>
+      </div>
+      <div class="community-card">
+        <div class="card-label">1975 onward</div>
+        <h3>Southeast Asian Refugees</h3>
+        <p>Over 1 million Vietnamese, Cambodian, Laotian, and Hmong refugees arrived after 1975. Rebuilt lives under enormous difficulty. Their communities are now part of the fabric of cities across California.</p>
+      </div>
+    </div>
+
+    <!-- LOCAL HISTORY -->
+    <div class="callout-card">
+      <h3>&#127968; San Diego Connection: Little Saigon and the Refugee Story</h3>
+      <p>San Diego has one of the largest Vietnamese American communities in the United States. After the fall of Saigon in 1975, thousands of Vietnamese refugees arrived in San Diego, many processed through Camp Pendleton. The neighborhood of City Heights became a major resettlement community for Southeast Asian refugees: Vietnamese, Cambodian, Laotian, and Hmong families. Today City Heights is one of the most ethnically diverse zip codes in the United States.</p>
+      <p class="detail">The Vietnamese community in San Diego's Linda Vista and City Heights neighborhoods built community organizations, restaurants, businesses, and cultural institutions that now define those neighborhoods. Their history in this city is less than 50 years old and still being written.</p>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 5 — HOW THIS STILL MATTERS TODAY
+  ══════════════════════════════════════════════ -->
+  <div class="divider">
+    <div class="divider-diamond">
+      <div class="divider-dot"></div>
+    </div>
+  </div>
+
+  <section id="still-matters">
+    <h2 class="section-heading">How This Still Matters Today</h2>
+
+    <p class="sm-headline">Anti-Asian hate crimes surged during the COVID-19 pandemic, reminding the country that the exclusion and scapegoating that defined the 19th and 20th centuries have not disappeared.</p>
+
+    <p>In 2020 and 2021, anti-Asian hate crimes increased by over 150 percent in major U.S. cities. Asian Americans were blamed by some politicians and media figures for COVID-19, echoing the same kind of scapegoating that produced the Chinese Exclusion Act in 1882. Elderly Asian Americans were attacked in broad daylight. The hashtag #StopAsianHate trended nationally as communities organized to respond. The pattern was old. The names were new.</p>
+
+    <p>At the same time, the conversation about the Civil Liberties Act of 1988 has given the reparations debate a concrete historical example. Japanese Americans received reparations, and the sky did not fall. That precedent is now cited in every serious discussion about reparations for other communities. The AAPI experience with government-issued harm and government-issued repair is directly relevant to conversations happening today about Black reparations, Native land claims, and immigrant rights.</p>
+
+    <ul class="news-links">
+      <li><a href="https://news.google.com/search?q=anti-Asian+hate+crimes+Stop+AAPI+Hate+2024+2025" target="_blank" rel="noopener">Stop AAPI Hate: Anti-Asian Violence and Community Response</a></li>
+      <li><a href="https://news.google.com/search?q=Hawaiian+sovereignty+native+Hawaiian+rights+land+2024" target="_blank" rel="noopener">Native Hawaiian Sovereignty: Land Rights and the Fight for Recognition</a></li>
+      <li><a href="https://news.google.com/search?q=Korematsu+internment+precedent+civil+liberties+today" target="_blank" rel="noopener">The Korematsu Decision: Its Legacy and What It Means for Civil Liberties Today</a></li>
+    </ul>
+
+    <!--
+      FILENAME: L05_StopAAPIHate.jpg
+      PLACE IN: images/L05/
+      FIND: Stop AAPI Hate rally or protest, 2021 — community members marching or gathered with signs, public domain or CC licensed
+      SEARCH: Stop AAPI Hate rally protest 2021 Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Stop_AAPI_Hate (suggested, not guaranteed)
+    -->
+    <figure>
+      <img src="images/L05/L05_StopAAPIHate.jpg" alt="Stop AAPI Hate rally, 2021">
+      <figcaption>Stop AAPI Hate rally, 2021. Following a surge in anti-Asian violence during the COVID-19 pandemic, communities across the country organized to demand protection and recognition. Source: Wikimedia Commons.</figcaption>
+    </figure>
+
+    <p class="closing-q">Chinese workers built the railroad and were written out of the photograph. Japanese Americans fought for the United States in World War II while their families were imprisoned at home. Filipino farmworkers started the strike that became the UFW and watched someone else get most of the credit. What do these patterns have in common? And what would it mean to finally get it right?</p>
+
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer>
+  Ethnic Studies &mdash; Lesson 05 &mdash; Asian American and Pacific Islander Experience: Building, Exclusion, and Belonging
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════ -->
+<script>
+document.querySelectorAll('.vocab').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.querySelectorAll('.vocab.active').forEach(function(v) {
+      if (v !== el) v.classList.remove('active');
+    });
+    el.classList.toggle('active');
+  });
+});
+document.addEventListener('click', function() {
+  document.querySelectorAll('.vocab.active').forEach(function(v) {
+    v.classList.remove('active');
+  });
+});
+</script>
+
 </body>
 </html>
+
+<!--
+IMAGE CHECKLIST FOR SS9_L05.html
+1. L05_HeaderBG.jpg — Chinese workers on the transcontinental railroad, Sierra Nevada, 1860s — Suggested link: https://www.loc.gov/photos/?q=chinese+workers+railroad+sierra+nevada
+2. L05_RailroadWorkers.jpg — Chinese workers constructing Central Pacific line, ca. 1866, Alfred Hart photographs — Suggested link: https://commons.wikimedia.org/wiki/Category:Construction_of_the_First_Transcontinental_Railroad
+3. L05_ChineseExclusionAct.jpg — Chinese Exclusion Act 1882 document or anti-Chinese political cartoon — Suggested link: https://commons.wikimedia.org/wiki/Category:Chinese_Exclusion_Act
+4. L05_ManazanarCamp.jpg — Manzanar internment camp, Ansel Adams or Dorothea Lange photograph, 1942–1945 — Suggested link: https://www.loc.gov/photos/?q=manzanar+internment+camp
+5. L05_FredKorematsu.jpg — portrait of Fred Korematsu, civil rights activist — Suggested link: https://commons.wikimedia.org/wiki/File:Fred_Korematsu.jpg
+6. L05_FilipineFarmworkers.jpg — Filipino farmworkers in California fields, 1960s, or Larry Itliong — Suggested link: https://commons.wikimedia.org/wiki/Category:Filipino_Americans
+7. L05_CivilLibertiesAct.jpg — Reagan signing the Civil Liberties Act of 1988, Japanese American reparations — Suggested link: https://commons.wikimedia.org/wiki/Category:Civil_Liberties_Act_of_1988
+8. L05_StopAAPIHate.jpg — Stop AAPI Hate rally or protest, 2021 — Suggested link: https://commons.wikimedia.org/wiki/Category:Stop_AAPI_Hate
+-->
