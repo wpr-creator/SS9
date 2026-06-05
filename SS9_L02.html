@@ -4,848 +4,224 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SS9 L02 — NATIVE AMERICAN PEOPLES: SOVEREIGNTY, SURVIVAL, AND PRESENCE</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Barlow+Condensed:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --earth:        #1c1008;
-    --deep-earth:   #2a1a08;
-    --bark:         #4a2c10;
-    --clay:         #7a4018;
-    --sienna:       #a05a28;
-    --sand:         #c8944a;
-    --pale-sand:    #e8c880;
-    --sage:         #5a6e40;
-    --deep-sage:    #3a4a28;
-    --sky:          #4a6a8a;
-    --parchment:    #f4e8d0;
-    --light-parch:  #fdf6e8;
-    --cream:        #f8f0e0;
-    --accent-red:   #b03030;
-    --text:         #1c0e04;
+    --earth:#1c1008; --deep-earth:#2a1a08; --bark:#4a2c10; --clay:#7a4018; --sienna:#a05a28;
+    --sand:#c8944a; --pale-sand:#e8c880; --sage:#5a6e40; --deep-sage:#3a4a28; --sky:#4a6a8a;
+    --parchment:#f4e8d0; --light-parch:#fdf6e8; --cream:#f8f0e0; --accent-red:#b03030; --text:#1c0e04;
+    --break-blue:#102f3a; --break-orange:#bd4b21; --break-black:#15120f; --break-green:#173827;
   }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'Lora', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-
-  /* ── HEADER ── */
-  header {
-    position: relative;
-    background: var(--earth);
-    overflow: hidden;
-    padding: 64px 24px 54px;
-    text-align: center;
-  }
-  .header-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center 30%;
-    opacity: 0.35;
-  }
-  .header-inner {
-    position: relative;
-    z-index: 2;
-    max-width: 820px;
-    margin: 0 auto;
-  }
-  .course-label {
-    font-family: 'Lora', serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--pale-sand);
-    margin-bottom: 20px;
-  }
-  h1.page-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(34px, 6vw, 60px);
-    font-weight: 900;
-    color: var(--parchment);
-    line-height: 1.12;
-    margin-bottom: 30px;
-    text-shadow: 0 3px 20px rgba(0,0,0,0.65);
-    letter-spacing: 0.02em;
-  }
-  .eq-banner {
-    background: var(--deep-sage);
-    border-left: 6px solid var(--pale-sand);
-    border-right: 6px solid var(--pale-sand);
-    padding: 18px 32px;
-    display: inline-block;
-    max-width: 780px;
-    width: 100%;
-  }
-  .eq-label {
-    font-size: 10px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--pale-sand);
-    opacity: 0.8;
-    margin-bottom: 6px;
-    font-family: 'Lora', serif;
-  }
-  .eq-text {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(14px, 2.3vw, 20px);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.5;
-  }
-
-  /* ── NAV ── */
-  nav.section-nav {
-    background: var(--bark);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.42);
-  }
-  nav.section-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  nav.section-nav ul li a {
-    display: block;
-    padding: 13px 15px;
-    font-family: 'Lora', serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--parchment);
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: background 0.18s, border-color 0.18s, color 0.18s;
-  }
-  nav.section-nav ul li a:hover {
-    background: var(--clay);
-    border-bottom-color: var(--pale-sand);
-    color: var(--pale-sand);
-  }
-
-  /* ── MAIN ── */
-  main {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 22px 70px;
-  }
-
-  /* ── INTRO ── */
-  .intro-block {
-    background: var(--light-parch);
-    border-left: 5px solid var(--sienna);
-    padding: 36px 38px 30px;
-    margin: 50px 0 0;
-    font-size: 19px;
-    line-height: 1.9;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 58px 0 42px;
-  }
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--sand), transparent);
-  }
-  .divider-icon {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-  }
-
-  /* ── SECTIONS ── */
-  h2.section-heading {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(24px, 3.8vw, 34px);
-    font-weight: 700;
-    color: var(--bark);
-    margin-bottom: 24px;
-    line-height: 1.22;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--sand);
-    letter-spacing: 0.02em;
-  }
-  p {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-
-  /* ── VOCAB ── */
-  .vocab {
-    color: var(--accent-red);
-    text-decoration: underline dotted var(--accent-red);
-    cursor: help;
-    position: relative;
-    font-weight: 600;
-  }
-  .vocab .tip {
-    display: none;
-    position: absolute;
-    bottom: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1a1a2e;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 5px;
-    font-size: 15px;
-    line-height: 1.55;
-    z-index: 300;
-    font-style: normal;
-    font-weight: 400;
-    pointer-events: none;
-    max-width: 295px;
-    white-space: normal;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-  }
-  .vocab:hover .tip, .vocab.active .tip { display: block; }
-
-  /* ── IMAGES ── */
-  figure { margin: 32px 0; }
-  figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 3px solid #d8c8a8;
-    box-shadow: 0 4px 22px rgba(28,16,8,0.28);
-  }
-  figure.inset-left  { float: left;  width: 40%; margin: 4px 28px 16px 0; }
-  figure.inset-right { float: right; width: 40%; margin: 4px 0 16px 28px; }
-  .paired-wrap { display: flex; gap: 18px; margin: 32px 0; }
-  .paired-wrap figure { flex: 1; margin: 0; }
-  figcaption {
-    font-size: 13px;
-    font-style: italic;
-    color: var(--clay);
-    margin-top: 8px;
-    line-height: 1.5;
-    text-align: center;
-  }
-  .clearfix::after { content: ''; display: table; clear: both; }
-
-  /* ── PRIMARY SOURCE ── */
-  .primary-source {
-    background: #ede0c4;
-    border-left: 6px solid var(--sienna);
-    padding: 28px 34px 24px;
-    margin: 42px 0;
-  }
-  .primary-source blockquote {
-    font-family: 'Lora', serif;
-    font-size: 22px;
-    line-height: 1.7;
-    color: var(--deep-earth);
-    font-style: italic;
-    margin-bottom: 16px;
-  }
-  .primary-source .attribution {
-    font-size: 14px;
-    font-style: italic;
-    color: var(--clay);
-    margin-bottom: 12px;
-  }
-  .primary-source .narrator {
-    font-size: 16px;
-    color: var(--text);
-    border-top: 1px solid var(--sand);
-    padding-top: 12px;
-    line-height: 1.7;
-    margin-bottom: 0;
-  }
-  .primary-source .student-questions {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px dashed var(--sand);
-  }
-  .primary-source .student-questions p {
-    font-size: 17px;
-    margin-bottom: 12px;
-    color: var(--deep-earth);
-  }
-  .primary-source .student-questions strong { color: var(--sienna); }
-
-  /* ── POLICY TIMELINE ── */
-  .policy-list {
-    list-style: none;
-    padding: 0;
-    margin: 28px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .policy-list li {
-    display: flex;
-    gap: 0;
-    position: relative;
-  }
-  .policy-list li::before {
-    content: '';
-    position: absolute;
-    left: 56px;
-    top: 44px;
-    bottom: -2px;
-    width: 2px;
-    background: var(--sand);
-  }
-  .policy-list li:last-child::before { display: none; }
-  .policy-year {
-    min-width: 56px;
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--pale-sand);
-    background: var(--bark);
-    padding: 10px 6px;
-    text-align: center;
-    line-height: 1.3;
-    align-self: flex-start;
-    margin-top: 2px;
-    flex-shrink: 0;
-  }
-  .policy-body {
-    background: #ede0c4;
-    padding: 12px 18px;
-    margin-left: 2px;
-    margin-bottom: 4px;
-    flex: 1;
-    border-left: 4px solid var(--sienna);
-  }
-  .policy-body strong {
-    font-family: 'Cinzel', serif;
-    font-size: 14px;
-    color: var(--bark);
-    display: block;
-    margin-bottom: 4px;
-  }
-  .policy-body p {
-    font-size: 16px;
-    margin: 0;
-    line-height: 1.7;
-    color: var(--text);
-  }
-
-  /* ── CALLOUT CARD ── */
-  .callout-card {
-    background: var(--deep-earth);
-    color: var(--parchment);
-    padding: 30px 36px;
-    margin: 42px 0;
-    border-top: 4px solid var(--pale-sand);
-    border-bottom: 4px solid var(--pale-sand);
-  }
-  .callout-card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 20px;
-    color: var(--pale-sand);
-    margin-bottom: 14px;
-    line-height: 1.3;
-  }
-  .callout-card p { color: var(--parchment); font-size: 17px; }
-  .callout-card .detail {
-    font-size: 15px;
-    font-style: italic;
-    color: var(--pale-sand);
-    margin-top: 12px;
-  }
-
-  /* ── STILL MATTERS ── */
-  #still-matters {
-    background: var(--deep-earth);
-    padding: 50px 40px 48px;
-    margin: 58px -22px 0;
-  }
-  #still-matters h2 {
-    color: var(--pale-sand);
-    border-bottom-color: var(--sienna);
-  }
-  .sm-headline {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(17px, 2.8vw, 24px);
-    font-weight: 700;
-    color: var(--pale-sand);
-    line-height: 1.45;
-    margin: 26px 0 28px;
-  }
-  #still-matters p { color: var(--parchment); opacity: 0.92; margin-bottom: 20px; }
-  .news-links { list-style: none; padding: 0; margin: 0 0 34px; display: flex; flex-direction: column; gap: 12px; }
-  .news-links li a {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--pale-sand);
-    text-decoration: underline;
-    line-height: 1.5;
-    transition: color 0.18s;
-  }
-  .news-links li a:hover { color: #fff; }
-  .closing-q {
-    font-family: 'Lora', serif;
-    font-size: clamp(18px, 2.8vw, 23px);
-    font-style: italic;
-    color: var(--parchment);
-    line-height: 1.65;
-    border-top: 2px solid var(--sienna);
-    padding-top: 28px;
-    margin-top: 32px;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--earth);
-    border-top: 3px solid var(--sand);
-    padding: 22px 20px;
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: var(--pale-sand);
-    text-transform: uppercase;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 620px) {
-    figure.inset-left, figure.inset-right { float: none; width: 100%; margin: 24px 0; }
-    .paired-wrap { flex-direction: column; }
-    #still-matters { margin: 58px -22px 0; padding: 36px 22px 40px; }
-    .intro-block { padding: 24px 20px; }
-    .primary-source { padding: 20px 18px; }
-    .callout-card { padding: 24px 20px; }
-    .policy-year { font-size: 11px; min-width: 48px; }
-  }
+  *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--text);font-family:'Lora',Georgia,serif;font-size:18px;line-height:1.9}
+  header{position:relative;background:var(--earth);overflow:hidden;padding:64px 24px 54px;text-align:center}
+  .header-bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.35}
+  .header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+  .course-label{font-family:'Lora',serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pale-sand);margin-bottom:20px}
+  h1.page-title{font-family:'Cinzel',Georgia,serif;font-size:clamp(34px,6vw,60px);font-weight:900;color:var(--parchment);line-height:1.12;margin-bottom:30px;text-shadow:0 3px 20px rgba(0,0,0,.65);letter-spacing:.02em;text-transform:uppercase}
+  .eq-banner{background:var(--deep-sage);border-left:6px solid var(--pale-sand);border-right:6px solid var(--pale-sand);padding:18px 32px;display:inline-block;max-width:780px;width:100%}
+  .eq-label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--pale-sand);opacity:.8;margin-bottom:6px;font-family:'Lora',serif}
+  .eq-text{font-family:'Cinzel',serif;font-size:clamp(14px,2.3vw,20px);font-weight:700;color:#fff;line-height:1.5}
+  nav.section-nav{background:var(--bark);position:sticky;top:0;z-index:100;box-shadow:0 3px 14px rgba(0,0,0,.42)}
+  nav.section-nav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;max-width:920px;margin:0 auto;padding:0}
+  nav.section-nav a{display:block;padding:13px 15px;font-family:'Lora',serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--parchment);text-decoration:none;border-bottom:3px solid transparent;transition:background .18s,border-color .18s,color .18s}
+  nav.section-nav a:hover{background:var(--clay);border-bottom-color:var(--pale-sand);color:var(--pale-sand)}
+  #lexile-toggle{display:block;margin:20px auto 28px;padding:10px 24px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:2px solid var(--sienna);background:transparent;color:var(--sienna);font-family:'Cinzel',serif;font-weight:700;transition:background .2s,color .2s}
+  #lexile-toggle:hover{background:var(--sienna);color:var(--light-parch)}
+  .para-simple{display:none} body.simplified .para-standard{display:none} body.simplified .para-simple{display:block}
+  .toc-sidebar{position:fixed;right:calc(50% - 570px);top:50%;transform:translateY(-50%);width:155px;padding:14px 12px;font-size:12px;line-height:1.7;z-index:50;background:rgba(42,26,8,.88);border-left:2px solid rgba(232,200,128,.35)}
+  .toc-sidebar .toc-label{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--pale-sand);display:block;margin-bottom:10px}
+  .toc-sidebar a{display:block;color:#d8c8a8;text-decoration:none;padding:3px 0;font-size:11px;letter-spacing:.05em;transition:color .2s}
+  .toc-sidebar a.active,.toc-sidebar a:hover{color:#fff;font-weight:600}
+  @media(max-width:1100px){.toc-sidebar{display:none}}
+  main{max-width:820px;margin:0 auto;padding:0 22px 70px}
+  .intro-block{background:var(--light-parch);border-left:5px solid var(--sienna);padding:36px 38px 30px;margin:50px 0 0;font-size:19px;line-height:1.9}
+  .divider{display:flex;align-items:center;gap:14px;margin:58px 0 42px}.divider::before,.divider::after{content:'';flex:1;height:2px;background:linear-gradient(to right,transparent,var(--sand),transparent)}.divider-icon{width:36px;height:36px;flex-shrink:0}
+  h2.section-heading{font-family:'Cinzel',serif;font-size:clamp(24px,3.8vw,34px);font-weight:700;color:var(--bark);margin-bottom:24px;line-height:1.22;padding-bottom:10px;border-bottom:3px solid var(--sand);letter-spacing:.02em;text-transform:uppercase}
+  p{margin-bottom:20px;font-size:18px;line-height:1.9}
+  .vocab{color:var(--accent-red);text-decoration:underline dotted var(--accent-red);cursor:help;position:relative;font-weight:600}.vocab .tip{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:10px 16px;border-radius:5px;font-size:15px;line-height:1.55;z-index:300;font-style:normal;font-weight:400;pointer-events:none;max-width:295px;white-space:normal;box-shadow:0 4px 20px rgba(0,0,0,.45)}.vocab:hover .tip,.vocab.active .tip{display:block}.vocab-red{color:var(--accent-red)}
+  figure{margin:32px 0}figure img{width:100%;height:auto;display:block;border:3px solid #d8c8a8;box-shadow:0 4px 22px rgba(28,16,8,.28)}figure.inset-left{float:left;width:40%;margin:4px 28px 16px 0}figure.inset-right{float:right;width:40%;margin:4px 0 16px 28px}.paired-wrap{display:flex;gap:18px;margin:32px 0}.paired-wrap figure{flex:1;margin:0}figcaption{font-size:13px;font-style:italic;color:var(--clay);margin-top:8px;line-height:1.5;text-align:center}.clearfix::after{content:'';display:table;clear:both}
+  .primary-source{background:#ede0c4;border-left:6px solid var(--sienna);padding:28px 34px 24px;margin:42px 0}.primary-source blockquote{font-family:'Lora',serif;font-size:22px;line-height:1.7;color:var(--deep-earth);font-style:italic;margin-bottom:16px}.primary-source .attribution{font-size:14px;font-style:italic;color:var(--clay);margin-bottom:12px}.primary-source .narrator{font-size:16px;color:var(--text);border-top:1px solid var(--sand);padding-top:12px;line-height:1.7;margin-bottom:0}.primary-source .student-questions{margin-top:20px;padding-top:16px;border-top:1px dashed var(--sand)}.primary-source .student-questions p{font-size:17px;margin-bottom:12px;color:var(--deep-earth)}.primary-source .student-questions strong{color:var(--sienna)}
+  .policy-list{list-style:none;padding:0;margin:28px 0;display:flex;flex-direction:column;gap:0}.policy-list li{display:flex;gap:0;position:relative}.policy-list li::before{content:'';position:absolute;left:56px;top:44px;bottom:-2px;width:2px;background:var(--sand)}.policy-list li:last-child::before{display:none}.policy-year{min-width:56px;font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--pale-sand);background:var(--bark);padding:10px 6px;text-align:center;line-height:1.3;align-self:flex-start;margin-top:2px;flex-shrink:0}.policy-body{background:#ede0c4;padding:12px 18px;margin-left:2px;margin-bottom:4px;flex:1;border-left:4px solid var(--sienna)}.policy-body strong{font-family:'Cinzel',serif;font-size:14px;color:var(--bark);display:block;margin-bottom:4px}.policy-body p{font-size:16px;margin:0;line-height:1.7;color:var(--text)}
+  .callout-card{background:var(--deep-earth);color:var(--parchment);padding:30px 36px;margin:42px 0;border-top:4px solid var(--pale-sand);border-bottom:4px solid var(--pale-sand)}.callout-card h3{font-family:'Cinzel',serif;font-size:20px;color:var(--pale-sand);margin-bottom:14px;line-height:1.3;text-transform:uppercase}.callout-card p{color:var(--parchment);font-size:17px}.callout-card .detail{font-size:15px;font-style:italic;color:var(--pale-sand);margin-top:12px}
+  .brain-break{font-family:'Barlow Condensed',Impact,sans-serif;margin:44px -10px;padding:36px 44px;position:relative;overflow:hidden}.bb-label{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-size:12px;font-weight:900;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.86}.bb-text{font-family:'Barlow Condensed',Impact,sans-serif;font-size:24px;font-weight:600;line-height:1.55;margin:0}.dyk-break{background:var(--break-blue);color:#fff;border-left:6px solid #f5c84b}.dyk-break .bb-label{color:#f5c84b}.ff-break{background:#15120f;color:#fff;padding:36px 40px;margin:0 -10px 44px;border-top:3px solid #f5c84b;border-bottom:3px solid #f5c84b;text-align:center}.ff-break .bb-label{text-align:center;margin-bottom:24px;color:#f5c84b}.ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px}.ff-item{text-align:center;padding:8px 12px}.ff-number{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-size:58px;font-weight:900;color:#f5c84b;line-height:1;margin-bottom:8px}.ff-desc{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f7ead0;max-width:145px;margin:0 auto;line-height:1.35}.as-break{background:#173827;color:#fff;padding:44px 50px;margin:44px -10px;border-top:3px solid #f5c84b;border-bottom:3px solid #f5c84b;text-align:center}.as-break .bb-label{color:#f5c84b}.as-image{max-width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(245,200,75,.7);box-shadow:0 8px 32px rgba(0,0,0,.5)}.as-caption{font-family:'Barlow Condensed',Impact,sans-serif;font-style:normal;font-size:14px;color:#f7ead0;line-height:1.5;margin-bottom:28px;display:block}.as-question{font-family:'Barlow Condensed',Impact,sans-serif;font-size:27px;font-style:italic;font-weight:600;color:#fff;line-height:1.45;max-width:620px;margin:0 auto}.tn-break{background:#102f3a;color:#fff;padding:36px 44px;margin:30px 0 28px}.tn-break .bb-label{color:#f5c84b;text-align:center;display:block;margin-bottom:20px}.tn-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}.tn-item{text-align:center}.tn-era-label{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#f5c84b;margin-bottom:10px;font-weight:900}.tn-item img{width:100%;display:block;border:2px solid rgba(245,200,75,.55)}.tn-caption{font-family:'Barlow Condensed',Impact,sans-serif;font-size:13px;font-style:italic;color:#f7ead0;margin-top:8px;line-height:1.4}.tn-question{font-family:'Barlow Condensed',Impact,sans-serif;font-size:22px;font-style:italic;font-weight:600;text-align:center;color:#fff;margin-top:16px;line-height:1.45}
+  #still-matters{background:var(--deep-earth);padding:50px 40px 48px;margin:58px -22px 0}#still-matters h2{color:#fff;border-bottom-color:var(--sienna)}.sm-headline{font-family:'Cinzel',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:#fff;line-height:1.45;margin:26px 0 28px}.closing-q{font-family:'Lora',serif;font-size:clamp(19px,2.8vw,24px);font-style:italic;color:#fff;line-height:1.65;border-top:2px solid var(--sienna);padding-top:28px;margin-top:32px}footer{background:var(--earth);border-top:3px solid var(--sand);padding:22px 20px;text-align:center;font-family:'Lora',serif;font-size:12px;letter-spacing:.1em;color:var(--pale-sand);text-transform:uppercase}
+  @media(max-width:620px){figure.inset-left,figure.inset-right{float:none;width:100%;margin:24px 0}.paired-wrap{flex-direction:column}#still-matters{margin:58px -22px 0;padding:36px 22px 40px}.intro-block{padding:24px 20px}.primary-source{padding:20px 18px}.callout-card{padding:24px 20px}.policy-year{font-size:11px;min-width:48px}.brain-break{padding:28px 22px;margin:36px 0}.as-break{padding:32px 22px}.as-question{font-size:22px}.tn-pair{grid-template-columns:1fr}.tn-break{padding:28px 22px}.ff-number{font-size:44px}}
 </style>
 </head>
 <body>
-
-<!-- ══════════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════════ -->
 <header>
   <!--
     FILENAME: L02_HeaderBG.jpg
     PLACE IN: images/L02/
-    FIND: Sweeping landscape of California or the American Southwest — canyon, valley, or coastal mesa — ideally a pre-contact or historic landscape photograph suggesting deep Indigenous presence. Alternatively: a wide shot of a Native American gathering or ceremony, early 20th century, public domain.
+    FIND: Sweeping landscape of California or the American Southwest, canyon, valley, or coastal mesa, ideally public domain and suggesting deep Indigenous presence.
     SEARCH: California landscape Indigenous land Wikimedia Commons OR Native American gathering photograph Library of Congress
     LINK: https://www.loc.gov/photos/?q=native+american+landscape+california (suggested, not guaranteed)
   -->
   <div class="header-bg" style="background-image: url('images/L02/L02_HeaderBG.jpg');"></div>
   <div class="header-inner">
-    <p class="course-label">Ethnic Studies &mdash; Lesson 02</p>
-    <h1 class="page-title">Native American Peoples:<br>Sovereignty, Survival, and Presence</h1>
-    <div class="eq-banner">
-      <p class="eq-label">Essential Question</p>
-      <p class="eq-text">How did Indigenous peoples survive colonization, and how do they assert their sovereignty today?</p>
-    </div>
+    <p class="course-label">ETHNIC STUDIES — LESSON 02</p>
+    <h1 class="page-title">NATIVE AMERICAN PEOPLES:<br>SOVEREIGNTY, SURVIVAL, AND PRESENCE</h1>
+    <div class="eq-banner"><p class="eq-label">ESSENTIAL QUESTION</p><p class="eq-text">How did Indigenous peoples survive colonization, and how do they assert their sovereignty today?</p></div>
   </div>
 </header>
-
-<!-- ══════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════ -->
-<nav class="section-nav" aria-label="Page sections">
-  <ul>
-    <li><a href="#before-contact">Before Contact</a></li>
-    <li><a href="#colonization">What Colonization Did</a></li>
-    <li><a href="#resistance">Resistance and Survival</a></li>
-    <li><a href="#sovereignty-now">Sovereignty Today</a></li>
-    <li><a href="#still-matters">How This Still Matters Today</a></li>
-  </ul>
-</nav>
-
-<!-- ══════════════════════════════════════════════
-     MAIN
-══════════════════════════════════════════════ -->
+<nav class="section-nav" aria-label="Page sections"><ul><li><a href="#before-contact">BEFORE CONTACT</a></li><li><a href="#colonization">COLONIZATION</a></li><li><a href="#resistance">RESISTANCE</a></li><li><a href="#sovereignty-now">SOVEREIGNTY TODAY</a></li><li><a href="#local-history">LOCAL HISTORY</a></li><li><a href="#still-matters">HOW THIS STILL MATTERS</a></li></ul></nav>
+<button id="lexile-toggle">SIMPLIFY TEXT</button>
+<aside class="toc-sidebar" aria-label="Table of contents"><span class="toc-label">ON THIS PAGE</span><a href="#before-contact">BEFORE CONTACT</a><a href="#colonization">COLONIZATION</a><a href="#resistance">RESISTANCE</a><a href="#sovereignty-now">SOVEREIGNTY TODAY</a><a href="#local-history">LOCAL HISTORY</a><a href="#still-matters">STILL MATTERS</a></aside>
 <main>
-
-  <!-- INTRO -->
   <div class="intro-block">
-    <p>In 1851, a woman named Toypurina was remembered in California as a fighter. Twenty years earlier, she had organized a revolt against Mission San Gabriel, where Tongva people had been forced to live, labor, and give up their language and religion. She was caught, put on trial, and exiled. But she had stood in front of her captors and told them exactly why she had acted. Her name was not in any textbook for the next 150 years. This course is going to change that.</p>
+    <p class="para-standard">In 1851, a woman named Toypurina was remembered in California as a fighter. Twenty years earlier, she had helped organize a revolt against Mission San Gabriel, where Tongva people had been forced to live, labor, and give up their language and religion. She was caught, put on trial, and exiled. But she stood in front of her captors and told them exactly why she had acted. Her name was left out of most textbooks for the next 150 years.</p>
+    <p class="para-simple">In 1851, people in California still remembered Toypurina as a fighter. Years earlier, she helped plan a revolt against Mission San Gabriel. Tongva people there were forced to work and give up parts of their culture. Toypurina was caught and sent away. But she spoke clearly about why she fought.</p>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 1 — BEFORE CONTACT
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/>
-      <circle cx="18" cy="18" r="6" fill="#c8944a"/>
-      <line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/>
-      <line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/>
-      <line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/>
-      <line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/>
-    </svg>
-  </div>
+  <div class="divider"><svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/><circle cx="18" cy="18" r="6" fill="#c8944a"/><line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/><line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/><line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/><line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/></svg></div>
 
   <section id="before-contact">
-    <h2 class="section-heading">Before Contact: A World Already Full</h2>
-
+    <h2 class="section-heading">BEFORE CONTACT: A WORLD ALREADY FULL</h2>
     <!--
       FILENAME: L02_NativeTradeNetwork.jpg
       PLACE IN: images/L02/
-      FIND: Map or illustration of pre-contact Native American trade routes or tribal territories in North America, public domain
+      FIND: Map or illustration of pre-contact Native American trade routes or tribal territories in North America, public domain.
       SEARCH: Native American trade routes map pre-contact North America Wikimedia Commons
       LINK: https://commons.wikimedia.org/wiki/Category:Pre-Columbian_North_America (suggested, not guaranteed)
     -->
-    <figure class="inset-right">
-      <img src="images/L02/L02_NativeTradeNetwork.jpg" alt="Map of pre-contact Native American trade routes across North America">
-      <figcaption>Pre-contact Indigenous trade networks across North America. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
+    <figure class="inset-right"><img src="images/L02/L02_NativeTradeNetwork.jpg" alt="Map of pre-contact Native American trade routes across North America"><figcaption>Pre-contact Indigenous trade networks across North America. Source: Wikimedia Commons.</figcaption></figure>
     <div class="clearfix">
-      <p>When European explorers arrived in the Americas in the late 1400s, they did not find an empty land. They found hundreds of distinct nations, each with its own government, language, trade network, and way of life. Historians estimate that between 50 and 100 million people lived in the Americas before European contact. In what is now California alone, there were over 100 different tribes and approximately 300,000 people speaking more than 100 distinct languages.</p>
-
-      <p>These were not simple societies. The Haudenosaunee Confederacy, also called the Iroquois League, had a democratic constitution that influenced the thinking of some American founders. The Mississippian cultures of the Southeast built cities with tens of thousands of residents. The Pueblo peoples of the Southwest built multi-story stone apartment complexes that are still standing today. California nations like the Chumash built oceangoing canoes and traded across hundreds of miles of coastline.</p>
-
-      <p>Every nation had its own relationship with the land. For most Indigenous peoples, land was not something you could own the way Europeans owned property. It was something you belonged to: something you had responsibility for, lived with, and passed on. That idea would become one of the central points of conflict when European settlers arrived.</p>
-
-      <p>Understanding this world matters because it pushes back against a common mistake: the idea that Indigenous peoples were primitive or backward before Europeans arrived. The evidence says otherwise. What colonization destroyed was not a simple world. It was a complex, thriving one.</p>
+      <p class="para-standard">When European explorers arrived in the Americas in the late 1400s, they did not find an empty land. They found hundreds of distinct nations, each with its own government, language, trade network, and way of life. Historians estimate that between 50 and 100 million people lived in the Americas before European contact. In what is now California alone, there were over 100 different tribes and about 300,000 people speaking more than 100 distinct languages.</p>
+      <p class="para-simple">When Europeans arrived in the Americas, the land was not empty. Many Native nations already lived here. Each nation had its own language, leaders, trade, and way of life. In California, more than 100 tribes lived here before European contact. People spoke more than 100 different languages.</p>
+      <p class="para-standard">These were not simple societies. The Haudenosaunee Confederacy, also called the Iroquois League, had a democratic constitution that influenced some American founders. The Mississippian cultures of the Southeast built cities with tens of thousands of residents. The Pueblo peoples of the Southwest built multi-story stone homes that are still standing today. California nations like the Chumash built oceangoing canoes and traded across hundreds of miles of coastline.</p>
+      <p class="para-simple">These societies were complex. The Haudenosaunee had a system of government that influenced some American leaders. Pueblo peoples built stone homes with many floors. Chumash people built canoes that could travel on the ocean. Native nations traded across long distances.</p>
+      <p class="para-standard">Every nation had its own relationship with the land. For many Indigenous peoples, land was not something you could own the way Europeans owned property. It was something you belonged to: something you cared for, lived with, and passed on. That difference became one of the biggest conflicts when European settlers arrived.</p>
+      <p class="para-simple">Native nations had deep relationships with the land. Many did not see land as something a person could simply buy and own. They saw land as something to care for and pass on. This idea clashed with European ideas about property.</p>
+      <p class="para-standard">Understanding this world matters because it pushes back against a common mistake: the idea that Indigenous peoples were primitive before Europeans arrived. The evidence says otherwise. What colonization damaged was not a simple world. It was a complex, thriving one.</p>
+      <p class="para-simple">This history matters because it corrects a false idea. Native peoples were not primitive before Europeans arrived. Their communities were complex and strong. Colonization harmed a world that was already full of life.</p>
     </div>
-
-    <!-- PRIMARY SOURCE 1 -->
     <div class="primary-source">
       <blockquote>"We did not think of the great open plains, the beautiful rolling hills, and the winding streams with tangled growth as 'wild.' Only to the white man was nature a 'wilderness.'"</blockquote>
       <p class="attribution">Luther Standing Bear (Lakota), <em>Land of the Spotted Eagle</em>, 1933.</p>
-      <p class="narrator">Standing Bear grew up on the Great Plains before the reservation era and spent his life pushing back against the idea that Native peoples were uncivilized — he argued that it was the settlers who failed to understand the land they were entering.</p>
-      <div class="student-questions">
-        <p><strong>Question 1:</strong> What is Standing Bear saying about the difference between how Native peoples and European settlers saw the land? Use a specific detail from your reading to support your answer.</p>
-        <p><strong>Question 2:</strong> How does this quote connect to the essential question about sovereignty and survival?</p>
-      </div>
+      <p class="narrator">Standing Bear argued that settlers often failed to understand the land they were entering.</p>
+      <div class="student-questions"><p><strong>Question 1:</strong> What is Standing Bear saying about the difference between how Native peoples and European settlers saw the land?</p><p><strong>Question 2:</strong> How does this quote connect to the essential question about sovereignty and survival?</p></div>
     </div>
-
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 2 — WHAT COLONIZATION DID
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/>
-      <circle cx="18" cy="18" r="6" fill="#c8944a"/>
-      <line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/>
-      <line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/>
-      <line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/>
-      <line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/>
-    </svg>
-  </div>
+  <div class="brain-break dyk-break"><span class="bb-label">DID YOU KNOW</span><p class="bb-text">The Chumash built plank canoes called tomols that could cross open ocean. Some carried people, trade goods, and stories between the mainland and the Channel Islands long before California was called California.</p></div>
+  <div class="brain-break ff-break"><span class="bb-label">FAST FACTS</span><div class="ff-grid"><div class="ff-item"><span class="ff-number">100+</span><span class="ff-desc">CALIFORNIA TRIBES BEFORE CONTACT</span></div><div class="ff-item"><span class="ff-number">300,000</span><span class="ff-desc">NATIVE CALIFORNIANS BEFORE MISSIONS</span></div><div class="ff-item"><span class="ff-number">21</span><span class="ff-desc">SPANISH MISSIONS BUILT</span></div><div class="ff-item"><span class="ff-number">95%</span><span class="ff-desc">POPULATION LOSS BY 1900</span></div></div></div>
+
+  <div class="divider"><svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/><circle cx="18" cy="18" r="6" fill="#c8944a"/><line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/><line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/><line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/><line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/></svg></div>
 
   <section id="colonization">
-    <h2 class="section-heading">What Colonization Actually Did</h2>
-
+    <h2 class="section-heading">WHAT COLONIZATION ACTUALLY DID</h2>
     <!--
       FILENAME: L02_CaliforniaMission.jpg
       PLACE IN: images/L02/
-      FIND: California mission building exterior, preferably Mission San Gabriel or Mission San Diego, 19th or early 20th century photograph, public domain
+      FIND: California mission building exterior, preferably Mission San Gabriel or Mission San Diego, 19th or early 20th century photograph, public domain.
       SEARCH: California mission San Gabriel photograph 19th century Library of Congress Wikimedia Commons
       LINK: https://www.loc.gov/photos/?q=california+mission+san+gabriel (suggested, not guaranteed)
     -->
-    <figure>
-      <img src="images/L02/L02_CaliforniaMission.jpg" alt="California mission building, late 19th or early 20th century">
-      <figcaption>A California mission, the Spanish colonial system that forced tens of thousands of Native Californians into labor and religious conversion. Source: Library of Congress.</figcaption>
-    </figure>
-
-    <p><span class="vocab">Colonization<span class="tip">When one group of people takes control of another people's land, government, and way of life, usually by force, and uses their resources for their own benefit.</span></span> in California began in 1769 when Spanish missionaries built the first mission at San Diego. Over the next 54 years, Spain built 21 missions along the California coast. The mission system forced Native Californians to live and work inside mission walls, converting to Christianity, giving up their languages, and laboring for no pay. Those who tried to leave were hunted down and brought back.</p>
-
-    <p>The results were catastrophic. Before the missions, California had approximately 300,000 Indigenous people. By 1900, that number had fallen to around 15,000. Disease killed many. But so did starvation, forced labor, violence, and despair. Historians call this a genocide. The Native population of California dropped by 95 percent in roughly 130 years.</p>
-
-    <p>After the missions came U.S. statehood in 1850. The new California government passed a law called the Act for the Government and Protection of Indians. Despite its name, this law allowed white settlers to declare Native children "vagrant" and force them into years of unpaid labor. It created a legal system of slavery that lasted until 1863.</p>
-
-    <p>Alongside all of this was a legal framework that made land seizure seem legitimate. In 1823, the U.S. Supreme Court used a concept called the <strong>Doctrine of Discovery</strong> to rule that European nations had automatically gained the right to own land just by "discovering" it, even if people were already living there. This doctrine became the legal backbone of U.S. Indian law for the next two centuries. It was only formally repudiated by the Supreme Court in 2023.</p>
-
+    <figure><img src="images/L02/L02_CaliforniaMission.jpg" alt="California mission building, late 19th or early 20th century"><figcaption>A California mission. Source: Library of Congress.</figcaption></figure>
+    <p class="para-standard"><span class="vocab">Colonization<span class="tip">When one group takes control of another people's land, government, and way of life, usually by force.</span></span> in California began in 1769 when Spanish missionaries built the first mission at San Diego. Over the next 54 years, Spain built 21 missions along the California coast. The mission system forced Native Californians to live and work inside mission walls, convert to Christianity, give up their languages, and labor for no pay. People who tried to leave could be hunted down and brought back.</p>
+    <p class="para-simple"><span class="vocab-red">Colonization</span> in California began in 1769. Spanish missionaries built the first mission at San Diego. Over time, Spain built 21 missions. Native Californians were forced to work, convert to Christianity, and give up their languages. People who left could be forced back.</p>
+    <p class="para-standard">The results were catastrophic. Before the missions, California had about 300,000 Indigenous people. By 1900, that number had fallen to around 15,000. Disease killed many people. So did starvation, forced labor, violence, and despair. Historians call this a genocide because the Native population of California dropped by about 95 percent in roughly 130 years.</p>
+    <p class="para-simple">The results were terrible. Before the missions, about 300,000 Indigenous people lived in California. By 1900, only about 15,000 remained. Disease killed many people. Forced labor, violence, hunger, and grief also killed many people. Historians call this a genocide.</p>
+    <p class="para-standard">After the missions came U.S. statehood in 1850. California passed a law called the Act for the Government and Protection of Indians. Despite its name, the law allowed white settlers to declare Native children "vagrant" and force them into years of unpaid labor. It created a legal system of slavery that lasted until 1863.</p>
+    <p class="para-simple">California became a U.S. state in 1850. Soon after, the state passed a law that claimed to protect Native people. It did the opposite. White settlers could take Native children and force them to work without pay. This system lasted until 1863.</p>
+    <p class="para-standard">A legal idea called the Doctrine of Discovery also made land seizure seem legitimate. In 1823, the U.S. Supreme Court ruled that European nations had gained the right to own land by "discovering" it, even when people already lived there. That idea became part of U.S. Indian law for two centuries.</p>
+    <p class="para-simple">The Doctrine of Discovery was another harmful idea. It said European countries could claim land just by "discovering" it. This ignored the Native peoples already living there. The U.S. used this idea in law for a long time.</p>
     <!--
       FILENAME: L02_IndianRemovalMap.jpg
       PLACE IN: images/L02/
-      FIND: Map showing Indian removal routes, Trail of Tears, or forced relocation of Native nations, public domain
+      FIND: Map showing Indian removal routes, Trail of Tears, or forced relocation of Native nations, public domain.
       SEARCH: Indian removal map Trail of Tears 1830s Wikimedia Commons Library of Congress
       LINK: https://commons.wikimedia.org/wiki/Category:Indian_Removal_Act (suggested, not guaranteed)
     -->
-    <figure class="inset-left">
-      <img src="images/L02/L02_IndianRemovalMap.jpg" alt="Map of Indian removal routes and the Trail of Tears, 1830s">
-      <figcaption>Forced removal routes of Native nations under the Indian Removal Act of 1830. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
+    <figure class="inset-left"><img src="images/L02/L02_IndianRemovalMap.jpg" alt="Map of Indian removal routes and the Trail of Tears, 1830s"><figcaption>Forced removal routes under the Indian Removal Act of 1830. Source: Wikimedia Commons.</figcaption></figure>
     <div class="clearfix">
-      <p>The Indian Removal Act of 1830 forced tens of thousands of Native people from their homelands in the Southeast to territory west of the Mississippi River. The Cherokee called their forced march the "Trail Where They Cried." Historians know it as the Trail of Tears. Approximately 4,000 Cherokee people died on that journey. Thousands more from other nations died on similar forced marches.</p>
-
-      <p>What the missions, the Removal Act, and the Doctrine of Discovery had in common was this: they all treated Indigenous peoples as obstacles to be moved rather than as sovereign nations with rights. That assumption shaped U.S. policy for well over a century. The consequences are still felt today in every Native community in this country.</p>
-
-      <p>This is also a San Diego story. The Kumeyaay people, whose territory covered what is now San Diego County and northern Baja California, were among the first Native peoples in California to face Spanish missions. Mission San Diego de Alcal&aacute; was built on Kumeyaay land in 1769. The Kumeyaay burned it to the ground in 1775. That resistance was not a footnote. It was a declaration.</p>
+      <p class="para-standard">The Indian Removal Act of 1830 forced tens of thousands of Native people from their homelands in the Southeast to territory west of the Mississippi River. The Cherokee called their forced march the "Trail Where They Cried." Historians know it as the Trail of Tears. About 4,000 Cherokee people died on that journey. Thousands more from other nations died on similar forced marches.</p>
+      <p class="para-simple">The Indian Removal Act of 1830 forced many Native people to leave their homelands. They had to move west of the Mississippi River. The Cherokee called their forced march the "Trail Where They Cried." About 4,000 Cherokee people died. Other Native nations suffered too.</p>
+      <p class="para-standard">The missions, the Removal Act, and the Doctrine of Discovery all treated Indigenous peoples as obstacles to be moved instead of sovereign nations with rights. That assumption shaped U.S. policy for more than a century. The consequences are still felt today in Native communities.</p>
+      <p class="para-simple">These policies had the same message. They treated Native peoples like problems to move out of the way. They did not treat Native nations as governments with rights. Native communities still feel the effects today.</p>
+      <p class="para-standard">This is also a San Diego story. The Kumeyaay people, whose territory covered what is now San Diego County and northern Baja California, were among the first Native peoples in California to face Spanish missions. Mission San Diego de Alcalá was built on Kumeyaay land in 1769. The Kumeyaay burned it to the ground in 1775. That resistance was not a footnote. It was a declaration.</p>
+      <p class="para-simple">This history happened in San Diego too. The Kumeyaay lived in what is now San Diego County and northern Baja California. Mission San Diego was built on Kumeyaay land in 1769. In 1775, Kumeyaay people burned it down. That was resistance.</p>
     </div>
-
-    <!-- PRIMARY SOURCE 2 -->
-    <div class="primary-source">
-      <blockquote>"Our nation was powerful. We were once a happy people. The white man seems to want to swallow us up; to make slaves of us."</blockquote>
-      <p class="attribution">Tecumseh (Shawnee), speech to Governor William Henry Harrison, Vincennes, Indiana, August 1810.</p>
-      <p class="narrator">Tecumseh spent his life building a confederation of Native nations to resist U.S. expansion into their homelands; this speech was delivered directly to the man who would later become president and who had spent years pressuring Native nations to give up their land through treaties.</p>
-      <div class="student-questions">
-        <p><strong>Question 1:</strong> Tecumseh used the word "slaves." Based on what you have read about the California mission system and the Indian Removal Act, do you think that word fits? Explain your thinking.</p>
-        <p><strong>Question 2:</strong> Tecumseh was speaking directly to a U.S. government official. What was he demanding, and how does that connect to the idea of <span class="vocab" style="color: var(--accent-red); text-decoration: underline dotted var(--accent-red);">sovereignty<span class="tip">The right of a nation or people to govern themselves and make their own decisions, without being controlled by another government.</span></span>?</p>
-      </div>
-    </div>
-
+    <div class="primary-source"><blockquote>"Our nation was powerful. We were once a happy people. The white man seems to want to swallow us up; to make slaves of us."</blockquote><p class="attribution">Tecumseh (Shawnee), speech to Governor William Henry Harrison, August 1810.</p><p class="narrator">Tecumseh built alliances among Native nations to resist U.S. expansion.</p><div class="student-questions"><p><strong>Question 1:</strong> Tecumseh used the word "slaves." Based on the lesson, why might he have used that word?</p><p><strong>Question 2:</strong> What was Tecumseh demanding, and how does that connect to <span class="vocab">sovereignty<span class="tip">The right of a nation or people to govern themselves and make their own decisions.</span></span>?</p></div></div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 3 — RESISTANCE AND SURVIVAL
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/>
-      <circle cx="18" cy="18" r="6" fill="#c8944a"/>
-      <line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/>
-      <line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/>
-      <line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/>
-      <line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/>
-    </svg>
-  </div>
+  <div class="divider"><svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/><circle cx="18" cy="18" r="6" fill="#c8944a"/><line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/><line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/><line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/><line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/></svg></div>
 
   <section id="resistance">
-    <h2 class="section-heading">Resistance and Survival Across Centuries</h2>
+    <h2 class="section-heading">RESISTANCE AND SURVIVAL ACROSS CENTURIES</h2>
+    <p class="para-standard">Indigenous peoples never simply accepted what was done to them. At every stage of colonization and U.S. expansion, Native communities found ways to resist, adapt, organize, and survive. That is not a small detail. It is the central fact of Indigenous history in America.</p>
+    <p class="para-simple">Indigenous peoples did not simply accept what happened to them. Native communities resisted, adapted, organized, and survived. That is one of the most important facts in Native American history.</p>
+    <!-- FILENAME: L02_TecumsehPortrait.jpg PLACE IN: images/L02/ FIND: Portrait of Tecumseh, Shawnee leader, early 19th century, public domain SEARCH: Tecumseh Shawnee portrait Wikimedia Commons LINK: https://commons.wikimedia.org/wiki/File:Tecumseh02.jpg (suggested, not guaranteed) -->
+    <!-- FILENAME: L02_AIMProtest.jpg PLACE IN: images/L02/ FIND: American Indian Movement protest or Wounded Knee 1973 occupation, public domain or CC licensed SEARCH: American Indian Movement Wounded Knee 1973 protest Wikimedia Commons LINK: https://commons.wikimedia.org/wiki/Category:Wounded_Knee_incident_(1973) (suggested, not guaranteed) -->
+    <div class="paired-wrap"><figure><img src="images/L02/L02_TecumsehPortrait.jpg" alt="Portrait of Tecumseh, Shawnee leader, early 19th century"><figcaption>Tecumseh, Shawnee leader, ca. 1810. Source: Wikimedia Commons.</figcaption></figure><figure><img src="images/L02/L02_AIMProtest.jpg" alt="American Indian Movement occupation of Wounded Knee, 1973"><figcaption>American Indian Movement members at Wounded Knee, 1973. Source: Wikimedia Commons.</figcaption></figure></div>
+    <p class="para-standard">Tecumseh organized one of the largest Native resistance movements in history in the early 1800s. He argued that no single nation could sell land that belonged to Native peoples collectively. He traveled thousands of miles building alliances from the Great Lakes to the Gulf of Mexico. He was killed in battle in 1813, but the confederacy he built showed what organized resistance could look like.</p>
+    <p class="para-simple">Tecumseh organized a large Native resistance movement in the early 1800s. He said no single Native nation could sell land that belonged to many Native peoples. He traveled far to build alliances. He died in battle, but his work showed the power of Native unity.</p>
+    <p class="para-standard">In the late 1800s, as reservation life destroyed traditional ways of living, the Ghost Dance movement spread across the Plains nations. It was a spiritual practice that prophesied the return of the old world and the departure of settlers. The U.S. government was so threatened by it that soldiers were sent to stop the dances. That decision led directly to the Wounded Knee Massacre of 1890, where the U.S. Army killed about 300 Lakota men, women, and children.</p>
+    <p class="para-simple">In the late 1800s, the Ghost Dance spread among Plains nations. It was a spiritual dance about hope and renewal. U.S. leaders feared it. Soldiers were sent to stop the dances. This led to the Wounded Knee Massacre in 1890, where about 300 Lakota people were killed.</p>
+    <p class="para-standard">Resistance did not stop there. In 1968, the American Indian Movement, known as AIM, was founded in Minneapolis to fight police brutality against urban Native communities. In 1973, AIM members occupied Wounded Knee for 71 days to protest broken <span class="vocab">treaty<span class="tip">A formal agreement between two governments; the U.S. signed over 400 treaties with Native nations, and many were later broken.</span></span> obligations and corrupt tribal leadership backed by the federal government. The occupation made international news and forced the U.S. to negotiate.</p>
+    <p class="para-simple">Resistance continued in the 1900s. In 1968, Native activists created the American Indian Movement, or AIM. They fought police brutality and broken treaty promises. In 1973, AIM occupied Wounded Knee for 71 days. The protest forced the U.S. government to pay attention.</p>
+    <p class="para-standard">Native communities also preserved their languages, ceremonies, and cultures in quiet ways. Families passed down oral traditions, maintained relationships with land, and protected knowledge until it could be reclaimed openly. Survival is also a form of resistance.</p>
+    <p class="para-simple">Native survival also happened quietly. Families kept languages, stories, ceremonies, and knowledge alive. They protected culture even when it was dangerous. Survival itself became resistance.</p>
+    <!-- FILENAME: L02_FederalPolicyTimeline.jpg PLACE IN: images/L02/ FIND: Image related to federal Indian policy, Bureau of Indian Affairs document, Dawes Act, or termination policy document, public domain SEARCH: Bureau of Indian Affairs document policy Wikimedia Commons Library of Congress LINK: https://www.loc.gov/photos/?q=bureau+of+indian+affairs (suggested, not guaranteed) -->
+    <figure class="inset-right"><img src="images/L02/L02_FederalPolicyTimeline.jpg" alt="Bureau of Indian Affairs document or federal Indian policy record"><figcaption>Federal records related to U.S. Indian policy, 19th-20th century. Source: Library of Congress.</figcaption></figure>
+    <div class="clearfix"><p class="para-standard">Federal Indian policy shifted dramatically over the decades, and almost every shift hurt Native communities in a different way. The timeline below shows the main phases:</p><p class="para-simple">U.S. policy toward Native nations changed many times. Most changes harmed Native communities. The timeline shows the main phases.</p></div>
+    <ul class="policy-list"><li><div class="policy-year">1830s</div><div class="policy-body"><strong>REMOVAL ERA</strong><p>The Indian Removal Act forced Native nations east of the Mississippi to relocate west, breaking treaties and killing thousands on forced marches.</p></div></li><li><div class="policy-year">1887</div><div class="policy-body"><strong>ALLOTMENT (DAWES ACT)</strong><p>The government broke up reservation land into individual parcels. Native nations lost 90 million acres in 47 years.</p></div></li><li><div class="policy-year">1930s-50s</div><div class="policy-body"><strong>BOARDING SCHOOLS</strong><p>The federal government removed Native children from their families and sent them to schools designed to erase their cultures.</p></div></li><li><div class="policy-year">1953</div><div class="policy-body"><strong><span class="vocab">TERMINATION POLICY<span class="tip">A U.S. policy that ended the federal government's official relationship with over 100 Native nations.</span></span></strong><p>Congress ended federal recognition for many Native nations. Tribes lost legal status, land, and services.</p></div></li><li><div class="policy-year">1975</div><div class="policy-body"><strong>SELF-DETERMINATION ERA</strong><p>Native nations gained more control over their own programs and services. This is the era we are still in today.</p></div></li></ul>
+  </section>
 
-    <p>Indigenous peoples never simply accepted what was done to them. At every stage of colonization and U.S. expansion, Native communities found ways to resist, adapt, organize, and survive. That is not a small thing. It is the central fact of Indigenous history in America.</p>
-
-    <!--
-      FILENAME: L02_TecumsehPortrait.jpg
+  <div class="brain-break as-break"><span class="bb-label">ART SPOTLIGHT</span><figure><!--
+      FILENAME: L02_ArtSpotlight_WoundedKnee1890.jpg
       PLACE IN: images/L02/
-      FIND: Portrait of Tecumseh, Shawnee leader, early 19th century, public domain
-      SEARCH: Tecumseh Shawnee portrait Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/File:Tecumseh02.jpg (suggested, not guaranteed)
-    -->
+      FIND: Aftermath or camp image connected to Wounded Knee Massacre, 1890, public domain, showing the human cost of federal violence.
+      SEARCH: Wounded Knee Massacre 1890 photograph Library of Congress Wikimedia Commons
+      LINK: https://www.loc.gov/photos/?q=Wounded+Knee+1890 (suggested, not guaranteed)
+    --><img src="images/L02/L02_ArtSpotlight_WoundedKnee1890.jpg" alt="Photograph connected to Wounded Knee, 1890" class="as-image"><figcaption class="as-caption">Wounded Knee, 1890. Source: Library of Congress or Wikimedia Commons.</figcaption></figure><p class="as-question">When you look at this place, what do you think people were trying hardest to remember?</p></div>
 
-    <!--
-      FILENAME: L02_AIMProtest.jpg
+  <div class="divider"><svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/><circle cx="18" cy="18" r="6" fill="#c8944a"/><line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/><line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/><line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/><line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/></svg></div>
+
+  <section id="sovereignty-now"><h2 class="section-heading">SOVEREIGNTY: WHAT IT MEANS RIGHT NOW</h2>
+    <!-- FILENAME: L02_TribalNation.jpg PLACE IN: images/L02/ FIND: Modern tribal government building, Native nation flag, or tribal council meeting, recent, CC licensed or public domain SEARCH: tribal government building Native nation modern Wikimedia Commons LINK: https://commons.wikimedia.org/wiki/Category:Native_American_governments (suggested, not guaranteed) -->
+    <figure><img src="images/L02/L02_TribalNation.jpg" alt="Modern tribal government building or flag of a Native nation"><figcaption>A modern tribal government building. Native nations today operate governments, courts, schools, and businesses. Source: Wikimedia Commons.</figcaption></figure>
+    <p class="para-standard">Today, 574 federally recognized Native nations exist within the borders of the United States. Each one is a sovereign government. That means they have the right to make their own laws, run their own courts, operate their own schools, and manage their own land. <span class="vocab">Self-determination<span class="tip">The right of a people to decide how to govern their community and shape their own future.</span></span> is not a gift from the U.S. government. It is a right that Native nations have always had and have been reclaiming piece by piece for decades.</p>
+    <p class="para-simple">Today, 574 federally recognized Native nations exist in the United States. Each one is a government. They can make laws, run courts, operate schools, and manage land. Self-determination means Native nations have the right to make decisions for themselves.</p>
+    <p class="para-standard">Tribal sovereignty shows up in ways many Americans do not notice. Tribal casinos exist because Native nations have the legal right to set some of their own laws on their land. Water rights cases in the West often involve tribal claims connected to treaties signed long ago. Native nations can negotiate directly with the federal government over land, natural resources, and education. These are not special privileges. They are surviving political rights.</p>
+    <p class="para-simple">Tribal sovereignty affects everyday life. Some Native nations run casinos because they can set laws on their own land. Many water rights cases involve Native treaty rights. Native nations also work directly with the federal government. These are political rights, not favors.</p>
+    <p class="para-standard">At the same time, the challenges are enormous. Native Americans face high poverty rates, underfunded health care, and serious housing problems. Missing and Murdered Indigenous Women, known as MMIW, is a crisis that receives far less attention than it deserves. These problems are connected to long histories of land theft, forced removal, broken treaties, and children being taken from families.</p>
+    <p class="para-simple">Native communities also face serious problems today. Many communities deal with poverty, poor housing, and underfunded health care. Missing and Murdered Indigenous Women is a major crisis. These problems did not happen by accident. They connect to land theft, broken treaties, and forced removal.</p>
+    <p class="para-standard">Understanding that connection matters. Sovereignty is not only about what happened in the past. It is about who has power today, who gets heard, and who gets to decide the future of Native communities.</p>
+    <p class="para-simple">This connection matters. Sovereignty is about power today. It asks who gets heard and who gets to make decisions for Native communities.</p>
+  </section>
+
+  <section id="local-history" class="callout-card"><h3>LOCAL HISTORY CONNECTION: THE KUMEYAAY NATION AND SAN DIEGO</h3><!--
+      FILENAME: L02_Local_KumeyaayLand.jpg
       PLACE IN: images/L02/
-      FIND: American Indian Movement protest or Wounded Knee 1973 occupation, public domain or CC licensed
-      SEARCH: American Indian Movement Wounded Knee 1973 protest Wikimedia Commons
+      FIND: Kumeyaay community, Kumeyaay land, or San Diego County tribal government image connected to Kumeyaay presence and sovereignty.
+      SEARCH: Kumeyaay Nation San Diego tribal government Wikimedia Commons OR Kumeyaay land San Diego Library of Congress
+      LINK: https://commons.wikimedia.org/wiki/Category:Kumeyaay (suggested, not guaranteed)
+    --><figure><img src="images/L02/L02_Local_KumeyaayLand.jpg" alt="Kumeyaay land or community in the San Diego region"><figcaption>Kumeyaay presence in the San Diego region. Source: Wikimedia Commons or Library of Congress.</figcaption></figure><p class="para-standard">San Diego County is home to 18 federally recognized Kumeyaay bands, one of the largest concentrations of tribal governments in one county in the United States. The Kumeyaay have lived in this region for thousands of years, and today bands such as Viejas, Sycuan, and Barona operate independent governments here.</p><p class="para-simple">San Diego County is home to 18 federally recognized Kumeyaay bands. The Kumeyaay have lived here for thousands of years. Today, bands such as Viejas, Sycuan, and Barona run their own governments.</p><p class="detail">Their presence is not a relic of the past. It is active tribal sovereignty in the place students live now.</p></section>
+
+  <div class="divider"><svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/><circle cx="18" cy="18" r="6" fill="#c8944a"/><line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/><line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/><line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/><line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/></svg></div>
+
+  <section id="still-matters"><h2 class="section-heading">HOW THIS STILL MATTERS TODAY</h2><p class="sm-headline">Native nations are not a chapter from the past. They are governments, communities, and living cultures fighting for their rights right now.</p><div class="brain-break tn-break"><span class="bb-label">THEN AND NOW</span><div class="tn-pair"><div class="tn-item"><span class="tn-era-label">1973</span><!--
+      FILENAME: L02_Then_WoundedKneeOccupation1973.jpg
+      PLACE IN: images/L02/
+      FIND: Wounded Knee occupation, 1973, American Indian Movement members, public domain or CC licensed. Use a different image than the AIM image already used in the lesson.
+      SEARCH: Wounded Knee occupation 1973 American Indian Movement photograph Wikimedia Commons
       LINK: https://commons.wikimedia.org/wiki/Category:Wounded_Knee_incident_(1973) (suggested, not guaranteed)
-    -->
-
-    <div class="paired-wrap">
-      <figure>
-        <img src="images/L02/L02_TecumsehPortrait.jpg" alt="Portrait of Tecumseh, Shawnee leader, early 19th century">
-        <figcaption>Tecumseh, Shawnee leader and organizer of the Native Confederacy, ca. 1810. Source: Wikimedia Commons.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/L02/L02_AIMProtest.jpg" alt="American Indian Movement occupation of Wounded Knee, 1973">
-        <figcaption>American Indian Movement members at Wounded Knee, South Dakota, 1973. Source: Wikimedia Commons.</figcaption>
-      </figure>
-    </div>
-
-    <p>Tecumseh organized one of the largest Native resistance movements in history in the early 1800s. He argued that no single nation could sell land that belonged to all Native peoples collectively, and he traveled thousands of miles building alliances from the Great Lakes to the Gulf of Mexico. He was killed in battle in 1813, but the confederacy he built showed what organized resistance could look like.</p>
-
-    <p>In the late 1800s, as reservation life destroyed traditional ways of living, the Ghost Dance movement spread across the Plains nations. It was a spiritual practice that prophesied the return of the old world and the departure of settlers. The U.S. government was so threatened by it that they sent soldiers to stop the dances. That decision led directly to the Wounded Knee Massacre of 1890, where the U.S. Army killed approximately 300 Lakota men, women, and children.</p>
-
-    <p>Resistance did not stop there. In 1968, the American Indian Movement, known as AIM, was founded in Minneapolis to fight police brutality against urban Native communities. In 1973, AIM members occupied Wounded Knee for 71 days to protest broken <span class="vocab">treaty<span class="tip">A formal agreement between two governments; the U.S. signed over 400 treaties with Native nations, most of which the U.S. later broke.</span></span> obligations and corrupt tribal leadership backed by the federal government. The occupation made international news and forced the U.S. to negotiate.</p>
-
-    <p>Through all of this, Native communities also preserved their languages, ceremonies, and cultures in hidden and quiet ways: passing down oral traditions in secret, maintaining relationships with the land, and keeping alive the knowledge that would eventually be reclaimed openly. Survival is also a form of resistance.</p>
-
-    <!--
-      FILENAME: L02_FederalPolicyTimeline.jpg
+    --><img src="images/L02/L02_Then_WoundedKneeOccupation1973.jpg" alt="American Indian Movement occupation at Wounded Knee in 1973"><p class="tn-caption">AIM members occupied Wounded Knee in 1973 to protest broken promises and federal policy.</p></div><div class="tn-item"><span class="tn-era-label">TODAY</span><!--
+      FILENAME: L02_Now_StandingRockWaterProtectors.jpg
       PLACE IN: images/L02/
-      FIND: Image related to federal Indian policy — Bureau of Indian Affairs document, Dawes Act, or termination policy document, public domain
-      SEARCH: Bureau of Indian Affairs document policy Wikimedia Commons Library of Congress
-      LINK: https://www.loc.gov/photos/?q=bureau+of+indian+affairs (suggested, not guaranteed)
-    -->
-    <figure class="inset-right">
-      <img src="images/L02/L02_FederalPolicyTimeline.jpg" alt="Bureau of Indian Affairs document or federal Indian policy record">
-      <figcaption>Federal records related to U.S. Indian policy, 19th–20th century. Source: Library of Congress.</figcaption>
-    </figure>
-
-    <div class="clearfix">
-      <p>Federal Indian policy shifted dramatically over the decades, and almost every shift hurt Native communities in a different way. The timeline below shows the main phases:</p>
-    </div>
-
-    <ul class="policy-list">
-      <li>
-        <div class="policy-year">1830s</div>
-        <div class="policy-body">
-          <strong>Removal Era</strong>
-          <p>The Indian Removal Act forced Native nations east of the Mississippi to relocate west, destroying communities, breaking treaties, and killing thousands on forced marches.</p>
-        </div>
-      </li>
-      <li>
-        <div class="policy-year">1887</div>
-        <div class="policy-body">
-          <strong>Allotment (Dawes Act)</strong>
-          <p>The government broke up communally held reservation land into individual parcels. Native families kept some land, but "surplus" land was sold to white settlers. Native nations lost 90 million acres in 47 years.</p>
-        </div>
-      </li>
-      <li>
-        <div class="policy-year">1930s&ndash;50s</div>
-        <div class="policy-body">
-          <strong>Boarding Schools</strong>
-          <p>The federal government removed Native children from their families and sent them to schools designed to erase their culture. The motto of these schools: "Kill the Indian, save the man."</p>
-        </div>
-      </li>
-      <li>
-        <div class="policy-year">1953</div>
-        <div class="policy-body">
-          <strong><span class="vocab" style="color: var(--accent-red);">Termination Policy<span class="tip">A U.S. government policy that ended the federal government's official relationship with over 100 Native nations, removing their legal status and forcing them to give up reservation lands.</span></span></strong>
-          <p>Congress passed laws ending the federal government's relationship with over 100 Native nations. Tribes lost their legal status, their land, and their federal services. Many communities were devastated.</p>
-        </div>
-      </li>
-      <li>
-        <div class="policy-year">1975</div>
-        <div class="policy-body">
-          <strong>Self-Determination Era</strong>
-          <p>The Indian Self-Determination and Education Assistance Act gave tribal governments more control over their own programs and services. It was the first major shift toward recognizing Native nations as self-governing. This is the era we are still in today.</p>
-        </div>
-      </li>
-    </ul>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 4 — SOVEREIGNTY TODAY
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/>
-      <circle cx="18" cy="18" r="6" fill="#c8944a"/>
-      <line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/>
-      <line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/>
-      <line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/>
-      <line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/>
-    </svg>
-  </div>
-
-  <section id="sovereignty-now">
-    <h2 class="section-heading">Sovereignty: What It Means Right Now</h2>
-
-    <!--
-      FILENAME: L02_TribalNation.jpg
-      PLACE IN: images/L02/
-      FIND: Modern tribal government building, Native nation flag, or tribal council meeting, recent, CC licensed or public domain
-      SEARCH: tribal government building Native nation modern Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/Category:Native_American_governments (suggested, not guaranteed)
-    -->
-    <figure>
-      <img src="images/L02/L02_TribalNation.jpg" alt="Modern tribal government building or flag of a Native nation">
-      <figcaption>A modern tribal government building. Native nations today operate their own governments, courts, schools, and businesses. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <p>Today, 574 federally recognized Native nations exist within the borders of the United States. Each one is a sovereign government. That means they have the right to make their own laws, run their own courts, operate their own schools, and manage their own land. <span class="vocab">Self-determination<span class="tip">The right of a people to decide for themselves how to govern their community and shape their own future, without outside interference.</span></span> is not a gift the U.S. gave to Native nations. It is a right that Native nations have always had, and that they have been reclaiming piece by piece for decades.</p>
-
-    <p>Tribal sovereignty shows up in ways many Americans interact with without realizing it. Tribal casinos exist because Native nations have the legal right to set their own gambling laws on their land, separate from state law. Water rights cases in the West often involve tribal claims that go back to treaties signed 150 years ago. Native nations can negotiate directly with the federal government over land use, natural resource management, and education. These are not special privileges. They are the surviving remnants of original political agreements.</p>
-
-    <p>At the same time, challenges are enormous. Native Americans experience the highest rates of poverty of any racial group in the United States. Life expectancy on many reservations is decades lower than the national average. Missing and Murdered Indigenous Women, known as MMIW, is a crisis that receives far less federal attention than it deserves. The Indian Health Service is chronically underfunded. Housing on many reservations is severely inadequate.</p>
-
-    <p>None of these problems are accidents. They are the long-term consequences of policies that took land, destroyed economies, removed children from families, and systematically cut Native communities off from their own futures. Understanding that connection is what this course is about.</p>
-
-    <!-- LOCAL HISTORY -->
-    <div class="callout-card">
-      <h3>&#127968; Local Connection: The Kumeyaay Nation and San Diego</h3>
-      <p>San Diego County is home to 18 federally recognized Kumeyaay bands, more tribal nations in one county than almost anywhere in the United States. The Kumeyaay have lived in this region for at least 10,000 years. Their territory was divided by the U.S.-Mexico border in 1848, splitting families and communities between two countries. Today the Kumeyaay operate their own governments, schools, and businesses on both sides of that border.</p>
-      <p class="detail">The Viejas Band of Kumeyaay Indians, the Sycuan Band, the Barona Group, and 15 other bands each operate independent tribal governments right here in San Diego County. Their presence is not a relic of the past. It is one of the largest concentrations of active tribal sovereignty in the United States.</p>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 5 — HOW THIS STILL MATTERS TODAY
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <svg class="divider-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="16" stroke="#c8944a" stroke-width="2"/>
-      <circle cx="18" cy="18" r="6" fill="#c8944a"/>
-      <line x1="18" y1="2" x2="18" y2="10" stroke="#c8944a" stroke-width="2"/>
-      <line x1="18" y1="26" x2="18" y2="34" stroke="#c8944a" stroke-width="2"/>
-      <line x1="2" y1="18" x2="10" y2="18" stroke="#c8944a" stroke-width="2"/>
-      <line x1="26" y1="18" x2="34" y2="18" stroke="#c8944a" stroke-width="2"/>
-    </svg>
-  </div>
-
-  <section id="still-matters">
-    <h2 class="section-heading">How This Still Matters Today</h2>
-
-    <p class="sm-headline">Native nations are not a chapter from the past. They are governments, communities, and living cultures fighting for their rights right now.</p>
-
-    <p>The Standing Rock protests of 2016 put Native sovereignty on the front page of every newspaper in the country. Members of over 300 tribes gathered in North Dakota to oppose a pipeline that would run under a river that their reservation depended on for drinking water. The federal government eventually approved the pipeline anyway. The legal battle continues today.</p>
-
-    <p>In 2022, the Supreme Court heard a case called Haaland v. Brackeen that challenged the Indian Child Welfare Act, a 1978 law designed to keep Native children within Native communities after a century of forced removal. The court upheld the law, but the fact that it reached the Supreme Court at all shows how fragile these legal protections can be.</p>
-
-    <ul class="news-links">
-      <li><a href="https://news.google.com/search?q=Native+American+tribal+sovereignty+rights+2024+2025" target="_blank" rel="noopener">Native American Tribal Sovereignty: Current Legal Battles and Rights</a></li>
-      <li><a href="https://news.google.com/search?q=Missing+Murdered+Indigenous+Women+MMIW+crisis+federal+response" target="_blank" rel="noopener">Missing and Murdered Indigenous Women: The Crisis and the Response</a></li>
-      <li><a href="https://news.google.com/search?q=Kumeyaay+Nation+San+Diego+sovereignty+land+rights" target="_blank" rel="noopener">Kumeyaay Nation: Sovereignty and Land Rights in San Diego</a></li>
-    </ul>
-
-    <!--
-      FILENAME: L02_StandingRock.jpg
-      PLACE IN: images/L02/
-      FIND: Standing Rock Dakota Access Pipeline protest, 2016, water protectors, public domain or CC licensed
-      SEARCH: Standing Rock protest 2016 Dakota Access Pipeline water protectors Wikimedia Commons
+      FIND: Standing Rock water protectors, 2016, Dakota Access Pipeline protest, public domain or CC licensed. Use a different image than any prior Standing Rock image.
+      SEARCH: Standing Rock water protectors 2016 Dakota Access Pipeline Wikimedia Commons
       LINK: https://commons.wikimedia.org/wiki/Category:Dakota_Access_Pipeline_protests (suggested, not guaranteed)
-    -->
-    <figure>
-      <img src="images/L02/L02_StandingRock.jpg" alt="Standing Rock Dakota Access Pipeline protests, 2016">
-      <figcaption>Water protectors at Standing Rock, North Dakota, 2016. Over 300 tribal nations gathered to oppose the Dakota Access Pipeline. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <p class="closing-q">Toypurina fought back in 1775. Tecumseh organized in 1810. AIM stood at Wounded Knee in 1973. Water protectors stood at Standing Rock in 2016. What does it mean that the same fight has been going on for 250 years? And what does it take to end it?</p>
-
-  </section>
-
+    --><img src="images/L02/L02_Now_StandingRockWaterProtectors.jpg" alt="Standing Rock water protectors in 2016"><p class="tn-caption">Water protectors gathered at Standing Rock in 2016 to defend land, water, and treaty rights.</p></div></div><p class="tn-question">What do you think people in both images wanted the rest of the country to finally hear?</p></div><p class="closing-q">Toypurina fought back in 1775. Tecumseh organized in 1810. AIM stood at Wounded Knee in 1973. Water protectors stood at Standing Rock in 2016. What does it take for a country to stop treating Native sovereignty like a debate and start treating it like a promise?</p></section>
 </main>
-
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
-<footer>
-  Ethnic Studies &mdash; Lesson 02 &mdash; Native American Peoples: Sovereignty, Survival, and Presence
-</footer>
-
-<!-- ══════════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════════ -->
+<footer>ETHNIC STUDIES — LESSON 02 — NATIVE AMERICAN PEOPLES: SOVEREIGNTY, SURVIVAL, AND PRESENCE</footer>
 <script>
-document.querySelectorAll('.vocab').forEach(function(el) {
-  el.addEventListener('click', function(e) {
-    e.stopPropagation();
-    document.querySelectorAll('.vocab.active').forEach(function(v) {
-      if (v !== el) v.classList.remove('active');
-    });
-    el.classList.toggle('active');
-  });
-});
-document.addEventListener('click', function() {
-  document.querySelectorAll('.vocab.active').forEach(function(v) {
-    v.classList.remove('active');
-  });
-});
+document.querySelectorAll('.vocab').forEach(function(el){el.addEventListener('click',function(e){e.stopPropagation();document.querySelectorAll('.vocab.active').forEach(function(v){if(v!==el)v.classList.remove('active')});el.classList.toggle('active')})});document.addEventListener('click',function(){document.querySelectorAll('.vocab.active').forEach(function(v){v.classList.remove('active')})});
+document.getElementById('lexile-toggle').addEventListener('click',function(){document.body.classList.toggle('simplified');this.textContent=document.body.classList.contains('simplified')?'STANDARD TEXT':'SIMPLIFY TEXT'});
+document.querySelectorAll('.section-nav a,.toc-sidebar a').forEach(function(link){link.addEventListener('click',function(e){var target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}})});
+const tocObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{const id=entry.target.getAttribute('id');const link=document.querySelector('.toc-sidebar a[href="#'+id+'"]');if(link){if(entry.isIntersecting)link.classList.add('active');else link.classList.remove('active')}})},{threshold:.25});document.querySelectorAll('section[id]').forEach(el=>tocObserver.observe(el));
 </script>
-
 </body>
 </html>
-
-<!--
-IMAGE CHECKLIST FOR SS9_L02.html
-1. L02_HeaderBG.jpg — sweeping California or Southwest landscape, OR wide-shot Native gathering, early 20th century — Suggested link: https://www.loc.gov/photos/?q=native+american+landscape+california
-2. L02_NativeTradeNetwork.jpg — map or illustration of pre-contact Native American trade routes across North America — Suggested link: https://commons.wikimedia.org/wiki/Category:Pre-Columbian_North_America
-3. L02_CaliforniaMission.jpg — California mission building photograph, 19th or early 20th century — Suggested link: https://www.loc.gov/photos/?q=california+mission+san+gabriel
-4. L02_IndianRemovalMap.jpg — map of Indian removal routes and Trail of Tears, 1830s — Suggested link: https://commons.wikimedia.org/wiki/Category:Indian_Removal_Act
-5. L02_TecumsehPortrait.jpg — portrait of Tecumseh, Shawnee leader, early 19th century — Suggested link: https://commons.wikimedia.org/wiki/File:Tecumseh02.jpg
-6. L02_AIMProtest.jpg — American Indian Movement, Wounded Knee occupation, 1973 — Suggested link: https://commons.wikimedia.org/wiki/Category:Wounded_Knee_incident_(1973)
-7. L02_FederalPolicyTimeline.jpg — Bureau of Indian Affairs document or federal Indian policy record — Suggested link: https://www.loc.gov/photos/?q=bureau+of+indian+affairs
-8. L02_TribalNation.jpg — modern tribal government building or Native nation flag — Suggested link: https://commons.wikimedia.org/wiki/Category:Native_American_governments
-9. L02_StandingRock.jpg — Standing Rock Dakota Access Pipeline protests, 2016 — Suggested link: https://commons.wikimedia.org/wiki/Category:Dakota_Access_Pipeline_protests
--->
