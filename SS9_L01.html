@@ -3,465 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS9 L01 — WHO GETS ERASED? THE HISTORY BEHIND THE HISTORY</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<title>SS9_L01 — WHO GETS ERASED?</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink:          #1a0f06;
-    --deep-brown:   #2c1a0e;
-    --warm-brown:   #5c3317;
-    --mid-brown:    #7a4526;
-    --terracotta:   #b5511e;
-    --rust:         #9e3a10;
-    --gold:         #c8922a;
-    --bright-gold:  #e8a93a;
-    --pale-gold:    #f5dfa0;
-    --parchment:    #f5ead8;
-    --cream:        #faf3e6;
-    --light-parch:  #fdf6ea;
-    --section-alt:  #f2e8d4;
-    --card-bg:      #ede0c4;
-    --accent-red:   #b03030;
-    --text:         #1e0f05;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-
-  /* ── HEADER ── */
-  header {
-    position: relative;
-    background: var(--deep-brown);
-    overflow: hidden;
-    padding: 64px 24px 52px;
-    text-align: center;
-  }
-  .header-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('images/L01/L01_HeaderBG.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.30;
-  }
-  .header-inner {
-    position: relative;
-    z-index: 2;
-    max-width: 820px;
-    margin: 0 auto;
-  }
-  .course-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--bright-gold);
-    margin-bottom: 18px;
-  }
-  h1.page-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(36px, 6.5vw, 64px);
-    font-weight: 900;
-    color: var(--parchment);
-    line-height: 1.12;
-    margin-bottom: 30px;
-    text-shadow: 0 3px 18px rgba(0,0,0,0.6);
-  }
-  .eq-banner {
-    background: var(--terracotta);
-    border-left: 6px solid var(--bright-gold);
-    border-right: 6px solid var(--bright-gold);
-    padding: 18px 32px;
-    display: inline-block;
-    max-width: 780px;
-    width: 100%;
-  }
-  .eq-label {
-    font-size: 10px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--pale-gold);
-    opacity: 0.85;
-    margin-bottom: 6px;
-  }
-  .eq-text {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(16px, 2.6vw, 23px);
-    font-weight: 700;
-    font-style: italic;
-    color: #fff;
-    line-height: 1.45;
-  }
-
-  /* ── NAV ── */
-  nav.section-nav {
-    background: var(--warm-brown);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.38);
-  }
-  nav.section-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  nav.section-nav ul li a {
-    display: block;
-    padding: 13px 16px;
-    font-size: 12.5px;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--parchment);
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: background 0.18s, border-color 0.18s, color 0.18s;
-    font-family: 'Source Serif 4', serif;
-  }
-  nav.section-nav ul li a:hover {
-    background: var(--mid-brown);
-    border-bottom-color: var(--bright-gold);
-    color: var(--bright-gold);
-  }
-
-  /* ── MAIN ── */
-  main {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 22px 70px;
-  }
-
-  /* ── INTRO ── */
-  .intro-block {
-    background: var(--light-parch);
-    border-left: 5px solid var(--terracotta);
-    padding: 36px 38px 30px;
-    margin: 50px 0 0;
-    font-size: 19px;
-    line-height: 1.9;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 58px 0 42px;
-    color: var(--gold);
-  }
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-  }
-  .divider span { font-size: 20px; }
-
-  /* ── SECTIONS ── */
-  section { margin-bottom: 0; }
-
-  h2.section-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(25px, 4vw, 36px);
-    font-weight: 700;
-    color: var(--warm-brown);
-    margin-bottom: 24px;
-    line-height: 1.22;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--gold);
-  }
-  p {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-
-  /* ── VOCAB ── */
-  .vocab {
-    color: var(--accent-red);
-    text-decoration: underline dotted var(--accent-red);
-    cursor: help;
-    position: relative;
-    font-weight: 600;
-  }
-  .vocab .tip {
-    display: none;
-    position: absolute;
-    bottom: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1a1a2e;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 5px;
-    font-size: 15px;
-    line-height: 1.55;
-    z-index: 300;
-    font-style: normal;
-    font-weight: 400;
-    pointer-events: none;
-    max-width: 290px;
-    white-space: normal;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-  }
-  .vocab:hover .tip, .vocab.active .tip { display: block; }
-
-  /* ── IMAGES ── */
-  figure { margin: 32px 0; }
-  figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 3px solid var(--card-bg);
-    box-shadow: 0 4px 22px rgba(44,26,14,0.28);
-  }
-  figure.inset-left  { float: left;  width: 41%; margin: 4px 28px 16px 0; }
-  figure.inset-right { float: right; width: 41%; margin: 4px 0 16px 28px; }
-  .paired-wrap { display: flex; gap: 18px; margin: 32px 0; }
-  .paired-wrap figure { flex: 1; margin: 0; }
-  figcaption {
-    font-size: 13px;
-    font-style: italic;
-    color: var(--mid-brown);
-    margin-top: 8px;
-    line-height: 1.5;
-    text-align: center;
-  }
-  .clearfix::after { content: ''; display: table; clear: both; }
-
-  /* ── PRIMARY SOURCE ── */
-  .primary-source {
-    background: var(--card-bg);
-    border-left: 6px solid var(--terracotta);
-    padding: 28px 34px 24px;
-    margin: 42px 0;
-  }
-  .primary-source blockquote {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    line-height: 1.65;
-    color: var(--deep-brown);
-    font-style: italic;
-    margin-bottom: 16px;
-  }
-  .primary-source .attribution {
-    font-size: 14px;
-    font-style: italic;
-    color: var(--mid-brown);
-    margin-bottom: 12px;
-  }
-  .primary-source .narrator {
-    font-size: 16px;
-    color: var(--text);
-    border-top: 1px solid var(--gold);
-    padding-top: 12px;
-    line-height: 1.7;
-    margin-bottom: 0;
-  }
-  .primary-source .student-questions {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px dashed var(--gold);
-  }
-  .primary-source .student-questions p {
-    font-size: 17px;
-    margin-bottom: 12px;
-    color: var(--deep-brown);
-  }
-  .primary-source .student-questions strong { color: var(--terracotta); }
-
-  /* ── FIVE STORIES GRID ── */
-  .stories-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin: 36px 0;
-  }
-  .story-card {
-    background: var(--deep-brown);
-    color: var(--parchment);
-    padding: 22px 22px 18px;
-    border-top: 4px solid var(--terracotta);
-  }
-  .story-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
-    color: var(--bright-gold);
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-  .story-card p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--parchment);
-    opacity: 0.9;
-    margin-bottom: 0;
-  }
-  .story-card-wide {
-    grid-column: span 2;
-    border-top-color: var(--gold);
-  }
-  .story-card-wide h3 { color: var(--pale-gold); }
-
-  /* ── CALLOUT CARD ── */
-  .callout-card {
-    background: var(--deep-brown);
-    color: var(--parchment);
-    padding: 30px 36px;
-    margin: 42px 0;
-    border-top: 4px solid var(--bright-gold);
-    border-bottom: 4px solid var(--bright-gold);
-  }
-  .callout-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    color: var(--bright-gold);
-    margin-bottom: 14px;
-    line-height: 1.3;
-  }
-  .callout-card p { color: var(--parchment); font-size: 17px; }
-  .callout-card .detail {
-    font-size: 15px;
-    font-style: italic;
-    color: var(--pale-gold);
-    margin-top: 12px;
-  }
-
-  /* ── STILL MATTERS ── */
-  #still-matters {
-    background: var(--deep-brown);
-    padding: 50px 40px 48px;
-    margin: 58px -22px 0;
-  }
-  #still-matters h2 {
-    color: var(--bright-gold);
-    border-bottom-color: var(--terracotta);
-  }
-  .sm-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(19px, 3vw, 26px);
-    font-weight: 700;
-    color: var(--bright-gold);
-    line-height: 1.42;
-    margin: 26px 0 28px;
-  }
-  #still-matters p { color: var(--parchment); opacity: 0.9; margin-bottom: 20px; }
-  .news-links { list-style: none; padding: 0; margin: 0 0 34px; display: flex; flex-direction: column; gap: 12px; }
-  .news-links li a {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--bright-gold);
-    text-decoration: underline;
-    line-height: 1.45;
-    transition: color 0.18s;
-  }
-  .news-links li a:hover { color: #fff; }
-  .closing-q {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(18px, 2.8vw, 23px);
-    font-style: italic;
-    color: var(--parchment);
-    line-height: 1.62;
-    border-top: 2px solid var(--terracotta);
-    padding-top: 28px;
-    margin-top: 32px;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--deep-brown);
-    border-top: 3px solid var(--gold);
-    padding: 22px 20px;
-    text-align: center;
-    font-size: 12.5px;
-    letter-spacing: 0.09em;
-    color: var(--bright-gold);
-    text-transform: uppercase;
-    font-family: 'Source Serif 4', serif;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 620px) {
-    figure.inset-left, figure.inset-right { float: none; width: 100%; margin: 24px 0; }
-    .paired-wrap { flex-direction: column; }
-    .stories-grid { grid-template-columns: 1fr; }
-    .story-card-wide { grid-column: span 1; }
-    #still-matters { margin: 58px -22px 0; padding: 36px 22px 40px; }
-    .intro-block { padding: 24px 20px; }
-    .primary-source { padding: 20px 18px; }
-    .callout-card { padding: 24px 20px; }
-  }
+:root{
+  --ink:#1a0f06;--deep-brown:#2c1a0e;--warm-brown:#5c3317;--mid-brown:#7a4526;
+  --terracotta:#b5511e;--rust:#9e3a10;--gold:#c8922a;--bright-gold:#e8a93a;
+  --pale-gold:#f5dfa0;--parchment:#f5ead8;--cream:#faf3e6;--light-parch:#fdf6ea;
+  --section-alt:#f2e8d4;--card-bg:#ede0c4;--accent-red:#b03030;--text:#1e0f05;
+  --break-blue:#17324a;--break-teal:#06413f;--break-plum:#3a1838;--break-black:#151515;--break-green:#17402d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.9}
+header{position:relative;background:var(--deep-brown);overflow:hidden;padding:64px 24px 52px;text-align:center}
+.header-bg{position:absolute;inset:0;background-image:url('images/L01/L01_HeaderBG.jpg');background-size:cover;background-position:center;opacity:.30}
+.header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.course-label{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bright-gold);margin-bottom:18px}
+h1.page-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(36px,6.5vw,64px);font-weight:900;color:var(--parchment);line-height:1.12;margin-bottom:30px;text-shadow:0 3px 18px rgba(0,0,0,.6);text-transform:uppercase}
+.eq-banner{background:var(--terracotta);border-left:6px solid var(--bright-gold);border-right:6px solid var(--bright-gold);padding:18px 32px;display:inline-block;max-width:780px;width:100%}
+.eq-label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--pale-gold);opacity:.85;margin-bottom:6px}
+.eq-text{font-family:'Playfair Display',serif;font-size:clamp(16px,2.6vw,23px);font-weight:700;font-style:italic;color:#fff;line-height:1.45}
+nav.section-nav{background:var(--warm-brown);position:sticky;top:0;z-index:100;box-shadow:0 3px 14px rgba(0,0,0,.38)}
+nav.section-nav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;max-width:900px;margin:0 auto;padding:0}
+nav.section-nav a{display:block;padding:13px 16px;font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--parchment);text-decoration:none;border-bottom:3px solid transparent}
+nav.section-nav a:hover{background:var(--mid-brown);border-bottom-color:var(--bright-gold);color:var(--bright-gold)}
+#lexile-toggle{display:block;margin:20px auto 28px;padding:10px 24px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:2px solid var(--terracotta);background:transparent;color:var(--terracotta);font-family:'Source Serif 4',serif;transition:background .2s,color .2s}
+#lexile-toggle:hover{background:var(--terracotta);color:var(--cream)}
+.para-simple{display:none} body.simplified .para-standard{display:none} body.simplified .para-simple{display:block}
+.toc-sidebar{position:fixed;right:calc(50% - 570px);top:50%;transform:translateY(-50%);width:155px;padding:14px 12px;z-index:50;background:rgba(44,26,14,.88);border-left:2px solid rgba(232,169,58,.35)}
+.toc-sidebar .toc-label{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--bright-gold);display:block;margin-bottom:10px}
+.toc-sidebar a{display:block;color:var(--parchment);text-decoration:none;padding:3px 0;font-size:11px;letter-spacing:.05em;line-height:1.6}
+.toc-sidebar a.active,.toc-sidebar a:hover{color:var(--bright-gold);font-weight:600}
+@media(max-width:1100px){.toc-sidebar{display:none}}
+main{max-width:820px;margin:0 auto;padding:0 22px 70px}
+.intro-block{background:var(--light-parch);border-left:5px solid var(--terracotta);padding:36px 38px 30px;margin:0 0 0;font-size:19px;line-height:1.9}
+.divider{display:flex;align-items:center;gap:14px;margin:58px 0 42px;color:var(--gold)}
+.divider:before,.divider:after{content:'';flex:1;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.divider span{font-size:20px}
+section{margin-bottom:0;scroll-margin-top:70px}
+h2.section-heading{font-family:'Playfair Display',serif;font-size:clamp(25px,4vw,36px);font-weight:700;color:var(--warm-brown);margin-bottom:24px;line-height:1.22;padding-bottom:10px;border-bottom:3px solid var(--gold);text-transform:uppercase}
+p{margin-bottom:20px;font-size:18px;line-height:1.9}
+.vocab{color:var(--accent-red);text-decoration:underline dotted var(--accent-red);cursor:help;position:relative;font-weight:600}
+.vocab .tip{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:10px 16px;border-radius:5px;font-size:15px;line-height:1.55;z-index:300;font-style:normal;font-weight:400;pointer-events:none;max-width:290px;white-space:normal;box-shadow:0 4px 20px rgba(0,0,0,.45)}
+.vocab:hover .tip,.vocab.active .tip{display:block}
+.vocab-ref{color:var(--accent-red);font-weight:600}
+figure{margin:32px 0}
+figure img{width:100%;height:auto;display:block;border:3px solid var(--card-bg);box-shadow:0 4px 22px rgba(44,26,14,.28)}
+figure.inset-left{float:left;width:41%;margin:4px 28px 16px 0}
+figure.inset-right{float:right;width:41%;margin:4px 0 16px 28px}
+.paired-wrap,.tn-pair{display:flex;gap:18px;margin:32px 0}
+.paired-wrap figure,.tn-item{flex:1;margin:0}
+figcaption,.tn-caption{font-size:13px;font-style:italic;color:var(--mid-brown);margin-top:8px;line-height:1.5;text-align:center}
+.clearfix:after{content:'';display:table;clear:both}
+.primary-source{background:var(--card-bg);border-left:6px solid var(--terracotta);padding:28px 34px 24px;margin:42px 0}
+.primary-source blockquote{font-family:'Playfair Display',serif;font-size:22px;line-height:1.65;color:var(--deep-brown);font-style:italic;margin-bottom:16px}
+.primary-source .attribution{font-size:14px;font-style:italic;color:var(--mid-brown);margin-bottom:12px}
+.primary-source .narrator{font-size:16px;color:var(--text);border-top:1px solid var(--gold);padding-top:12px;line-height:1.7;margin-bottom:0}
+.primary-source .student-questions{margin-top:20px;padding-top:16px;border-top:1px dashed var(--gold)}
+.primary-source .student-questions p{font-size:17px;margin-bottom:12px;color:var(--deep-brown)}
+.primary-source .student-questions strong{color:var(--terracotta)}
+.stories-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:36px 0}
+.story-card{background:var(--deep-brown);color:var(--parchment);padding:22px 22px 18px;border-top:4px solid var(--terracotta)}
+.story-card h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--bright-gold);margin-bottom:10px;line-height:1.3;text-transform:uppercase}
+.story-card p{font-size:15px;line-height:1.75;color:var(--parchment);opacity:.9;margin-bottom:0}
+.story-card-wide{grid-column:span 2;border-top-color:var(--gold)}
+.callout-card{background:var(--deep-brown);color:var(--parchment);padding:30px 36px;margin:42px 0;border-top:4px solid var(--bright-gold);border-bottom:4px solid var(--bright-gold)}
+.callout-card h3{font-family:'Playfair Display',serif;font-size:21px;color:var(--bright-gold);margin-bottom:14px;line-height:1.3;text-transform:uppercase}
+.callout-card p{color:var(--parchment);font-size:17px}
+.callout-card .detail{font-size:15px;font-style:italic;color:var(--pale-gold);margin-top:12px}
+.brain-break{font-family:'Oswald',sans-serif;margin:44px -10px;padding:36px 44px;position:relative;overflow:hidden}
+.bb-label{display:block;font-family:'Oswald',sans-serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.85}
+.bb-text{font-family:'Oswald',sans-serif;font-size:22px;font-weight:500;line-height:1.65;margin:0}
+.dyk-break{background:var(--break-blue);color:#fff;border-left:6px solid #ffcb3d}.dyk-break .bb-label{color:#ffcb3d}
+.ff-break{background:var(--break-teal);color:#fff;padding:36px 40px;margin:44px -10px;border-top:3px solid #f6d365;border-bottom:3px solid #f6d365;text-align:center}
+.ff-break .bb-label{text-align:center;margin-bottom:24px;color:#f6d365}
+.ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px}.ff-item{text-align:center;padding:8px 12px}
+.ff-number{display:block;font-family:'Oswald',sans-serif;font-size:58px;font-weight:700;color:#f6d365;line-height:1;margin-bottom:8px}
+.ff-desc{display:block;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#d8fff7;max-width:120px;margin:0 auto;line-height:1.4}
+.yd-break{background:var(--break-plum);color:#fff;border-left:6px solid #ff7ad9}.yd-break .bb-label{color:#ff7ad9}
+.as-break{background:var(--break-black);color:#fff;padding:44px 50px;margin:44px -10px;border-top:3px solid #ffb64a;border-bottom:3px solid #ffb64a;text-align:center}
+.as-break .bb-label{color:#ffb64a}.as-image{max-width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(255,182,74,.5);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.as-caption{font-family:'Oswald',sans-serif;font-style:normal;font-size:13px;color:#ddd;line-height:1.5;margin-bottom:28px;display:block}
+.as-question{font-family:'Oswald',sans-serif;font-size:26px;font-style:italic;font-weight:500;color:#fff;line-height:1.55;max-width:580px;margin:0 auto}
+#still-matters{background:var(--deep-brown);padding:50px 40px 48px;margin:58px -22px 0}
+#still-matters h2{color:var(--bright-gold);border-bottom-color:var(--terracotta)}
+.sm-headline{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,30px);font-weight:700;color:var(--bright-gold);line-height:1.42;margin:26px 0 28px}
+.tn-break{background:var(--break-green);color:#fff;padding:36px 44px;margin:30px 0 28px}
+.tn-break .bb-label{color:#ffd761;text-align:center;display:block;margin-bottom:20px}
+.tn-pair{display:grid;grid-template-columns:1fr 1fr}.tn-era-label{display:block;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:#ffd761;margin-bottom:10px;font-weight:700;text-align:center}
+.tn-item img{width:100%;display:block;border:2px solid rgba(255,215,97,.4)}
+.tn-caption{font-family:'Oswald',sans-serif;color:#e5f4dc}
+.tn-question{font-family:'Oswald',sans-serif;font-size:20px;font-style:italic;font-weight:500;text-align:center;color:#fff;margin-top:16px;line-height:1.5}
+.closing-q{font-family:'Playfair Display',serif;font-size:clamp(22px,2.8vw,26px);font-style:italic;color:var(--parchment);line-height:1.62;border-top:2px solid var(--terracotta);padding-top:28px;margin-top:32px}
+footer{background:var(--deep-brown);border-top:3px solid var(--gold);padding:22px 20px;text-align:center;font-size:12.5px;letter-spacing:.09em;color:var(--bright-gold);text-transform:uppercase;font-family:'Source Serif 4',serif}
+@media(max-width:620px){figure.inset-left,figure.inset-right{float:none;width:100%;margin:24px 0}.paired-wrap,.tn-pair{display:block}.stories-grid{grid-template-columns:1fr}.story-card-wide{grid-column:span 1}#still-matters{margin:58px -22px 0;padding:36px 22px 40px}.intro-block{padding:24px 20px}.primary-source{padding:20px 18px}.callout-card{padding:24px 20px}.brain-break{padding:28px 22px;margin:36px 0}.as-break{padding:32px 22px}.as-question{font-size:20px}}
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════════ -->
 <header>
   <!--
     FILENAME: L01_HeaderBG.jpg
     PLACE IN: images/L01/
-    FIND: San Francisco State College student strike scene 1968-1969, OR an open history textbook with visible pages — something that captures erasure or the fight over whose story gets told
+    FIND: San Francisco State College student strike scene 1968-1969, OR an open history textbook with visible pages; something that captures erasure or the fight over whose story gets told
     SEARCH: San Francisco State student strike 1968 Wikimedia Commons
     LINK: https://commons.wikimedia.org/wiki/Category:San_Francisco_State_University (suggested, not guaranteed)
   -->
   <div class="header-bg"></div>
   <div class="header-inner">
-    <p class="course-label">Ethnic Studies &mdash; Lesson 01</p>
-    <h1 class="page-title">Who Gets Erased?<br>The History Behind the History</h1>
-    <div class="eq-banner">
-      <p class="eq-label">Essential Question</p>
-      <p class="eq-text">What stories have been left out of American history, and why does that matter?</p>
-    </div>
+    <p class="course-label">ETHNIC STUDIES — LESSON 01</p>
+    <h1 class="page-title">WHO GETS ERASED?<br>THE HISTORY BEHIND THE HISTORY</h1>
+    <div class="eq-banner"><p class="eq-label">ESSENTIAL QUESTION</p><p class="eq-text">What stories have been left out of American history, and why does that matter?</p></div>
   </div>
 </header>
 
-<!-- ══════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════ -->
 <nav class="section-nav" aria-label="Page sections">
   <ul>
-    <li><a href="#textbook-problem">The Textbook Problem</a></li>
-    <li><a href="#sf-state">The Strike That Changed Schools</a></li>
-    <li><a href="#california-law">How California Finally Acted</a></li>
-    <li><a href="#five-stories">Five Stories You Were Never Told</a></li>
-    <li><a href="#still-matters">How This Still Matters Today</a></li>
+    <li><a href="#textbook-problem">THE TEXTBOOK PROBLEM</a></li>
+    <li><a href="#sf-state">THE STRIKE</a></li>
+    <li><a href="#california-law">CALIFORNIA ACTS</a></li>
+    <li><a href="#five-stories">FIVE STORIES</a></li>
+    <li><a href="#still-matters">STILL MATTERS</a></li>
   </ul>
 </nav>
+<button id="lexile-toggle">SIMPLIFY TEXT</button>
+<aside class="toc-sidebar">
+  <span class="toc-label">ON THIS PAGE</span>
+  <a href="#textbook-problem">TEXTBOOK PROBLEM</a>
+  <a href="#sf-state">THE STRIKE</a>
+  <a href="#california-law">CALIFORNIA ACTS</a>
+  <a href="#five-stories">FIVE STORIES</a>
+  <a href="#still-matters">STILL MATTERS</a>
+</aside>
 
-<!-- ══════════════════════════════════════════════
-     MAIN
-══════════════════════════════════════════════ -->
 <main>
-
-  <!-- INTRO -->
   <div class="intro-block">
-    <p>In 1968, a group of students at San Francisco State College looked at their textbooks and noticed something. Thousands of people had helped build California. Farmworkers, railroad laborers, Indigenous peoples, and enslaved men and women had all shaped the state. But none of them appeared in the books students were required to read. The students had a word for what they saw: <span class="vocab">erasure<span class="tip">When the history, culture, or experiences of a group of people are deliberately left out or ignored, as if they never existed.</span></span>. And they decided to do something about it.</p>
+    <p class="para-standard">In 1968, students at San Francisco State College opened their history books and noticed who was missing. Farmworkers, railroad workers, Indigenous peoples, and enslaved people had all helped build California and the United States. But many of their stories were barely there. The students called this <span class="vocab">erasure<span class="tip">When the history, culture, or experiences of a group of people are deliberately left out or ignored.</span></span>, and they decided to fight it.</p>
+    <p class="para-simple">In 1968, students at San Francisco State College looked at their history books. They saw many people were missing. Workers, Native people, and enslaved people helped build the country. But their stories were barely there. The students called this <span class="vocab">erasure<span class="tip">Leaving people or their stories out.</span></span>. They decided to fight it.</p>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 1 — THE TEXTBOOK PROBLEM
-  ══════════════════════════════════════════════ -->
-  <div class="divider"><span>&#9670;</span></div>
+  <div class="divider"><span>◆</span></div>
   <section id="textbook-problem">
-    <h2 class="section-heading">The Textbook Problem</h2>
-
+    <h2 class="section-heading">THE TEXTBOOK PROBLEM</h2>
     <!--
       FILENAME: L01_OldTextbook.jpg
       PLACE IN: images/L01/
@@ -469,99 +153,101 @@
       SEARCH: American history textbook 1950s 1960s school Wikimedia Commons Library of Congress
       LINK: https://commons.wikimedia.org/wiki/Category:History_textbooks (suggested, not guaranteed)
     -->
-    <figure class="inset-right">
-      <img src="images/L01/L01_OldTextbook.jpg" alt="Mid-20th century American history textbook">
-      <figcaption>A mid-20th century American history textbook. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
+    <figure class="inset-right"><img src="images/L01/L01_OldTextbook.jpg" alt="Mid-20th century American history textbook"><figcaption>A mid-20th century American history textbook. Source: Wikimedia Commons.</figcaption></figure>
     <div class="clearfix">
-      <p>Every history textbook is a set of choices. Someone decided which events were important enough to include. Someone decided which people were worth naming. For most of American history, those choices were made by a very small group of people: mostly white, mostly male, and mostly from the eastern United States.</p>
+      <p class="para-standard">History books do not tell every story. People choose what goes in and what stays out. Those choices shape how students understand the past.</p>
+      <p class="para-simple">History books cannot tell every story. People choose what goes in. People choose what stays out. Those choices matter.</p>
 
-      <p>That meant large parts of the American story got cut out. The Chinese workers who built the transcontinental railroad were not in the chapters about the railroad. The Black soldiers who fought in every American war were rarely given more than a sentence. The Native nations who negotiated treaties with the U.S. government were described as obstacles or footnotes, not as sovereign peoples with their own governments and laws.</p>
+      <p class="para-standard">For a long time, a small group of people made most of those choices. They were often white men from the eastern United States. Because of that, many communities were pushed to the side.</p>
+      <p class="para-simple">For a long time, a small group made most history books. They were often white men. Many other communities were left out.</p>
 
-      <p>This was not always an accident. Some of these choices were intentional. School boards and publishers made decisions about what version of America students should believe in. A textbook that celebrated conquest looked very different from one that asked questions about it. The <span class="vocab">narrative<span class="tip">The story that gets told about a group of people or a historical event, and who has the power to decide what that story says.</span></span> that got chosen shaped how generations of Americans understood their country.</p>
+      <p class="para-standard">Chinese railroad workers were often missing from railroad chapters. Black soldiers were often given only a sentence. Native nations were often shown as problems, not as governments with their own laws and leaders.</p>
+      <p class="para-simple">Chinese railroad workers were often missing. Black soldiers got little space. Native nations were often shown as problems. They were not shown as governments with laws and leaders.</p>
 
-      <p>When a group of people does not see themselves in the story they are taught, it sends a message. It says: your history does not count here. That message has real consequences. It affects how students see themselves and how they see each other. And it leaves everyone with an incomplete picture of how this country actually came to be.</p>
+      <p class="para-standard">This was not always a mistake. Schools and publishers chose the version of America students would read. The <span class="vocab">narrative<span class="tip">The story that gets told about a group of people or event, especially when someone has power to shape that story.</span></span> shaped how people saw the country.</p>
+      <p class="para-simple">This was not always an accident. Schools chose the story students would read. That <span class="vocab">narrative<span class="tip">The story people choose to tell about an event or group.</span></span> shaped how people saw America.</p>
+
+      <p class="para-standard">When students never see their communities in class, they get a message. The message says their history does not matter. That hurts how students see themselves, and it gives everyone an incomplete story.</p>
+      <p class="para-simple">When students never see their community in class, it sends a message. It says their history does not matter. That hurts students. It also gives everyone an incomplete story.</p>
     </div>
 
-    <!-- PRIMARY SOURCE 1 -->
     <div class="primary-source">
       <blockquote>"One ever feels his twoness: an American, a Negro; two souls, two thoughts, two unreconciled strivings."</blockquote>
       <p class="attribution">W.E.B. Du Bois, <em>The Souls of Black Folk</em>, 1903.</p>
-      <p class="narrator">Du Bois was one of the first Black scholars to write about what it felt like to live in a country that refused to include you in its own story. He called this feeling of being split between two worlds "double consciousness," and it is still something many students of color describe today.</p>
+      <p class="narrator">Du Bois wrote about what it felt like to live in a country that did not fully include Black Americans in its own story.</p>
       <div class="student-questions">
-        <p><strong>Question 1:</strong> What do you think Du Bois meant by "two unreconciled strivings"? What two things might be pulling in opposite directions?</p>
-        <p><strong>Question 2:</strong> How does this connect to the essential question: what happens when whole communities are left out of the story?</p>
+        <p><strong>Question 1:</strong> What two sides might Du Bois be talking about?</p>
+        <p><strong>Question 2:</strong> What happens when a community is left out of the story?</p>
       </div>
     </div>
-
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 2 — THE SF STATE STRIKE
-  ══════════════════════════════════════════════ -->
-  <div class="divider"><span>&#9670;</span></div>
-  <section id="sf-state">
-    <h2 class="section-heading">The Strike That Changed Schools</h2>
+  <div class="brain-break dyk-break">
+    <span class="bb-label">DID YOU KNOW</span>
+    <p class="bb-text">The San Francisco State strike lasted 134 days. That is longer than an entire modern high school semester.</p>
+  </div>
 
+  <div class="divider"><span>◆</span></div>
+  <section id="sf-state">
+    <h2 class="section-heading">THE STRIKE THAT CHANGED SCHOOLS</h2>
     <!--
       FILENAME: L01_SFStateStrike.jpg
       PLACE IN: images/L01/
-      FIND: San Francisco State College student strike, 1968–1969, protesters on campus, public domain or CC licensed
+      FIND: San Francisco State College student strike, 1968-1969, protesters on campus
       SEARCH: San Francisco State College student strike 1968 1969 Wikimedia Commons
       LINK: https://commons.wikimedia.org/wiki/Category:1968_in_the_United_States (suggested, not guaranteed)
     -->
-    <figure>
-      <img src="images/L01/L01_SFStateStrike.jpg" alt="Students striking at San Francisco State College, 1968">
-      <figcaption>Students strike at San Francisco State College, 1968–1969 — the longest student strike in U.S. history. Source: Wikimedia Commons.</figcaption>
-    </figure>
+    <figure><img src="images/L01/L01_SFStateStrike.jpg" alt="Students striking at San Francisco State College, 1968"><figcaption>Students strike at San Francisco State College, 1968-1969; the longest student strike in U.S. history. Source: Wikimedia Commons.</figcaption></figure>
 
-    <p>In November 1968, students at San Francisco State College walked off campus and refused to return. They were not striking over tuition or cafeteria food. They were striking because their college had no courses, no departments, and no faculty dedicated to the history and culture of communities of color. They wanted that to change.</p>
+    <p class="para-standard">In November 1968, students at San Francisco State College stopped going to class. They were not protesting lunch or tuition. They wanted classes that taught the histories and cultures of communities of color.</p>
+    <p class="para-simple">In November 1968, students stopped going to class. They were not upset about lunch or tuition. They wanted classes about communities of color.</p>
 
-    <p>The students formed a group called the <strong>Third World Liberation Front</strong>. That name was a deliberate choice. Around the world in the 1960s, colonized peoples were fighting for independence. These students connected their struggle in the classroom to a global struggle against systems that pushed certain communities to the margins. They saw the university as one of those systems.</p>
+    <p class="para-standard">The students formed the Third World Liberation Front. Around the world, people were fighting colonial rule. These students saw their school as part of a bigger problem: some communities were treated as less important.</p>
+    <p class="para-simple">The students formed a group. It was called the Third World Liberation Front. They saw a bigger problem. Some communities were treated as less important.</p>
 
-    <p>The strike lasted 134 days. It is still the longest student strike in American history. Police were called to campus repeatedly. Students were arrested. The college president resigned. But the students did not stop.</p>
+    <p class="para-standard">The strike lasted 134 days. Police came to campus many times. Students were arrested. The college president resigned. Still, the students kept going.</p>
+    <p class="para-simple">The strike lasted 134 days. Police came many times. Students were arrested. The college president quit. The students kept going.</p>
 
     <!--
       FILENAME: L01_TWLFDemands.jpg
       PLACE IN: images/L01/
-      FIND: Third World Liberation Front flyer, poster, or document from 1968 SF State strike, public domain
+      FIND: Third World Liberation Front flyer, poster, or document from 1968 SF State strike
       SEARCH: Third World Liberation Front San Francisco State demands 1968 Wikimedia Commons
       LINK: https://commons.wikimedia.org/wiki/Category:San_Francisco_State_University (suggested, not guaranteed)
     -->
-    <figure class="inset-left">
-      <img src="images/L01/L01_TWLFDemands.jpg" alt="Third World Liberation Front demands document, 1968">
-      <figcaption>Third World Liberation Front demands, San Francisco State, 1968. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
+    <figure class="inset-left"><img src="images/L01/L01_TWLFDemands.jpg" alt="Third World Liberation Front demands document, 1968"><figcaption>Third World Liberation Front demands, San Francisco State, 1968. Source: Wikimedia Commons.</figcaption></figure>
     <div class="clearfix">
-      <p>The Third World Liberation Front had fifteen specific demands. The central ones were clear: create a School of <span class="vocab">Ethnic Studies<span class="tip">The academic study of the histories, cultures, and experiences of communities whose stories have been left out of mainstream education.</span></span>, hire faculty from those communities, and create courses that reflected the real history of all Americans, not just some.</p>
+      <p class="para-standard">The students had fifteen demands. Their biggest demand was clear: create <span class="vocab">Ethnic Studies<span class="tip">The study of histories, cultures, and experiences of communities often left out of mainstream education.</span></span>. They wanted courses that told a fuller American story.</p>
+      <p class="para-simple">The students had fifteen demands. Their biggest demand was <span class="vocab">Ethnic Studies<span class="tip">A class that studies communities often left out of regular history classes.</span></span>. They wanted classes that told more of the American story.</p>
 
-      <p>In 1969, after 134 days, the college agreed. San Francisco State became the first university in the country to create a College of Ethnic Studies. That school still exists today. The students who went on strike in 1968 did not just change one college. They changed what American education was allowed to look like.</p>
-
-      <p>Their demand was simple at its heart: if this is our country too, then our history belongs in this classroom. That argument took 134 days of walking picket lines in the cold to make stick. But it stuck.</p>
+      <p class="para-standard">In 1969, the college agreed. San Francisco State created the first College of Ethnic Studies in the country. The students changed one school, but they also changed what American education could look like.</p>
+      <p class="para-simple">In 1969, the college agreed. It created the first College of Ethnic Studies. The students changed one school. They also changed education.</p>
     </div>
 
-    <!-- PRIMARY SOURCE 2 -->
     <div class="primary-source">
       <blockquote>"We are a coalition of Third World students united to end racism in our educational system."</blockquote>
       <p class="attribution">Third World Liberation Front, <em>Strike Demands Statement</em>, San Francisco State College, November 1968.</p>
-      <p class="narrator">These students were not asking for a favor. They were making an argument that had been ignored for generations: that a school system that erases certain communities is not educating everyone equally.</p>
+      <p class="narrator">These students argued that a school system that erases some communities is not educating everyone equally.</p>
       <div class="student-questions">
-        <p><strong>Question 1:</strong> The students used the word "racism" to describe what was happening in their schools. Based on what you have read so far, do you think that word fits? Why or why not?</p>
-        <p><strong>Question 2:</strong> The students were asking for <span class="vocab" style="font-weight:600; color: var(--accent-red); text-decoration: underline dotted var(--accent-red);">representation<span class="tip">Whether a group of people is accurately included in media, textbooks, schools, or public life, and how they are shown when they are included.</span></span> in their own education. How does that connect to the essential question of what gets left out and why?</p>
+        <p><strong>Question 1:</strong> Why did students call this racism?</p>
+        <p><strong>Question 2:</strong> How does <span class="vocab">representation<span class="tip">Whether a group of people is accurately included in schools, media, textbooks, or public life.</span></span> connect to the essential question?</p>
       </div>
     </div>
-
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 3 — HOW CALIFORNIA FINALLY ACTED
-  ══════════════════════════════════════════════ -->
-  <div class="divider"><span>&#9670;</span></div>
-  <section id="california-law">
-    <h2 class="section-heading">How California Finally Acted</h2>
+  <div class="brain-break ff-break">
+    <span class="bb-label">FAST FACTS</span>
+    <div class="ff-grid">
+      <div class="ff-item"><span class="ff-number">134</span><span class="ff-desc">DAYS ON STRIKE</span></div>
+      <div class="ff-item"><span class="ff-number">15</span><span class="ff-desc">TWLF DEMANDS</span></div>
+      <div class="ff-item"><span class="ff-number">1ST</span><span class="ff-desc">ETHNIC STUDIES COLLEGE</span></div>
+      <div class="ff-item"><span class="ff-number">1969</span><span class="ff-desc">PROGRAM CREATED</span></div>
+    </div>
+  </div>
 
+  <div class="divider"><span>◆</span></div>
+  <section id="california-law">
+    <h2 class="section-heading">HOW CALIFORNIA FINALLY ACTED</h2>
     <!--
       FILENAME: L01_CaliforniaCapitol.jpg
       PLACE IN: images/L01/
@@ -569,96 +255,82 @@
       SEARCH: California State Capitol Sacramento Wikimedia Commons
       LINK: https://commons.wikimedia.org/wiki/File:California_State_Capitol.jpg (suggested, not guaranteed)
     -->
-    <figure class="inset-right">
-      <img src="images/L01/L01_CaliforniaCapitol.jpg" alt="California State Capitol, Sacramento">
-      <figcaption>California State Capitol, Sacramento. Source: Wikimedia Commons.</figcaption>
-    </figure>
+    <figure class="inset-right"><img src="images/L01/L01_CaliforniaCapitol.jpg" alt="California State Capitol, Sacramento"><figcaption>California State Capitol, Sacramento. Source: Wikimedia Commons.</figcaption></figure>
 
     <div class="clearfix">
-      <p>The students at San Francisco State won something big in 1969. But what they won applied to one university. The fight to bring ethnic studies into every high school in California took another fifty years.</p>
+      <p class="para-standard">The San Francisco State students won something important in 1969. But that change only reached one university. It took about fifty more years to bring ethnic studies into California high schools.</p>
+      <p class="para-simple">The students won in 1969. But the change only reached one college. It took about fifty more years to reach California high schools.</p>
 
-      <p>In 2021, Governor Gavin Newsom signed a law making ethnic studies a graduation requirement for all California high school students. California became the first state in the country to require it. The law takes full effect for the class of 2030. You are one of the first groups of students to experience this requirement.</p>
+      <p class="para-standard">In 2021, California made ethnic studies a graduation requirement. It was the first state to do this. The rule fully begins with the class of 2030.</p>
+      <p class="para-simple">In 2021, California made ethnic studies a graduation rule. It was the first state to do this. The rule starts fully with the class of 2030.</p>
 
-      <p>Why did it take fifty years? The short answer is that powerful people disagreed about what American history should say. Some argued that adding ethnic studies would divide students instead of unite them. Others argued that leaving out the history of millions of Americans had already done that, and that students deserved the full story. That argument went back and forth in school boards, legislatures, and community meetings across the state for decades.</p>
-
-      <p>What finally moved it forward was organizing: students, teachers, parents, and community groups who kept pushing, kept showing up, and kept making the same argument the San Francisco State students made in 1968. The course you are sitting in right now is the result of that work.</p>
+      <p class="para-standard">Why did it take so long? People argued about what American history should include. Some said ethnic studies would divide students. Others said leaving people out had already done that.</p>
+      <p class="para-simple">Why did it take so long? People argued about history class. Some said ethnic studies would divide students. Others said leaving people out already divided students.</p>
     </div>
 
-    <!-- LOCAL HISTORY -->
     <div class="callout-card">
-      <h3>&#127968; San Diego Connection: The Fight Came Here Too</h3>
-      <p>San Diego Unified School District began piloting ethnic studies courses years before the state law passed. Community members and students here pushed for curriculum that reflected the region's history: the Kumeyaay Nation's deep roots, the Mexican American families whose ancestors lived here before the U.S.-Mexico border was drawn, and the Filipino and Black communities who shaped this city's labor and military history.</p>
-      <p class="detail">The Kumeyaay Cultural Repatriation Committee has been working for decades to recover cultural items taken from their community and held in university collections. That fight over what belongs to whom, and who gets to tell the story, is the same fight this course is about.</p>
+      <h3>SAN DIEGO CONNECTION: THE FIGHT CAME HERE TOO</h3>
+      <p>San Diego schools began trying ethnic studies before the state law passed. Students, families, and community members wanted lessons that included the Kumeyaay Nation, Mexican American families, Filipino communities, and Black communities in the city.</p>
+      <p class="detail">The Kumeyaay Cultural Repatriation Committee has worked for decades to recover cultural items taken from their community and held in university collections.</p>
     </div>
-
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 4 — FIVE STORIES
-  ══════════════════════════════════════════════ -->
-  <div class="divider"><span>&#9670;</span></div>
+  <div class="brain-break yd-break">
+    <span class="bb-label">YOU DECIDE</span>
+    <p class="bb-text">You are designing one history class. You only have one full week left. What gets the week: presidents, wars, immigration, labor movements, civil rights, or local community history?</p>
+  </div>
+
+  <div class="divider"><span>◆</span></div>
   <section id="five-stories">
-    <h2 class="section-heading">Five Stories You Were Never Told</h2>
+    <h2 class="section-heading">FIVE STORIES YOU WERE NEVER TOLD</h2>
+    <p class="para-standard">This course will include stories that many history classes skip. You do not need to know the full story yet. Start with one question: did you already know this happened?</p>
+    <p class="para-simple">This course includes stories many classes skip. You do not need to know everything yet. Ask this: Did I already know this happened?</p>
 
-    <p>Across this course, you will encounter stories that almost never appear in a standard American history class. Here are five of them. You do not need to know the full story yet. Just notice: did you already know this happened? And if not, why not?</p>
-
-    <p>A <span class="vocab">counternarrative<span class="tip">A story that challenges or corrects the official version of history by including voices and events that were left out.</span></span> is exactly what it sounds like: a story that pushes back against the version of history that has been handed down as the official one. The events below are all real. All of them were left out of most textbooks for most of the 20th century.</p>
-
-    <!--
-      FILENAME: L01_TulsaMassacre.jpg
-      PLACE IN: images/L01/
-      FIND: Greenwood District / Black Wall Street destruction, Tulsa, Oklahoma, 1921, public domain
-      SEARCH: Tulsa race massacre 1921 Greenwood Wikimedia Commons Library of Congress
-      LINK: https://commons.wikimedia.org/wiki/Category:Tulsa_race_massacre (suggested, not guaranteed)
-    -->
-
-    <!--
-      FILENAME: L01_ZootSuitRiots.jpg
-      PLACE IN: images/L01/
-      FIND: Zoot Suit Riots, Los Angeles, 1943, soldiers or sailors attacking young Mexican American men, public domain
-      SEARCH: Zoot Suit Riots Los Angeles 1943 Wikimedia Commons Library of Congress
-      LINK: https://commons.wikimedia.org/wiki/Category:Zoot_Suit_Riots (suggested, not guaranteed)
-    -->
+    <p class="para-standard">A <span class="vocab">counternarrative<span class="tip">A story that challenges the official version of history by including voices and events that were left out.</span></span> pushes back against the usual version of history. It adds people and events that were left out. The stories below are real, but many textbooks ignored them for years.</p>
+    <p class="para-simple">A <span class="vocab">counternarrative<span class="tip">A story that adds people or events that were left out.</span></span> pushes back against the usual story. It adds people who were left out. The stories below are real. Many books ignored them.</p>
 
     <div class="paired-wrap">
       <figure>
-        <img src="images/L01/L01_TulsaMassacre.jpg" alt="Greenwood District after the Tulsa Race Massacre, 1921">
-        <figcaption>Greenwood District (Black Wall Street) after the Tulsa Race Massacre, 1921. Source: Library of Congress.</figcaption>
+        <!--
+          FILENAME: L01_TulsaMassacre.jpg
+          PLACE IN: images/L01/
+          FIND: Greenwood District / Black Wall Street destruction, Tulsa, Oklahoma, 1921, public domain
+          SEARCH: Tulsa race massacre 1921 Greenwood Wikimedia Commons Library of Congress
+          LINK: https://commons.wikimedia.org/wiki/Category:Tulsa_race_massacre (suggested, not guaranteed)
+        -->
+        <img src="images/L01/L01_TulsaMassacre.jpg" alt="Greenwood District after the Tulsa Race Massacre, 1921"><figcaption>Greenwood District after the Tulsa Race Massacre, 1921. Source: Library of Congress.</figcaption>
       </figure>
       <figure>
-        <img src="images/L01/L01_ZootSuitRiots.jpg" alt="Aftermath of the Zoot Suit Riots, Los Angeles, 1943">
-        <figcaption>Aftermath of the Zoot Suit Riots, Los Angeles, 1943. Source: Wikimedia Commons.</figcaption>
+        <!--
+          FILENAME: L01_ZootSuitRiots.jpg
+          PLACE IN: images/L01/
+          FIND: Zoot Suit Riots, Los Angeles, 1943
+          SEARCH: Zoot Suit Riots Los Angeles 1943 Wikimedia Commons Library of Congress
+          LINK: https://commons.wikimedia.org/wiki/Category:Zoot_Suit_Riots (suggested, not guaranteed)
+        -->
+        <img src="images/L01/L01_ZootSuitRiots.jpg" alt="Aftermath of the Zoot Suit Riots, Los Angeles, 1943"><figcaption>Aftermath of the Zoot Suit Riots, Los Angeles, 1943. Source: Wikimedia Commons.</figcaption>
       </figure>
     </div>
 
     <div class="stories-grid">
-
-      <div class="story-card">
-        <h3>The Tulsa Race Massacre (1921)</h3>
-        <p>In June 1921, a white mob burned down a thriving Black neighborhood in Tulsa, Oklahoma called Greenwood. Over 300 Black Americans were killed and 10,000 were left homeless overnight. It was one of the worst acts of racial violence in U.S. history. It was not taught in Oklahoma schools until 2020.</p>
-      </div>
-
-      <div class="story-card">
-        <h3>The Zoot Suit Riots (1943)</h3>
-        <p>In Los Angeles in 1943, U.S. servicemen attacked young Mexican American and Black men wearing zoot suits, a popular style of clothing. Police arrested the victims, not the attackers. Local newspapers cheered the violence on. The riots were a flashpoint in the history of anti-Mexican racism in California.</p>
-      </div>
-
-      <div class="story-card">
-        <h3>The Chinese Exclusion Act (1882)</h3>
-        <p>In 1882, the U.S. Congress passed a law banning Chinese laborers from entering the country. It was the first and only law in American history to exclude an entire ethnic group by name. It was not fully repealed until 1943. The workers who had helped build the transcontinental railroad were now legally barred from the country that railroad connected.</p>
-      </div>
-
-      <div class="story-card">
-        <h3>The Bracero Program (1942&ndash;1964)</h3>
-        <p>During and after World War II, the U.S. government brought over 4 million Mexican workers to the U.S. under temporary contracts to work on farms. Many were cheated out of wages that were promised to them. When the work was done, the workers were deported. Their labor fed the country. Their names did not make it into the textbooks.</p>
-      </div>
-
-      <div class="story-card story-card-wide">
-        <h3>The Trail of Broken Treaties (1972)</h3>
-        <p>In 1972, a coalition of Native American organizations drove a caravan of cars across the country to Washington, D.C. They presented the U.S. government with a list of twenty demands for honoring the treaties that had been signed and broken for over 150 years. The government refused to meet with them. The protest received almost no coverage in major newspapers. Most Americans still do not know it happened.</p>
-      </div>
-
+      <div class="story-card"><h3>THE TULSA RACE MASSACRE (1921)</h3><p>A white mob burned down Greenwood, a successful Black neighborhood in Tulsa, Oklahoma. Many people were killed or hurt. Thousands lost their homes.</p></div>
+      <div class="story-card"><h3>THE ZOOT SUIT RIOTS (1943)</h3><p>In Los Angeles, U.S. servicemen attacked young Mexican American and Black men wearing zoot suits. Police often arrested the victims instead of the attackers.</p></div>
+      <div class="story-card"><h3>THE CHINESE EXCLUSION ACT (1882)</h3><p>Congress banned Chinese laborers from entering the country. Many Chinese workers had helped build the railroad. Then the country shut them out.</p></div>
+      <div class="story-card"><h3>THE BRACERO PROGRAM (1942-1964)</h3><p>Millions of Mexican workers came to the U.S. to work on farms. Many were promised fair pay. Many were cheated.</p></div>
+      <div class="story-card story-card-wide"><h3>THE TRAIL OF BROKEN TREATIES (1972)</h3><p>Native American activists traveled to Washington, D.C. They demanded that the U.S. honor treaties. Most Americans still do not know it happened.</p></div>
     </div>
+
+    <!--
+      FILENAME: L01_TrailBrokenTreaties.jpg
+      PLACE IN: images/L01/
+      FIND: Trail of Broken Treaties protest, Washington, D.C., 1972, preferably American Indian Movement activists at or inside the Bureau of Indian Affairs building
+      SEARCH: Trail of Broken Treaties 1972 Bureau of Indian Affairs protest photograph Wikimedia Commons Library of Congress
+      LINK: https://www.nps.gov/articles/000/trail-of-broken-treaties.htm (suggested, not guaranteed)
+    -->
+    <figure>
+      <img src="images/L01/L01_TrailBrokenTreaties.jpg" alt="Trail of Broken Treaties protest, Washington, D.C., 1972">
+      <figcaption>Trail of Broken Treaties protest, Washington, D.C., 1972. Native activists demanded that the U.S. honor treaties and recognize tribal sovereignty. Source: National Park Service / public archive.</figcaption>
+    </figure>
 
     <!--
       FILENAME: L01_ChineseRailroadWorkers.jpg
@@ -667,91 +339,105 @@
       SEARCH: Chinese laborers transcontinental railroad 1860s Wikimedia Commons Library of Congress
       LINK: https://commons.wikimedia.org/wiki/Category:Construction_of_the_First_Transcontinental_Railroad (suggested, not guaranteed)
     -->
-    <figure>
-      <img src="images/L01/L01_ChineseRailroadWorkers.jpg" alt="Chinese laborers working on the transcontinental railroad, 1860s">
-      <figcaption>Chinese laborers building the transcontinental railroad, ca. 1860s. Their work made the railroad possible; their history was left out of most textbooks for over a century. Source: Library of Congress.</figcaption>
-    </figure>
+    <figure><img src="images/L01/L01_ChineseRailroadWorkers.jpg" alt="Chinese laborers working on the transcontinental railroad, 1860s"><figcaption>Chinese laborers building the transcontinental railroad, ca. 1860s. Source: Library of Congress.</figcaption></figure>
 
-    <p>These five stories are not rare exceptions. They are examples of a pattern. When a country writes a history of itself, it is also making choices about what that country stands for. Leaving out the Tulsa Massacre or the Chinese Exclusion Act does not make those events less real. It just means students grow up without knowing they happened. This course is about changing that.</p>
-
+    <p class="para-standard">These five stories are not random. They show a pattern. Leaving them out does not make them less real. It only means students grow up without knowing them.</p>
+    <p class="para-simple">These stories are not random. They show a pattern. Leaving them out does not make them less real. It just means students do not learn them.</p>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       SECTION 5 — HOW THIS STILL MATTERS TODAY
-  ══════════════════════════════════════════════ -->
-  <div class="divider"><span>&#9670;</span></div>
+  <div class="brain-break as-break">
+    <span class="bb-label">ART SPOTLIGHT</span>
+    <figure>
+      <!--
+        FILENAME: L01_CommunityHistoryMural.jpg
+        PLACE IN: images/L01/
+        FIND: Community mural in San Francisco or California showing layered histories, public memory, and identity; choose a mural with people, movement, or community symbolism rather than a blank wall
+        SEARCH: San Francisco community mural history identity Wikimedia Commons Library of Congress
+        LINK: https://commons.wikimedia.org/wiki/Category:Murals_in_San_Francisco (suggested, not guaranteed)
+      -->
+      <img src="images/L01/L01_CommunityHistoryMural.jpg" alt="Community mural showing public memory and identity" class="as-image">
+      <figcaption class="as-caption">Community mural showing how history can live on walls, streets, and neighborhoods instead of only in textbooks.</figcaption>
+    </figure>
+    <p class="as-question">What part of this mural feels like it is trying hardest not to be forgotten?</p>
+  </div>
+
+  <div class="divider"><span>◆</span></div>
   <section id="still-matters">
-    <h2 class="section-heading" style="color: var(--bright-gold); border-bottom-color: var(--terracotta);">How This Still Matters Today</h2>
-
-    <p class="sm-headline">The argument over what gets taught in American history classrooms is one of the most contested fights in education right now.</p>
-
-    <p>Across the country, states are passing laws about what teachers can and cannot say about race and history. Some states have banned books that include the history of communities of color. Others, like California, are moving in the opposite direction. The question at the center of all of it is the same one the San Francisco State students asked in 1968: whose history belongs in this classroom?</p>
-
-    <p>The Tulsa Race Massacre was left out of Oklahoma textbooks for nearly 100 years. It took a 2021 state law and a TV show to bring it to wide public attention. The families of survivors are still waiting for official recognition and reparations. The story was always there. It was just not being told.</p>
-
-    <ul class="news-links">
-      <li><a href="https://news.google.com/search?q=ethnic+studies+California+graduation+requirement+2021" target="_blank" rel="noopener">California Makes Ethnic Studies a Graduation Requirement</a></li>
-      <li><a href="https://news.google.com/search?q=Tulsa+race+massacre+reparations+survivors+2024" target="_blank" rel="noopener">Tulsa Race Massacre: Survivors and Families Seek Reparations</a></li>
-      <li><a href="https://news.google.com/search?q=book+bans+history+curriculum+schools+race+2024+2025" target="_blank" rel="noopener">Book Bans and History Curriculum: The Fight Over What Students Learn</a></li>
-    </ul>
-
-    <!--
-      FILENAME: L01_BooksProtest.jpg
-      PLACE IN: images/L01/
-      FIND: Students or community members protesting book bans or defending curriculum, recent, public domain or CC licensed
-      SEARCH: book ban protest students school curriculum Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/Category:Banned_books (suggested, not guaranteed)
-    -->
-    <figure>
-      <img src="images/L01/L01_BooksProtest.jpg" alt="Community members protest book bans and curriculum restrictions">
-      <figcaption>Community members and students protest against book bans and curriculum restrictions in public schools, recent years. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <p class="closing-q">If a history gets erased long enough, does it become harder to fix the harm that history caused? What do we owe to stories that were deliberately left out?</p>
-
+    <h2 class="section-heading">HOW THIS STILL MATTERS TODAY</h2>
+    <p class="sm-headline">THE FIGHT OVER WHOSE STORIES BELONG IN SCHOOL NEVER ACTUALLY ENDED.</p>
+    <div class="brain-break tn-break">
+      <span class="bb-label">THEN AND NOW</span>
+      <div class="tn-pair">
+        <div class="tn-item">
+          <span class="tn-era-label">1968</span>
+          <!--
+            FILENAME: L01_SFStatePicketLine.jpg
+            PLACE IN: images/L01/
+            FIND: Different photograph from the San Francisco State College student strike, 1968-1969, preferably a picket line, crowd, or students holding signs; use a different image than the main strike image earlier in the lesson
+            SEARCH: San Francisco State College strike picket line 1968 1969 Wikimedia Commons
+            LINK: https://commons.wikimedia.org/wiki/Category:San_Francisco_State_University (suggested, not guaranteed)
+          -->
+          <img src="images/L01/L01_SFStatePicketLine.jpg" alt="Students on a picket line during the San Francisco State strike">
+          <p class="tn-caption">Students put their bodies on the line to demand courses that included their communities.</p>
+        </div>
+        <div class="tn-item">
+          <span class="tn-era-label">TODAY</span>
+          <!--
+            FILENAME: L01_BooksProtest.jpg
+            PLACE IN: images/L01/
+            FIND: Students or community members protesting book bans or defending curriculum
+            SEARCH: book ban protest students school curriculum Wikimedia Commons
+            LINK: https://commons.wikimedia.org/wiki/Category:Banned_books (suggested, not guaranteed)
+          -->
+          <img src="images/L01/L01_BooksProtest.jpg" alt="Community members protest book bans and curriculum restrictions">
+          <p class="tn-caption">Students and families still argue over what schools should teach.</p>
+        </div>
+      </div>
+      <p class="tn-question">Which group do you think would understand the other group immediately?</p>
+    </div>
+    <p class="closing-q">If nobody tells a story for fifty years, who is responsible for telling it now?</p>
   </section>
-
 </main>
 
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
-<footer>
-  Ethnic Studies &mdash; Lesson 01 &mdash; Who Gets Erased? The History Behind the History
-</footer>
+<footer>ETHNIC STUDIES — LESSON 01 — WHO GETS ERASED? THE HISTORY BEHIND THE HISTORY</footer>
 
-<!-- ══════════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════════ -->
 <script>
+document.getElementById('lexile-toggle').addEventListener('click', function() {
+ document.body.classList.toggle('simplified');
+ this.textContent = document.body.classList.contains('simplified') ? 'STANDARD TEXT' : 'SIMPLIFY TEXT';
+});
 document.querySelectorAll('.vocab').forEach(function(el) {
-  el.addEventListener('click', function(e) {
-    e.stopPropagation();
-    document.querySelectorAll('.vocab.active').forEach(function(v) {
-      if (v !== el) v.classList.remove('active');
-    });
-    el.classList.toggle('active');
-  });
+ el.addEventListener('click', function(e) {
+   e.stopPropagation();
+   document.querySelectorAll('.vocab.active').forEach(function(v) { if (v !== el) v.classList.remove('active'); });
+   el.classList.toggle('active');
+ });
 });
-document.addEventListener('click', function() {
-  document.querySelectorAll('.vocab.active').forEach(function(v) {
-    v.classList.remove('active');
-  });
-});
+document.addEventListener('click', function() { document.querySelectorAll('.vocab.active').forEach(function(v) { v.classList.remove('active'); }); });
+const tocObserver = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+   const id = entry.target.getAttribute('id');
+   const link = document.querySelector('.toc-sidebar a[href="#' + id + '"]');
+   if (link) { if (entry.isIntersecting) link.classList.add('active'); else link.classList.remove('active'); }
+ });
+}, { threshold: 0.25 });
+document.querySelectorAll('section[id]').forEach(el => tocObserver.observe(el));
 </script>
-
 </body>
 </html>
-
 <!--
 IMAGE CHECKLIST FOR SS9_L01.html
 1. L01_HeaderBG.jpg — header background: SF State student strike scene or textbook image evoking erasure — Suggested link: https://commons.wikimedia.org/wiki/Category:San_Francisco_State_University
 2. L01_OldTextbook.jpg — mid-20th century American history textbook cover or open pages — Suggested link: https://commons.wikimedia.org/wiki/Category:History_textbooks
-3. L01_SFStateStrike.jpg — students striking at San Francisco State College, 1968–1969 — Suggested link: https://commons.wikimedia.org/wiki/Category:1968_in_the_United_States
+3. L01_SFStateStrike.jpg — students striking at San Francisco State College, 1968-1969 — Suggested link: https://commons.wikimedia.org/wiki/Category:1968_in_the_United_States
 4. L01_TWLFDemands.jpg — Third World Liberation Front demands flyer or document, 1968 — Suggested link: https://commons.wikimedia.org/wiki/Category:San_Francisco_State_University
 5. L01_CaliforniaCapitol.jpg — California State Capitol building, Sacramento — Suggested link: https://commons.wikimedia.org/wiki/File:California_State_Capitol.jpg
 6. L01_TulsaMassacre.jpg — Greenwood District destruction after Tulsa Race Massacre, 1921 — Suggested link: https://commons.wikimedia.org/wiki/Category:Tulsa_race_massacre
 7. L01_ZootSuitRiots.jpg — Zoot Suit Riots aftermath, Los Angeles, 1943 — Suggested link: https://commons.wikimedia.org/wiki/Category:Zoot_Suit_Riots
-8. L01_ChineseRailroadWorkers.jpg — Chinese laborers building transcontinental railroad, 1860s — Suggested link: https://commons.wikimedia.org/wiki/Category:Construction_of_the_First_Transcontinental_Railroad
-9. L01_BooksProtest.jpg — students or community protesting book bans or curriculum restrictions — Suggested link: https://commons.wikimedia.org/wiki/Category:Banned_books
+8. L01_TrailBrokenTreaties.jpg — Trail of Broken Treaties protest, Washington, D.C., 1972 — Suggested link: https://www.nps.gov/articles/000/trail-of-broken-treaties.htm
+9. L01_ChineseRailroadWorkers.jpg — Chinese laborers building transcontinental railroad, 1860s — Suggested link: https://commons.wikimedia.org/wiki/Category:Construction_of_the_First_Transcontinental_Railroad
+10. L01_CommunityHistoryMural.jpg — community mural showing public memory, identity, and layered histories — Suggested link: https://commons.wikimedia.org/wiki/Category:Murals_in_San_Francisco
+11. L01_SFStatePicketLine.jpg — different SF State strike picket line/crowd photo for Then and Now left — Suggested link: https://commons.wikimedia.org/wiki/Category:San_Francisco_State_University
+12. L01_BooksProtest.jpg — students or community protesting book bans or curriculum restrictions — Suggested link: https://commons.wikimedia.org/wiki/Category:Banned_books
+TOTAL IMAGES: 12 INCLUDING HEADER BACKGROUND
 -->
