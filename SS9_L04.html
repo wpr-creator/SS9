@@ -3,787 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS9 L04 — CHICANO AND LATINO IDENTITY: BORDER, CULTURE, AND POWER</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@500;700;900&display=swap" rel="stylesheet">
+<title>SS9_L04 — CHICANO AND LATINO IDENTITY</title>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Atkinson+Hyperlegible:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --adobe:       #1a0a00;
-    --dark-adobe:  #2e1200;
-    --brick:       #7a2800;
-    --terracotta:  #b04020;
-    --chili:       #c83010;
-    --sun:         #d4880a;
-    --gold:        #e8a820;
-    --pale-gold:   #f5d070;
-    --sage:        #4a6838;
-    --dark-sage:   #2e4020;
-    --sky-blue:    #2860a0;
-    --parchment:   #f8ead8;
-    --light-parch: #fdf6ec;
-    --cream:       #faf4e8;
-    --accent-red:  #b03030;
-    --text:        #1a0800;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-
-  /* ── HEADER ── */
-  header {
-    position: relative;
-    background: var(--adobe);
-    overflow: hidden;
-    padding: 66px 24px 54px;
-    text-align: center;
-  }
-  .header-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center 45%;
-    opacity: 0.34;
-  }
-  .header-inner {
-    position: relative;
-    z-index: 2;
-    max-width: 820px;
-    margin: 0 auto;
-  }
-  .course-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--pale-gold);
-    margin-bottom: 20px;
-  }
-  h1.page-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(34px, 6.5vw, 62px);
-    font-weight: 900;
-    color: var(--parchment);
-    line-height: 1.08;
-    margin-bottom: 30px;
-    text-shadow: 0 3px 22px rgba(0,0,0,0.7);
-    letter-spacing: -0.01em;
-  }
-  .eq-banner {
-    background: var(--dark-sage);
-    border-left: 6px solid var(--gold);
-    border-right: 6px solid var(--gold);
-    padding: 18px 32px;
-    display: inline-block;
-    max-width: 780px;
-    width: 100%;
-  }
-  .eq-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--pale-gold);
-    opacity: 0.85;
-    margin-bottom: 6px;
-  }
-  .eq-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(14px, 2.4vw, 20px);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.5;
-  }
-
-  /* ── NAV ── */
-  nav.section-nav {
-    background: var(--brick);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.48);
-  }
-  nav.section-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  nav.section-nav ul li a {
-    display: block;
-    padding: 13px 14px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 11.5px;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    color: var(--parchment);
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: background 0.18s, border-color 0.18s, color 0.18s;
-  }
-  nav.section-nav ul li a:hover {
-    background: var(--terracotta);
-    border-bottom-color: var(--gold);
-    color: var(--gold);
-  }
-
-  /* ── MAIN ── */
-  main {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 22px 70px;
-  }
-
-  /* ── INTRO ── */
-  .intro-block {
-    background: var(--light-parch);
-    border-left: 6px solid var(--terracotta);
-    padding: 36px 38px 30px;
-    margin: 50px 0 0;
-    font-size: 19px;
-    line-height: 1.9;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    margin: 60px 0 44px;
-  }
-  .divider-line {
-    flex: 1;
-    height: 3px;
-    background: var(--terracotta);
-  }
-  .divider-block {
-    background: var(--terracotta);
-    padding: 6px 18px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #fff;
-  }
-
-  /* ── SECTIONS ── */
-  h2.section-heading {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 900;
-    color: var(--brick);
-    margin-bottom: 24px;
-    line-height: 1.18;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--gold);
-    letter-spacing: -0.01em;
-  }
-  p {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-
-  /* ── VOCAB ── */
-  .vocab {
-    color: var(--accent-red);
-    text-decoration: underline dotted var(--accent-red);
-    cursor: help;
-    position: relative;
-    font-weight: 700;
-  }
-  .vocab .tip {
-    display: none;
-    position: absolute;
-    bottom: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1a1a2e;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 5px;
-    font-size: 15px;
-    line-height: 1.55;
-    z-index: 300;
-    font-style: normal;
-    font-weight: 400;
-    pointer-events: none;
-    max-width: 300px;
-    white-space: normal;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  }
-  .vocab:hover .tip, .vocab.active .tip { display: block; }
-
-  /* ── IMAGES ── */
-  figure { margin: 32px 0; }
-  figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 3px solid #d8c8a0;
-    box-shadow: 0 4px 22px rgba(26,8,0,0.3);
-  }
-  figure.inset-left  { float: left;  width: 41%; margin: 4px 28px 16px 0; }
-  figure.inset-right { float: right; width: 41%; margin: 4px 0 16px 28px; }
-  .paired-wrap { display: flex; gap: 18px; margin: 32px 0; }
-  .paired-wrap figure { flex: 1; margin: 0; }
-  figcaption {
-    font-size: 13px;
-    font-style: italic;
-    color: var(--brick);
-    margin-top: 8px;
-    line-height: 1.5;
-    text-align: center;
-  }
-  .clearfix::after { content: ''; display: table; clear: both; }
-
-  /* ── PRIMARY SOURCE ── */
-  .primary-source {
-    background: #f0e0cc;
-    border-left: 6px solid var(--terracotta);
-    padding: 28px 34px 24px;
-    margin: 42px 0;
-  }
-  .primary-source blockquote {
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.65;
-    color: var(--dark-adobe);
-    font-style: italic;
-    margin-bottom: 16px;
-  }
-  .primary-source .attribution {
-    font-size: 14px;
-    font-style: italic;
-    color: var(--brick);
-    margin-bottom: 12px;
-  }
-  .primary-source .narrator {
-    font-size: 16px;
-    color: var(--text);
-    border-top: 1px solid var(--sun);
-    padding-top: 12px;
-    line-height: 1.7;
-    margin-bottom: 0;
-  }
-  .primary-source .student-questions {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px dashed var(--sun);
-  }
-  .primary-source .student-questions p {
-    font-size: 17px;
-    margin-bottom: 12px;
-    color: var(--dark-adobe);
-  }
-  .primary-source .student-questions strong { color: var(--chili); }
-
-  /* ── DEMANDS GRID ── */
-  .demands-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 32px 0;
-  }
-  .demand-card {
-    background: var(--dark-adobe);
-    border-top: 4px solid var(--gold);
-    padding: 18px 20px;
-  }
-  .demand-card .demand-num {
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 6px;
-    opacity: 0.7;
-  }
-  .demand-card .demand-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    color: var(--pale-gold);
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .demand-card p {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--parchment);
-    opacity: 0.9;
-    margin: 0;
-  }
-
-  /* ── CALLOUT CARD ── */
-  .callout-card {
-    background: var(--adobe);
-    color: var(--parchment);
-    padding: 30px 36px;
-    margin: 42px 0;
-    border-top: 4px solid var(--gold);
-    border-bottom: 4px solid var(--gold);
-  }
-  .callout-card h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--gold);
-    margin-bottom: 14px;
-    line-height: 1.3;
-  }
-  .callout-card p { color: var(--parchment); font-size: 17px; }
-  .callout-card .detail {
-    font-size: 15px;
-    font-style: italic;
-    color: var(--pale-gold);
-    margin-top: 12px;
-  }
-
-  /* ── STILL MATTERS ── */
-  #still-matters {
-    background: var(--adobe);
-    padding: 50px 40px 48px;
-    margin: 58px -22px 0;
-  }
-  #still-matters h2 {
-    color: var(--gold);
-    border-bottom-color: var(--chili);
-  }
-  .sm-headline {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(17px, 2.8vw, 24px);
-    font-weight: 900;
-    color: var(--pale-gold);
-    line-height: 1.42;
-    margin: 26px 0 28px;
-  }
-  #still-matters p { color: var(--parchment); opacity: 0.92; margin-bottom: 20px; }
-  .news-links { list-style: none; padding: 0; margin: 0 0 34px; display: flex; flex-direction: column; gap: 12px; }
-  .news-links li a {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--pale-gold);
-    text-decoration: underline;
-    line-height: 1.5;
-    transition: color 0.18s;
-  }
-  .news-links li a:hover { color: #fff; }
-  .closing-q {
-    font-family: 'Libre Baskerville', serif;
-    font-size: clamp(18px, 2.8vw, 23px);
-    font-style: italic;
-    color: var(--parchment);
-    line-height: 1.65;
-    border-top: 2px solid var(--chili);
-    padding-top: 28px;
-    margin-top: 32px;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--adobe);
-    border-top: 3px solid var(--gold);
-    padding: 22px 20px;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--pale-gold);
-    text-transform: uppercase;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 620px) {
-    figure.inset-left, figure.inset-right { float: none; width: 100%; margin: 24px 0; }
-    .paired-wrap { flex-direction: column; }
-    .demands-grid { grid-template-columns: 1fr; }
-    #still-matters { margin: 58px -22px 0; padding: 36px 22px 40px; }
-    .intro-block { padding: 24px 20px; }
-    .primary-source { padding: 20px 18px; }
-    .callout-card { padding: 24px 20px; }
-  }
+:root{--cream:#fff2d6;--sand:#f2d29b;--terracotta:#a94724;--terracotta-dark:#73301c;--indigo:#1d3159;--teal:#08746f;--cactus:#315c35;--gold:#f2b632;--red:#b03030;--ink:#24160f;--muted:#6b4a37;--paper:#fff8e8;--sun:#ffcf33;--purple:#32134d;--electric:#00a7a7;--navy:#10233f}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:radial-gradient(circle at 12% 8%,rgba(242,182,50,.25),transparent 24%),linear-gradient(135deg,#f4c27a 0%,#f7e0b2 42%,#d88147 100%);color:var(--ink);font-family:'Atkinson Hyperlegible',Arial,sans-serif;font-size:18px;line-height:1.85}.page-shell{max-width:920px;margin:0 auto;background:var(--paper);box-shadow:0 0 70px rgba(70,31,12,.42);border-left:6px solid var(--terracotta-dark);border-right:6px solid var(--terracotta-dark)}.hero{position:relative;overflow:hidden;min-height:440px;padding:72px 42px 62px;display:flex;align-items:center;text-align:center;background:var(--terracotta-dark)}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.36;filter:saturate(1.05) contrast(1.05) sepia(.08)}.hero:before,.hero:after{content:"";position:absolute;left:0;right:0;height:18px;background:repeating-linear-gradient(90deg,var(--gold) 0 20px,var(--teal) 20px 40px,var(--terracotta) 40px 60px,var(--indigo) 60px 80px);z-index:2}.hero:before{top:0}.hero:after{bottom:0}.hero-inner{position:relative;z-index:3;max-width:820px;margin:0 auto}.course-label{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:#ffe8b7;margin-bottom:16px}.page-title{font-family:'Rye',serif;text-transform:uppercase;font-size:clamp(46px,7vw,70px);line-height:1.08;color:#fff9e8;text-shadow:0 4px 18px rgba(0,0,0,.65);margin-bottom:28px}.eq-banner{display:inline-block;max-width:760px;background:rgba(16,35,63,.92);color:#fff;border:3px solid var(--gold);border-radius:4px;padding:18px 28px;text-align:left;font-weight:700;font-size:20px;line-height:1.5}.eq-label{display:block;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}.section-nav{position:sticky;top:0;z-index:100;background:var(--indigo);border-bottom:4px solid var(--gold);display:flex;flex-wrap:wrap;justify-content:center}.section-nav a{font-family:'Oswald',sans-serif;color:#ffe8b7;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-size:12px;padding:14px 13px;border-bottom:4px solid transparent;margin-bottom:-4px}.section-nav a:hover{color:#fff;border-bottom-color:var(--gold);background:rgba(255,255,255,.08)}#lexile-toggle{display:block;margin:20px auto 28px;padding:10px 24px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:2px solid var(--terracotta);background:transparent;color:var(--terracotta);transition:background .2s,color .2s}#lexile-toggle:hover{background:var(--terracotta);color:var(--cream)}.para-simple{display:none}body.simplified .para-standard{display:none}body.simplified .para-simple{display:block}.toc-sidebar{position:fixed;right:calc(50% - 590px);top:50%;transform:translateY(-50%);width:155px;padding:14px 12px;font-family:'Oswald',sans-serif;z-index:50;background:rgba(29,49,89,.9);border-left:2px solid rgba(242,182,50,.45)}.toc-sidebar .toc-label{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px}.toc-sidebar a{display:block;color:#ffe8b7;text-decoration:none;padding:3px 0;font-size:11px;letter-spacing:.05em;text-transform:uppercase}.toc-sidebar a.active,.toc-sidebar a:hover{color:#fff;font-weight:700}main{max-width:820px;margin:0 auto;padding:0 28px 66px}.intro-section{padding:48px 0 26px}.intro-section p{font-size:19px;line-height:1.9;margin-bottom:18px;color:var(--ink)}.content-section{padding:46px 0 24px;border-top:3px double rgba(169,71,36,.32)}.section-kicker{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.24em;color:var(--terracotta);text-transform:uppercase;margin-bottom:8px}.section-heading{font-family:'Rye',serif;font-size:clamp(32px,4.5vw,42px);line-height:1.16;text-transform:uppercase;color:var(--indigo);margin-bottom:24px;padding-bottom:12px;border-bottom:5px solid var(--terracotta)}p{margin-bottom:20px}.real-world{border-left:5px solid var(--teal);background:#f6e4bd;padding:16px 20px;margin:26px 0;font-weight:700}.divider{display:flex;align-items:center;gap:12px;margin:38px 0}.divider:before,.divider:after{content:"";height:3px;flex:1;background:linear-gradient(to right,transparent,var(--terracotta),transparent)}.divider span{font-family:'Rye',serif;color:var(--terracotta);font-size:18px}.vocab{color:var(--red);text-decoration:underline dotted var(--red);cursor:help;position:relative;font-weight:700}.vocab-red{color:var(--red);font-weight:700}.vocab .tip{display:none;position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:8px 14px;border-radius:4px;font-size:14px;line-height:1.5;z-index:10;font-style:normal;font-weight:400;pointer-events:none;max-width:280px;white-space:normal;font-family:'Atkinson Hyperlegible',Arial,sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.45)}.vocab:hover .tip,.vocab.active .tip{display:block}figure{margin:30px 0}figure img{width:100%;display:block;border:3px solid var(--terracotta-dark);box-shadow:0 8px 24px rgba(71,31,15,.28)}figcaption{font-size:13px;font-style:italic;color:var(--muted);margin-top:8px;line-height:1.5}.img-inset-right{float:right;width:42%;margin:6px 0 20px 28px}.img-inset-left{float:left;width:42%;margin:6px 28px 20px 0}.img-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0}.clearfix:after{content:"";display:table;clear:both}.primary-source{background:#f4deb1;border-left:7px solid var(--terracotta);padding:28px 32px;margin:36px 0;box-shadow:0 4px 18px rgba(95,48,18,.18)}.ps-label{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.28em;color:var(--terracotta);text-transform:uppercase;margin-bottom:12px}.ps-quote{font-size:22px;font-style:italic;line-height:1.6;color:var(--ink);margin-bottom:14px}.ps-attribution{font-size:13px;font-style:italic;color:var(--muted);margin-bottom:10px}.ps-narrator{border-top:1px solid rgba(169,71,36,.35);padding-top:12px;font-size:15px;font-weight:700;color:var(--indigo)}.ps-questions{background:#f6e4bd;border:1px solid rgba(169,71,36,.35);padding:22px 26px;margin-bottom:38px}.ps-questions p{font-size:17px;margin-bottom:12px}.project-card{background:var(--indigo);color:#fff;border:4px solid var(--gold);padding:26px 30px;margin:34px 0}.project-card h3{font-family:'Rye',serif;font-size:30px;line-height:1.2;color:var(--gold);text-transform:uppercase;margin-bottom:14px}.project-card p,.project-card li{color:#fff;line-height:1.7}.project-card ul{margin-left:22px}.brain-break{font-family:'Oswald',sans-serif;margin:44px -50px;padding:36px 50px;position:relative;overflow:hidden}.bb-label{display:block;font-family:'Oswald',sans-serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.85}.bb-text{font-family:'Oswald',sans-serif;font-size:22px;font-weight:500;line-height:1.65;margin:0}.dyk-break{background:var(--electric);color:#081414;border-left:6px solid #ff4f2e}.dyk-break .bb-label{color:#7b1609}.ff-break{background:#17110d;color:#fff;padding:36px 40px;margin:0 -50px 44px;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);text-align:center}.ff-break .bb-label{text-align:center;margin-bottom:24px;color:var(--gold)}.ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px}.ff-item{text-align:center;padding:8px 12px}.ff-number{display:block;font-family:'Oswald',sans-serif;font-size:58px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:8px}.ff-desc{display:block;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#ffe8b7;max-width:126px;margin:0 auto;line-height:1.4}.as-break{background:var(--purple);color:#fff;padding:44px 50px;margin:44px -50px;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);text-align:center}.as-break .bb-label{color:var(--gold)}.as-image{max-width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(242,182,50,.65);box-shadow:0 8px 32px rgba(0,0,0,.5)}.as-caption{font-family:'Oswald',sans-serif;font-style:normal;font-size:13px;color:#ffe8b7;line-height:1.5;margin-bottom:28px;display:block}.as-fact{font-family:'Oswald',sans-serif;font-size:22px;font-weight:500;color:#fff;line-height:1.6;max-width:650px;margin:0 auto;text-align:center}.tn-break{background:var(--navy);color:#fff;padding:36px 50px;margin:30px -50px 0}.tn-break .bb-label{color:var(--gold);text-align:center;display:block;margin-bottom:20px}.tn-payoff{font-family:'Oswald',sans-serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;line-height:1.35;text-align:center;color:var(--gold);margin-bottom:28px;max-width:700px;margin-left:auto;margin-right:auto}.tn-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}.tn-item{text-align:center}.tn-era-label{display:block;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:700}.tn-item img{width:100%;display:block;border:2px solid rgba(242,182,50,.55)}.tn-caption{font-family:'Oswald',sans-serif;font-size:12px;font-style:italic;color:#ffe8b7;margin-top:8px;line-height:1.4}.tn-closing{font-family:'Oswald',sans-serif;font-size:20px;font-weight:500;text-align:center;color:#fff;margin-top:24px;line-height:1.5;border-top:1px solid rgba(242,182,50,.35);padding-top:20px}footer{background:var(--indigo);color:#ffe8b7;text-align:center;padding:24px 30px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-top:5px solid var(--gold)}@media(max-width:1100px){.toc-sidebar{display:none}}@media(max-width:880px){.page-shell{border:0}main{padding:0 22px 50px}.hero{padding:60px 22px 50px}.img-inset-right,.img-inset-left{float:none;width:100%;margin:22px 0}.img-pair,.tn-pair{grid-template-columns:1fr}.brain-break{margin:36px 0;padding:28px 22px}.ff-break,.as-break{margin:36px 0;padding:28px 22px}.tn-break{padding:28px 22px;margin:30px 0 0}.section-nav a{font-size:11px;padding:11px 8px}}@media(max-width:600px){.page-title{font-size:42px}.section-heading{font-size:30px}.bb-text,.as-fact{font-size:18px}}
 </style>
 </head>
 <body>
-
-<!-- ══════════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════════ -->
-<header>
+<div class="page-shell">
+<header class="hero">
   <!--
-    FILENAME: L04_HeaderBG.jpg
+    FILENAME: L04_Header_BorderWallFriendshipPark.jpg
     PLACE IN: images/L04/
-    FIND: The US-Mexico border fence or wall with Tijuana and San Diego visible, aerial or ground-level — a wide shot that captures the reality of the border as a physical dividing line through a continuous landscape and community. Public domain or CC licensed.
-    SEARCH: US Mexico border fence San Diego Tijuana aerial Wikimedia Commons
-    LINK: https://commons.wikimedia.org/wiki/Category:United_States%E2%80%93Mexico_border (suggested, not guaranteed)
+    FIND: U.S.-Mexico border fence at Friendship Park or San Diego-Tijuana border; shows the border as a real place where families, land, and politics meet
+    SEARCH: U.S. Mexico border Friendship Park Wikimedia Commons border fence Tijuana San Diego
+    LINK: https://commons.wikimedia.org/wiki/Category:Mexico%E2%80%93United_States_border_wall (suggested, not guaranteed)
   -->
-  <div class="header-bg" style="background-image: url('images/L04/L04_HeaderBG.jpg');"></div>
-  <div class="header-inner">
-    <p class="course-label">Ethnic Studies &mdash; Lesson 04</p>
-    <h1 class="page-title">Chicano and Latino Identity:<br>Border, Culture, and Power</h1>
-    <div class="eq-banner">
-      <p class="eq-label">Essential Question</p>
-      <p class="eq-text">How has the history of the U.S.-Mexico border shaped the lives, culture, and political power of Latino communities?</p>
-    </div>
+  <img class="hero-bg" src="images/L04/L04_Header_BorderWallFriendshipPark.jpg" alt="U.S.-Mexico border fence near Friendship Park">
+  <div class="hero-inner">
+    <div class="course-label">ETHNIC STUDIES — LESSON 04</div>
+    <h1 class="page-title">CHICANO AND LATINO IDENTITY</h1>
+    <div class="eq-banner"><span class="eq-label">ESSENTIAL QUESTION</span>How has the history of the U.S.-Mexico border shaped the lives, culture, and political power of Latino communities?</div>
   </div>
 </header>
-
-<!-- ══════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════ -->
-<nav class="section-nav" aria-label="Page sections">
-  <ul>
-    <li><a href="#border-moves">The Border Moved Over People</a></li>
-    <li><a href="#bracero">Labor, Exploitation, and Deportation</a></li>
-    <li><a href="#chicano-movement">The Chicano Movement</a></li>
-    <li><a href="#power-today">Latino Power Today</a></li>
-    <li><a href="#still-matters">How This Still Matters Today</a></li>
-  </ul>
-</nav>
-
-<!-- ══════════════════════════════════════════════
-     MAIN
-══════════════════════════════════════════════ -->
+<nav class="section-nav" aria-label="Page sections"><a href="#border-moved">BORDER MOVED</a><a href="#labor-and-life">LABOR AND LIFE</a><a href="#resistance-power">RESISTANCE</a><a href="#today">POWER TODAY</a><a href="#primary-source-moment">PRIMARY SOURCE</a><a href="#then-now">THEN AND NOW</a></nav>
+<button id="lexile-toggle" type="button">SIMPLIFY TEXT</button>
+<aside class="toc-sidebar"><span class="toc-label">ON THIS PAGE</span><a href="#border-moved">BORDER MOVED</a><a href="#labor-and-life">LABOR</a><a href="#resistance-power">RESISTANCE</a><a href="#today">TODAY</a><a href="#primary-source-moment">SOURCE</a><a href="#then-now">THEN AND NOW</a></aside>
 <main>
-
-  <!-- INTRO -->
-  <div class="intro-block">
-    <p>In 1848, a man named Pablo de la Guerra stood up in the California State Senate and said something the new American government did not want to hear. He had been born in Santa Barbara when it was part of Mexico. He had never moved. But now, without crossing any border, he was suddenly a foreigner in his own home. "I am a stranger in my native land," he said. He was not speaking for himself alone. He was speaking for the tens of thousands of Mexican families who woke up one morning in 1848 and found that a war they had not started had redrawn the map around them.</p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 1 — THE BORDER MOVED OVER PEOPLE
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-block">I</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <section id="border-moves">
-    <h2 class="section-heading">The Border Moved Over People, Not the Other Way Around</h2>
-
+<section class="intro-section"><p class="para-standard">In 1848, a family living in what had been northern Mexico woke up inside a new country without moving at all. Their home, church, land, and memories stayed in the same place. The border moved over them. Overnight, they became Mexican people living inside the United States.</p><p class="para-simple">In 1848, some Mexican families woke up in a new country. They had not moved. Their homes and land stayed in place. The border moved over them. They became Mexican people living inside the United States.</p><p class="para-standard">That history still shapes Latino life today. The border is not only a line on a map. It is a story about land, labor, language, family, law, and power. Latino communities have faced exclusion, but they have also built movements, culture, unions, schools, and political voice.</p><p class="para-simple">That history still matters. The border is not just a line on a map. It is about land, labor, language, family, law, and power. Latino communities faced unfair treatment. They also built movements, culture, unions, schools, and political power.</p></section>
+<div class="divider"><span>✦</span></div>
+<section class="content-section clearfix" id="border-moved">
+  <div class="section-kicker">HISTORICAL CONTEXT</div>
+  <h2 class="section-heading">THE BORDER MOVED OVER PEOPLE</h2>
+  <!--
+    FILENAME: L04_TreatyMap_MexicanCession.jpg
+    PLACE IN: images/L04/
+    FIND: Map showing Mexican Cession after Treaty of Guadalupe Hidalgo, 1848; visually explains how land changed countries
+    SEARCH: Mexican Cession map Treaty of Guadalupe Hidalgo 1848 Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/File:Mexican_Cession.png (suggested, not guaranteed)
+  -->
+  <figure class="img-inset-right"><img src="images/L04/L04_TreatyMap_MexicanCession.jpg" alt="Map of Mexican Cession after the Treaty of Guadalupe Hidalgo"><figcaption>Map of the Mexican Cession after the Treaty of Guadalupe Hidalgo, 1848. Wikimedia Commons.</figcaption></figure>
+  <p class="para-standard">The U.S.-Mexico War ended in 1848 with the <span class="vocab">Treaty of Guadalupe Hidalgo<span class="tip">The 1848 treaty that ended the U.S.-Mexico War.</span></span>. Mexico gave up a huge amount of land, including what became California, Arizona, New Mexico, Nevada, Utah, and parts of other states. The treaty promised to protect the property and rights of Mexican people living in the new U.S. territory.</p>
+  <p class="para-simple">The U.S.-Mexico War ended in 1848. The <span class="vocab-red">Treaty of Guadalupe Hidalgo</span> gave the United States a huge amount of land. This land included California, Arizona, New Mexico, Nevada, Utah, and more. The treaty promised to protect Mexican people who already lived there.</p>
+  <p class="para-standard">Those promises often failed. Many Mexican landowners had to prove ownership in U.S. courts. Court cases took years and cost money. Some families lost land to lawyers, taxes, squatters, or new U.S. laws. The border had moved, but power moved too.</p>
+  <p class="para-simple">Those promises often failed. Mexican landowners had to prove their land claims in U.S. courts. This took years and cost money. Some families lost land. The border moved, and power moved with it.</p>
+  <p class="para-standard">This is why Chicano and Latino history cannot be told as only an immigration story. Some families crossed the border. Other families were already there when the border crossed them. Both stories shaped identity, language, and belonging.</p>
+  <p class="para-simple">Chicano and Latino history is not only about immigration. Some families crossed the border. Other families were already there when the border crossed them. Both stories shaped identity and belonging.</p>
+  <!--
+    FILENAME: L04_TreatyGuadalupeHidalgoPage.jpg
+    PLACE IN: images/L04/
+    FIND: Treaty of Guadalupe Hidalgo document page or treaty exchange image, 1848; connects treaty promises to real document
+    SEARCH: Treaty of Guadalupe Hidalgo document page Wikimedia Commons 1848
+    LINK: https://commons.wikimedia.org/wiki/Category:Treaty_of_Guadalupe_Hidalgo (suggested, not guaranteed)
+  -->
+  <figure><img src="images/L04/L04_TreatyGuadalupeHidalgoPage.jpg" alt="Treaty of Guadalupe Hidalgo document page"><figcaption>Page from the Treaty of Guadalupe Hidalgo, 1848. Wikimedia Commons / National Archives.</figcaption></figure>
+  <div class="primary-source"><div class="ps-label">PRIMARY SOURCE</div><div class="ps-quote">"Mexicans now established in territories previously belonging to Mexico... shall be free to continue where they now reside."</div><div class="ps-attribution">Treaty of Guadalupe Hidalgo, Article VIII, 1848</div><div class="ps-narrator">The treaty promised that Mexican residents could stay, but the meaning of that promise depended on who held power in courts, land offices, and local governments.</div></div>
+  <p class="real-world para-standard">Real-world connection: Border history still affects debates over citizenship, land, language, and who gets treated as belonging.</p><p class="real-world para-simple">Real-world connection: Border history still affects debates about citizenship, land, language, and belonging.</p>
+</section>
+<div class="brain-break dyk-break"><span class="bb-label">DID YOU KNOW</span><div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;"><div style="flex:1;min-width:200px;">
+  <!--
+    FILENAME: L04_DYK_GadsdenPurchaseMap.jpg
+    PLACE IN: images/L04/
+    FIND: Map showing the Gadsden Purchase of 1853; visual fact that the border changed again after the Treaty of Guadalupe Hidalgo
+    SEARCH: Gadsden Purchase map 1853 Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/File:Gadsden_Purchase_Cities.png (suggested, not guaranteed)
+  -->
+  <img src="images/L04/L04_DYK_GadsdenPurchaseMap.jpg" alt="Map of the Gadsden Purchase" style="width:100%;display:block;border:3px solid #7b1609;box-shadow:0 4px 18px rgba(0,0,0,0.4);"><p style="font-size:12px;margin-top:8px;opacity:0.85;font-family:'Oswald',sans-serif;">The border moved again in 1853 with the Gadsden Purchase.</p></div><p class="bb-text" style="flex:1;min-width:200px;">The U.S.-Mexico border did not become final in 1848. Five years later, the United States bought another strip of land from Mexico for a planned southern railroad route. That means the border moved twice in one generation, while families, towns, graves, farms, and memories stayed rooted in the same ground.</p></div></div>
+<div class="brain-break ff-break"><span class="bb-label">FAST FACTS</span><div class="ff-grid"><div class="ff-item"><span class="ff-number">1848</span><span class="ff-desc">BORDER MOVES</span></div><div class="ff-item"><span class="ff-number">525K</span><span class="ff-desc">SQUARE MILES</span></div><div class="ff-item"><span class="ff-number">4.5M</span><span class="ff-desc">BRACERO CONTRACTS</span></div><div class="ff-item"><span class="ff-number">1943</span><span class="ff-desc">ZOOT SUIT RIOTS</span></div><div class="ff-item"><span class="ff-number">1965</span><span class="ff-desc">DELANO STRIKE</span></div></div></div>
+<section class="content-section clearfix" id="labor-and-life"><div class="section-kicker">HISTORICAL CONTEXT</div><h2 class="section-heading">MEXICAN LABOR BUILT CALIFORNIA AGRICULTURE</h2>
+  <!--
+    FILENAME: L04_BraceroWorkersCalifornia.jpg
+    PLACE IN: images/L04/
+    FIND: Bracero workers in California fields, preferably Leonard Nadel photographs, 1956; shows Mexican labor in agriculture
+    SEARCH: Bracero Program California farm workers Leonard Nadel 1956 Library of Congress
+    LINK: https://www.loc.gov/pictures/search/?q=bracero+program+farm+workers (suggested, not guaranteed)
+  -->
+  <figure class="img-inset-left"><img src="images/L04/L04_BraceroWorkersCalifornia.jpg" alt="Bracero workers in California fields"><figcaption>Bracero workers in California fields, 1950s. Library of Congress.</figcaption></figure>
+  <p class="para-standard">During World War II, U.S. farms needed workers. Many American workers had gone into the military or war industries. In 1942, the United States and Mexico created the <span class="vocab">bracero program<span class="tip">A program that brought Mexican workers to U.S. farms.</span></span>. Mexican men came on temporary contracts to work in fields, railroads, and other jobs.</p>
+  <p class="para-simple">During World War II, U.S. farms needed workers. Many American workers had gone to war jobs. In 1942, the United States and Mexico created the <span class="vocab-red">bracero program</span>. Mexican men came on temporary contracts to work in fields and other jobs.</p>
+  <p class="para-standard">Bracero workers helped feed the United States. They harvested crops that made California agriculture powerful. But many lived in poor camps, faced wage theft, and had little control over their working conditions. Their labor was welcomed, but their full humanity was often ignored.</p>
+  <p class="para-simple">Bracero workers helped feed the United States. They harvested crops in California. Many lived in poor camps. Some had wages stolen. Their work was welcomed, but they were not always treated with respect.</p>
+  <p class="para-standard">This pattern continued after the bracero program ended in 1964. Farms still depended on Mexican and Mexican American labor. Workers still faced low pay, pesticides, heat, and unsafe housing. The food system depended on people whose rights were often limited.</p>
+  <p class="para-simple">This pattern continued after 1964. Farms still depended on Mexican and Mexican American workers. Workers still faced low pay, pesticides, heat, and unsafe housing. The food system depended on people with limited rights.</p>
+  <!--
+    FILENAME: L04_BraceroInspection.jpg
+    PLACE IN: images/L04/
+    FIND: Bracero worker medical or processing inspection, 1940s-1950s; shows the program's controlling and dehumanizing entry process
+    SEARCH: Bracero Program inspection processing center Library of Congress 1950s Wikimedia Commons
+    LINK: https://www.loc.gov/pictures/search/?q=bracero+inspection (suggested, not guaranteed)
+  -->
+  <figure><img src="images/L04/L04_BraceroInspection.jpg" alt="Bracero workers being processed or inspected"><figcaption>Bracero workers being processed or inspected, 1940s-1950s. Library of Congress.</figcaption></figure>
+  <p class="para-standard">Undocumented immigration is also an economic and human story. Employers have long wanted low-wage labor, especially in agriculture, construction, service work, and domestic work. Migrants often come because work, family, safety, or survival pulls them across borders. The law may call a person undocumented, but the economy often depends on that person's work.</p>
+  <p class="para-simple">Undocumented immigration is also about work and human life. Employers often want low-wage labor. Migrants may come for work, family, safety, or survival. The law may call someone undocumented. The economy may still depend on their work.</p>
+  <p class="real-world para-standard">Real-world connection: When people talk about immigration, they are also talking about food prices, labor rights, family separation, safety, and the value of human work.</p><p class="real-world para-simple">Real-world connection: Immigration debates are also about food prices, labor rights, family separation, safety, and work.</p>
+</section>
+<section class="content-section clearfix" id="resistance-power"><div class="section-kicker">RESISTANCE AND AGENCY</div><h2 class="section-heading">FROM ZOOT SUITS TO THE CHICANO MOVEMENT</h2>
+  <!--
+    FILENAME: L04_ZootSuitYouthLosAngeles.jpg
+    PLACE IN: images/L04/
+    FIND: Mexican American youth in zoot suits in Los Angeles, early 1940s; shows youth culture before or during the Zoot Suit era
+    SEARCH: Mexican American zoot suit youth Los Angeles 1943 Library of Congress Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/Category:Zoot_suit (suggested, not guaranteed)
+  -->
+  <figure class="img-inset-right"><img src="images/L04/L04_ZootSuitYouthLosAngeles.jpg" alt="Mexican American youth in zoot suits in Los Angeles, 1940s"><figcaption>Mexican American youth and zoot suit style, Los Angeles, early 1940s. Wikimedia Commons / Library of Congress.</figcaption></figure>
+  <p class="para-standard">In Los Angeles during the 1940s, many Mexican American young people created their own style. Some wore zoot suits with long coats, wide pants, and sharp hats. The style was bold, proud, and visible. It said that young people had a right to take up space.</p><p class="para-simple">In Los Angeles in the 1940s, many Mexican American young people created their own style. Some wore zoot suits. These suits had long coats, wide pants, and sharp hats. The style was bold and proud. It said young people had a right to be seen.</p>
+  <p class="para-standard">In 1943, white sailors and soldiers attacked Mexican American youth in Los Angeles during the Zoot Suit Riots. Police often arrested the Mexican American youth who had been attacked. Newspapers blamed the victims and described them as criminals. The riots showed how racism could turn culture into a target.</p><p class="para-simple">In 1943, white sailors and soldiers attacked Mexican American youth in Los Angeles. These attacks became the Zoot Suit Riots. Police often arrested the youth who had been attacked. Newspapers blamed the victims. The riots showed how racism can target culture.</p>
+  <p class="para-standard">In the 1960s and 1970s, the <span class="vocab">Chicano movement<span class="tip">A movement for Mexican American rights and pride.</span></span> pushed back against unfair treatment. Students demanded better schools and bilingual education. Farm workers demanded safer conditions and fair pay. Activists demanded political representation and respect for Mexican American history.</p><p class="para-simple">In the 1960s and 1970s, the <span class="vocab-red">Chicano movement</span> pushed back. Students wanted better schools and bilingual education. Farm workers wanted safer conditions and fair pay. Activists wanted political power and respect for Mexican American history.</p>
+  <!--
+    FILENAME: L04_EastLAWalkouts1968.jpg
+    PLACE IN: images/L04/
+    FIND: East Los Angeles Blowouts or Chicano student walkouts, 1968; students protesting for better schools and bilingual education
+    SEARCH: East Los Angeles walkouts 1968 Chicano students Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/Category:East_L.A._walkouts (suggested, not guaranteed)
+  -->
+  <figure><img src="images/L04/L04_EastLAWalkouts1968.jpg" alt="East Los Angeles student walkouts, 1968"><figcaption>East Los Angeles student walkouts, 1968. Chicano students demanded better schools and respect for their communities. Wikimedia Commons.</figcaption></figure>
+  <p class="para-standard">Dolores Huerta and César Chávez helped build the United Farm Workers. They organized strikes, boycotts, marches, and community meetings. The Delano grape strike began in 1965 when Filipino farm workers walked out, and Mexican American workers joined them. The movement showed that farm workers could use collective power.</p><p class="para-simple">Dolores Huerta and César Chávez helped build the United Farm Workers. They organized strikes, boycotts, marches, and meetings. The Delano grape strike began in 1965. Filipino farm workers walked out first, and Mexican American workers joined them. The movement showed farm workers had power together.</p>
+  <div class="img-pair"><figure>
     <!--
-      FILENAME: L04_TreatyGuadalupe.jpg
+      FILENAME: L04_DoloresHuertaMarch.jpg
       PLACE IN: images/L04/
-      FIND: The Treaty of Guadalupe Hidalgo document, 1848, original pages, National Archives — public domain
-      SEARCH: Treaty of Guadalupe Hidalgo 1848 document National Archives Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/File:Treaty_of_Guadalupe_Hidalgo_in_Spanish.jpg (suggested, not guaranteed)
+      FIND: Dolores Huerta at United Farm Workers march or rally, 1960s-1970s; shows leadership and organizing
+      SEARCH: Dolores Huerta United Farm Workers march Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:Dolores_Huerta (suggested, not guaranteed)
     -->
-    <figure class="inset-right">
-      <img src="images/L04/L04_TreatyGuadalupe.jpg" alt="Treaty of Guadalupe Hidalgo, 1848, original document pages">
-      <figcaption>The Treaty of Guadalupe Hidalgo, 1848 — the document that transferred half of Mexico's territory to the United States. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <div class="clearfix">
-      <p>The <span class="vocab">Treaty of Guadalupe Hidalgo<span class="tip">The 1848 peace agreement that ended the Mexican-American War and transferred California, Texas, New Mexico, Arizona, Nevada, Utah, and parts of Colorado from Mexico to the United States.</span></span>, signed in 1848, ended the Mexican-American War. With it, Mexico gave up — or was forced to give up — over half its national territory. California, Texas, New Mexico, Arizona, Nevada, Utah, and parts of Colorado all became part of the United States in a single document. The price the U.S. paid was 15 million dollars. At the time of the transfer, approximately 100,000 Mexican citizens were living in that territory. They did not immigrate to the United States. The United States immigrated to them.</p>
-
-      <p>The treaty promised these residents full citizenship and the protection of their property rights. Both promises were broken almost immediately. Mexican landowners in California lost their land through a combination of legal costs, court manipulation, new property taxes, and outright violence. Within 20 years of the treaty, most of the large rancho land grants that had belonged to Mexican California families had passed into the hands of Anglo American settlers. The legal system designed to protect Mexican property rights was the same system that dismantled them.</p>
-
-      <p>This history is the foundation of everything that follows. The idea that Mexican Americans are immigrants in a foreign country erases the fact that their families were often in this territory before the United States was. The popular saying "We didn't cross the border; the border crossed us" is not a slogan. It is a precise description of what the Treaty of Guadalupe Hidalgo actually did.</p>
-
-      <p>California had been part of Spain and then Mexico for over 250 years before 1848. The place names, the architecture, the irrigation systems, the cattle ranching culture, the entire agricultural foundation of the state: all of it was built on Mexican and Indigenous labor and knowledge. That history did not disappear in 1848. It just stopped being acknowledged.</p>
-    </div>
-
+    <img src="images/L04/L04_DoloresHuertaMarch.jpg" alt="Dolores Huerta at a farm worker march"><figcaption>Dolores Huerta at a farm worker march or rally. Wikimedia Commons.</figcaption></figure><figure>
     <!--
-      FILENAME: L04_MexicanCessionMap.jpg
+      FILENAME: L04_CesarChavezUFWMarch.jpg
       PLACE IN: images/L04/
-      FIND: Map showing the Mexican Cession of 1848 — the territory transferred from Mexico to the United States after the Mexican-American War, public domain
-      SEARCH: Mexican Cession 1848 map United States territory Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/File:Mexican_Cession.svg (suggested, not guaranteed)
+      FIND: César Chávez marching with United Farm Workers, 1960s-1970s; shows farm worker rights activism
+      SEARCH: Cesar Chavez United Farm Workers march Wikimedia Commons
+      LINK: https://commons.wikimedia.org/wiki/Category:C%C3%A9sar_Ch%C3%A1vez (suggested, not guaranteed)
     -->
-    <figure>
-      <img src="images/L04/L04_MexicanCessionMap.jpg" alt="Map of the Mexican Cession, 1848 — territory transferred from Mexico to the United States">
-      <figcaption>The Mexican Cession of 1848: the territory transferred from Mexico to the United States after the Mexican-American War — including all of present-day California. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <!-- PRIMARY SOURCE 1 -->
-    <div class="primary-source">
-      <blockquote>"We are now Americans, but we are not treated as Americans. We are strangers in our own land."</blockquote>
-      <p class="attribution">Pablo de la Guerra, California State Senate, speech on the Land Act, 1856.</p>
-      <p class="narrator">De la Guerra was a California state senator and former Mexican citizen who watched his community's land and legal rights disappear in the years after the Treaty of Guadalupe Hidalgo — he spent years arguing in court and in the legislature that promises made in the treaty were being systematically broken.</p>
-      <div class="student-questions">
-        <p><strong>Question 1:</strong> De la Guerra says his community is "not treated as Americans." What specific things in this section help explain why he would say that?</p>
-        <p><strong>Question 2:</strong> How does this 1856 statement connect to the essential question about how border history shapes Latino lives today?</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 2 — LABOR, EXPLOITATION, AND DEPORTATION
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-block">II</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <section id="bracero">
-    <h2 class="section-heading">Labor, Exploitation, and Deportation</h2>
-
-    <!--
-      FILENAME: L04_BraceroWorkers.jpg
-      PLACE IN: images/L04/
-      FIND: Photograph of bracero workers in California fields, 1940s–1960s, public domain — Library of Congress Dorothea Lange or similar documentary-style image
-      SEARCH: bracero program workers California fields 1940s 1950s Library of Congress Wikimedia Commons
-      LINK: https://www.loc.gov/photos/?q=bracero+program+workers+california (suggested, not guaranteed)
-    -->
-    <figure>
-      <img src="images/L04/L04_BraceroWorkers.jpg" alt="Bracero workers in California fields, ca. 1940s–1950s">
-      <figcaption>Bracero workers in California, ca. 1940s–1950s. Over 4 million Mexican workers came to the U.S. under the Bracero Program between 1942 and 1964. Source: Library of Congress.</figcaption>
-    </figure>
-
-    <p>When the United States entered World War II in 1941, millions of American men went overseas to fight. That left an enormous gap in the agricultural workforce. California's farms — which fed much of the country — suddenly had no one to work them. The U.S. government's solution was the <span class="vocab">Bracero Program<span class="tip">A guest worker agreement between the U.S. and Mexico from 1942 to 1964 that brought over 4 million Mexican workers to the U.S. on temporary contracts, mostly for farm labor.</span></span>, a formal agreement with Mexico that brought temporary workers north under contract to harvest crops.</p>
-
-    <p>Between 1942 and 1964, over 4 million Mexican workers came to the United States through the Bracero Program. They picked cotton, harvested citrus, cut sugar beets, and planted and pulled vegetables from California to Texas to Michigan. Without them, American grocery shelves during and after the war would have looked very different. These workers were promised fair wages, decent housing, and safe conditions. Most of those promises were not kept. Workers were charged for food and housing that ate up most of their wages. Many were exposed to dangerous pesticides with no protection. Some were promised savings accounts that the companies administering the program never paid out.</p>
-
-    <p>Then, in 1954, the U.S. government launched a campaign called Operation Wetback. Despite the violent slur in its name, this was official U.S. government policy. Over 1 million people were <span class="vocab">deported<span class="tip">Forced out of a country by the government; in U.S. history, deportation has repeatedly targeted Mexican and Latino communities, including many U.S. citizens and legal residents.</span></span> or pressured to leave, often without any legal process. Many of those deported were legal residents. Some were U.S. citizens. Entire families were separated. The same government that had welcomed Mexican labor when it was needed had decided, once again, that Mexican people were not welcome when the work was done.</p>
-
-    <p>This pattern: recruit when needed, exploit while here, deport when convenient: has repeated itself across American history. The Bracero Program was not an isolated event. It was part of a longer story about how the U.S. economy has used Mexican and Latino labor while denying the people who provide it the full rights and dignity they deserve.</p>
-
-    <!--
-      FILENAME: L04_DeportationBus.jpg
-      PLACE IN: images/L04/
-      FIND: Photograph related to Operation Wetback or mass deportation of Mexican workers, 1950s, public domain
-      SEARCH: Operation Wetback deportation 1954 Mexican workers photograph Library of Congress Wikimedia Commons
-      LINK: https://www.loc.gov/photos/?q=deportation+mexican+workers+1954 (suggested, not guaranteed)
-    -->
-    <figure class="inset-left">
-      <img src="images/L04/L04_DeportationBus.jpg" alt="Deportation of Mexican workers during Operation Wetback, 1954">
-      <figcaption>Deportation of Mexican workers under Operation Wetback, 1954. Over 1 million people were removed, many without legal process. Source: Library of Congress.</figcaption>
-    </figure>
-
-    <div class="clearfix">
-      <p>Between the 1930s and the 1950s, an estimated 1.8 million people of Mexican descent were deported or forced out of the United States during two separate mass removal campaigns: the 1930s repatriation drives and Operation Wetback. Historians estimate that up to 60 percent of those removed during the 1930s campaign were U.S. citizens. Their citizenship did not protect them. The color of their skin and the sound of their last name did.</p>
-
-      <p>Today, deportation remains a central feature of the U.S. immigration debate. The communities, families, and legal battles that make that debate so personal trace directly back to these decades. Understanding the Bracero Program and Operation Wetback is not just history. It is context for conversations happening in the news right now.</p>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 3 — THE CHICANO MOVEMENT
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-block">III</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <section id="chicano-movement">
-    <h2 class="section-heading">The Chicano Movement: What Was Demanded and What Was Won</h2>
-
-    <!--
-      FILENAME: L04_CesarChavez.jpg
-      PLACE IN: images/L04/
-      FIND: Photograph of Cesar Chavez speaking or on the picket line with the United Farm Workers flag visible, public domain or CC licensed
-      SEARCH: Cesar Chavez United Farm Workers rally speech Wikimedia Commons Library of Congress
-      LINK: https://commons.wikimedia.org/wiki/File:Cesar_Chavez_crop.jpg (suggested, not guaranteed)
-    -->
-
-    <!--
-      FILENAME: L04_BlowoutStudents.jpg
-      PLACE IN: images/L04/
-      FIND: East Los Angeles student walkouts (East LA Blowouts) 1968 — students marching or picketing outside high schools, public domain or CC licensed
-      SEARCH: East Los Angeles student walkout blowout 1968 Chicano high school Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/Category:Chicano_Movement (suggested, not guaranteed)
-    -->
-
-    <div class="paired-wrap">
-      <figure>
-        <img src="images/L04/L04_CesarChavez.jpg" alt="Cesar Chavez speaking at a United Farm Workers rally">
-        <figcaption>Cesar Chavez at a United Farm Workers rally. His 1968 hunger strike lasted 25 days and drew national attention to farmworker conditions. Source: Wikimedia Commons.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/L04/L04_BlowoutStudents.jpg" alt="East Los Angeles student walkouts, 1968">
-        <figcaption>East Los Angeles student walkouts, known as the Blowouts, 1968. Over 10,000 Chicano students walked out to protest unequal schools. Source: Wikimedia Commons.</figcaption>
-      </figure>
-    </div>
-
-    <p>In 1965, a soft-spoken organizer named Cesar Chavez called a strike against grape growers in Delano, California. Farmworkers: mostly Filipino and Mexican: walked off the fields and demanded fair wages, safe conditions, and the right to organize a union. What followed was a five-year struggle that included a nationwide grape boycott, hunger strikes, and marches of hundreds of miles. In 1970, the growers finally signed contracts. The United Farm Workers union had won.</p>
-
-    <p>That victory was part of a larger explosion of organizing called the <span class="vocab">Chicano Movement<span class="tip">A political and cultural movement of the 1960s and 1970s in which Mexican Americans organized for civil rights, fair labor conditions, educational equality, and political power, and embraced the term "Chicano" as a statement of pride and identity.</span></span>. In 1968, over 10,000 Chicano students in East Los Angeles walked out of five high schools to protest unequal education, under-resourced schools, and counselors who discouraged students from going to college. These walkouts, called the Blowouts, were among the first large student strikes in U.S. history. They forced the Los Angeles school district to negotiate and helped launch a national movement for bilingual education.</p>
-
-    <p>The Chicano Movement also reclaimed identity. Mexican Americans had long been pressured to downplay their heritage: to Anglicize their names, speak only English, and distance themselves from their cultural roots. The movement said the opposite. Activists embraced the word "Chicano," reclaimed Indigenous heritage as part of their identity, created murals that covered entire city walls with Mexican and pre-Columbian imagery, and argued that their culture was a strength, not something to hide.</p>
-
-    <p>Here is what the Chicano Movement demanded and what changed:</p>
-
-    <div class="demands-grid">
-      <div class="demand-card">
-        <div class="demand-num">01</div>
-        <div class="demand-title">Farm Worker Rights</div>
-        <p>The United Farm Workers won the first union contracts for agricultural workers in California. The California Agricultural Labor Relations Act of 1975 gave farmworkers the legal right to organize for the first time.</p>
-      </div>
-      <div class="demand-card">
-        <div class="demand-num">02</div>
-        <div class="demand-title">Bilingual Education</div>
-        <p>The Bilingual Education Act of 1968 and subsequent California legislation required schools to provide instruction in students' home languages. It was a direct response to Chicano student organizing.</p>
-      </div>
-      <div class="demand-card">
-        <div class="demand-num">03</div>
-        <div class="demand-title">Political Representation</div>
-        <p>The Chicano Movement sparked a generation of Latino political organizing. MALDEF, the Mexican American Legal Defense Fund, was founded in 1968 and has fought for Latino civil rights in court ever since.</p>
-      </div>
-      <div class="demand-card">
-        <div class="demand-num">04</div>
-        <div class="demand-title">Cultural Reclamation</div>
-        <p>Chicano muralism, literature, and theater created a new public identity. Artists like Luis Valdez and painters of the mural tradition made Chicano history visible on the walls of cities across the Southwest.</p>
-      </div>
-    </div>
-
-    <!-- PRIMARY SOURCE 2 -->
-    <div class="primary-source">
-      <blockquote>"We shall overcome. Yes, we will, but only if we respect that most precious possession of our people: their faith, their hope, and their strength as a movement."</blockquote>
-      <p class="attribution">Cesar Chavez, statement ending his 25-day hunger strike, March 1968.</p>
-      <p class="narrator">Chavez fasted for 25 days in 1968 to recommit the farmworker movement to nonviolent organizing at a moment when many younger activists were pushing for more confrontational tactics — this statement, delivered to a crowd of thousands that included Robert F. Kennedy, became one of the defining words of the Chicano Movement.</p>
-      <div class="student-questions">
-        <p><strong>Question 1:</strong> Chavez talks about "their faith, their hope, and their strength as a movement." Why do you think he would describe those things as the "most precious possession" of his people?</p>
-        <p><strong>Question 2:</strong> The Chicano Movement fought for rights inside a country that had a complicated history with its community. How does that connect to the essential question about how border history shapes Latino political power?</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 4 — LATINO POWER TODAY
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-block">IV</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <section id="power-today">
-    <h2 class="section-heading">Latino Power in California Today</h2>
-
-    <!--
-      FILENAME: L04_DREAMers.jpg
-      PLACE IN: images/L04/
-      FIND: DACA or DREAM Act rally or protest, young immigrants with signs or graduation caps, public domain or CC licensed
-      SEARCH: DACA dreamers rally protest 2017 2018 Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/Category:DACA (suggested, not guaranteed)
-    -->
-    <figure class="inset-right">
-      <img src="images/L04/L04_DREAMers.jpg" alt="DACA recipients and supporters at a rally">
-      <figcaption>DACA recipients and supporters rally for immigration protection. The <span style="color: var(--accent-red); font-weight:700;">DACA</span> program has protected approximately 800,000 young people from deportation since 2012. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <div class="clearfix">
-      <p>Today, Latinos are the largest ethnic group in California. Over 15 million Latinos live in the state, making up approximately 40 percent of the total population. They are the fastest-growing group of eligible voters in the country. In California, Latino political representation has grown significantly in recent decades: the state legislature, the courts, and local government all reflect that shift, though representation still does not match population numbers.</p>
-
-      <p>The immigration debate in the United States today is inseparable from this history. The <span class="vocab">DACA<span class="tip">Deferred Action for Childhood Arrivals — a 2012 executive order that protected people brought to the United States as children from deportation and allowed them to work legally; its legal status has been in court battles ever since.</span></span> program, created in 2012, has protected approximately 800,000 young people — often called Dreamers — from deportation. Most of them grew up entirely in the United States. They went to American schools, speak English, and have built their entire lives here. Their immigration status, a consequence of decisions made by their parents when they were children, remains unresolved by Congress more than a decade later.</p>
-
-      <p>The undocumented immigrant population in the United States is estimated at approximately 11 million people. The majority come from Mexico and Central America. Most have lived in the United States for ten or more years. They pay taxes, start businesses, raise citizen children, and contribute to communities across the country. The political debate about their status rarely reflects the actual human complexity of their lives.</p>
-
-      <p>California has responded by extending certain state protections to undocumented residents: state financial aid for college, driver's licenses, and limitations on cooperation between local police and federal immigration enforcement. These are political choices that trace directly back to the Chicano Movement's demand that Latino communities be treated as full members of the society they have always helped build.</p>
-    </div>
-
-    <!-- LOCAL HISTORY -->
-    <div class="callout-card">
-      <h3>&#127968; This Is a San Diego Story</h3>
-      <p>San Diego sits at one of the busiest international border crossings in the world. The San Ysidro Port of Entry processes over 70,000 northbound crossings every single day. The communities of Barrio Logan, Logan Heights, and National City have deep roots in Mexican American and Chicano history. Barrio Logan's Chicano Park, created in 1970 when community members literally sat down in front of bulldozers to reclaim land that had been taken for a highway interchange, is now a National Historic Landmark covered in some of the most significant Chicano murals in the world.</p>
-      <p class="detail">On April 22, 1970, community members and students occupied the land beneath the Coronado Bridge and refused to leave until the city agreed to build a park there. Chicano Park opened the same year. It is located at Crosby Street and National Avenue in Barrio Logan, and you can visit it today.</p>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SECTION 5 — HOW THIS STILL MATTERS TODAY
-  ══════════════════════════════════════════════ -->
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-block">V</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <section id="still-matters">
-    <h2 class="section-heading">How This Still Matters Today</h2>
-
-    <p class="sm-headline">The border is not a line on a map. It is a living political reality that shapes the daily lives of millions of people in this region right now.</p>
-
-    <p>Every debate about immigration enforcement, DACA, the border wall, farmworker wages, and bilingual education connects directly to the history in this lesson. The Treaty of Guadalupe Hidalgo is still cited in court cases. The legal fights that the Chicano Movement started in the 1960s are still being argued. Deportation remains one of the most contested tools of U.S. government policy. And the question of whether Latino communities will be treated as full members of American society — with the rights, representation, and respect that their history in this land deserves — remains unanswered.</p>
-
-    <ul class="news-links">
-      <li><a href="https://news.google.com/search?q=DACA+Supreme+Court+Dreamers+future+2024+2025" target="_blank" rel="noopener">DACA and the Dreamers: Where the Legal Battle Stands Now</a></li>
-      <li><a href="https://news.google.com/search?q=Chicano+Park+San+Diego+Barrio+Logan+National+Historic+Landmark" target="_blank" rel="noopener">Chicano Park San Diego: A National Historic Landmark in Barrio Logan</a></li>
-      <li><a href="https://news.google.com/search?q=farmworker+rights+California+wages+immigration+2024" target="_blank" rel="noopener">California Farmworker Rights: Wages, Safety, and Organizing Today</a></li>
-    </ul>
-
-    <!--
-      FILENAME: L04_ChicanoPark.jpg
-      PLACE IN: images/L04/
-      FIND: Chicano Park murals under the Coronado Bridge in Barrio Logan, San Diego — a wide shot showing the scale of the murals and the bridge, public domain or CC licensed
-      SEARCH: Chicano Park murals Barrio Logan San Diego Coronado Bridge Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/Category:Chicano_Park (suggested, not guaranteed)
-    -->
-    <figure>
-      <img src="images/L04/L04_ChicanoPark.jpg" alt="Chicano Park murals under the Coronado Bridge, Barrio Logan, San Diego">
-      <figcaption>Chicano Park murals, Barrio Logan, San Diego. Created beginning in 1970 after community members occupied the land to prevent a highway construction takeover, the park is now a National Historic Landmark. Source: Wikimedia Commons.</figcaption>
-    </figure>
-
-    <p class="closing-q">Pablo de la Guerra said in 1856 that he was a stranger in his own land. Over 150 years later, DACA recipients say the only country they have ever known might deport them. What does it mean when belonging to a place and having legal status in that place are two completely different things? And who gets to decide which one matters more?</p>
-
-  </section>
-
-</main>
-
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
-<footer>
-  Ethnic Studies &mdash; Lesson 04 &mdash; Chicano and Latino Identity: Border, Culture, and Power
-</footer>
-
-<!-- ══════════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════════ -->
+    <img src="images/L04/L04_CesarChavezUFWMarch.jpg" alt="César Chávez marching with United Farm Workers"><figcaption>César Chávez marching with United Farm Workers, 1960s-1970s. Wikimedia Commons.</figcaption></figure></div>
+  <p class="para-standard">The Chicano movement won real changes. It helped expand bilingual education, Chicano studies programs, labor protections, voter registration, and Latino political representation. It also changed culture by making murals, music, theater, and community pride part of political life.</p><p class="para-simple">The Chicano movement won real changes. It helped expand bilingual education and Chicano studies. It supported labor rights and voter registration. It also built pride through murals, music, theater, and community action.</p>
+  <p class="real-world para-standard">Real-world connection: Student protests and farm worker organizing show how communities can turn daily unfairness into public demands for change.</p><p class="real-world para-simple">Real-world connection: Student protests and farm worker organizing show how communities can demand change.</p>
+</section>
+<div class="brain-break as-break"><span class="bb-label">ART SPOTLIGHT</span><figure>
+  <!--
+    FILENAME: L04_ArtSpotlight_UFWHuelgaFlag.jpg
+    PLACE IN: images/L04/
+    FIND: United Farm Workers huelga eagle flag or poster artwork; iconic Chicano movement labor symbol; art image unique to Art Spotlight
+    SEARCH: United Farm Workers huelga eagle flag poster Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/Category:United_Farm_Workers (suggested, not guaranteed)
+  -->
+  <img src="images/L04/L04_ArtSpotlight_UFWHuelgaFlag.jpg" alt="United Farm Workers huelga eagle flag or poster artwork" class="as-image"><figcaption class="as-caption">UNITED FARM WORKERS HUELGA EAGLE FLAG OR POSTER, 1960S-1970S. WIKIMEDIA COMMONS.</figcaption></figure><p class="as-fact">The UFW eagle was designed to be simple enough that workers and supporters could draw it by hand. That mattered because a movement needed a symbol that could travel fast: onto signs, buttons, flags, walls, and picket lines. The image turned a labor demand into something people could recognize from across a street.</p></div>
+<section class="content-section clearfix" id="today"><div class="section-kicker">PRESENT REALITY</div><h2 class="section-heading">LATINO POLITICAL AND CULTURAL POWER TODAY</h2>
+  <!--
+    FILENAME: L04_DACAProtestToday.jpg
+    PLACE IN: images/L04/
+    FIND: DACA recipients or Dreamers at a rally, 2010s-2020s; shows undocumented immigration as a human and political story
+    SEARCH: DACA Dreamers rally Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/Category:DACA (suggested, not guaranteed)
+  -->
+  <figure class="img-inset-left"><img src="images/L04/L04_DACAProtestToday.jpg" alt="DACA recipients or Dreamers at a rally"><figcaption>DACA recipients and supporters at a rally, 2010s-2020s. Wikimedia Commons.</figcaption></figure>
+  <p class="para-standard"><span class="vocab">DACA<span class="tip">A program protecting some undocumented youth from deportation.</span></span> stands for Deferred Action for Childhood Arrivals. It protects some undocumented people who came to the United States as children from <span class="vocab">deportation<span class="tip">Being forced to leave a country by the government.</span></span> for a period of time. DACA does not create full citizenship. It shows how young immigrants can live, study, work, and belong in a country that may still deny them permanent safety.</p><p class="para-simple"><span class="vocab-red">DACA</span> protects some undocumented people who came to the United States as children. It can protect them from <span class="vocab-red">deportation</span> for a period of time. It does not create citizenship. It shows how young immigrants can belong but still live with uncertainty.</p>
+  <p class="para-standard">Latino communities have also become central to California politics and culture. Latino voters, organizers, artists, workers, small business owners, students, and elected leaders shape the state every day. Spanish-language media, murals, music, food, family networks, and bilingual classrooms are part of California's public life.</p><p class="para-simple">Latino communities are central to California today. Latino voters, organizers, artists, workers, students, and leaders shape the state. Spanish-language media, murals, music, food, family networks, and bilingual classrooms are part of daily life.</p>
+  <p class="para-standard">This power did not appear from nowhere. It grew from generations of people who defended land, crossed borders, harvested food, fought discrimination, walked out of schools, organized unions, and voted. Latino identity is not one single story. It includes many national backgrounds, languages, races, migration stories, and political beliefs.</p><p class="para-simple">This power did not appear from nowhere. It came from many generations. People defended land, crossed borders, harvested food, fought racism, organized unions, and voted. Latino identity is not one single story. It includes many backgrounds, languages, races, and beliefs.</p>
+  <!--
+    FILENAME: L04_ChicanoMuralCalifornia.jpg
+    PLACE IN: images/L04/
+    FIND: Chicano mural in California, ideally Chicano Park or Los Angeles mural; shows cultural memory and public art
+    SEARCH: Chicano mural California Chicano Park Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/Category:Chicano_Park (suggested, not guaranteed)
+  -->
+  <figure><img src="images/L04/L04_ChicanoMuralCalifornia.jpg" alt="Chicano mural in California"><figcaption>Chicano mural in California. Murals often turn public walls into community memory. Wikimedia Commons.</figcaption></figure>
+  <div class="project-card"><h3>BORDER STORY PROJECT</h3><p>Choose one perspective and write a one-page first-person account. Write as a real person living inside history, not as a textbook narrator.</p><ul><li>A bracero worker in 1950</li><li>A Chicano student activist in 1968</li><li>A farm worker on strike in 1965</li><li>A DACA recipient today</li></ul><p>Answer these questions in your story: Where are you? What is your daily reality? What do you want? What stands in your way?</p></div>
+  <p class="real-world para-standard">Real-world connection: Latino power today is not only voting power. It is also cultural power, labor power, language power, and the power to tell the story from inside the community.</p><p class="real-world para-simple">Real-world connection: Latino power today is more than voting. It is culture, work, language, and the power to tell your own story.</p>
+</section>
+<div class="divider"><span>✦</span></div>
+<section id="primary-source-moment" class="content-section"><div class="section-kicker">PRIMARY SOURCE</div><h2 class="section-heading">PRIMARY SOURCE MOMENT</h2><div class="primary-source"><div class="ps-label">PRIMARY SOURCE</div><div class="ps-quote">"Every moment is an organizing opportunity, every person a potential activist, every minute a chance to change the world."</div><div class="ps-attribution">Dolores Huerta, labor organizer and co-founder of the United Farm Workers</div><div class="ps-narrator">Huerta's words show that organizing is not only one march or one speech; it is daily work with ordinary people.</div></div><div class="primary-source"><div class="ps-label">PRIMARY SOURCE</div><div class="ps-quote">"Preservation of one's own culture does not require contempt or disrespect for other cultures."</div><div class="ps-attribution">César Chávez, labor organizer and co-founder of the United Farm Workers</div><div class="ps-narrator">Chávez connected cultural pride with respect, not separation from others.</div></div><div class="ps-questions"><p><strong>QUESTION 1:</strong> What does Dolores Huerta mean when she says every person can be a potential activist?</p><p><strong>QUESTION 2:</strong> How do these sources connect to the essential question about border history, culture, and political power?</p></div></section>
+<div class="brain-break tn-break" id="then-now"><span class="bb-label">THEN AND NOW</span><p class="tn-payoff">THE BORDER IS A LINE ON A MAP, BUT PEOPLE TURN IT INTO FAMILY, WORK, CULTURE, AND POLITICAL POWER.</p><div class="tn-pair"><div class="tn-item"><span class="tn-era-label">1940S-1950S</span>
+  <!--
+    FILENAME: L04_BraceroWorkersCalifornia.jpg
+    PLACE IN: images/L04/
+    FIND: Bracero workers in California fields, 1950s; reused for Then and Now left because it shows historic Mexican labor in California agriculture
+    SEARCH: Bracero Program California farm workers Leonard Nadel 1956 Library of Congress
+    LINK: https://www.loc.gov/pictures/search/?q=bracero+program+farm+workers (suggested, not guaranteed)
+  -->
+  <img src="images/L04/L04_BraceroWorkersCalifornia.jpg" alt="Bracero workers in California fields"><p class="tn-caption">Mexican workers helped build California agriculture while living with limited rights.</p></div><div class="tn-item"><span class="tn-era-label">TODAY</span>
+  <!--
+    FILENAME: L04_LatinoVotersCaliforniaToday.jpg
+    PLACE IN: images/L04/
+    FIND: Latino voters, civic engagement, or California Latino political event today; shows present-day political power
+    SEARCH: Latino voters California civic engagement Wikimedia Commons
+    LINK: https://commons.wikimedia.org/wiki/Category:Latino_politics_in_the_United_States (suggested, not guaranteed)
+  -->
+  <img src="images/L04/L04_LatinoVotersCaliforniaToday.jpg" alt="Latino civic engagement or voters in California today"><p class="tn-caption">Latino communities shape politics, culture, schools, labor, and public life today.</p></div></div><p class="tn-closing">The first image shows people whose labor was needed but whose power was limited. The second image shows what changes when communities keep organizing long after the workday ends.</p></div>
+</main><footer>ETHNIC STUDIES — LESSON 04 — CHICANO AND LATINO IDENTITY: BORDER, CULTURE, AND POWER</footer></div>
 <script>
-document.querySelectorAll('.vocab').forEach(function(el) {
-  el.addEventListener('click', function(e) {
-    e.stopPropagation();
-    document.querySelectorAll('.vocab.active').forEach(function(v) {
-      if (v !== el) v.classList.remove('active');
-    });
-    el.classList.toggle('active');
-  });
-});
-document.addEventListener('click', function() {
-  document.querySelectorAll('.vocab.active').forEach(function(v) {
-    v.classList.remove('active');
-  });
-});
+document.getElementById('lexile-toggle').addEventListener('click',function(){document.body.classList.toggle('simplified');this.textContent=document.body.classList.contains('simplified')?'STANDARD TEXT':'SIMPLIFY TEXT';});document.querySelectorAll('.vocab').forEach(function(el){el.addEventListener('click',function(e){e.stopPropagation();document.querySelectorAll('.vocab.active').forEach(function(v){if(v!==el)v.classList.remove('active');});el.classList.toggle('active');});});document.addEventListener('click',function(){document.querySelectorAll('.vocab.active').forEach(function(v){v.classList.remove('active');});});const tocObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{const id=entry.target.getAttribute('id');const link=document.querySelector('.toc-sidebar a[href="#'+id+'"]');if(link){if(entry.isIntersecting)link.classList.add('active');else link.classList.remove('active');}});},{threshold:.25});document.querySelectorAll('section[id], div[id="then-now"]').forEach(el=>tocObserver.observe(el));
 </script>
-
 </body>
 </html>
-
-<!--
-IMAGE CHECKLIST FOR SS9_L04.html
-1. L04_HeaderBG.jpg — US-Mexico border fence/wall, San Diego–Tijuana aerial or ground view — Suggested link: https://commons.wikimedia.org/wiki/Category:United_States%E2%80%93Mexico_border
-2. L04_TreatyGuadalupe.jpg — Treaty of Guadalupe Hidalgo original document, 1848 — Suggested link: https://commons.wikimedia.org/wiki/File:Treaty_of_Guadalupe_Hidalgo_in_Spanish.jpg
-3. L04_MexicanCessionMap.jpg — map of Mexican Cession territory, 1848 — Suggested link: https://commons.wikimedia.org/wiki/File:Mexican_Cession.svg
-4. L04_BraceroWorkers.jpg — bracero workers in California fields, 1940s–1950s — Suggested link: https://www.loc.gov/photos/?q=bracero+program+workers+california
-5. L04_DeportationBus.jpg — deportation of Mexican workers, Operation Wetback, 1954 — Suggested link: https://www.loc.gov/photos/?q=deportation+mexican+workers+1954
-6. L04_CesarChavez.jpg — Cesar Chavez at a United Farm Workers rally — Suggested link: https://commons.wikimedia.org/wiki/File:Cesar_Chavez_crop.jpg
-7. L04_BlowoutStudents.jpg — East Los Angeles Chicano student walkouts, 1968 — Suggested link: https://commons.wikimedia.org/wiki/Category:Chicano_Movement
-8. L04_DREAMers.jpg — DACA recipients and supporters at a rally — Suggested link: https://commons.wikimedia.org/wiki/Category:DACA
-9. L04_ChicanoPark.jpg — Chicano Park murals under Coronado Bridge, Barrio Logan, San Diego — Suggested link: https://commons.wikimedia.org/wiki/Category:Chicano_Park
--->
