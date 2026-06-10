@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS9_L06 — SOUTH ASIAN AMERICANS</title>
+<title>SS9_L06 · SOUTH ASIAN AMERICANS</title>
 <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Atkinson+Hyperlegible:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -29,6 +29,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+#reading-progress{position:fixed;top:0;left:0;height:4px;width:0%;background:var(--gold);z-index:9999;transition:width .1s linear}
 body{
   background:radial-gradient(circle at 12% 8%,rgba(241,184,59,.35),transparent 24%),linear-gradient(135deg,#f3b15f 0%,#fff3d7 44%,#d66b18 100%);
   color:var(--ink);
@@ -129,7 +130,7 @@ body{
 }
 .section-nav{
   position:sticky;
-  top:0;
+  top:4px;
   z-index:100;
   display:flex;
   flex-wrap:wrap;
@@ -149,6 +150,7 @@ body{
   margin-bottom:-4px;
 }
 .section-nav a:hover{color:#fff;border-bottom-color:var(--gold);background:rgba(255,255,255,.08)}
+.section-nav a.active{color:#fff;border-bottom-color:var(--gold);background:rgba(255,255,255,.08)}
 #lexile-toggle{
   display:block;
   margin:20px auto 28px;
@@ -169,7 +171,7 @@ body.simplified .para-standard{display:none}
 body.simplified .para-simple{display:block}
 .toc-sidebar{
   position:fixed;
-  right:calc(50% - 590px);
+  left:calc(50% - 570px);
   top:50%;
   transform:translateY(-50%);
   width:155px;
@@ -177,7 +179,7 @@ body.simplified .para-simple{display:block}
   font-family:'Oswald',sans-serif;
   z-index:50;
   background:rgba(27,37,89,.92);
-  border-left:2px solid rgba(241,184,59,.45);
+  border-right:2px solid rgba(241,184,59,.45);
 }
 .toc-sidebar .toc-label{
   display:block;
@@ -261,6 +263,9 @@ p{margin-bottom:20px;color:var(--ink)}
   box-shadow:0 4px 18px rgba(0,0,0,.45);
 }
 .vocab:hover .tip,.vocab.active .tip{display:block}
+.vocab:focus{outline:2px solid var(--gold);outline-offset:2px;border-radius:2px}
+img{opacity:0;transition:opacity .4s ease}
+img.loaded{opacity:1}
 figure{margin:32px 0}
 figure img{
   width:100%;
@@ -308,6 +313,9 @@ figcaption{
   margin:38px 0;
   box-shadow:0 6px 18px rgba(0,0,0,.18);
 }
+.ps-visual{display:grid;grid-template-columns:minmax(200px,36%) 1fr;gap:24px;align-items:start}
+.ps-visual figure{margin:0}
+.ps-visual img{width:100%;display:block;border:3px solid var(--saffron-dark);box-shadow:0 8px 24px rgba(70,31,15,.28)}
 .ps-label{
   font-family:'Oswald',sans-serif;
   font-size:12px;
@@ -380,7 +388,8 @@ figcaption{
   border-bottom:3px solid var(--orange);
   text-align:center;
 }
-.ff-break .bb-label{text-align:center;margin-bottom:24px;color:var(--orange)}
+.ff-break .bb-label{text-align:center;margin-bottom:8px;color:var(--orange)}
+.ff-context{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#ffe8b7;text-align:center;margin-bottom:28px;opacity:.88;font-weight:700}
 .ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px}
 .ff-item{text-align:center;padding:8px 12px}
 .ff-number{
@@ -395,11 +404,10 @@ figcaption{
 .ff-desc{
   display:block;
   font-family:'Oswald',sans-serif;
-  font-size:12px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:.08em;
   color:#ffe8b7;
-  max-width:130px;
+  max-width:180px;
   margin:0 auto;
   line-height:1.4;
 }
@@ -490,6 +498,12 @@ figcaption{
   border-top:1px solid rgba(38,216,255,.35);
   padding-top:20px;
 }
+.tn-text-block{margin-top:24px;border-top:1px solid rgba(38,216,255,.35);padding-top:20px}
+.tn-text-block h3{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);margin:18px 0 8px}
+.tn-text-block p{font-family:'Oswald',sans-serif;font-size:17px;line-height:1.65;margin-bottom:12px;color:#fff}
+.section-animate{opacity:0;transform:translateY(24px);transition:opacity .45s ease-out,transform .45s ease-out}
+.section-animate.visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){.section-animate{opacity:1;transform:none;transition:none}}
 footer{
   background:var(--indigo);
   color:#ffe8b7;
@@ -512,6 +526,7 @@ footer{
   .tn-break{padding:28px 22px;margin:30px 0 0}
   .section-nav a{font-size:11px;padding:11px 8px}
 }
+@media(max-width:700px){.ps-visual{grid-template-columns:1fr}}
 @media(max-width:600px){
   .page-title{font-size:42px}
   .section-heading{font-size:31px}
@@ -520,30 +535,32 @@ footer{
 </style>
 </head>
 <body>
+<div id="reading-progress"></div>
 <div class="page-wrap">
 <header class="site-header">
   <!--
     FILENAME: L06_Header_PunjabiFarmersCalifornia.jpg
     PLACE IN: images/L06/
+    PRIORITY: ESSENTIAL
     FIND: Early South Asian or Punjabi Sikh farmers in California fields, 1910s-1930s; shows the farming roots of the first South Asian communities in California
     SEARCH: Punjabi Sikh farmers California 1910 Imperial Valley Wikimedia Commons SAADA
-    LINK: https://www.saada.org/ (suggested, not guaranteed)
+    LINK: Suggested: https://www.saada.org/
   -->
   <img class="header-bg" src="images/L06/L06_Header_PunjabiFarmersCalifornia.jpg" alt="Punjabi Sikh farmers in California">
   <div class="shade"></div>
   <div class="header-inner">
-    <div class="course-label">ETHNIC STUDIES — LESSON 06</div>
+    <div class="course-label">ETHNIC STUDIES · LESSON 06</div>
     <h1 class="page-title">SOUTH ASIAN AMERICANS</h1>
     <div class="eq-banner"><span class="eq-label">ESSENTIAL QUESTION</span>What happens when two excluded communities find each other, and what does their story tell us about who gets to belong in America?</div>
   </div>
 </header>
 
 <nav class="section-nav" aria-label="Page sections">
+  <a href="#intro">OPENING MOMENT</a>
   <a href="#farmworkers">FARMWORKERS</a>
   <a href="#exclusion">EXCLUSION</a>
   <a href="#families">PUNJABI-MEXICAN</a>
   <a href="#today">TODAY</a>
-  <a href="#primary-source-moment">PRIMARY SOURCE</a>
   <a href="#then-now">THEN AND NOW</a>
 </nav>
 
@@ -560,22 +577,23 @@ footer{
 </aside>
 
 <main>
-<section class="intro-section">
+<section class="intro-section section-animate" id="intro">
   <p class="para-standard">In the early 1900s, a Punjabi Sikh farmer in California might finish a long day in the fields and come home to a house where Punjabi, Spanish, and English all mixed at the dinner table. His wife might be Mexican American and Catholic. Their children might carry names like Singh-Hernandez or Garcia-Dhaliwal.</p>
   <p class="para-simple">In the early 1900s, a Punjabi Sikh farmer in California might come home after a long day in the fields. His wife might be Mexican American and Catholic. Their children might have names like Singh-Hernandez or Garcia-Dhaliwal.</p>
   <p class="para-standard">This was not a tiny accident of history. It was a real California community built by people who were pushed out by law, race, and immigration rules. Their story shows that belonging is sometimes built at the kitchen table before the country is ready to recognize it.</p>
   <p class="para-simple">This was not just one family. It was a real California community. These families were pushed away by unfair laws. Their story shows that belonging can begin at home before the country accepts it.</p>
 </section>
 
-<section class="content-section clearfix" id="farmworkers">
+<section class="content-section clearfix section-animate" id="farmworkers">
   <span class="section-kicker">HISTORICAL CONTEXT</span>
   <h2 class="section-heading">PUNJABI SIKH MEN COME TO CALIFORNIA</h2>
   <!--
     FILENAME: L06_PunjabMapBritishIndia.jpg
     PLACE IN: images/L06/
+    PRIORITY: SUPPORTING
     FIND: Map of Punjab region under British India; helps students locate where many early South Asian immigrants came from
     SEARCH: Punjab British India map Wikimedia Commons
-    LINK: https://commons.wikimedia.org/wiki/Category:Maps_of_Punjab (suggested, not guaranteed)
+    LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Maps_of_Punjab
   -->
   <figure class="img-right">
     <img src="images/L06/L06_PunjabMapBritishIndia.jpg" alt="Map of Punjab in British India">
@@ -588,9 +606,10 @@ footer{
   <!--
     FILENAME: L06_ImperialValleyFarmWorkers.jpg
     PLACE IN: images/L06/
+    PRIORITY: SUPPORTING
     FIND: Imperial Valley or Central Valley farmworkers, early 1900s; shows the agricultural world Punjabi immigrants entered
     SEARCH: Imperial Valley farm workers 1910 California Library of Congress
-    LINK: https://www.loc.gov/search/?fa=location:california&q=Imperial+Valley+farmworkers (suggested, not guaranteed)
+    LINK: Suggested: https://www.loc.gov/search/?fa=location:california&q=Imperial+Valley+farmworkers
   -->
   <figure>
     <img src="images/L06/L06_ImperialValleyFarmWorkers.jpg" alt="Farmworkers in California's Imperial Valley">
@@ -602,16 +621,17 @@ footer{
   <p class="real-world para-simple">Real-world connection: California farms have often depended on workers who were treated unfairly.</p>
 </section>
 
-<div class="brain-break dyk-break">
+<div class="brain-break dyk-break section-animate">
   <span class="bb-label">DID YOU KNOW</span>
   <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;">
     <div style="flex:1;min-width:200px;">
       <!--
         FILENAME: L06_DYK_RiceFieldsCalifornia.jpg
         PLACE IN: images/L06/
+    PRIORITY: SUPPORTING
         FIND: Rice fields in Sacramento Valley or early California rice farming; connects Punjabi farmers to rice agriculture
         SEARCH: Sacramento Valley rice fields California Wikimedia Commons
-        LINK: https://commons.wikimedia.org/wiki/Category:Rice_fields_in_California (suggested, not guaranteed)
+        LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Rice_fields_in_California
       -->
       <img src="images/L06/L06_DYK_RiceFieldsCalifornia.jpg" alt="Rice fields in California" style="width:100%;display:block;border:3px solid var(--lime);box-shadow:0 4px 18px rgba(0,0,0,.4);">
       <p style="font-size:12px;margin-top:8px;opacity:.8;font-family:'Oswald',sans-serif;">Rice fields in California's Sacramento Valley.</p>
@@ -620,17 +640,8 @@ footer{
   </div>
 </div>
 
-<div class="brain-break ff-break">
-  <span class="bb-label">FAST FACTS</span>
-  <div class="ff-grid">
-    <div class="ff-item"><span class="ff-number">1917</span><span class="ff-desc">BARRED ZONE ACT</span></div>
-    <div class="ff-item"><span class="ff-number">1923</span><span class="ff-desc">THIND DECISION</span></div>
-    <div class="ff-item"><span class="ff-number">400+</span><span class="ff-desc">DOCUMENTED FAMILIES</span></div>
-    <div class="ff-item"><span class="ff-number">1965</span><span class="ff-desc">NEW IMMIGRATION LAW</span></div>
-  </div>
-</div>
 
-<section class="content-section clearfix" id="exclusion">
+<section class="content-section clearfix section-animate" id="exclusion">
   <span class="section-kicker">EXCLUSION BY LAW</span>
   <h2 class="section-heading">THE LAW CLOSES THE DOOR</h2>
   <p class="para-standard">In 1917, Congress passed the <span class="vocab">Barred Zone Act<span class="tip">A law blocking immigration from much of Asia.</span></span>. It cut off immigration from a huge area of Asia, including India. That meant Punjabi men already in California were stuck. New workers could not easily come, and many men could not bring wives or family.</p>
@@ -638,9 +649,10 @@ footer{
   <!--
     FILENAME: L06_BarredZoneMap.jpg
     PLACE IN: images/L06/
+    PRIORITY: ESSENTIAL
     FIND: Map showing Asiatic Barred Zone from the Immigration Act of 1917; shows the geography of exclusion
     SEARCH: Map showing Asiatic zone prescribed in section three of Immigration Act Wikimedia Commons
-    LINK: https://commons.wikimedia.org/wiki/File:Map_showing_Asiatic_zone_prescribed_in_section_three_of_Immigration_Act,_the_natives_of_which_are_excluded_from_the_United_State,_with_certain_exceptions.jpg (suggested, not guaranteed)
+    LINK: Suggested: https://commons.wikimedia.org/wiki/File:Map_showing_Asiatic_zone_prescribed_in_section_three_of_Immigration_Act,_the_natives_of_which_are_excluded_from_the_United_State,_with_certain_exceptions.jpg
   -->
   <figure>
     <img src="images/L06/L06_BarredZoneMap.jpg" alt="Map of the Asiatic Barred Zone">
@@ -651,9 +663,10 @@ footer{
   <!--
     FILENAME: L06_BhagatSinghThindUniform.jpg
     PLACE IN: images/L06/
+    PRIORITY: SUPPORTING
     FIND: Bhagat Singh Thind in U.S. Army uniform, 1918; shows the veteran whose citizenship case reached the Supreme Court
     SEARCH: Bhagat Singh Thind U.S. Army uniform 1918 Wikimedia Commons
-    LINK: https://commons.wikimedia.org/wiki/File:Bhagatsinghthind.jpg (suggested, not guaranteed)
+    LINK: Suggested: https://commons.wikimedia.org/wiki/File:Bhagatsinghthind.jpg
   -->
   <figure class="img-left">
     <img src="images/L06/L06_BhagatSinghThindUniform.jpg" alt="Bhagat Singh Thind in U.S. Army uniform">
@@ -665,15 +678,28 @@ footer{
   <p class="para-simple">Marriage law made things even harder. The <span class="vocab-red">Cable Act</span> said some American women could lose citizenship if they married men who could not become citizens. California also had <span class="vocab-red">anti-miscegenation</span> laws that banned some interracial marriages.</p>
 </section>
 
-<section class="content-section clearfix" id="families">
+<div class="brain-break ff-break section-animate">
+  <span class="bb-label">FAST FACTS</span>
+  <p class="ff-context">The laws and records that shaped South Asian belonging</p>
+  <div class="ff-grid">
+    <div class="ff-item"><span class="ff-number">1917</span><span class="ff-desc">the Barred Zone Act blocked immigration from much of Asia, including India, which separated many families</span></div>
+    <div class="ff-item"><span class="ff-number">1923</span><span class="ff-desc">the Supreme Court ruled that Bhagat Singh Thind could not be a citizen as a “white person” under naturalization law</span></div>
+    <div class="ff-item"><span class="ff-number">400+</span><span class="ff-desc">Punjabi-Mexican families were documented by scholar Karen Leonard, showing this was a real community</span></div>
+    <div class="ff-item"><span class="ff-number">1965</span><span class="ff-desc">a new immigration law ended the old quota system and opened a different chapter of South Asian immigration</span></div>
+  </div>
+</div>
+
+
+<section class="content-section clearfix section-animate" id="families">
   <span class="section-kicker">SOLIDARITY AND FAMILY</span>
   <h2 class="section-heading">THE PUNJABI-MEXICAN COMMUNITY</h2>
   <!--
     FILENAME: L06_PunjabiMexicanFamily.jpg
     PLACE IN: images/L06/
+    PRIORITY: ESSENTIAL
     FIND: Punjabi-Mexican family photograph from Imperial Valley or Karen Leonard / SAADA archive; shows a real mixed family from this community
     SEARCH: Punjabi Mexican family Imperial Valley photograph SAADA
-    LINK: https://www.saada.org/explore/archive/search?search=Punjabi%20Mexican (suggested, not guaranteed)
+    LINK: Suggested: https://www.saada.org/explore/archive/search?search=Punjabi%20Mexican
   -->
   <figure class="img-right">
     <img src="images/L06/L06_PunjabiMexicanFamily.jpg" alt="Punjabi-Mexican family in California">
@@ -697,15 +723,16 @@ footer{
   </div>
 </section>
 
-<div class="brain-break as-break">
+<div class="brain-break as-break section-animate">
   <span class="bb-label">ART SPOTLIGHT</span>
   <figure>
     <!--
       FILENAME: L06_ArtSpotlight_BarredZoneMap.jpg
       PLACE IN: images/L06/
+    PRIORITY: SUPPORTING
       FIND: Specific 1917 map titled "Map showing Asiatic zone prescribed in section three of Immigration Act"; use as historical illustration of exclusion
       SEARCH: Map showing Asiatic zone prescribed in section three of Immigration Act Wikimedia Commons
-      LINK: https://commons.wikimedia.org/wiki/File:Map_showing_Asiatic_zone_prescribed_in_section_three_of_Immigration_Act,_the_natives_of_which_are_excluded_from_the_United_State,_with_certain_exceptions.jpg (suggested, not guaranteed)
+      LINK: Suggested: https://commons.wikimedia.org/wiki/File:Map_showing_Asiatic_zone_prescribed_in_section_three_of_Immigration_Act,_the_natives_of_which_are_excluded_from_the_United_State,_with_certain_exceptions.jpg
     -->
     <img src="images/L06/L06_ArtSpotlight_BarredZoneMap.jpg" alt="Map showing Asiatic zone prescribed in section three of Immigration Act" class="as-image">
     <figcaption class="as-caption"><em>Map showing Asiatic zone prescribed in section three of Immigration Act</em>, 1917. The map made exclusion look like geography.</figcaption>
@@ -713,15 +740,16 @@ footer{
   <p class="as-fact">The strange thing about this map is how calm it looks. It uses neat lines and official labels to show a law that separated families across oceans. A person could look at the map and forget that every border line meant a door closing on someone's future.</p>
 </div>
 
-<section class="content-section clearfix" id="today">
+<section class="content-section clearfix section-animate" id="today">
   <span class="section-kicker">PRESENT REALITY</span>
   <h2 class="section-heading">A NEW CHAPTER AFTER 1965</h2>
   <!--
     FILENAME: L06_ImmigrationAct1965Signing.jpg
     PLACE IN: images/L06/
+    PRIORITY: SUPPORTING
     FIND: President Lyndon Johnson signing Immigration and Nationality Act of 1965; shows the law that opened a new South Asian immigration chapter
     SEARCH: Immigration and Nationality Act 1965 signing Lyndon Johnson Wikimedia Commons
-    LINK: https://commons.wikimedia.org/wiki/Category:Immigration_and_Nationality_Act_of_1965 (suggested, not guaranteed)
+    LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Immigration_and_Nationality_Act_of_1965
   -->
   <figure class="img-left">
     <img src="images/L06/L06_ImmigrationAct1965Signing.jpg" alt="Signing of the Immigration and Nationality Act of 1965">
@@ -735,28 +763,35 @@ footer{
   <p class="para-simple">South Asian America also includes working-class people, taxi drivers, farmworkers, restaurant workers, and undocumented immigrants. If we only tell the success story, we erase people who still struggle. A full history includes all of them.</p>
 </section>
 
-<section class="content-section" id="primary-source-moment">
+<section class="content-section section-animate" id="primary-source-moment">
   <span class="section-kicker">PRIMARY SOURCE MOMENT</span>
   <h2 class="section-heading">WHO COUNTS AS BELONGING?</h2>
-  <div class="primary-source">
-    <div class="ps-label">PRIMARY SOURCE</div>
-    <div class="ps-quote">"The words 'free white persons' are words of common speech, to be interpreted in accordance with the understanding of the common man."</div>
-    <div class="ps-attribution">United States v. Bhagat Singh Thind, Supreme Court decision, 1923</div>
-    <div class="ps-narrator">The Court used everyday prejudice to decide who could become a citizen.</div>
-  </div>
-  <div class="primary-source">
-    <div class="ps-label">PRIMARY SOURCE</div>
-    <div class="ps-quote">"I found two, three hundred marriage, death and birth records for these Punjabi Mexican couples. It wasn't just a handful. It was a whole community."</div>
-    <div class="ps-attribution">Karen Leonard, interview on Punjabi-Mexican American research, SAADA, 2020</div>
-    <div class="ps-narrator">Leonard's archive work showed that these families were not rare exceptions; they were a real community.</div>
-  </div>
-  <div class="ps-questions">
-    <p><strong>Question 1:</strong> How did the Supreme Court define who counted as white enough for citizenship?</p>
-    <p><strong>Question 2:</strong> How do the Punjabi-Mexican records challenge the idea that the law gets to decide who belongs?</p>
+  <div class="primary-source section-animate">
+    <div class="ps-visual">
+      <figure>
+        <!--
+          FILENAME: L06_BhagatSinghThindUniform.jpg
+          PLACE IN: images/L06/
+          PRIORITY: ESSENTIAL
+          FIND: Bhagat Singh Thind in U.S. Army uniform, 1918; shows the veteran whose citizenship case reached the Supreme Court
+          SEARCH: Bhagat Singh Thind U.S. Army uniform 1918 Wikimedia Commons
+          LINK: Suggested: https://commons.wikimedia.org/wiki/File:Bhagatsinghthind.jpg
+        -->
+        <img src="images/L06/L06_BhagatSinghThindUniform.jpg" alt="Bhagat Singh Thind in U.S. Army uniform">
+        <figcaption>Bhagat Singh Thind served in the U.S. Army, but the Supreme Court still denied his path to citizenship. Wikimedia Commons / SAADA.</figcaption>
+      </figure>
+      <div>
+        <div class="ps-label">PRIMARY SOURCE</div>
+        <div class="ps-quote">“The words ‘free white persons’ are words of common speech, to be interpreted in accordance with the understanding of the common man. They are not words of scientific origin. The average man knows perfectly well that there are unmistakable and profound differences between the people popularly known as white and the people of India.”</div>
+        <div class="ps-attribution">United States Supreme Court, <em>United States v. Bhagat Singh Thind</em>, 1923</div>
+        <div class="ps-narrator">The Court did not use fairness to decide who belonged. It used the racial ideas that many Americans already accepted, then turned those ideas into citizenship law.</div>
+        <div class="ps-narrator"><strong>IN SIMPLE TERMS:</strong> The Court said South Asians could be blocked from citizenship because most white Americans did not see them as white.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="brain-break tn-break" id="then-now">
+<div class="brain-break tn-break section-animate" id="then-now">
   <span class="bb-label">THEN AND NOW</span>
   <p class="tn-payoff">Belonging often begins where the law says it should not.</p>
   <div class="tn-pair">
@@ -765,74 +800,148 @@ footer{
       <!--
         FILENAME: L06_Then_PunjabiMexicanFamily.jpg
         PLACE IN: images/L06/
+        PRIORITY: ESSENTIAL
         FIND: Punjabi-Mexican family photograph from California's Imperial Valley; historical family image for then-and-now comparison
         SEARCH: Punjabi Mexican family Imperial Valley photograph SAADA
-        LINK: https://www.saada.org/explore/archive/search?search=Punjabi%20Mexican (suggested, not guaranteed)
+        LINK: Suggested: https://www.saada.org/explore/archive/search?search=Punjabi%20Mexican
       -->
       <img src="images/L06/L06_Then_PunjabiMexicanFamily.jpg" alt="Historic Punjabi-Mexican family">
       <p class="tn-caption">Punjabi-Mexican families created belonging across borders, religions, and laws.</p>
     </div>
     <div class="tn-item">
-      <span class="tn-era-label">TODAY</span>
+      <span class="tn-era-label">NOW</span>
       <!--
         FILENAME: L06_Now_SouthAsianAmericanCommunity.jpg
         PLACE IN: images/L06/
-        FIND: Contemporary South Asian American community event, Sikh parade, or Punjabi American community gathering in California
+        PRIORITY: ESSENTIAL
+        FIND: Contemporary South Asian American community event, Sikh parade, or Punjabi American community gathering in California showing agency and community presence
         SEARCH: Sikh parade California Punjabi American community Wikimedia Commons
-        LINK: https://commons.wikimedia.org/wiki/Category:Sikhism_in_California (suggested, not guaranteed)
+        LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Sikhism_in_California
       -->
       <img src="images/L06/L06_Now_SouthAsianAmericanCommunity.jpg" alt="Contemporary South Asian American community gathering">
       <p class="tn-caption">South Asian American communities today include many languages, religions, jobs, and migration stories.</p>
     </div>
   </div>
-  <p class="tn-closing">The faces change, but the question stays close to home: who gets treated like they belong before they have to prove it?</p>
+  <div class="tn-text-block">
+    <h3>THEN</h3>
+    <p>In the early twentieth century, Punjabi men and Mexican or Mexican American women built families while immigration and citizenship laws tried to limit them. Their homes connected languages, religions, food, farming, and family names. The historical image represents a community that made belonging before the law fully allowed it.</p>
+    <h3>NOW</h3>
+    <p>Today, South Asian American communities continue to build public life through cultural events, religious communities, organizing, businesses, art, and family networks. The present-day image shows community presence rather than isolation. South Asian American history is not only a story of exclusion; it is also a story of action and belonging.</p>
+    <h3>CONNECTION</h3>
+    <p>The connection is that communities often create belonging before governments recognize it. Punjabi-Mexican families showed that people could cross borders that laws tried to harden. South Asian Americans today continue that work by making community visible in public life.</p>
+    <p>Who should get to decide when a community belongs?</p>
+  </div>
 </div>
 </main>
 
-<footer>ETHNIC STUDIES — LESSON 06 — SOUTH ASIAN AMERICANS</footer>
+<footer>ETHNIC STUDIES · LESSON 06 — SOUTH ASIAN AMERICANS</footer>
 </div>
 
 <script>
+(function(){
+  var bar=document.getElementById('reading-progress');
+  window.addEventListener('scroll',function(){
+    var scrollTop=window.scrollY||document.documentElement.scrollTop;
+    var docHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    var progress=docHeight>0?(scrollTop/docHeight)*100:0;
+    bar.style.width=progress+'%';
+  },{passive:true});
+})();
+
+document.getElementById('lexile-toggle').addEventListener('click',function(){
+  document.body.classList.toggle('simplified');
+  this.textContent=document.body.classList.contains('simplified')?'STANDARD TEXT':'SIMPLIFY TEXT';
+});
+
+function repositionTip(el){
+  var tip=el.querySelector('.tip');
+  if(!tip)return;
+  tip.style.left='50%';
+  tip.style.transform='translateX(-50%)';
+  var rect=tip.getBoundingClientRect();
+  if(rect.left<8){
+    var shift=8-rect.left;
+    tip.style.transform='translateX(calc(-50% + '+shift+'px))';
+  }else if(rect.right>window.innerWidth-8){
+    var shift=rect.right-(window.innerWidth-8);
+    tip.style.transform='translateX(calc(-50% - '+shift+'px))';
+  }
+}
+
 document.querySelectorAll('.vocab').forEach(function(el){
+  el.setAttribute('tabindex','0');
   el.addEventListener('click',function(e){
     e.stopPropagation();
     document.querySelectorAll('.vocab.active').forEach(function(v){if(v!==el)v.classList.remove('active');});
     el.classList.toggle('active');
+    if(el.classList.contains('active'))repositionTip(el);
+  });
+  el.addEventListener('focus',function(){el.classList.add('active');repositionTip(el);});
+  el.addEventListener('blur',function(){el.classList.remove('active');});
+  el.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){
+      e.preventDefault();
+      el.classList.toggle('active');
+      if(el.classList.contains('active'))repositionTip(el);
+    }
+    if(e.key==='Escape')el.classList.remove('active');
   });
 });
 document.addEventListener('click',function(){
   document.querySelectorAll('.vocab.active').forEach(function(v){v.classList.remove('active');});
 });
-document.getElementById('lexile-toggle').addEventListener('click',function(){
-  document.body.classList.toggle('simplified');
-  this.textContent=document.body.classList.contains('simplified')?'STANDARD TEXT':'SIMPLIFY TEXT';
-});
+
 const tocObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     const id=entry.target.getAttribute('id');
-    const link=document.querySelector('.toc-sidebar a[href="#'+id+'"]');
-    if(link){
-      if(entry.isIntersecting)link.classList.add('active');
-      else link.classList.remove('active');
+    const tocLink=document.querySelector('.toc-sidebar a[href="#'+id+'"]');
+    const navLink=document.querySelector('.section-nav a[href="#'+id+'"]');
+    if(entry.isIntersecting){
+      if(tocLink)tocLink.classList.add('active');
+      if(navLink)navLink.classList.add('active');
+    }else{
+      if(tocLink)tocLink.classList.remove('active');
+      if(navLink)navLink.classList.remove('active');
     }
   });
 },{threshold:.25});
-document.querySelectorAll('[id]').forEach(el=>tocObserver.observe(el));
+document.querySelectorAll('section[id], div[id="then-now"]').forEach(el=>tocObserver.observe(el));
+
+(function(){
+  var animObserver=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        animObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.08});
+  document.querySelectorAll('.section-animate').forEach(function(el){animObserver.observe(el);});
+})();
+
+document.querySelectorAll('img').forEach(function(img){
+  if(img.complete&&img.naturalWidth>0){
+    img.classList.add('loaded');
+  }else{
+    img.addEventListener('load',function(){img.classList.add('loaded');});
+    img.addEventListener('error',function(){
+      img.style.opacity='0.15';
+      img.style.border='2px dashed rgba(255,255,255,0.2)';
+    });
+  }
+});
 </script>
 </body>
 </html>
 
 <!--
-IMAGE CHECKLIST FOR SS9_L06.html
-1. L06_Header_PunjabiFarmersCalifornia.jpg — Early South Asian or Punjabi Sikh farmers in California fields — Suggested link: https://www.saada.org/
-2. L06_PunjabMapBritishIndia.jpg — Map of Punjab under British India — Suggested link: https://commons.wikimedia.org/wiki/Category:Maps_of_Punjab
-3. L06_ImperialValleyFarmWorkers.jpg — Farmworkers in California's Imperial Valley or Central Valley, early twentieth century — Suggested link: https://www.loc.gov/search/?fa=location:california&q=Imperial+Valley+farmworkers
-4. L06_DYK_RiceFieldsCalifornia.jpg — Rice fields in California's Sacramento Valley — Suggested link: https://commons.wikimedia.org/wiki/Category:Rice_fields_in_California
-5. L06_BarredZoneMap.jpg — Map of Asiatic Barred Zone from the Immigration Act of 1917 — Suggested link: https://commons.wikimedia.org/wiki/File:Map_showing_Asiatic_zone_prescribed_in_section_three_of_Immigration_Act,_the_natives_of_which_are_excluded_from_the_United_State,_with_certain_exceptions.jpg
-6. L06_BhagatSinghThindUniform.jpg — Bhagat Singh Thind in U.S. Army uniform, 1918 — Suggested link: https://commons.wikimedia.org/wiki/File:Bhagatsinghthind.jpg
-7. L06_PunjabiMexicanFamily.jpg — Punjabi-Mexican family photograph from Imperial Valley or SAADA archive — Suggested link: https://www.saada.org/explore/archive/search?search=Punjabi%20Mexican
-8. L06_ArtSpotlight_BarredZoneMap.jpg — Specific 1917 map showing Asiatic zone prescribed by Immigration Act — Suggested link: https://commons.wikimedia.org/wiki/File:Map_showing_Asiatic_zone_prescribed_in_section_three_of_Immigration_Act,_the_natives_of_which_are_excluded_from_the_United_State,_with_certain_exceptions.jpg
-9. L06_ImmigrationAct1965Signing.jpg — Signing of the Immigration and Nationality Act of 1965 — Suggested link: https://commons.wikimedia.org/wiki/Category:Immigration_and_Nationality_Act_of_1965
-10. L06_Then_PunjabiMexicanFamily.jpg — Historic Punjabi-Mexican family photograph — Suggested link: https://www.saada.org/explore/archive/search?search=Punjabi%20Mexican
-11. L06_Now_SouthAsianAmericanCommunity.jpg — Contemporary South Asian American community gathering in California — Suggested link: https://commons.wikimedia.org/wiki/Category:Sikhism_in_California
+  IMAGE CHECK: Open browser DevTools (F12), go to Console, paste and run:
+
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.complete || img.naturalWidth === 0) {
+      console.warn('MISSING:', img.src);
+    } else {
+      console.log('OK:', img.src);
+    }
+  });
 -->
