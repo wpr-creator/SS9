@@ -19,23 +19,28 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #f0ede8;
-  --bg-card:    #faf9f6;
-  --border:     #ddd9d2;
-  --border-mid: #cac4bb;
-  --text:       #141210;
-  --text-mid:   #3a3530;
-  --text-muted: #7a746c;
+  /* Warm, rich background — no more gray */
+  --bg:         #f5ede0;
+  --bg-deep:    #ede1cf;
+  --bg-card:    #fdf8f2;
+  --border:     #d4c5b0;
+  --border-mid: #bfae97;
+  --text:       #180f07;
+  --text-mid:   #3d2e1e;
+  --text-muted: #7a6348;
 
-  --c1: #1e6e48;
-  --c2: #7a3a12;
-  --c3: #1c3464;
-  --c4: #b83818;
-  --c5: #a02808;
-  --c6: #b86808;
-  --c7: #224e7a;
-  --c8: #1e5e4a;
-  --c9: #5a3282;
+  /* Community colors — richer, more saturated */
+  --c1: #1a6640;   /* Native: forest green */
+  --c2: #7a3010;   /* African American: deep ochre-brown */
+  --c3: #1a3070;   /* Chicano/Latino: cobalt blue */
+  --c4: #c03010;   /* AAPI: vermillion */
+  --c5: #982208;   /* AAPI expanded: brick */
+  --c6: #c07000;   /* South Asian: saffron */
+  --c7: #1c4878;   /* Jewish: steel blue */
+  --c8: #155a42;   /* Arab: deep teal */
+  --c9: #56288a;   /* San Diego local: violet */
+
+  --today-color: var(--c5); /* Day 5 = AAPI */
 }
 
 html { scroll-behavior: smooth; }
@@ -48,7 +53,18 @@ body {
   overflow-x: hidden;
 }
 
-/* ── BACKGROUND ANIMATION ── */
+/* ── SCROLL PROGRESS BAR ── */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--c4), var(--c9), var(--c1));
+  transition: width 0.1s linear;
+}
+
+/* ── BACKGROUND ── */
 .bg-layer {
   position: fixed;
   inset: 0;
@@ -57,7 +73,7 @@ body {
   overflow: hidden;
 }
 
-/* Diagonal stripe pattern — faint */
+/* Warmer, more visible diagonal grain */
 .bg-stripes {
   position: absolute;
   inset: -50%;
@@ -66,9 +82,9 @@ body {
   background: repeating-linear-gradient(
     -45deg,
     transparent,
-    transparent 60px,
-    rgba(180,160,130,0.04) 60px,
-    rgba(180,160,130,0.04) 61px
+    transparent 58px,
+    rgba(160,120,70,0.055) 58px,
+    rgba(160,120,70,0.055) 59px
   );
   animation: stripeShift 40s linear infinite;
 }
@@ -77,20 +93,21 @@ body {
   to   { transform: translateX(87px); }
 }
 
-/* Color orbs — community colors, very subtle */
+/* Richer color orbs */
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(90px);
   animation: orbDrift ease-in-out infinite;
 }
-.orb-1 { width:500px;height:500px;background:rgba(122,58,18,0.07);top:-150px;right:-100px;animation-duration:25s; }
-.orb-2 { width:400px;height:400px;background:rgba(28,52,100,0.07);bottom:-100px;left:-80px;animation-duration:30s;animation-delay:8s; }
-.orb-3 { width:350px;height:350px;background:rgba(90,50,130,0.06);top:40%;left:35%;animation-duration:22s;animation-delay:4s; }
+.orb-1 { width:550px;height:550px;background:rgba(122,48,16,0.1);top:-160px;right:-120px;animation-duration:26s; }
+.orb-2 { width:450px;height:450px;background:rgba(26,48,112,0.09);bottom:-120px;left:-90px;animation-duration:31s;animation-delay:9s; }
+.orb-3 { width:380px;height:380px;background:rgba(86,40,138,0.08);top:42%;left:38%;animation-duration:23s;animation-delay:4s; }
+.orb-4 { width:300px;height:300px;background:rgba(192,112,0,0.07);bottom:20%;right:15%;animation-duration:28s;animation-delay:12s; }
 
 @keyframes orbDrift {
   0%,100% { transform:translate(0,0); }
-  50%      { transform:translate(25px,-20px); }
+  50%      { transform:translate(28px,-22px); }
 }
 
 /* ── HERO ── */
@@ -110,14 +127,14 @@ body {
   inset: 0;
   background:
     linear-gradient(165deg,
-      rgba(8,6,4,0.15) 0%,
-      rgba(15,10,6,0.6) 55%,
-      rgba(8,6,4,0.92) 100%),
+      rgba(8,4,2,0.1) 0%,
+      rgba(18,10,4,0.62) 55%,
+      rgba(8,4,2,0.94) 100%),
     url('images/header_eth.jpg') center 28% / cover no-repeat;
-  background-color: #100c08;
+  background-color: #120a04;
 }
 
-/* Animated grid lines in hero */
+/* Animated grid lines */
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -136,14 +153,14 @@ body {
 .hg-v:nth-child(4) { left:33%; animation-duration:12s;animation-delay:1s; }
 .hg-v:nth-child(5) { left:66%; animation-duration:10s;animation-delay:5s; }
 @keyframes hgPulse {
-  0%,100% { opacity:0.3; }
-  50%      { opacity:1; }
+  0%,100% { opacity:0.25; }
+  50%      { opacity:0.9; }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 2.5rem 4rem;
+  padding: 0 2.5rem 4.5rem;
   text-align: left;
   max-width: 1140px;
   margin: 0 auto;
@@ -183,7 +200,7 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   display: block;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.78);
   margin-bottom: 0.15em;
   text-shadow: none;
 }
@@ -191,24 +208,25 @@ body {
 .hero-sub {
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.42);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-/* Community color strip at bottom */
+/* Community color strip at bottom — wider, more vivid */
 .color-strip {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 4px;
+  height: 5px;
   display: flex;
 }
 .cs {
   flex: 1;
-  transition: flex 0.3s ease;
+  transition: flex 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  cursor: default;
 }
-.cs:hover { flex: 2; }
+.cs:hover { flex: 3; }
 .cs-1 { background:var(--c1); }
 .cs-2 { background:var(--c2); }
 .cs-3 { background:var(--c3); }
@@ -218,6 +236,37 @@ body {
 .cs-7 { background:var(--c7); }
 .cs-8 { background:var(--c8); }
 .cs-9 { background:var(--c9); }
+.cs-10 { background: #888; }
+
+/* ── SESSION PROGRESS STRIP ── */
+.progress-strip {
+  background: var(--text);
+  color: rgba(255,255,255,0.75);
+  text-align: center;
+  padding: 0.65rem 1rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+.progress-strip .pips {
+  display: flex;
+  gap: 5px;
+}
+.pip {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  transition: background 0.3s;
+}
+.pip.done   { background: var(--c4); }
+.pip.active { background: #fff; box-shadow: 0 0 7px rgba(255,255,255,0.7); }
 
 /* ── MAIN ── */
 .page-wrap {
@@ -268,8 +317,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  background: var(--border-mid);
+  border: 1px solid var(--border-mid);
 }
 
 .day-card {
@@ -279,8 +328,19 @@ body {
   background: var(--bg-card);
   padding: 1.6rem 1.4rem 1.8rem;
   position: relative;
-  transition: background 0.18s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
   overflow: hidden;
+
+  /* Scroll reveal start state */
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.day-card.visible {
+  animation: cardReveal 0.42s ease forwards;
+}
+@keyframes cardReveal {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Top color bar */
@@ -290,17 +350,76 @@ body {
   top: 0; left: 0; right: 0;
   height: 3px;
   background: var(--c, var(--border-mid));
-  transform: scaleX(0.3);
+  transform: scaleX(0.28);
   transform-origin: left;
-  transition: transform 0.25s ease;
+  transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
 }
 
 .day-card:hover {
-  background: #ffffff;
+  background: #fffdf8;
+  transform: translateY(-2px);
+  z-index: 2;
+  box-shadow: 0 8px 28px rgba(24,15,7,0.1);
 }
-
 .day-card:hover::before {
   transform: scaleX(1);
+}
+
+/* TODAY card: animated color-pulse border */
+.day-card.today {
+  background: #fffdf8;
+}
+.day-card.today::before {
+  transform: scaleX(1);
+  animation: todayPulse 2.4s ease-in-out infinite;
+}
+@keyframes todayPulse {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+/* DONE cards: muted */
+.day-card.done {
+  background: #f7f1e9;
+  opacity: 0.7;
+}
+.day-card.done .card-title { color: var(--text-muted); }
+.day-card.done::before { transform: scaleX(1); opacity: 0.35; }
+
+/* TODAY badge */
+.today-badge {
+  display: inline-block;
+  background: var(--today-color);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* FINAL badge */
+.final-badge {
+  display: inline-block;
+  background: var(--text);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 
 .day-num {
@@ -312,26 +431,29 @@ body {
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .day-num::after {
   content: '';
   display: inline-block;
-  width: 16px;
+  width: 14px;
   height: 1px;
   background: currentColor;
-  opacity: 0.4;
+  opacity: 0.35;
+  margin-left: 2px;
 }
+/* Don't show the dash when there's a badge */
+.day-num:has(.today-badge)::after,
+.day-num:has(.final-badge)::after { display: none; }
 
 .card-title {
   font-family: 'Instrument Serif', serif;
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   font-weight: 400;
   color: var(--text);
   line-height: 1.38;
   margin-bottom: 0.7rem;
-  text-transform: uppercase;
   letter-spacing: 0.01em;
 }
 
@@ -352,7 +474,32 @@ body {
   text-transform: uppercase;
   color: var(--text-muted);
   font-weight: 600;
-  opacity: 0.6;
+  opacity: 0.65;
+}
+
+/* ── TOOLTIP ── */
+.day-card[data-community] {
+  position: relative;
+}
+.day-card[data-community]::after {
+  content: attr(data-community);
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c, var(--text-muted));
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+.day-card[data-community]:hover::after {
+  opacity: 0.7;
+  transform: translateY(0);
 }
 
 /* ── FOOTER ── */
@@ -373,55 +520,43 @@ footer {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--text-muted);
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .footer-dots {
   display: flex;
   gap: 5px;
 }
-
 .footer-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.65;
+  transition: opacity 0.2s, transform 0.2s;
+  cursor: default;
 }
-
-/* ── FADE IN ── */
-.fade-in {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeUp 0.45s ease forwards;
-}
-.cards-grid .fade-in:nth-child(1) { animation-delay: 0.03s; }
-.cards-grid .fade-in:nth-child(2) { animation-delay: 0.07s; }
-.cards-grid .fade-in:nth-child(3) { animation-delay: 0.11s; }
-.cards-grid .fade-in:nth-child(4) { animation-delay: 0.15s; }
-.cards-grid .fade-in:nth-child(5) { animation-delay: 0.19s; }
-.cards-grid .fade-in:nth-child(6) { animation-delay: 0.23s; }
-.cards-grid .fade-in:nth-child(7) { animation-delay: 0.27s; }
-.cards-grid .fade-in:nth-child(8) { animation-delay: 0.31s; }
-.cards-grid .fade-in:nth-child(9) { animation-delay: 0.35s; }
-
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.footer-dot:hover { opacity: 1; transform: scale(1.4); }
 
 @media (max-width: 640px) {
   .hero h1 { font-size: 2.8rem; }
   .hero-content { padding: 0 1.5rem 3rem; }
-  .cards-grid { grid-template-columns: 1fr; gap: 1px; }
+  .cards-grid { grid-template-columns: 1fr; }
   .page-wrap { padding: 0 1.2rem 3rem; }
   footer { padding: 1.2rem; flex-direction: column; gap: 1rem; text-align: center; }
+  .progress-strip { font-size: 0.65rem; gap: 0.8rem; }
 }
 </style>
 </head>
 <body>
+
+<div id="progress-bar"></div>
 
 <div class="bg-layer">
   <div class="bg-stripes"></div>
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
 </div>
 
 <!-- HERO -->
@@ -440,7 +575,7 @@ footer {
       <strong>Ethnic</strong>
       Studies
     </h1>
-    <p class="hero-sub">CA Ethnic Studies Model Curriculum &nbsp;·&nbsp; 9 Lessons</p>
+    <p class="hero-sub">CA Ethnic Studies Model Curriculum &nbsp;·&nbsp; 9 Lessons + Final</p>
   </div>
   <div class="color-strip">
     <div class="cs cs-1"></div>
@@ -452,8 +587,15 @@ footer {
     <div class="cs cs-7"></div>
     <div class="cs cs-8"></div>
     <div class="cs cs-9"></div>
+    <div class="cs cs-10"></div>
   </div>
 </header>
+
+<!-- SESSION PROGRESS -->
+<div class="progress-strip">
+  <span>Day 5 of 10</span>
+  <div class="pips" id="pips"></div>
+</div>
 
 <!-- MAIN -->
 <main class="page-wrap">
@@ -467,67 +609,78 @@ footer {
 
     <div class="cards-grid">
 
-      <a class="day-card fade-in" href="SS9_L01.html" style="--c:#1e6e48;">
-        <div class="day-num" style="color:#1e6e48;">Day 1</div>
-        <div class="card-title">Who Gets Erased? The History Behind the History</div>
-        <div class="card-eq">What stories have been left out of American history, and why does that matter?</div>
-        <div class="card-std">CA ES Framework — Units 1 &amp; 2</div>
-      </a>
-
-      <a class="day-card fade-in" href="SS9_L02.html" style="--c:#7a3a12;">
-        <div class="day-num" style="color:#7a3a12;">Day 2</div>
-        <div class="card-title">Native American Peoples: Sovereignty, Survival, and Presence</div>
-        <div class="card-eq">How did Indigenous peoples survive colonization, and how do they assert their sovereignty today?</div>
-        <div class="card-std">CA ES Framework — Native American Studies</div>
-      </a>
-
-      <a class="day-card fade-in" href="SS9_L03.html" style="--c:#1c3464;">
-        <div class="day-num" style="color:#1c3464;">Day 3</div>
-        <div class="card-title">African American Experience: From Enslavement to Power</div>
-        <div class="card-eq">How did enslaved people and their descendants resist, survive, and transform American democracy from the inside?</div>
-        <div class="card-std">CA ES Framework — African American Studies</div>
-      </a>
-
-      <a class="day-card fade-in" href="SS9_L04.html" style="--c:#b83818;">
-        <div class="day-num" style="color:#b83818;">Day 4</div>
-        <div class="card-title">Chicano and Latino Identity: Border, Culture, and Power</div>
-        <div class="card-eq">How has the history of the U.S.-Mexico border shaped the lives, culture, and political power of Latino communities?</div>
-        <div class="card-std">CA ES Framework — Chicana/o/x &amp; Latina/o/x Studies</div>
-      </a>
-
-      <a class="day-card fade-in" href="SS9_L05.html" style="--c:#a02808;">
-        <div class="day-num" style="color:#a02808;">Day 5</div>
+      <!-- TODAY: Day 5 -->
+      <a class="day-card today" href="SS9_L05.html" style="--c:#982208;" data-community="AAPI">
+        <div class="day-num" style="color:#982208;">Day 5 <span class="today-badge">Today</span></div>
         <div class="card-title">Asian American and Pacific Islander Experience</div>
         <div class="card-eq">How did Asian immigrants build American infrastructure, face systematic exclusion, and fight for belonging over two centuries?</div>
         <div class="card-std">CA ES Framework — AAPI Studies</div>
       </a>
 
-      <a class="day-card fade-in" href="SS9_L06.html" style="--c:#b86808;">
-        <div class="day-num" style="color:#b86808;">Day 6</div>
+      <!-- Days 6–9 (upcoming) -->
+      <a class="day-card" href="SS9_L06.html" style="--c:#c07000;" data-community="South Asian">
+        <div class="day-num" style="color:#c07000;">Day 6</div>
         <div class="card-title">South Asian Americans: Farmworkers, Exclusion, and the Punjabi-Mexican Community</div>
         <div class="card-eq">What happens when two excluded communities find each other, and what does their story tell us about who gets to belong in America?</div>
         <div class="card-std">CA ES Framework — AAPI Studies Expanded</div>
       </a>
 
-      <a class="day-card fade-in" href="SS9_L07.html" style="--c:#224e7a;">
-        <div class="day-num" style="color:#224e7a;">Day 7</div>
+      <a class="day-card" href="SS9_L07.html" style="--c:#1c4878;" data-community="Jewish American">
+        <div class="day-num" style="color:#1c4878;">Day 7</div>
         <div class="card-title">Jewish American Experience: Immigration, Identity, and Belonging</div>
         <div class="card-eq">How did Jewish immigrants build American identity while facing exclusion, and what does their experience tell us about who gets to be considered American?</div>
         <div class="card-std">CA ES Framework — Expanded Community Studies</div>
       </a>
 
-      <a class="day-card fade-in" href="SS9_L08.html" style="--c:#1e5e4a;">
-        <div class="day-num" style="color:#1e5e4a;">Day 8</div>
+      <a class="day-card" href="SS9_L08.html" style="--c:#155a42;" data-community="Arab American">
+        <div class="day-num" style="color:#155a42;">Day 8</div>
         <div class="card-title">Arab American and Middle Eastern Experience</div>
         <div class="card-eq">How has the Arab American community built a life in the United States while navigating stereotypes, discrimination, and questions about loyalty and belonging?</div>
         <div class="card-std">CA ES Framework — Expanded Community Studies</div>
       </a>
 
-      <a class="day-card fade-in" href="SS9_L09.html" style="--c:#5a3282;">
-        <div class="day-num" style="color:#5a3282;">Day 9</div>
+      <a class="day-card" href="SS9_L09.html" style="--c:#56288a;" data-community="San Diego Local">
+        <div class="day-num" style="color:#56288a;">Day 9</div>
         <div class="card-title">San Diego's Hidden Communities: Filipino, Somali, Hmong, and Chaldean</div>
         <div class="card-eq">Who are your neighbors, where did they come from, and what did America have to do with why they are here?</div>
         <div class="card-std">CA ES Framework — Local Community Studies</div>
+      </a>
+
+      <!-- Days 1–4 (completed / muted) -->
+      <a class="day-card done" href="SS9_L01.html" style="--c:#1a6640;" data-community="Foundations">
+        <div class="day-num" style="color:#1a6640;">Day 1</div>
+        <div class="card-title">Who Gets Erased? The History Behind the History</div>
+        <div class="card-eq">What stories have been left out of American history, and why does that matter?</div>
+        <div class="card-std">CA ES Framework — Units 1 &amp; 2</div>
+      </a>
+
+      <a class="day-card done" href="SS9_L02.html" style="--c:#7a3010;" data-community="Native American">
+        <div class="day-num" style="color:#7a3010;">Day 2</div>
+        <div class="card-title">Native American Peoples: Sovereignty, Survival, and Presence</div>
+        <div class="card-eq">How did Indigenous peoples survive colonization, and how do they assert their sovereignty today?</div>
+        <div class="card-std">CA ES Framework — Native American Studies</div>
+      </a>
+
+      <a class="day-card done" href="SS9_L03.html" style="--c:#1a3070;" data-community="African American">
+        <div class="day-num" style="color:#1a3070;">Day 3</div>
+        <div class="card-title">African American Experience: From Enslavement to Power</div>
+        <div class="card-eq">How did enslaved people and their descendants resist, survive, and transform American democracy from the inside?</div>
+        <div class="card-std">CA ES Framework — African American Studies</div>
+      </a>
+
+      <a class="day-card done" href="SS9_L04.html" style="--c:#c03010;" data-community="Chicano / Latino">
+        <div class="day-num" style="color:#c03010;">Day 4</div>
+        <div class="card-title">Chicano and Latino Identity: Border, Culture, and Power</div>
+        <div class="card-eq">How has the history of the U.S.-Mexico border shaped the lives, culture, and political power of Latino communities?</div>
+        <div class="card-std">CA ES Framework — Chicana/o/x &amp; Latina/o/x Studies</div>
+      </a>
+
+      <!-- Day 10: Final -->
+      <a class="day-card" href="SS9_L10.html" style="--c:#444;">
+        <div class="day-num" style="color:#444;">Day 10 <span class="final-badge">Final</span></div>
+        <div class="card-title">Ethnic Studies Final Exam</div>
+        <div class="card-eq">Demonstrating mastery across all nine communities: erasure, resistance, identity, and belonging in American society.</div>
+        <div class="card-std">CA ES Framework — All Units</div>
       </a>
 
     </div>
@@ -538,17 +691,51 @@ footer {
 <footer>
   <span class="footer-left">Ethnic Studies &nbsp;·&nbsp; OCS Summer School &nbsp;·&nbsp; SS9</span>
   <div class="footer-dots">
-    <div class="footer-dot" style="background:#1e6e48;"></div>
-    <div class="footer-dot" style="background:#7a3a12;"></div>
-    <div class="footer-dot" style="background:#1c3464;"></div>
-    <div class="footer-dot" style="background:#b83818;"></div>
-    <div class="footer-dot" style="background:#a02808;"></div>
-    <div class="footer-dot" style="background:#b86808;"></div>
-    <div class="footer-dot" style="background:#224e7a;"></div>
-    <div class="footer-dot" style="background:#1e5e4a;"></div>
-    <div class="footer-dot" style="background:#5a3282;"></div>
+    <div class="footer-dot" style="background:#1a6640;" title="Native American"></div>
+    <div class="footer-dot" style="background:#7a3010;" title="African American"></div>
+    <div class="footer-dot" style="background:#1a3070;" title="Chicano/Latino"></div>
+    <div class="footer-dot" style="background:#c03010;" title="AAPI"></div>
+    <div class="footer-dot" style="background:#982208;" title="AAPI Expanded"></div>
+    <div class="footer-dot" style="background:#c07000;" title="South Asian"></div>
+    <div class="footer-dot" style="background:#1c4878;" title="Jewish American"></div>
+    <div class="footer-dot" style="background:#155a42;" title="Arab American"></div>
+    <div class="footer-dot" style="background:#56288a;" title="San Diego Local"></div>
   </div>
 </footer>
 
+<script>
+/* ── Scroll progress bar ── */
+const bar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (total > 0 ? (scrolled / total * 100) : 0) + '%';
+}, { passive: true });
+
+/* ── Session progress pips (Day 5 of 10) ── */
+const pipsEl = document.getElementById('pips');
+for (let i = 1; i <= 10; i++) {
+  const pip = document.createElement('div');
+  pip.className = 'pip' + (i < 5 ? ' done' : i === 5 ? ' active' : '');
+  pipsEl.appendChild(pip);
+}
+
+/* ── Intersection Observer: scroll-reveal cards with stagger ── */
+const cards = document.querySelectorAll('.day-card');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const card = entry.target;
+      const siblings = Array.from(card.closest('.cards-grid').children);
+      const idx = siblings.indexOf(card);
+      card.style.animationDelay = (idx * 0.055) + 's';
+      card.classList.add('visible');
+      observer.unobserve(card);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+
+cards.forEach(card => observer.observe(card));
+</script>
 </body>
 </html>
