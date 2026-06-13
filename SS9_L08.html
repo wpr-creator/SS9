@@ -3,19 +3,400 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS9 — COMING SOON</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<title>SS9 L08 : THE ARAB AMERICAN EXPERIENCE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Atkinson+Hyperlegible:wght@400;700&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
 <style>
+:root{
+  --sand:#c8a878;
+  --sand-dark:#8a6a3a;
+  --deep:#1a0e04;
+  --terracotta:#9a3a18;
+  --cream:#f5edd8;
+  --pale:#ede0c0;
+  --ink:#1c1008;
+  --charcoal:#2a1e10;
+  --vocab:#8a2010;
+  --green:#044d37;
+  --lime:#d7ff3f;
+  --purple:#32134d;
+  --pink:#ff4fd8;
+  --cyan:#1bd6ff;
+  --orange:#e87820;
+  --blue:#1a3a5e;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Source Sans 3',sans-serif;background:#2a1a0e;color:#f5ead8;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
-h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#d4883a;margin-bottom:1rem}
-p{font-size:0.9rem;color:rgba(245,234,216,0.55);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:2rem}
-a{color:#c05030;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(192,80,48,0.35);padding-bottom:2px}
+html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+body{background:radial-gradient(ellipse at top,#1a0e04 0%,#080402 80%);font-family:'Atkinson Hyperlegible',Arial,sans-serif;font-size:18px;line-height:1.88;color:var(--charcoal);overflow-x:hidden}
+#reading-progress{position:fixed;top:0;left:0;height:4px;width:0%;background:var(--sand);z-index:9999;transition:width .1s linear}
+.page-wrap{width:min(920px,100%);margin:0 auto;background:var(--cream);box-shadow:0 0 120px rgba(0,0,0,.98);border-left:6px solid var(--deep);border-right:6px solid var(--deep);overflow-x:hidden}
+.site-header{position:relative;min-height:455px;overflow:hidden;background:var(--deep);display:flex;align-items:center;text-align:center}
+.header-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.36;filter:sepia(.3) contrast(1.1)}
+.site-header:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,14,4,.1),rgba(26,14,4,.74) 52%,rgba(26,14,4,.97))}
+.header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:56px 34px 50px}
+.course-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--sand);margin-bottom:18px}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,8vw,78px);font-weight:900;line-height:.97;color:#fff;text-transform:uppercase;letter-spacing:.04em;text-shadow:2px 5px 22px rgba(0,0,0,.9);margin-bottom:30px}
+.eq-banner{display:inline-block;background:rgba(154,58,24,.9);color:#fff;border:3px solid var(--sand);border-left-width:8px;border-right-width:8px;padding:18px 28px;max-width:760px;font-weight:700;font-size:19px;line-height:1.5;text-align:left}
+.eq-label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:8px}
+.section-nav{position:sticky;top:4px;z-index:100;display:flex;flex-wrap:wrap;justify-content:center;background:var(--deep);border-bottom:4px solid var(--sand);overflow-x:auto}
+.section-nav a{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(220,200,160,.65);text-decoration:none;padding:13px 11px;border-bottom:4px solid transparent;margin-bottom:-4px;white-space:nowrap;transition:color .2s,border-color .2s}
+.section-nav a:hover{color:#fff;border-bottom-color:var(--sand)}
+.section-nav a.active{color:#fff;border-bottom-color:var(--sand);background:rgba(200,168,120,.18)}
+#lexile-toggle{display:block;margin:22px auto 30px;padding:10px 26px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border:2px solid var(--terracotta);background:transparent;color:var(--terracotta);transition:background .2s,color .2s}
+#lexile-toggle:hover{background:var(--terracotta);color:#fff}
+.para-simple{display:none}body.simplified .para-standard{display:none}body.simplified .para-simple{display:block}
+.toc-sidebar{position:fixed;left:calc(50% - 572px);top:50%;transform:translateY(-50%);width:155px;padding:14px 12px;font-family:'Barlow Condensed',sans-serif;z-index:50;background:rgba(26,14,4,.93);border-right:2px solid rgba(200,168,120,.4)}
+.toc-sidebar .toc-label{display:block;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--sand);margin-bottom:12px}
+.toc-sidebar a{display:block;color:rgba(220,200,160,.55);text-decoration:none;padding:4px 0;font-size:11px;letter-spacing:.05em;text-transform:uppercase;line-height:1.35;transition:color .2s}
+.toc-sidebar a.active,.toc-sidebar a:hover{color:var(--sand);font-weight:700}
+@media(max-width:1100px){.toc-sidebar{display:none}}
+main{max-width:820px;margin:0 auto;padding:0 28px 68px}
+.intro-section{padding:50px 0 30px}
+.intro-section p{font-size:19px;line-height:1.92;margin-bottom:18px}
+.content-section{padding:50px 0 28px;border-top:2px solid rgba(138,106,58,.2)}
+.section-kicker{display:block;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px}
+.section-heading{font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,5vw,46px);font-weight:900;color:var(--deep);text-transform:uppercase;border-left:7px solid var(--sand);padding-left:16px;line-height:1.08;margin-bottom:26px}
+p{margin-bottom:20px;color:var(--charcoal)}
+.real-world{background:var(--pale);border-left:5px solid var(--sand-dark);padding:17px 21px;margin:30px 0;font-weight:700;color:var(--ink)}
+figure{margin:32px 0}
+figure img{width:100%;height:auto;display:block;border:3px solid rgba(90,70,40,.5);box-shadow:0 8px 26px rgba(0,0,0,.28)}
+figcaption{font-size:13px;font-style:italic;color:#6a5030;margin-top:8px;line-height:1.45}
+.img-right{float:right;width:42%;margin:6px 0 20px 28px}
+.img-left{float:left;width:42%;margin:6px 28px 20px 0}
+.clearfix:after{content:"";display:table;clear:both}
+@media(max-width:680px){.img-right,.img-left{float:none;width:100%;margin:20px 0}}
+.vocab{color:var(--vocab);text-decoration:underline dotted var(--vocab);cursor:help;position:relative;font-weight:700}
+.vocab-red{color:var(--vocab);font-weight:700}
+.vocab .tip{display:none;position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#050505;color:#fff;padding:8px 14px;border-radius:4px;font-size:14px;line-height:1.5;z-index:200;font-style:normal;font-weight:400;pointer-events:none;max-width:280px;white-space:normal;font-family:'Atkinson Hyperlegible',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.85);border:1px solid var(--sand-dark)}
+.vocab:hover .tip,.vocab.active .tip{display:block}
+.vocab:focus{outline:2px solid var(--sand);outline-offset:2px;border-radius:2px}
+.brain-break{font-family:'Roboto Slab',serif;margin:44px -50px;padding:36px 50px;position:relative;overflow:hidden;max-width:calc(100% + 100px)}
+.bb-label{display:block;font-family:'Roboto Slab',serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.88}
+.bb-text{font-family:'Roboto Slab',serif;font-size:22px;font-weight:500;line-height:1.65;margin:0}
+.dyk-break{background:var(--green);color:#fff;border-left:6px solid var(--lime)}.dyk-break .bb-label{color:var(--lime)}
+.ff-break{background:#0a0604;color:#fff;padding:36px 40px;margin:44px -50px;border-top:3px solid var(--orange);border-bottom:3px solid var(--orange);text-align:center}
+.ff-break .bb-label{color:var(--orange);text-align:center;margin-bottom:8px}
+.ff-context{font-family:'Roboto Slab',serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,200,130,.8);text-align:center;margin-bottom:28px;font-weight:700}
+.ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px}
+.ff-item{text-align:center;padding:8px 16px;max-width:185px}
+.ff-number{display:block;font-family:'Roboto Slab',serif;font-size:52px;font-weight:700;color:var(--orange);line-height:1;margin-bottom:8px}
+.ff-desc{display:block;font-family:'Roboto Slab',serif;font-size:13px;letter-spacing:.08em;color:rgba(255,200,130,.8);max-width:185px;margin:0 auto;line-height:1.5}
+.as-break{background:var(--purple);color:#fff;padding:44px 50px;margin:44px -50px;border-top:3px solid var(--pink);border-bottom:3px solid var(--pink);text-align:center}
+.as-break .bb-label{color:var(--pink)}
+.as-image{max-width:580px;width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(255,79,216,.65);box-shadow:0 8px 32px rgba(0,0,0,.6)}
+.as-caption{font-family:'Roboto Slab',serif;font-size:14px;color:rgba(255,232,251,.75);line-height:1.6;margin-bottom:28px;display:block;font-style:normal}
+.as-fact{font-family:'Roboto Slab',serif;font-size:22px;font-weight:500;color:#fff;line-height:1.65;max-width:680px;margin:0 auto;text-align:center}
+.primary-source{background:var(--pale);border-left:7px solid var(--terracotta);padding:30px 34px;margin:38px 0;box-shadow:0 6px 20px rgba(0,0,0,.14)}
+.ps-visual{display:grid;grid-template-columns:minmax(200px,36%) 1fr;gap:24px;align-items:start}
+.ps-visual figure{margin:0}
+.ps-visual img{width:100%;height:auto;display:block;border:3px solid rgba(90,70,40,.5);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.ps-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;display:block}
+.ps-quote{font-size:20px;font-style:italic;line-height:1.65;color:var(--ink);margin-bottom:14px}
+.ps-attribution{font-size:13px;font-style:italic;color:#6a5030;margin-bottom:12px}
+.ps-narrator{border-top:1px solid rgba(138,106,58,.28);padding-top:12px;font-size:15px;line-height:1.6;font-weight:700;color:var(--ink)}
+@media(max-width:700px){.ps-visual{grid-template-columns:1fr}}
+.tn-break{background:var(--deep);color:#fff;padding:36px 50px;margin:30px -50px 0}
+.tn-break .bb-label{color:var(--sand);text-align:center;display:block;margin-bottom:20px}
+.tn-payoff{font-family:'Roboto Slab',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;line-height:1.32;text-align:center;color:var(--sand);margin:0 auto 28px;max-width:720px}
+.tn-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+.tn-item{text-align:center}
+.tn-era-label{display:block;font-family:'Roboto Slab',serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--sand);margin-bottom:10px;font-weight:700}
+.tn-item img{width:100%;display:block;border:2px solid rgba(200,168,120,.4)}
+.tn-caption{font-family:'Roboto Slab',serif;font-size:12px;font-style:italic;color:rgba(220,200,160,.7);margin-top:8px;line-height:1.4}
+.tn-text-block{margin-top:24px;border-top:1px solid rgba(200,168,120,.28);padding-top:20px}
+.tn-text-block h3{font-family:'Roboto Slab',serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand);margin:18px 0 8px}
+.tn-text-block p{font-family:'Roboto Slab',serif;font-size:17px;line-height:1.65;margin-bottom:12px;color:#fff}
+img{opacity:0;transition:opacity .4s ease}img.loaded{opacity:1}
+.section-animate{opacity:0;transform:translateY(24px);transition:opacity .45s ease-out,transform .45s ease-out}
+.section-animate.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.section-animate{opacity:1;transform:none;transition:none}}
+footer{background:var(--deep);color:rgba(220,200,160,.45);text-align:center;padding:24px 30px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-top:5px solid var(--sand)}
+@media(max-width:880px){.page-wrap{border:0}main{padding:0 22px 50px}.header-inner{padding:44px 22px 42px}.brain-break,.ff-break,.as-break,.tn-break{margin:36px 0;padding:28px 22px;max-width:100%}.section-nav a{font-size:11px;padding:11px 8px}}
+@media(max-width:600px){.page-title{font-size:42px}.section-heading{font-size:30px}.ff-number{font-size:44px}.as-fact{font-size:18px}.tn-pair{grid-template-columns:1fr}.tn-break{padding:28px 22px;margin:30px 0 0}.bb-text{font-size:18px}}
+@media(max-width:980px){.brain-break,.ff-break,.as-break,.tn-break{margin-left:0;margin-right:0;padding-left:28px;padding-right:28px;max-width:100%}}
+.dyk-break,.dyk-break p,.dyk-break span,.ff-break,.ff-break p,.ff-break span,.as-break,.as-break p,.as-break span,.tn-break,.tn-break p,.tn-break span{color:#fff}
+.ff-context,.ff-desc{color:rgba(255,200,130,.8)}.as-caption{color:rgba(255,232,251,.75)}.tn-caption{color:rgba(220,200,160,.7)}
 </style>
 </head>
 <body>
-<h1>Ethnic Studies</h1>
-<p>This lesson is coming soon</p>
-<a href="index.html">← Back to Course</a>
+<div id="reading-progress"></div>
+<div class="page-wrap">
+
+<header class="site-header">
+  <!--
+    FILENAME: L08_DearbornMosque.jpg
+    PLACE IN: images/L08/
+    PRIORITY: ESSENTIAL
+    FIND: Islamic Center of America or a mosque in Dearborn, Michigan — exterior photograph showing the mosque in its urban neighborhood context, a symbol of Arab American community-building
+    SEARCH: Islamic Center America Dearborn Michigan mosque exterior Wikimedia Commons
+    LINK: Suggested: https://commons.wikimedia.org/wiki/Islamic_Center_of_America
+  -->
+  <img src="images/L08/L08_DearbornMosque.jpg" alt="Islamic Center of America, Dearborn, Michigan" class="header-bg">
+  <div class="header-inner">
+    <p class="course-label">Ethnic Studies &mdash; Lesson 08</p>
+    <h1 class="page-title">The Arab<br>American<br>Experience</h1>
+    <div class="eq-banner">
+      <span class="eq-label">Essential Question</span>
+      How has the Arab American community built a life in the United States while navigating stereotypes, discrimination, and questions about loyalty and belonging?
+    </div>
+  </div>
+</header>
+
+<nav class="section-nav">
+  <a href="#introduction">INTRODUCTION</a>
+  <a href="#historical-context">HISTORICAL CONTEXT</a>
+  <a href="#resistance-agency">RESISTANCE AND AGENCY</a>
+  <a href="#present-reality">PRESENT REALITY</a>
+  <a href="#primary-source-moment">SOURCE</a>
+  <a href="#then-now">THEN AND NOW</a>
+</nav>
+
+<aside class="toc-sidebar">
+  <span class="toc-label">ON THIS PAGE</span>
+  <a href="#introduction">Introduction</a>
+  <a href="#historical-context">Historical Context</a>
+  <a href="#resistance-agency">Resistance &amp; Agency</a>
+  <a href="#present-reality">Present Reality</a>
+  <a href="#primary-source-moment">Source</a>
+  <a href="#then-now">Then &amp; Now</a>
+</aside>
+
+<main>
+<button id="lexile-toggle" type="button">SIMPLIFY TEXT</button>
+
+<!-- INTRODUCTION -->
+<section class="intro-section section-animate" id="introduction">
+  <p class="para-standard">In the weeks after September 11, 2001, a man named Adel Kamal walked into a barbershop in Dearborn, Michigan, and found a handwritten sign taped to the window: "We don't serve Arabs." Kamal had been born in Michigan. His father had been born in Michigan. His grandfather had come from Lebanon in 1920, sold dry goods from a pack on his back through the Ohio River valley, saved enough money to open a store, and eventually built a life that his children and grandchildren continued. Three generations of American citizenship, military service, and community-building — and a handwritten sign. What happened to Arab Americans after September 11 did not appear from nowhere. It was built from a century of stereotypes, fear, and the demand that Arab Americans constantly prove they belonged.</p>
+  <p class="para-simple">In the weeks after September 11, 2001, a man named Adel Kamal walked into a barbershop in Dearborn, Michigan, and found a sign in the window: "We don't serve Arabs." Kamal had been born in Michigan. His father had been born in Michigan. His grandfather came from Lebanon in 1920 and spent decades building a life in America. Three generations of citizenship and service — and a sign telling him to leave. What happened to Arab Americans after September 11 did not come from nowhere. It was built from a century of stereotypes and the demand that Arab Americans prove they belonged.</p>
+</section>
+
+<!-- SECTION 1: HISTORICAL CONTEXT -->
+<section class="content-section clearfix section-animate" id="historical-context">
+  <span class="section-kicker">PHASE ONE</span>
+  <h2 class="section-heading">HISTORICAL CONTEXT</h2>
+
+  <!--
+    FILENAME: L08_SyrianMerchantsEarly.jpg
+    PLACE IN: images/L08/
+    PRIORITY: ESSENTIAL
+    FIND: Early Arab American immigrants — Syrian or Lebanese peddlers or merchants in the United States, circa 1890-1920; photograph of a dry goods peddler, a family in front of a store, or early Arab American community gathering
+    SEARCH: Syrian Lebanese immigrants peddlers merchants United States 1900 early Arab American Wikimedia Commons Library of Congress
+    LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Arab_Americans
+  -->
+  <figure class="img-right">
+    <img src="images/L08/L08_SyrianMerchantsEarly.jpg" alt="Early Arab American immigrants, Syrian and Lebanese merchants, circa 1900-1920">
+    <figcaption>Early Arab American immigrants from Greater Syria — modern-day Lebanon, Syria, Jordan, and Palestine — who arrived in the United States beginning in the 1880s and built lives as traveling merchants and small business owners. Library of Congress / Wikimedia Commons.</figcaption>
+  </figure>
+
+  <p class="para-standard">The first significant wave of Arab immigration to the United States began in the 1880s and came overwhelmingly from Greater Syria — the region that is now Lebanon, Syria, Jordan, and Palestine. Most were <span class="vocab" tabindex="0">Maronite<span class="tip">Members of a Lebanese Christian church that is in communion with the Roman Catholic Church — one of the oldest Christian communities in the world.</span></span> and Eastern Orthodox Christians fleeing instability under the Ottoman Empire and searching for economic opportunity. They landed in New York, Boston, and other port cities and quickly spread across the country as traveling merchants — carrying packs of dry goods, fabric, and household items on their backs and selling door to door through the rural South, the Midwest, and industrial cities. They were called peddlers, and many of them eventually saved enough to open stores, bring over relatives, and plant the first Arab American communities in places like Dearborn, Michigan; Birmingham, Alabama; and Toledo, Ohio.</p>
+  <p class="para-simple">The first large wave of Arab immigration to the United States began in the 1880s. Most came from the region called Greater Syria — now Lebanon, Syria, Jordan, and Palestine. Most were Christian, fleeing instability and poverty under the Ottoman Empire. They arrived in East Coast cities and spread across the country as traveling merchants — carrying packs of goods on their backs and selling door to door. Over time, many saved enough to open stores, bring family members over, and build communities in places like Dearborn, Michigan, Birmingham, Alabama, and Toledo, Ohio.</p>
+
+  <p class="para-standard">These early Arab Americans built their own institutions: churches, <span class="vocab" tabindex="0">diaspora<span class="tip">A community of people who have left their homeland and settled in other countries, while maintaining connections to their culture and each other.</span></span> organizations, Arabic-language newspapers, and mutual aid societies. They became citizens, and their sons served in World War I and World War II. They were Catholic and Orthodox Christians whose communities were largely invisible to mainstream America — treated as white enough to assimilate in some contexts and foreign enough to be suspect in others. The second wave of Arab immigration came after the Immigration Act of 1965 opened the country to non-European immigrants more broadly, and after the Arab-Israeli wars of 1948 and 1967 displaced Palestinians and created refugees. This second wave included more Muslims, more political refugees, and communities fleeing specific conflicts rather than general poverty.</p>
+  <p class="para-simple">These early Arab Americans built churches, community organizations, Arabic-language newspapers, and mutual aid groups. They became citizens and served in both World Wars. A second wave of Arab immigration came after 1965, when the United States opened immigration to non-European countries, and after the Arab-Israeli wars displaced Palestinians and created refugees. This second wave included more Muslims and more people fleeing specific conflicts. Today Arab Americans include Lebanese, Egyptian, Syrian, Iraqi, Palestinian, Yemeni, and many other communities — Christian and Muslim, wealthy and working-class, long-established and recently arrived.</p>
+
+  <p class="para-standard">The <span class="vocab" tabindex="0">stereotype<span class="tip">A fixed, oversimplified belief about a group of people that ignores the real diversity within that group.</span></span> of the Arab as terrorist, oil sheikh, or belly dancer became embedded in American film and television starting in the 1970s. A 2001 study by media scholar Jack Shaheen documented over 900 Hollywood films that portrayed Arab and Muslim characters as villains, buffoons, or threats. These images were produced before September 11 — but they prepared the ground for what came after.</p>
+  <p class="para-simple">Stereotypes of Arab people as terrorists, oil sheikhs, or belly dancers became common in American movies and TV starting in the 1970s. A 2001 study found over 900 Hollywood films that showed Arab and Muslim characters as villains or threats. These images existed before September 11 — but they prepared Americans to respond to Arab Americans with fear and suspicion after the attacks.</p>
+</section>
+
+<!-- DID YOU KNOW -->
+<div class="brain-break dyk-break section-animate">
+  <span class="bb-label">DID YOU KNOW</span>
+  <p class="bb-text">Khalil Gibran — author of "The Prophet," one of the best-selling books in history — was a Lebanese immigrant who arrived in Boston in 1895 at age twelve, speaking no English. He went on to write poetry and philosophy in both Arabic and English that has been translated into more than 40 languages and is still read worldwide. He was Arab American before that term existed — and most Americans who have read his words have no idea he was from Lebanon.</p>
+</div>
+
+<!-- SECTION 2: RESISTANCE AND AGENCY -->
+<section class="content-section clearfix section-animate" id="resistance-agency">
+  <span class="section-kicker">PHASE TWO</span>
+  <h2 class="section-heading">RESISTANCE AND AGENCY</h2>
+
+  <!--
+    FILENAME: L08_AADCProtest.jpg
+    PLACE IN: images/L08/
+    PRIORITY: ESSENTIAL
+    FIND: Arab American Anti-Discrimination Committee event or protest — community organizing, advocacy event, or civil rights demonstration involving Arab Americans; OR Dearborn Arab American community gathering or march
+    SEARCH: Arab American Anti-Discrimination Committee ADC protest community organizing Wikimedia Commons
+    LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Arab_Americans
+  -->
+  <figure class="img-left">
+    <img src="images/L08/L08_AADCProtest.jpg" alt="Arab American community organizing and civil rights advocacy">
+    <figcaption>Arab American community members organizing and advocating for civil rights. The Arab American Anti-Discrimination Committee was founded in 1980 to challenge discrimination and stereotyping — more than two decades before September 11. Wikimedia Commons.</figcaption>
+  </figure>
+
+  <p class="para-standard">Arab American community organizing did not begin after September 11 — it had been building for decades. The Arab American Anti-Discrimination Committee (ADC) was founded in 1980 by former United States Senator James Abourezk, a Lebanese American from South Dakota, to fight against <span class="vocab" tabindex="0">discrimination<span class="tip">Treating people unfairly because of their race, religion, national origin, or other identity.</span></span> and stereotyping in media, employment, and public life. The ADC documented hate crimes, challenged discriminatory portrayals in film and television, provided legal support to community members, and built a national presence before most Americans had any framework for understanding Arab American civil rights. Community organizations in Dearborn and Detroit became some of the strongest local political forces in Michigan, supporting Arab American candidates and making Arab American concerns a visible part of local and state politics.</p>
+  <p class="para-simple">Arab American organizing did not start after September 11. The Arab American Anti-Discrimination Committee was founded in 1980 by James Abourezk, a Lebanese American senator from South Dakota, to fight stereotypes and discrimination in media and public life. Community organizations in Dearborn and Detroit became strong political forces in Michigan long before the 2001 attacks, supporting Arab American candidates and making their community's concerns visible in local politics.</p>
+
+  <p class="para-standard">After September 11, Arab American organizations, mosques, and community leaders faced an impossible demand: to publicly condemn the attacks, prove their loyalty, and take responsibility for violence committed by people who shared their ethnic or religious identity. The demand itself was a form of <span class="vocab" tabindex="0">discrimination<span class="tip">Treating people unfairly because of their race, religion, national origin, or other identity.</span></span> — no other ethnic or religious community in America was held collectively responsible for crimes committed by members of their group. Arab American activists named this directly, organized against the <span class="vocab" tabindex="0">Patriot Act<span class="tip">A law passed in 2001 that expanded government surveillance powers, used disproportionately against Muslim and Arab American communities.</span></span>, and challenged the special registration programs that required men from Arab and Muslim-majority countries to report to immigration offices for fingerprinting and monitoring.</p>
+  <p class="para-simple">After September 11, Arab American communities were pressured to publicly condemn the attacks and prove their loyalty — a demand no other ethnic group faced. Arab American activists named this as discrimination. They organized against the Patriot Act, which expanded government surveillance and was used heavily against Muslim and Arab communities. They challenged special registration programs that required men from Arab and Muslim-majority countries to report to immigration offices and be fingerprinted, as if their national origin made them suspects.</p>
+
+  <p class="para-standard">Arab American political participation also grew in the years after September 11. More Arab Americans ran for office, registered to vote in higher numbers, and built coalitions with other communities of color facing similar surveillance and discrimination. In Dearborn — which has the highest concentration of Arab Americans of any city in the country — Arab Americans have served on city council, as mayor, and in state and federal roles. The response to discrimination was not only protest: it was also presence, visibility, and the insistence on full participation in American political life.</p>
+  <p class="para-simple">Arab American political participation also grew after September 11. More Arab Americans ran for office, voted in higher numbers, and built coalitions with other communities facing surveillance and discrimination. In Dearborn — the city with the highest concentration of Arab Americans in the country — Arab Americans have served as mayor and in state and federal positions. The response to discrimination included protest, but also political organizing, electoral participation, and the insistence on full visibility in American public life.</p>
+</section>
+
+<!-- FAST FACTS -->
+<div class="brain-break ff-break section-animate">
+  <span class="bb-label">FAST FACTS</span>
+  <p class="ff-context">ARAB AMERICA BY THE NUMBERS</p>
+  <div class="ff-grid">
+    <div class="ff-item">
+      <span class="ff-number">3.7M</span>
+      <span class="ff-desc">Arab Americans in the United States today — a community as large as the entire population of Los Angeles</span>
+    </div>
+    <div class="ff-item">
+      <span class="ff-number">63%</span>
+      <span class="ff-desc">of Arab Americans who are Christian, not Muslim — the opposite of what most Americans assume</span>
+    </div>
+    <div class="ff-item">
+      <span class="ff-number">900+</span>
+      <span class="ff-desc">Hollywood films documented as portraying Arab characters as villains or threats — in a study published the same year as September 11</span>
+    </div>
+    <div class="ff-item">
+      <span class="ff-number">1880s</span>
+      <span class="ff-desc">when the first significant Arab immigration to the United States began — making Arab Americans one of America's oldest immigrant communities</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: PRESENT REALITY -->
+<section class="content-section clearfix section-animate" id="present-reality">
+  <span class="section-kicker">PHASE THREE</span>
+  <h2 class="section-heading">PRESENT REALITY</h2>
+
+  <!--
+    FILENAME: L08_ElCajonChaldean.jpg
+    PLACE IN: images/L08/
+    PRIORITY: ESSENTIAL
+    FIND: El Cajon Chaldean community — Chaldean Catholic church exterior, Chaldean community center, or businesses along El Cajon Boulevard reflecting the Chaldean presence; showing community agency and establishment
+    SEARCH: El Cajon Chaldean community church California Wikimedia Commons
+    LINK: Suggested: https://commons.wikimedia.org/wiki/Category:El_Cajon,_California
+  -->
+  <figure class="img-right">
+    <img src="images/L08/L08_ElCajonChaldean.jpg" alt="Chaldean community presence in El Cajon, California">
+    <figcaption>El Cajon, California — home to the largest Chaldean community in the United States outside Detroit. Chaldean Christians were driven from Iraq primarily by the sectarian violence that followed the 2003 U.S. invasion. Wikimedia Commons.</figcaption>
+  </figure>
+
+  <p class="para-standard">Arab Americans today number around 3.7 million and span an enormous range of national origins, religions, class positions, and political views. Lebanese Americans, Egyptian Americans, Syrian Americans, Iraqi Americans, Palestinian Americans, and Yemeni Americans are all counted within the Arab American category — but they share little beyond a general linguistic and cultural heritage, and even that is complicated by the diversity of the Arabic-speaking world. The single most important thing to know about Arab Americans is also the thing American media most consistently gets wrong: the majority of Arab Americans are Christian, not Muslim. The image of the Arab as Muslim and the Muslim as Arab — and both as potential threats — flattens a community of enormous diversity into a single, dangerous stereotype.</p>
+  <p class="para-simple">Arab Americans today number about 3.7 million and include Lebanese, Egyptian, Syrian, Iraqi, Palestinian, Yemeni, and many other communities. They are Christian and Muslim, wealthy and working-class, long-established and newly arrived. The most important fact that American media consistently gets wrong: the majority of Arab Americans are Christian, not Muslim. The stereotype of Arab equals Muslim equals threat erases the real diversity of a community that has been part of America for over a century.</p>
+
+  <p class="para-standard">San Diego's Arab American community includes a significant Chaldean population in El Cajon. <span class="vocab" tabindex="0">Chaldeans<span class="tip">An ethnic Semitic people indigenous to Mesopotamia — modern Iraq — who have practiced Christianity since the first century AD and speak Neo-Aramaic, a descendant of the language of Jesus.</span></span> are an ancient Christian community from Iraq who speak Neo-Aramaic — a language descended from Aramaic, the language spoken by Jesus. Chaldeans lived in Iraq for millennia, and under Saddam Hussein's secular government they had a degree of protection as a religious minority. When the United States invaded Iraq in 2003 and central authority collapsed, Chaldean Christians became targets of sectarian violence. Churches were bombed. Community leaders were kidnapped. Families received threats. Hundreds of thousands of Chaldean Christians fled Iraq between 2003 and 2010, and a significant share settled in El Cajon, which now carries the local nickname "Little Baghdad." The Chaldean community in El Cajon is one of the clearest examples in San Diego of a community whose presence here is inseparable from an American military decision made far away.</p>
+  <p class="para-simple">San Diego's Arab American community includes a large Chaldean population in El Cajon. Chaldeans are an ancient Christian people from Iraq who speak a language descended from Aramaic — the language spoken by Jesus. When the United States invaded Iraq in 2003 and central authority collapsed, Chaldean Christians became targets of sectarian violence. Churches were bombed, community leaders kidnapped, families threatened. Hundreds of thousands fled Iraq between 2003 and 2010, and many came to El Cajon, which is now called "Little Baghdad." The Chaldean community in El Cajon is here because of a decision made in Washington DC — not because they chose to leave their homeland.</p>
+
+  <p class="para-standard"><span class="vocab" tabindex="0">Islamophobia<span class="tip">Prejudice, discrimination, or hostility toward Islam and Muslim people, often based on fear or false stereotypes.</span></span> — prejudice and discrimination against Muslims — has continued to affect Arab Americans and Muslim Americans regardless of their actual religion. Surveillance of Muslim communities, hate crimes at mosques and Arab-owned businesses, discrimination in airports and workplaces, and political rhetoric portraying Islam as a threat to American values have all intensified in waves since September 11. Arab American activists, organizations, and community members continue to organize against these conditions: through legal challenges, coalition-building with other communities, cultural work that tells more complete and honest stories, and the daily act of living publicly and fully as Arab Americans in a country that continues to ask whether they truly belong.</p>
+  <p class="para-simple">Islamophobia — discrimination against Muslims — has continued to affect Arab Americans and Muslim Americans since September 11. Surveillance, hate crimes, workplace discrimination, and political rhetoric portraying Islam as a threat have intensified in waves. Arab American activists and community organizations continue to challenge these conditions through legal action, coalition-building, cultural work, and the everyday act of being fully visible and present in a country that still questions whether they belong.</p>
+
+  <p class="real-world para-standard">Real-world connection: Dearborn, Michigan is the city with the highest concentration of Arab Americans in the country, and its Arab American community has become one of the most politically active and visible in the United States — a model of community power built over more than a century.</p>
+  <p class="real-world para-simple">Real-world connection: Dearborn, Michigan has the highest concentration of Arab Americans in the country. Its community has become one of the most politically active in the United States — built over more than a century of organizing, business-building, and civic participation.</p>
+</section>
+
+<!-- ART SPOTLIGHT -->
+<div class="brain-break as-break section-animate">
+  <span class="bb-label">ART SPOTLIGHT</span>
+  <figure>
+    <!--
+      FILENAME: L08_KhalidMattawa.jpg
+      PLACE IN: images/L08/
+      PRIORITY: ENHANCEMENT
+      FIND: Etel Adnan — "Untitled" from her leporello book works, or a photograph of Etel Adnan with her accordion books of poetry and painting — Lebanese American poet and artist known for combining visual art and Arabic poetry
+      SEARCH: Etel Adnan leporello accordion book artwork Lebanese American poet Wikimedia Commons
+      LINK: Suggested: https://commons.wikimedia.org/wiki/Etel_Adnan
+      NOTE: Etel Adnan (1925-2021) was Lebanese American — a community member creating work directly connected to the Arab American experience. Prioritize her work per SS9 Art Spotlight guidelines.
+    -->
+    <img src="images/L08/L08_EtelAdnan.jpg" alt="Etel Adnan, Lebanese American poet and visual artist, with her accordion leporello books" class="as-image">
+    <figcaption class="as-caption">
+      Leporello book works &mdash; Etel Adnan, circa 1960s&ndash;2010s<br>
+      Lebanese American poet and visual artist Etel Adnan created a body of work that combined Arabic and French poetry with visual painting across hand-made accordion-fold books called leporellos. Her work is held in major museum collections including the Guggenheim and the Museum of Modern Art.
+    </figcaption>
+  </figure>
+  <p class="as-fact">Adnan was born in Beirut in 1925 and initially wrote only in French because she was educated by French nuns and had been taught that Arabic was not a language of modern literature. She began writing in Arabic only after Lebanese independence in 1943 — and eventually created a new art form combining visual and written language that made the shape of Arabic letters themselves part of the artwork. She died in 2021 at age 96, still writing, and her final collection of poems was published while she was in her nineties.</p>
+</div>
+
+<!-- PRIMARY SOURCE -->
+<div class="primary-source section-animate" id="primary-source-moment">
+  <span class="ps-label">PRIMARY SOURCE MOMENT</span>
+  <div class="ps-visual">
+    <figure>
+      <!--
+        FILENAME: L08_AbourezksPortrait.jpg
+        PLACE IN: images/L08/
+        PRIORITY: ESSENTIAL
+        FIND: James Abourezk, Lebanese American US Senator from South Dakota — official Senate portrait or press photograph, circa 1970s-1980s
+        SEARCH: James Abourezk senator South Dakota portrait photograph Wikimedia Commons
+        LINK: Suggested: https://commons.wikimedia.org/wiki/James_Abourezk
+      -->
+      <img src="images/L08/L08_AbourezksPortrait.jpg" alt="James Abourezk, Lebanese American US Senator from South Dakota">
+      <figcaption>James Abourezk, Lebanese American US Senator and founder of the Arab American Anti-Discrimination Committee. Wikimedia Commons.</figcaption>
+    </figure>
+    <div>
+      <p class="ps-quote">"Arabs in America have been the targets of stereotyping and ridicule for many years... Arab Americans have been cast as buffoons, bombers, belly dancers, and billionaires... The image of the Arab world conveyed by Hollywood has been one of oil, sand, camels, and violence. Arabs are portrayed as uniformly wealthy, or uniformly fanatic, or uniformly villainous... This is not just insulting. It is dangerous. People act on the images they carry."</p>
+      <p class="ps-attribution">&mdash; James Abourezk, founder of the Arab American Anti-Discrimination Committee, founding statement, 1980</p>
+      <p class="ps-narrator">WHY THIS MATTERS: Abourezk wrote this in 1980 — more than twenty years before September 11. He is identifying something that was already happening: the reduction of a 3.7 million-person community to a handful of negative images. His last sentence is the argument for why this matters: "People act on the images they carry." As you read this, think about what images of Arab people you have seen in movies, television, or news. Where did those images come from, and what do you think people are being prepared to feel about Arab Americans when they see them?</p>
+    </div>
+  </div>
+</div>
+
+<!-- THEN AND NOW -->
+<div class="brain-break tn-break section-animate" id="then-now">
+  <span class="bb-label">THEN AND NOW</span>
+  <p class="tn-payoff">ARAB AMERICANS HAVE BEEN IN THE UNITED STATES FOR OVER 140 YEARS — AND ARE STILL BEING ASKED TO PROVE THEY BELONG.</p>
+  <div class="tn-pair">
+    <div class="tn-item">
+      <span class="tn-era-label">1880s</span>
+      <!--
+        FILENAME: L08_ThenPeddlers1900.jpg
+        PLACE IN: images/L08/
+        PRIORITY: ESSENTIAL
+        FIND: Lebanese or Syrian peddlers or early Arab American immigrants in the United States, circa 1890-1920 — different image from the historical section; showing early community building
+        SEARCH: Syrian Lebanese peddlers immigrants United States 1900 early photograph Library of Congress
+        LINK: Suggested: https://loc.gov or https://commons.wikimedia.org
+      -->
+      <img src="images/L08/L08_ThenPeddlers1900.jpg" alt="Early Syrian and Lebanese immigrants in the United States, circa 1890-1920">
+      <p class="tn-caption">Early Lebanese and Syrian immigrants in the United States, circa 1890–1920. Library of Congress.</p>
+    </div>
+    <div class="tn-item">
+      <span class="tn-era-label">NOW</span>
+      <!--
+        FILENAME: L08_NowDearbornCelebration.jpg
+        PLACE IN: images/L08/
+        PRIORITY: ESSENTIAL
+        FIND: Arab American community celebration or cultural event in Dearborn or San Diego — Arab Americans in a festival, parade, political rally, or community gathering showing presence and agency; recent years
+        SEARCH: Dearborn Arab American community festival celebration recent Wikimedia Commons CC license
+        LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Arab_Americans
+        LICENSE: CC-licensed photography acceptable.
+      -->
+      <img src="images/L08/L08_NowDearbornCelebration.jpg" alt="Arab American community members at a cultural celebration or political event, recent years">
+      <p class="tn-caption">Arab Americans at a community event in Dearborn, Michigan — a city with the highest Arab American population density in the country. CC license.</p>
+    </div>
+  </div>
+  <div class="tn-text-block">
+    <h3>THEN</h3>
+    <p>When the first Arab immigrants arrived in the 1880s and 1890s, they were selling goods from packs on their backs in rural America, building communities in cities that had no framework for understanding who they were. They built their own institutions because the mainstream institutions did not include them. They proved their citizenship through military service, economic contribution, and community-building — but belonging was never fully granted, only negotiated.</p>
+    <h3>NOW</h3>
+    <p>Today Arab Americans serve in Congress, run major American cities, lead major universities and hospitals, and contribute to American culture as writers, artists, scientists, and activists. The community Adel Kamal's grandfather helped build in Michigan is now large enough to determine election outcomes in a swing state. But the question of belonging — expressed in surveillance programs, hate crimes, media stereotypes, and political rhetoric — has not been fully resolved.</p>
+    <h3>CONNECTION</h3>
+    <p>Arab Americans have spent 140 years building a place in this country while being asked, repeatedly and in different forms, to prove they deserve to be here. The demand that they condemn violence, prove loyalty, or apologize for their religion or ethnicity is a form of discrimination that has followed the community from the first Lebanese peddler to the most recent Chaldean refugee. What has also followed them, in every generation, is the refusal to accept that framing — the insistence on building, organizing, and claiming full membership in American life.</p>
+    <p>Abourezk said in 1980 that people act on the images they carry. What images of Arab Americans do you carry — and where did they come from?</p>
+  </div>
+</div>
+
+</main>
+<footer>ETHNIC STUDIES &mdash; LESSON 08 &mdash; THE ARAB AMERICAN EXPERIENCE</footer>
+</div>
+
+<script>
+(function(){var bar=document.getElementById('reading-progress');window.addEventListener('scroll',function(){var s=window.scrollY||document.documentElement.scrollTop;var d=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(d>0?(s/d)*100:0)+'%';},{passive:true});})();
+document.getElementById('lexile-toggle').addEventListener('click',function(){document.body.classList.toggle('simplified');this.textContent=document.body.classList.contains('simplified')?'STANDARD TEXT':'SIMPLIFY TEXT';});
+function repositionTip(el){var tip=el.querySelector('.tip');if(!tip)return;tip.style.left='50%';tip.style.transform='translateX(-50%)';var rect=tip.getBoundingClientRect();if(rect.left<8){tip.style.transform='translateX(calc(-50% + '+(8-rect.left)+'px))';}else if(rect.right>window.innerWidth-8){tip.style.transform='translateX(calc(-50% - '+(rect.right-(window.innerWidth-8))+'px))';}}
+document.querySelectorAll('.vocab').forEach(function(el){el.setAttribute('tabindex','0');el.addEventListener('click',function(e){e.stopPropagation();document.querySelectorAll('.vocab.active').forEach(function(v){if(v!==el)v.classList.remove('active');});el.classList.toggle('active');if(el.classList.contains('active'))repositionTip(el);});el.addEventListener('focus',function(){el.classList.add('active');repositionTip(el);});el.addEventListener('blur',function(){el.classList.remove('active');});el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();el.classList.toggle('active');if(el.classList.contains('active'))repositionTip(el);}if(e.key==='Escape')el.classList.remove('active');});});
+document.addEventListener('click',function(){document.querySelectorAll('.vocab.active').forEach(function(v){v.classList.remove('active');});});
+const tocObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{const id=entry.target.getAttribute('id');const tl=document.querySelector('.toc-sidebar a[href="#'+id+'"]');const nl=document.querySelector('.section-nav a[href="#'+id+'"]');if(entry.isIntersecting){if(tl)tl.classList.add('active');if(nl)nl.classList.add('active');}else{if(tl)tl.classList.remove('active');if(nl)nl.classList.remove('active');}});},{threshold:.25});
+document.querySelectorAll('section[id],div[id="then-now"]').forEach(el=>tocObserver.observe(el));
+(function(){var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');ao.unobserve(entry.target);}});},{threshold:.08});document.querySelectorAll('.section-animate').forEach(function(el){ao.observe(el);});})();
+document.querySelectorAll('img').forEach(function(img){if(img.complete&&img.naturalWidth>0){img.classList.add('loaded');}else{img.addEventListener('load',function(){img.classList.add('loaded');});img.addEventListener('error',function(){img.style.opacity='0.15';img.style.border='2px dashed rgba(255,255,255,0.2)';});}});
+</script>
 </body>
 </html>
+<!--
+  IMAGE CHECK: Open browser DevTools (F12), go to Console, paste and run:
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.complete || img.naturalWidth === 0) { console.warn('MISSING:', img.src); }
+    else { console.log('OK:', img.src); }
+  });
+-->
