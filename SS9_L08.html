@@ -4,68 +4,93 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SS9 L08 : THE ARAB AMERICAN EXPERIENCE</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Atkinson+Hyperlegible:wght@400;700&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --paper:#fffaf0;--sand:#f2dfbd;--saffron:#d6a124;--gold:#efc85f;--teal:#1f6f73;--teal-dark:#174b50;--indigo:#263f63;--indigo-dark:#16243a;--brick:#a84f36;--burgundy:#823038;--ink:#1c2528;--muted:#5d6667;--vocab:#9d2f2f;--lime:#f7df83;--purple:#4d315e;--night:#102c35
+  --paper:#fff7e8;
+  --page:#fffbf1;
+  --sand:#ead2a8;
+  --saffron:#d69a2d;
+  --copper:#a45633;
+  --clay:#8f3f2d;
+  --teal:#1f6f73;
+  --teal-dark:#12464d;
+  --indigo:#243c5a;
+  --ink:#182226;
+  --muted:#5f6767;
+  --vocab:#a93232;
+  --olive:#6f7b4a;
+  --night:#102f3a;
+  --plum:#50315f;
+  --cream:#fff0d0;
+  --lime:#f5d779;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
-body{background:radial-gradient(circle at top left,rgba(214,161,36,.22),transparent 36%),linear-gradient(135deg,#f3dfba 0%,#e4caa3 50%,#c9ad83 100%);font-family:'Atkinson Hyperlegible',Arial,sans-serif;font-size:18px;line-height:1.84;color:var(--ink);overflow-x:hidden}
-#reading-progress{position:fixed;top:0;left:0;height:4px;width:0%;background:var(--brick);z-index:9999;transition:width .1s linear}
-.page-wrap{width:min(920px,100%);margin:0 auto;background:var(--paper);box-shadow:0 0 70px rgba(45,30,10,.25);border-left:1px solid rgba(168,79,54,.25);border-right:1px solid rgba(168,79,54,.25);overflow-x:hidden}
-.site-header{position:relative;min-height:455px;overflow:hidden;background:var(--teal-dark);display:flex;align-items:center;text-align:center}
-.header-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.48;filter:saturate(.95) contrast(1.04)}
-.site-header:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(23,75,80,.60),rgba(38,63,99,.54) 46%,rgba(168,79,54,.38)),linear-gradient(to bottom,rgba(22,36,58,.04),rgba(22,36,58,.82) 78%)}
-.site-header:before{content:"";position:absolute;inset:20px;border:1px solid rgba(239,200,95,.52);z-index:1;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 20px,rgba(239,200,95,.08) 20px 22px,transparent 22px 44px)}
-.header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:56px 34px 50px}
-.course-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,8vw,78px);font-weight:900;line-height:.97;color:#fff;text-transform:uppercase;letter-spacing:.04em;text-shadow:2px 5px 22px rgba(0,0,0,.78);margin-bottom:30px}
-.eq-banner{display:inline-block;background:rgba(255,250,240,.96);color:var(--ink);border:3px solid var(--saffron);border-left-width:8px;border-right-width:8px;padding:18px 28px;max-width:760px;font-weight:700;font-size:19px;line-height:1.5;text-align:left;box-shadow:0 12px 30px rgba(0,0,0,.25)}
-.eq-label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--brick);margin-bottom:8px}
-.section-nav{position:sticky;top:4px;z-index:100;display:flex;flex-wrap:wrap;justify-content:center;background:var(--indigo-dark);border-bottom:4px solid var(--saffron);overflow-x:auto}
-.section-nav a{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,239,226,.78);text-decoration:none;padding:13px 10px;border-bottom:4px solid transparent;margin-bottom:-4px;white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
-.section-nav a:hover{color:#fff;border-bottom-color:var(--gold)}
-.section-nav a.active{color:#fff;border-bottom-color:var(--gold);background:rgba(214,161,36,.18)}
-#lexile-toggle{display:block;margin:22px auto 30px;padding:10px 26px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border:2px solid var(--brick);background:transparent;color:var(--brick);transition:background .2s,color .2s}
-#lexile-toggle:hover{background:var(--brick);color:#fff}
+body{
+  background:
+    radial-gradient(circle at 10% 0%,rgba(214,154,45,.25),transparent 34%),
+    radial-gradient(circle at 90% 10%,rgba(31,111,115,.18),transparent 38%),
+    linear-gradient(135deg,#f4ddb2 0%,#e5c796 45%,#cfae77 100%);
+  color:var(--ink);
+  font-family:'Nunito Sans',Arial,sans-serif;
+  font-size:18px;
+  line-height:1.82;
+  overflow-x:hidden;
+}
+#reading-progress{position:fixed;top:0;left:0;height:4px;width:0%;background:var(--copper);z-index:9999;transition:width .1s linear}
+.page-wrap{width:min(930px,100%);margin:0 auto;background:var(--page);box-shadow:0 0 70px rgba(45,30,10,.27);border-left:1px solid rgba(164,86,51,.25);border-right:1px solid rgba(164,86,51,.25);overflow-x:hidden}
+.site-header{position:relative;min-height:465px;overflow:hidden;background:var(--teal-dark);display:flex;align-items:center;text-align:center}
+.header-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45;filter:saturate(.95) contrast(1.04)}
+.site-header:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(18,70,77,.68),rgba(36,60,90,.58) 48%,rgba(164,86,51,.44)),linear-gradient(to bottom,rgba(16,47,58,.05),rgba(16,47,58,.84) 78%)}
+.site-header:before{content:"";position:absolute;inset:20px;border:1px solid rgba(245,215,121,.55);z-index:1;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 18px,rgba(245,215,121,.08) 18px 20px,transparent 20px 38px)}
+.header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:58px 34px 50px}
+.course-label{font-family:'Alegreya Sans SC',sans-serif;font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--lime);margin-bottom:18px}
+.page-title{font-family:'Alegreya Sans SC',sans-serif;font-size:clamp(50px,8vw,82px);font-weight:900;line-height:.94;color:#fff;text-transform:uppercase;letter-spacing:.045em;text-shadow:2px 5px 22px rgba(0,0,0,.78);margin-bottom:30px}
+.eq-banner{display:inline-block;background:rgba(255,251,241,.96);color:var(--ink);border:3px solid var(--saffron);border-left-width:8px;border-right-width:8px;padding:18px 28px;max-width:760px;font-weight:800;font-size:19px;line-height:1.5;text-align:left;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.eq-label{display:block;font-family:'Alegreya Sans SC',sans-serif;font-size:12px;letter-spacing:.30em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.section-nav{position:sticky;top:4px;z-index:100;display:flex;flex-wrap:wrap;justify-content:center;background:var(--night);border-bottom:4px solid var(--saffron);overflow-x:auto}
+.section-nav a{font-family:'Alegreya Sans SC',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,247,232,.78);text-decoration:none;padding:13px 9px;border-bottom:4px solid transparent;margin-bottom:-4px;white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
+.section-nav a:hover{color:#fff;border-bottom-color:var(--lime)}
+.section-nav a.active{color:#fff;border-bottom-color:var(--lime);background:rgba(214,154,45,.18)}
+#lexile-toggle{display:block;margin:22px auto 30px;padding:10px 26px;font-family:'Alegreya Sans SC',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border:2px solid var(--clay);background:transparent;color:var(--clay);transition:background .2s,color .2s}
+#lexile-toggle:hover{background:var(--clay);color:#fff}
 .para-simple{display:none}body.simplified .para-standard{display:none}body.simplified .para-simple{display:block}
-.toc-sidebar{position:fixed;left:calc(50% - 572px);top:50%;transform:translateY(-50%);width:155px;padding:14px 12px;font-family:'Barlow Condensed',sans-serif;z-index:50;background:rgba(22,36,58,.94);border-right:2px solid rgba(214,161,36,.42)}
-.toc-sidebar .toc-label{display:block;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.toc-sidebar a{display:block;color:rgba(246,239,226,.66);text-decoration:none;padding:4px 0;font-size:11px;letter-spacing:.05em;text-transform:uppercase;line-height:1.35;transition:color .2s}
-.toc-sidebar a.active,.toc-sidebar a:hover{color:var(--gold);font-weight:700}
+.toc-sidebar{position:fixed;left:calc(50% - 578px);top:50%;transform:translateY(-50%);width:160px;padding:14px 12px;font-family:'Alegreya Sans SC',sans-serif;z-index:50;background:rgba(16,47,58,.94);border-right:2px solid rgba(214,154,45,.42)}
+.toc-sidebar .toc-label{display:block;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
+.toc-sidebar a{display:block;color:rgba(255,247,232,.66);text-decoration:none;padding:4px 0;font-size:11px;letter-spacing:.05em;text-transform:uppercase;line-height:1.35;transition:color .2s}
+.toc-sidebar a.active,.toc-sidebar a:hover{color:var(--lime);font-weight:800}
 @media(max-width:1100px){.toc-sidebar{display:none}}
-main{max-width:800px;margin:0 auto;padding:0 32px 68px}
+main{max-width:810px;margin:0 auto;padding:0 32px 68px}
 .intro-section{padding:50px 0 30px}
-.intro-section p{font-size:19px;line-height:1.9;margin-bottom:18px}
+.intro-section p{font-size:19px;line-height:1.88;margin-bottom:18px}
 .content-section{padding:48px 0 28px;border-top:2px solid rgba(31,111,115,.16)}
-.content-section:before{content:"";display:block;width:100%;height:10px;margin:0 0 26px;background:repeating-linear-gradient(90deg,rgba(31,111,115,.18) 0 18px,transparent 18px 26px,rgba(214,161,36,.38) 26px 30px,transparent 30px 38px)}
-.section-kicker{display:block;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brick);margin-bottom:8px}
-.section-heading{font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,5vw,46px);font-weight:900;color:var(--indigo-dark);text-transform:uppercase;border-left:7px solid var(--saffron);padding-left:16px;line-height:1.08;margin-bottom:26px}
-.scene-label{font-family:'Barlow Condensed',sans-serif;font-size:27px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-dark);line-height:1.1;margin:34px 0 12px}
+.content-section:before{content:"";display:block;width:100%;height:10px;margin:0 0 26px;background:repeating-linear-gradient(90deg,rgba(31,111,115,.20) 0 18px,transparent 18px 26px,rgba(214,154,45,.38) 26px 30px,transparent 30px 38px)}
+.section-kicker{display:block;font-family:'Alegreya Sans SC',sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.section-heading{font-family:'Alegreya Sans SC',sans-serif;font-size:clamp(34px,5vw,48px);font-weight:900;color:var(--teal-dark);text-transform:uppercase;border-left:7px solid var(--saffron);padding-left:16px;line-height:1.05;margin-bottom:26px}
 p{margin-bottom:18px;color:var(--ink)}
-.sensory-box,.screen-card{background:#f7edd8;border-left:6px solid var(--teal);padding:18px 22px;margin:26px 0;box-shadow:0 5px 16px rgba(35,57,91,.10)}
-.sensory-box p,.screen-card p{margin:0;font-weight:700;color:var(--indigo-dark);line-height:1.58}
-.screen-card{border-left-color:var(--brick);background:#fff0d0}
-.screen-card strong{color:var(--burgundy)}
+.sensory-box,.screen-card{background:#fff0d0;border-left:6px solid var(--teal);padding:18px 22px;margin:26px 0;box-shadow:0 5px 16px rgba(35,57,91,.10)}
+.sensory-box p,.screen-card p{margin:0;font-weight:800;color:var(--teal-dark);line-height:1.58}
+.screen-card{border-left-color:var(--clay);background:#f7ead4}
+.screen-card strong{color:var(--clay)}
 figure{margin:30px 0}
 figure img{width:100%;max-width:100%;height:auto;display:block;border:3px solid rgba(35,57,91,.28);box-shadow:0 8px 26px rgba(0,0,0,.20);background:#eee}
 figcaption{font-size:13px;font-style:italic;color:var(--muted);margin-top:8px;line-height:1.45}
 .img-right{float:right;width:42%;margin:6px 0 20px 28px}.img-left{float:left;width:42%;margin:6px 28px 20px 0}.clearfix:after{content:"";display:table;clear:both}
 .institution-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
 .institution-card{background:#fff4df;border-top:5px solid var(--teal);padding:16px;box-shadow:0 6px 18px rgba(70,60,45,.09)}
-.institution-card h3{font-family:'Barlow Condensed',sans-serif;font-size:23px;text-transform:uppercase;color:var(--indigo-dark);line-height:1.1;margin-bottom:8px}
+.institution-card h3{font-family:'Alegreya Sans SC',sans-serif;font-size:23px;text-transform:uppercase;color:var(--teal-dark);line-height:1.1;margin-bottom:8px}
 .institution-card p{font-size:16px;line-height:1.65;margin:0}
 @media(max-width:680px){.img-right,.img-left{float:none;width:100%;margin:20px 0}.institution-grid{grid-template-columns:1fr}}
-.vocab{color:var(--vocab);text-decoration:underline dotted var(--vocab);cursor:help;position:relative;font-weight:700}.vocab-red{color:var(--vocab);font-weight:700}.vocab .tip{display:none;position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#050505;color:#fff;padding:8px 14px;border-radius:4px;font-size:14px;line-height:1.5;z-index:200;font-style:normal;font-weight:400;pointer-events:none;max-width:280px;white-space:normal;font-family:'Atkinson Hyperlegible',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.85);border:1px solid var(--saffron)}.vocab:hover .tip,.vocab.active .tip{display:block}.vocab:focus{outline:2px solid var(--saffron);outline-offset:2px;border-radius:2px}
-.brain-break{font-family:'Roboto Slab',serif;margin:44px -50px;padding:36px 50px;position:relative;overflow:hidden;max-width:calc(100% + 100px)}.bb-label{display:block;font-family:'Roboto Slab',serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.92}.bb-text{font-family:'Roboto Slab',serif;font-size:21px;font-weight:500;line-height:1.6;margin:0}
+.vocab{color:var(--vocab);text-decoration:underline dotted var(--vocab);cursor:help;position:relative;font-weight:800}.vocab-red{color:var(--vocab);font-weight:800}.vocab .tip{display:none;position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#050505;color:#fff;padding:8px 14px;border-radius:4px;font-size:14px;line-height:1.5;z-index:200;font-style:normal;font-weight:400;pointer-events:none;max-width:280px;white-space:normal;font-family:'Nunito Sans',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.85);border:1px solid var(--saffron)}.vocab:hover .tip,.vocab.active .tip{display:block}.vocab:focus{outline:2px solid var(--saffron);outline-offset:2px;border-radius:2px}
+.brain-break{font-family:'Zilla Slab',serif;margin:44px -50px;padding:36px 50px;position:relative;overflow:hidden;max-width:calc(100% + 100px)}.bb-label{display:block;font-family:'Zilla Slab',serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.92}.bb-text{font-family:'Zilla Slab',serif;font-size:21px;font-weight:500;line-height:1.6;margin:0}
 .dyk-break{background:var(--teal);color:#fff;border-left:6px solid var(--lime)}.dyk-break .bb-label{color:var(--lime)}
-.ff-break{background:var(--night);color:#fff;padding:36px 40px;margin:44px -50px;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);text-align:center}.ff-break .bb-label{color:var(--gold);text-align:center;margin-bottom:8px}.ff-context{font-family:'Roboto Slab',serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,232,180,.86);text-align:center;margin-bottom:28px;font-weight:700}.ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px}.ff-item{text-align:center;padding:8px 16px;max-width:185px}.ff-number{display:block;font-family:'Roboto Slab',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:8px}.ff-desc{display:block;font-family:'Roboto Slab',serif;font-size:13px;letter-spacing:.06em;color:rgba(255,232,180,.86);max-width:185px;margin:0 auto;line-height:1.5}
-.as-break{background:var(--purple);color:#fff;padding:44px 50px;margin:44px -50px;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);text-align:center}.as-break .bb-label{color:var(--gold)}.as-image{max-width:580px;width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(239,200,95,.72);box-shadow:0 8px 32px rgba(0,0,0,.48)}.as-caption{font-family:'Roboto Slab',serif;font-size:14px;color:rgba(255,238,205,.82);line-height:1.6;margin-bottom:28px;display:block;font-style:normal}.as-fact{font-family:'Roboto Slab',serif;font-size:21px;font-weight:500;color:#fff;line-height:1.6;max-width:680px;margin:0 auto;text-align:center}
-.primary-source{background:#fff2d8;border-left:7px solid var(--burgundy);padding:30px 34px;margin:38px 0;box-shadow:0 6px 20px rgba(35,57,91,.14)}.ps-visual{display:grid;grid-template-columns:minmax(200px,36%) 1fr;gap:24px;align-items:start}.ps-visual figure{margin:0}.ps-visual img{width:100%;max-width:100%;height:auto;display:block;border:3px solid rgba(35,57,91,.28);box-shadow:0 6px 18px rgba(0,0,0,.20)}.ps-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--burgundy);margin-bottom:12px;display:block}.ps-quote{font-size:20px;font-style:italic;line-height:1.62;color:var(--ink);margin-bottom:14px}.ps-attribution{font-size:13px;font-style:italic;color:var(--muted);margin-bottom:12px}.ps-narrator{border-top:1px solid rgba(35,57,91,.18);padding-top:12px;font-size:15px;line-height:1.6;font-weight:700;color:var(--ink)}
+.ff-break{background:var(--night);color:#fff;padding:36px 40px;margin:44px -50px;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);text-align:center}.ff-break .bb-label{color:var(--gold);text-align:center;margin-bottom:8px}.ff-context{font-family:'Zilla Slab',serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,232,180,.86);text-align:center;margin-bottom:28px;font-weight:700}.ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px}.ff-item{text-align:center;padding:8px 16px;max-width:185px}.ff-number{display:block;font-family:'Zilla Slab',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:8px}.ff-desc{display:block;font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.06em;color:rgba(255,232,180,.86);max-width:185px;margin:0 auto;line-height:1.5}
+.as-break{background:var(--plum);color:#fff;padding:44px 50px;margin:44px -50px;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);text-align:center}.as-break .bb-label{color:var(--gold)}.as-image{max-width:580px;width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(239,200,95,.72);box-shadow:0 8px 32px rgba(0,0,0,.48)}.as-caption{font-family:'Zilla Slab',serif;font-size:14px;color:rgba(255,238,205,.82);line-height:1.6;margin-bottom:28px;display:block;font-style:normal}.as-fact{font-family:'Zilla Slab',serif;font-size:21px;font-weight:500;color:#fff;line-height:1.6;max-width:680px;margin:0 auto;text-align:center}
+.primary-source{background:#fff2d8;border-left:7px solid var(--clay);padding:30px 34px;margin:38px 0;box-shadow:0 6px 20px rgba(35,57,91,.14)}.ps-visual{display:grid;grid-template-columns:minmax(200px,36%) 1fr;gap:24px;align-items:start}.ps-visual figure{margin:0}.ps-visual img{width:100%;max-width:100%;height:auto;display:block;border:3px solid rgba(35,57,91,.28);box-shadow:0 6px 18px rgba(0,0,0,.20)}.ps-label{font-family:'Alegreya Sans SC',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);margin-bottom:12px;display:block}.ps-quote{font-size:20px;font-style:italic;line-height:1.62;color:var(--ink);margin-bottom:14px}.ps-attribution{font-size:13px;font-style:italic;color:var(--muted);margin-bottom:12px}.ps-narrator{border-top:1px solid rgba(35,57,91,.18);padding-top:12px;font-size:15px;line-height:1.6;font-weight:800;color:var(--ink)}
 @media(max-width:700px){.ps-visual{grid-template-columns:1fr}}
-.tn-break{background:var(--indigo-dark);color:#fff;padding:36px 50px;margin:30px -50px 0}.tn-break .bb-label{color:var(--gold);text-align:center;display:block;margin-bottom:20px}.tn-payoff{font-family:'Roboto Slab',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;line-height:1.32;text-align:center;color:var(--gold);margin:0 auto 28px;max-width:720px}.tn-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}.tn-item{text-align:center}.tn-era-label{display:block;font-family:'Roboto Slab',serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:700}.tn-item img{width:100%;max-width:100%;display:block;border:2px solid rgba(240,196,92,.45)}.tn-caption{font-family:'Roboto Slab',serif;font-size:12px;font-style:italic;color:rgba(246,239,226,.75);margin-top:8px;line-height:1.4}.tn-text-block{margin-top:24px;border-top:1px solid rgba(240,196,92,.28);padding-top:20px}.tn-text-block h3{font-family:'Roboto Slab',serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:18px 0 8px}.tn-text-block p{font-family:'Roboto Slab',serif;font-size:17px;line-height:1.65;margin-bottom:12px;color:#fff}
-img{opacity:0;transition:opacity .4s ease}img.loaded{opacity:1}.section-animate{opacity:0;transform:translateY(24px);transition:opacity .45s ease-out,transform .45s ease-out}.section-animate.visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){.section-animate{opacity:1;transform:none;transition:none}}footer{background:var(--indigo-dark);color:rgba(246,239,226,.58);text-align:center;padding:24px 30px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-top:5px solid var(--saffron)}
+.tn-break{background:var(--night);color:#fff;padding:36px 50px;margin:30px -50px 0}.tn-break .bb-label{color:var(--gold);text-align:center;display:block;margin-bottom:20px}.tn-payoff{font-family:'Zilla Slab',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;line-height:1.32;text-align:center;color:var(--gold);margin:0 auto 28px;max-width:720px}.tn-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}.tn-item{text-align:center}.tn-era-label{display:block;font-family:'Zilla Slab',serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:700}.tn-item img{width:100%;max-width:100%;display:block;border:2px solid rgba(240,196,92,.45)}.tn-caption{font-family:'Zilla Slab',serif;font-size:12px;font-style:italic;color:rgba(246,239,226,.75);margin-top:8px;line-height:1.4}.tn-text-block{margin-top:24px;border-top:1px solid rgba(240,196,92,.28);padding-top:20px}.tn-text-block h3{font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:18px 0 8px}.tn-text-block p{font-family:'Zilla Slab',serif;font-size:17px;line-height:1.65;margin-bottom:12px;color:#fff}
+img{opacity:0;transition:opacity .4s ease}img.loaded{opacity:1}.section-animate{opacity:0;transform:translateY(24px);transition:opacity .45s ease-out,transform .45s ease-out}.section-animate.visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){.section-animate{opacity:1;transform:none;transition:none}}footer{background:var(--night);color:rgba(246,239,226,.58);text-align:center;padding:24px 30px;font-family:'Alegreya Sans SC',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-top:5px solid var(--saffron)}
 @media(max-width:880px){.page-wrap{border:0}main{padding:0 22px 50px}.header-inner{padding:44px 22px 42px}.brain-break,.ff-break,.as-break,.tn-break{margin:36px 0;padding:28px 22px;max-width:100%}.section-nav a{font-size:11px;padding:11px 8px}}
 @media(max-width:600px){.page-title{font-size:42px}.section-heading{font-size:30px}.ff-number{font-size:44px}.as-fact{font-size:18px}.tn-pair{grid-template-columns:1fr}.tn-break{padding:28px 22px;margin:30px 0 0}.bb-text{font-size:18px}}
 @media(max-width:980px){.brain-break,.ff-break,.as-break,.tn-break{margin-left:0;margin-right:0;padding-left:28px;padding-right:28px;max-width:100%}}
@@ -103,25 +128,25 @@ LINK: Suggested: https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_A
 <p class="para-simple">Inside the Arab American National Museum, students can see images, documents, art, and stories that many textbooks once ignored. A museum like this is not just a building. It says Arab American history belongs in American history. Ethnic Studies asks who gets remembered and who gets to tell the story. Arab Americans have answered by building institutions of their own.</p>
 
 <!--
-FILENAME: L08_SyrianGroceryWashingtonStreet.jpg
+FILENAME: L08_ThenPeddlers1900.jpg
 PLACE IN: images/L08/
 PRIORITY: ESSENTIAL
-FIND: Syrian Grocery at 78 Washington Street, 1929, photographed by Percy Loomis Sperr; strong storefront image of Little Syria as a real Arab American institution
-SEARCH: Syrian Grocery 78 Washington Street 1929 Percy Loomis Sperr NYPL
-LINK: Suggested: https://www.nypl.org/blog/2015/11/19/manhattans-little-syria
+FIND: Arab immigrant peddlers or Syrian peddlers around 1900; use existing repo image if present
+SEARCH: Syrian peddlers Arab American peddlers 1900 archival photograph
+LINK: Existing repo image
 -->
 <figure>
-<img alt="Syrian Grocery at 78 Washington Street in New York's Little Syria, 1929" src="images/L08/L08_SyrianGroceryWashingtonStreet.jpg"/>
-<figcaption>Syrian Grocery at 78 Washington Street, New York City, 1929. A small storefront could also be a community institution. New York Public Library.</figcaption>
+<img alt="Early Arab immigrant peddlers around 1900" src="images/L08/L08_ThenPeddlers1900.jpg"/>
+<figcaption>Early Arab immigrant peddlers, around 1900. Peddling connected families to labor, language learning, customers, and small business opportunities. Existing repository image.</figcaption>
 </figure>
 
-<p class="para-standard">A second sign shows why those institutions mattered. After September 11, 2001, Adel Kamal walked past a Dearborn barbershop and saw the words, "We don't serve Arabs." His family had lived in Michigan for generations. The sign tried to shrink a whole community into a suspect. This lesson follows both kinds of evidence: the places Arab Americans built, and the stereotypes and policies they had to challenge.</p>
-<p class="para-simple">A second sign shows why those institutions mattered. After September 11, 2001, Adel Kamal saw a sign in a Dearborn barbershop. It said, "We don't serve Arabs." His family had lived in Michigan for generations. The sign treated a whole community like suspects. This lesson studies what Arab Americans built and what they had to challenge.</p>
+<p class="para-standard">A second sign shows why institutions mattered. After September 11, 2001, Adel Kamal walked past a Dearborn barbershop and saw the words, "We don't serve Arabs." His family had lived in Michigan for generations. The sign tried to shrink a whole community into a suspect. This lesson follows both kinds of evidence: the lives Arab Americans built, and the stereotypes and policies they had to challenge.</p>
+<p class="para-simple">A second sign shows why institutions mattered. After September 11, 2001, Adel Kamal saw a sign in a Dearborn barbershop. It said, "We don't serve Arabs." His family had lived in Michigan for generations. The sign treated a whole community like suspects. This lesson studies what Arab Americans built and what they had to challenge.</p>
 </section>
 
 <section class="content-section clearfix section-animate" id="arrival">
 <span class="section-kicker">SECTION ONE</span>
-<h2 class="section-heading">ARRIVAL AND MIGRATION</h2>
+<h2 class="section-heading">ARRIVAL AND MANY ORIGINS</h2>
 
 <!--
 FILENAME: L08_SyrianArabEllisIsland.jpg
@@ -193,7 +218,7 @@ SEARCH: teacher-created graphic using public domain word roots; no photo needed
 LINK: Suggested: teacher-created visual
 -->
 <img alt="Graphic showing English words with Arabic roots, including algebra, coffee, sugar, zero, sofa, magazine, and safari" src="images/L08/L08_ArabicWordsGraphic.jpg" style="width:100%;display:block;border:3px solid var(--lime);box-shadow:0 4px 18px rgba(0,0,0,0.4);"/>
-<p style="font-size:12px;margin-top:8px;opacity:.86;font-family:'Roboto Slab',serif;color:#fff;">Teacher-created word graphic: English words with Arabic roots.</p>
+<p style="font-size:12px;margin-top:8px;opacity:.86;font-family:'Zilla Slab',serif;color:#fff;">Teacher-created word graphic: English words with Arabic roots.</p>
 </div>
 <p class="bb-text" style="flex:1;min-width:200px;">You already use Arabic more than you think. Words like algebra, coffee, sugar, zero, sofa, magazine, and safari entered English through Arabic or through trade networks shaped by Arabic-speaking scholars and merchants. Part of Arab history is hiding in your everyday vocabulary.</p>
 </div>
@@ -204,16 +229,16 @@ LINK: Suggested: teacher-created visual
 <h2 class="section-heading">STEREOTYPES, POLICY, AND POWER</h2>
 
 <!--
-FILENAME: L08_JamesAbourezk.jpg
+FILENAME: L08_AADCProtest.jpg
 PLACE IN: images/L08/
 PRIORITY: ESSENTIAL
-FIND: James Abourezk official congressional portrait or Wikimedia Commons image; first Arab American U.S. senator and founder of ADC
-SEARCH: James Abourezk official portrait Wikimedia Commons
-LINK: Suggested: https://commons.wikimedia.org/wiki/File:James_Abourezk.jpg
+FIND: Existing repo image of Arab American Anti-Discrimination Committee protest or Arab American civil rights demonstration; use actual event image already in repo
+SEARCH: existing repository image
+LINK: Existing repo image
 -->
 <figure class="img-left">
-<img alt="James Abourezk, first Arab American U.S. senator and founder of the Arab American Anti-Discrimination Committee" src="images/L08/L08_JamesAbourezk.jpg"/>
-<figcaption>James Abourezk, first Arab American U.S. senator and founder of the Arab American Anti-Discrimination Committee. Wikimedia Commons / Biographical Directory of Congress.</figcaption>
+<img alt="Arab American civil rights protest connected to anti-discrimination organizing" src="images/L08/L08_AADCProtest.jpg"/>
+<figcaption>Arab American civil rights organizing challenged discrimination in public life, schools, workplaces, government, and media. Existing repository image.</figcaption>
 </figure>
 
 <p class="para-standard">Arab Americans built institutions because institutions protect people when public opinion turns hostile. In 1980, James Abourezk, a Lebanese American former U.S. senator from South Dakota, founded the <span class="vocab" tabindex="0">Arab American Anti-Discrimination Committee<span class="tip">A civil rights group founded in 1980 to defend Arab Americans from discrimination.</span></span>. The group challenged discrimination in schools, workplaces, media, and government. It also helped Arab Americans answer stereotypes with legal action, education, and public pressure. That work mattered because images in media often shaped how people treated real communities.</p>
@@ -236,7 +261,7 @@ LINK: Suggested: https://commons.wikimedia.org/wiki/File:James_Abourezk.jpg
 
 <section class="content-section clearfix section-animate" id="today">
 <span class="section-kicker">SECTION FOUR</span>
-<h2 class="section-heading">ARAB AMERICA TODAY</h2>
+<h2 class="section-heading">ARAB AMERICANS SHAPE CULTURE TODAY</h2>
 
 <!--
 FILENAME: L08_TonyMaineSouthend.jpg
@@ -318,29 +343,29 @@ SEARCH: Dance of the New York Syrians NYPL Digital Collections
 LINK: Suggested: https://digitalcollections.nypl.org/search/index?filters=%5Btopic%3DSyrian+Americans%5D
 -->
 <img alt="Dance of the New York Syrians, early twentieth century" src="images/L08/L08_DanceOfNewYorkSyrians.jpg"/>
-<p class="tn-caption">Dance of the New York Syrians. Early Arab American public culture in New York without repeating the grocery or coffee-house image. NYPL Digital Collections.</p>
+<p class="tn-caption">Dance of the New York Syrians. Early Arab American public culture in New York without repeating the peddler or coffee-house image. NYPL Digital Collections.</p>
 </div>
 <div class="tn-item"><span class="tn-era-label">NOW</span>
 <!--
-FILENAME: L08_AANMFirstFloorGallery.jpg
+FILENAME: L08_NowArabYouthOrganizing.jpg
 PLACE IN: images/L08/
 PRIORITY: ESSENTIAL
-FIND: First Floor Gallery, Arab American National Museum, Wikimedia Commons; interior museum space showing community memory as a public institution
-SEARCH: First Floor Gallery Arab American National Museum Wikimedia Commons
-LINK: Suggested: https://commons.wikimedia.org/wiki/File:First_Floor_Gallery_-_Arab_American_National_Museum.jpg
+FIND: Contemporary Arab American youth leadership, student organizing, community journalism, or youth civic event; should show agency and not be San Diego/El Cajon
+SEARCH: Arab American youth organizing student leadership community event photo
+LINK: New image needed
 -->
-<img alt="First Floor Gallery at the Arab American National Museum" src="images/L08/L08_AANMFirstFloorGallery.jpg"/>
-<p class="tn-caption">First Floor Gallery at the Arab American National Museum in Dearborn. A museum turns community memory into public history. Wikimedia Commons, CC BY-SA 4.0.</p>
+<img alt="Contemporary Arab American youth organizing or leading a community project" src="images/L08/L08_NowArabYouthOrganizing.jpg"/>
+<p class="tn-caption">Arab American youth and community leadership today. The NOW image should show people organizing, creating, leading, or speaking in public. New image needed.</p>
 </div>
 </div>
 <div class="tn-text-block">
 <h3>THEN</h3>
 <p>Early Arab immigrants built stores, newspapers, churches, coffeehouses, and mutual aid networks because communities need institutions to survive. New York's Little Syria shows one early chapter of Arab American life, not the whole story. These communities were not temporary guests. They were building American neighborhoods.</p>
 <h3>NOW</h3>
-<p>Today Arab Americans continue building institutions through civil rights groups, media projects, businesses, schools, elections, art, and museums. The Arab American National Museum exists because a community insisted its history belonged in public. Arab American history continues through many communities, not only one city or one national background.</p>
+<p>Today Arab Americans continue building institutions through civil rights groups, media projects, businesses, schools, elections, art, and museums. Arab American youth and community leaders continue to decide how they want to be seen, heard, and represented. Arab American history continues through many communities, not only one city or one national background.</p>
 <h3>CONNECTION</h3>
 <p>The connection between then and now is community power. Earlier generations created institutions so people could survive, communicate, and belong. Today, Arab Americans continue that work through culture, voting, organizing, art, and public history. Their history shows that American identity is built by communities that create institutions and insist on telling their own stories.</p>
-<p>Which institution in this lesson seems most powerful: the coffee-house, the store, the newspaper, the civil rights group, the artwork, or the museum?</p>
+<p>Which institution in this lesson seems most powerful: the peddler network, the coffee-house, the newspaper, the civil rights group, the artwork, or youth organizing?</p>
 </div>
 </div>
 
