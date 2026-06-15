@@ -4,149 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SS9 L09 : SAN DIEGO'S HIDDEN COMMUNITIES</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Atkinson+Hyperlegible:wght@400;700&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sand:#f4ead8;
-  --paper:#fff9ef;
-  --stucco:#ead8bd;
-  --pacific:#2d6f73;
-  --pacific-dark:#244f53;
-  --teal:#2d6f73;
-  --teal-soft:#d9ebe5;
-  --terracotta:#ad5a3b;
-  --clay:#8c4a35;
-  --gold:#c79a3b;
-  --sun:#f5c45e;
-  --ink:#1d2524;
-  --charcoal:#293433;
-  --muted:#5e6b66;
-  --pale:#f8efe1;
-  --vocab:#9a3f2f;
-  --green:#456f60;
-  --lime:#ffe08a;
-  --navy:#234858;
-  --purple:#6b4b72;
-  --pink:#f5d2a2;
-  --deep:#17363b;
+  --paper:#fff8e8;
+  --cream:#f7ecd5;
+  --coast:#0f4f5a;
+  --bay:#166b74;
+  --ink:#1d2628;
+  --muted:#5f6a68;
+  --sun:#f0b84a;
+  --marigold:#f7d271;
+  --clay:#b45a3c;
+  --oxide:#7f3d2f;
+  --sage:#5f735d;
+  --deep:#102f35;
+  --plum:#55395f;
+  --vocab:#9a352c;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
 body{
   background:
-    linear-gradient(135deg,rgba(244,234,216,.92),rgba(234,216,189,.96)),
-    radial-gradient(circle at top left,rgba(45,111,115,.18),transparent 42%);
-  font-family:'DM Sans',Arial,sans-serif;
+    radial-gradient(circle at top left,rgba(240,184,74,.25),transparent 34%),
+    radial-gradient(circle at 85% 10%,rgba(22,107,116,.18),transparent 38%),
+    linear-gradient(135deg,#f2dcae 0%,#d9bb80 100%);
+  font-family:'Atkinson Hyperlegible',Arial,sans-serif;
   font-size:18px;
-  line-height:1.92;
-  color:var(--charcoal);
+  line-height:1.86;
+  color:var(--ink);
   overflow-x:hidden;
 }
-#reading-progress{position:fixed;top:0;left:0;height:4px;width:0%;background:var(--terracotta);z-index:9999;transition:width .1s linear}
-.page-wrap{
-  width:min(920px,100%);
-  margin:0 auto;
-  background:var(--paper);
-  box-shadow:0 0 70px rgba(65,45,25,.22);
-  border-left:1px solid rgba(140,74,53,.18);
-  border-right:1px solid rgba(140,74,53,.18);
-  overflow-x:hidden;
-}
-.site-header{position:relative;min-height:455px;overflow:hidden;background:var(--pacific-dark);display:flex;align-items:center;text-align:center}
-.header-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;filter:saturate(.96) contrast(1.02)}
-.site-header:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(36,79,83,.1),rgba(36,79,83,.58) 55%,rgba(23,54,59,.93))}
-.header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:56px 34px 50px}
-.course-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--sun);margin-bottom:18px}
-.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,7.8vw,76px);font-weight:900;line-height:.96;color:#fff;text-transform:uppercase;letter-spacing:.035em;text-shadow:2px 5px 22px rgba(0,0,0,.78);margin-bottom:30px}
-.eq-banner{display:inline-block;background:rgba(255,249,239,.95);color:var(--deep);border:3px solid var(--terracotta);border-left-width:8px;border-right-width:8px;padding:18px 28px;max-width:760px;font-weight:700;font-size:19px;line-height:1.5;text-align:left;box-shadow:0 8px 28px rgba(0,0,0,.25)}
-.eq-label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px}
+#reading-progress{position:fixed;top:0;left:0;height:4px;width:0%;background:var(--clay);z-index:9999;transition:width .1s linear}
+.page-wrap{width:min(930px,100%);margin:0 auto;background:var(--paper);box-shadow:0 0 70px rgba(47,33,18,.24);overflow-x:hidden}
+.site-header{position:relative;min-height:470px;overflow:hidden;background:var(--deep);display:flex;align-items:center;text-align:center}
+.header-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45;filter:saturate(.95) contrast(1.05)}
+.site-header:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,79,90,.66),rgba(16,47,53,.55) 45%,rgba(180,90,60,.42)),linear-gradient(to bottom,rgba(16,47,53,.02),rgba(16,47,53,.87) 82%)}
+.site-header:before{content:"";position:absolute;inset:20px;border:1px solid rgba(247,210,113,.5);z-index:1;pointer-events:none}
+.header-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:58px 34px 50px}
+.course-label{font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--marigold);margin-bottom:18px}
+.page-title{font-family:'Archivo Black',sans-serif;font-size:clamp(43px,7.6vw,72px);font-weight:900;line-height:1;color:#fff;text-transform:uppercase;letter-spacing:.02em;text-shadow:2px 5px 22px rgba(0,0,0,.76);margin-bottom:30px}
+.eq-banner{display:inline-block;background:rgba(255,248,232,.96);color:var(--deep);border:3px solid var(--sun);border-left-width:8px;border-right-width:8px;padding:18px 28px;max-width:760px;font-weight:700;font-size:19px;line-height:1.5;text-align:left;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.eq-label{display:block;font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
 .section-nav{position:sticky;top:4px;z-index:100;display:flex;flex-wrap:wrap;justify-content:center;background:var(--deep);border-bottom:4px solid var(--sun);overflow-x:auto}
-.section-nav a{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,249,239,.78);text-decoration:none;padding:13px 11px;border-bottom:4px solid transparent;margin-bottom:-4px;white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
-.section-nav a:hover{color:#fff;border-bottom-color:var(--sun)}
-.section-nav a.active{color:#fff;border-bottom-color:var(--sun);background:rgba(173,90,59,.28)}
-#lexile-toggle{display:block;margin:22px auto 30px;padding:10px 26px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border:2px solid var(--terracotta);background:transparent;color:var(--terracotta);transition:background .2s,color .2s}
-#lexile-toggle:hover{background:var(--terracotta);color:#fff}
+.section-nav a{font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,248,232,.8);text-decoration:none;padding:13px 9px;border-bottom:4px solid transparent;margin-bottom:-4px;white-space:nowrap;transition:.2s}
+.section-nav a:hover,.section-nav a.active{color:#fff;border-bottom-color:var(--marigold);background:rgba(180,90,60,.24)}
+#lexile-toggle{display:block;margin:22px auto 30px;padding:10px 26px;font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;border:2px solid var(--clay);background:transparent;color:var(--clay);transition:.2s}
+#lexile-toggle:hover{background:var(--clay);color:#fff}
 .para-simple{display:none}body.simplified .para-standard{display:none}body.simplified .para-simple{display:block}
-.toc-sidebar{position:fixed;left:calc(50% - 572px);top:50%;transform:translateY(-50%);width:155px;padding:14px 12px;font-family:'Barlow Condensed',sans-serif;z-index:50;background:rgba(23,54,59,.94);border-right:2px solid rgba(245,196,94,.42)}
-.toc-sidebar .toc-label{display:block;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--sun);margin-bottom:12px}
-.toc-sidebar a{display:block;color:rgba(255,249,239,.66);text-decoration:none;padding:4px 0;font-size:11px;letter-spacing:.05em;text-transform:uppercase;line-height:1.35;transition:color .2s}
-.toc-sidebar a.active,.toc-sidebar a:hover{color:var(--sun);font-weight:700}
+.toc-sidebar{position:fixed;left:calc(50% - 580px);top:50%;transform:translateY(-50%);width:162px;padding:14px 12px;font-family:'Archivo Black',sans-serif;z-index:50;background:rgba(16,47,53,.94);border-right:2px solid rgba(240,184,74,.42)}
+.toc-sidebar .toc-label{display:block;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--marigold);margin-bottom:12px}
+.toc-sidebar a{display:block;color:rgba(255,248,232,.68);text-decoration:none;padding:4px 0;font-size:10px;letter-spacing:.04em;text-transform:uppercase;line-height:1.35;transition:.2s}
+.toc-sidebar a.active,.toc-sidebar a:hover{color:var(--marigold)}
 @media(max-width:1100px){.toc-sidebar{display:none}}
-main{max-width:800px;margin:0 auto;padding:0 32px 68px}
+main{max-width:810px;margin:0 auto;padding:0 32px 68px}
 .intro-section{padding:50px 0 30px}
-.intro-section p{font-size:19px;line-height:1.95;margin-bottom:18px}
-.content-section{padding:50px 0 28px;border-top:2px solid rgba(45,111,115,.18)}
-.section-kicker{display:block;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px}
-.section-heading{font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,5vw,46px);font-weight:900;color:var(--deep);text-transform:uppercase;border-left:7px solid var(--teal);padding-left:16px;line-height:1.08;margin-bottom:26px}
-.scene-label{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--clay);line-height:1.1;margin:36px 0 12px}
-.community-tag{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;background:var(--teal);color:#fff;padding:4px 12px;margin-bottom:16px}
-p{margin-bottom:20px;color:var(--charcoal)}
-.walk-box{background:#fff4df;border-left:6px solid var(--terracotta);padding:18px 22px;margin:24px 0 28px;box-shadow:0 6px 18px rgba(70,60,45,.09)}
-.walk-box p{margin:0;color:var(--ink);font-weight:700;line-height:1.55}
-.causality-box{background:var(--teal-soft);color:var(--deep);padding:18px 22px;margin:24px 0;border-left:6px solid var(--terracotta);box-shadow:0 5px 18px rgba(36,70,84,.10)}
-.causality-box p{color:var(--deep);margin:0;font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:800;line-height:1.42;letter-spacing:.02em}
-.causality-box strong{color:var(--terracotta)}
-.real-world{background:var(--pale);border-left:5px solid var(--teal);padding:17px 21px;margin:30px 0;font-weight:700;color:var(--ink)}
+.intro-section p{font-size:19px;line-height:1.88;margin-bottom:18px}
+.content-section{padding:50px 0 28px;border-top:2px solid rgba(22,107,116,.18)}
+.content-section:before{content:"";display:block;width:100%;height:10px;margin:0 0 26px;background:repeating-linear-gradient(90deg,rgba(22,107,116,.2) 0 18px,transparent 18px 26px,rgba(240,184,74,.48) 26px 30px,transparent 30px 38px)}
+.section-kicker{display:block;font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.section-heading{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4.8vw,43px);font-weight:900;color:var(--coast);text-transform:uppercase;border-left:7px solid var(--sun);padding-left:16px;line-height:1.08;margin-bottom:26px}
+.scene-label{font-family:'Archivo Black',sans-serif;font-size:22px;letter-spacing:.03em;text-transform:uppercase;color:var(--oxide);line-height:1.2;margin:36px 0 12px}
+.community-tag{display:inline-block;font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--bay);color:#fff;padding:5px 12px;margin-bottom:16px}
+p{margin-bottom:20px;color:var(--ink)}
 figure{margin:32px 0}
-figure img{width:100%;height:auto;display:block;border:3px solid rgba(45,111,115,.34);box-shadow:0 8px 26px rgba(0,0,0,.22);background:#eee}
+figure img{width:100%;height:auto;display:block;border:3px solid rgba(15,79,90,.34);box-shadow:0 8px 26px rgba(0,0,0,.22);background:#eee}
 figcaption{font-size:13px;font-style:italic;color:var(--muted);margin-top:8px;line-height:1.45}
 .img-right{float:right;width:42%;margin:6px 0 20px 28px}
 .img-left{float:left;width:42%;margin:6px 28px 20px 0}
 .clearfix:after{content:"";display:table;clear:both}
-.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}
-.local-card{background:#fff4df;border-top:5px solid var(--teal);padding:14px;box-shadow:0 6px 18px rgba(70,60,45,.09)}
-.local-card figure{margin:0}
-.local-card h3{font-family:'Barlow Condensed',sans-serif;color:var(--deep);text-transform:uppercase;font-size:22px;letter-spacing:.04em;margin:12px 0 6px}
-.local-card p{font-size:15.5px;line-height:1.65;margin-bottom:0}
-@media(max-width:680px){.img-right,.img-left{float:none;width:100%;margin:20px 0}.local-grid{grid-template-columns:1fr}}
+.causality-box,.walk-box,.real-world{background:#fff0d0;border-left:6px solid var(--clay);padding:18px 22px;margin:24px 0 28px;box-shadow:0 6px 18px rgba(70,60,45,.09)}
+.causality-box p,.walk-box p,.real-world p{margin:0;font-weight:700;line-height:1.58;color:var(--deep)}
+.causality-box strong{color:var(--clay)}
+.object-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}
+.object-card{background:#fff4df;border-top:5px solid var(--bay);padding:14px;box-shadow:0 6px 18px rgba(70,60,45,.09)}
+.object-card figure{margin:0}
+.object-card h3{font-family:'Archivo Black',sans-serif;color:var(--coast);text-transform:uppercase;font-size:17px;letter-spacing:.04em;margin:12px 0 6px;line-height:1.25}
+.object-card p{font-size:15.5px;line-height:1.65;margin-bottom:0}
+@media(max-width:680px){.img-right,.img-left{float:none;width:100%;margin:20px 0}.object-grid{grid-template-columns:1fr}}
 .vocab{color:var(--vocab);text-decoration:underline dotted var(--vocab);cursor:help;position:relative;font-weight:700}
 .vocab-red{color:var(--vocab);font-weight:700}
-.vocab .tip{display:none;position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#050505;color:#fff;padding:8px 14px;border-radius:4px;font-size:14px;line-height:1.5;z-index:200;font-style:normal;font-weight:400;pointer-events:none;max-width:280px;white-space:normal;font-family:'DM Sans',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.85);border:1px solid var(--gold)}
+.vocab .tip{display:none;position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#050505;color:#fff;padding:8px 14px;border-radius:4px;font-size:14px;line-height:1.5;z-index:200;font-style:normal;font-weight:400;pointer-events:none;max-width:280px;white-space:normal;font-family:'Atkinson Hyperlegible',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.85);border:1px solid var(--sun)}
 .vocab:hover .tip,.vocab.active .tip{display:block}
-.vocab:focus{outline:2px solid var(--gold);outline-offset:2px;border-radius:2px}
-.brain-break{font-family:'Roboto Slab',serif;margin:44px -50px;padding:36px 50px;position:relative;overflow:hidden;max-width:calc(100% + 100px)}
-.bb-label{display:block;font-family:'Roboto Slab',serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.88}
-.bb-text{font-family:'Roboto Slab',serif;font-size:22px;font-weight:500;line-height:1.65;margin:0}
-.dyk-break{background:var(--green);color:#fff;border-left:6px solid var(--lime)}.dyk-break .bb-label{color:var(--lime)}
-.ff-break{background:var(--navy);color:#fff;padding:36px 40px;margin:44px -50px;border-top:3px solid var(--sun);border-bottom:3px solid var(--sun);text-align:center}
+.vocab:focus{outline:2px solid var(--sun);outline-offset:2px;border-radius:2px}
+.brain-break{font-family:'Zilla Slab',serif;margin:44px -50px;padding:36px 50px;position:relative;overflow:hidden;max-width:calc(100% + 100px)}
+.bb-label{display:block;font-family:'Zilla Slab',serif;font-size:11px;font-weight:700;letter-spacing:.55em;text-transform:uppercase;margin-bottom:14px;opacity:.9}
+.bb-text{font-family:'Zilla Slab',serif;font-size:22px;font-weight:500;line-height:1.65;margin:0}
+.dyk-break{background:var(--sage);color:#fff;border-left:6px solid var(--marigold)}
+.dyk-break .bb-label{color:var(--marigold)}
+.ff-break{background:var(--deep);color:#fff;padding:36px 40px;margin:44px -50px;border-top:3px solid var(--sun);border-bottom:3px solid var(--sun);text-align:center}
 .ff-break .bb-label{color:var(--sun);text-align:center;margin-bottom:8px}
-.ff-context{font-family:'Roboto Slab',serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,196,94,.86);text-align:center;margin-bottom:28px;font-weight:700}
+.ff-context{font-family:'Zilla Slab',serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,210,113,.9);text-align:center;margin-bottom:28px;font-weight:700}
 .ff-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px}
 .ff-item{text-align:center;padding:8px 16px;max-width:185px}
-.ff-number{display:block;font-family:'Roboto Slab',serif;font-size:52px;font-weight:700;color:var(--sun);line-height:1;margin-bottom:8px}
-.ff-desc{display:block;font-family:'Roboto Slab',serif;font-size:13px;letter-spacing:.08em;color:rgba(255,249,239,.78);max-width:185px;margin:0 auto;line-height:1.5}
-.as-break{background:var(--purple);color:#fff;padding:44px 50px;margin:44px -50px;border-top:3px solid var(--pink);border-bottom:3px solid var(--pink);text-align:center}
-.as-break .bb-label{color:var(--pink)}
-.as-image{max-width:580px;width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(245,210,162,.75);box-shadow:0 8px 32px rgba(0,0,0,.45)}
-.as-caption{font-family:'Roboto Slab',serif;font-size:14px;color:rgba(255,245,225,.84);line-height:1.6;margin-bottom:28px;display:block;font-style:normal}
-.as-fact{font-family:'Roboto Slab',serif;font-size:22px;font-weight:500;color:#fff;line-height:1.65;max-width:680px;margin:0 auto;text-align:center}
-.primary-source{background:#fff4df;border-left:7px solid var(--terracotta);padding:30px 34px;margin:38px 0;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.ff-number{display:block;font-family:'Zilla Slab',serif;font-size:52px;font-weight:700;color:var(--sun);line-height:1;margin-bottom:8px}
+.ff-desc{display:block;font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.08em;color:rgba(255,248,232,.78);max-width:185px;margin:0 auto;line-height:1.5}
+.as-break{background:var(--plum);color:#fff;padding:44px 50px;margin:44px -50px;border-top:3px solid #f5d6a5;border-bottom:3px solid #f5d6a5;text-align:center}
+.as-break .bb-label{color:#f5d6a5}
+.as-image{max-width:580px;width:100%;display:block;margin:0 auto 16px;border:3px solid rgba(245,214,165,.75);box-shadow:0 8px 32px rgba(0,0,0,.45)}
+.as-caption{font-family:'Zilla Slab',serif;font-size:14px;color:rgba(255,245,225,.84);line-height:1.6;margin-bottom:28px;display:block;font-style:normal}
+.as-fact{font-family:'Zilla Slab',serif;font-size:22px;font-weight:500;color:#fff;line-height:1.65;max-width:680px;margin:0 auto;text-align:center}
+.primary-source{background:#fff4df;border-left:7px solid var(--clay);padding:30px 34px;margin:38px 0;box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .ps-visual{display:grid;grid-template-columns:minmax(200px,36%) 1fr;gap:24px;align-items:start}
 .ps-visual figure{margin:0}
-.ps-visual img{width:100%;height:auto;display:block;border:3px solid rgba(173,90,59,.42);box-shadow:0 6px 18px rgba(0,0,0,.20)}
-.ps-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;display:block}
+.ps-visual img{width:100%;height:auto;display:block;border:3px solid rgba(180,90,60,.42);box-shadow:0 6px 18px rgba(0,0,0,.20)}
+.ps-label{font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);margin-bottom:12px;display:block}
 .ps-quote{font-size:21px;font-style:italic;line-height:1.65;color:var(--ink);margin-bottom:14px}
 .ps-attribution{font-size:13px;font-style:italic;color:var(--muted);margin-bottom:12px}
-.ps-narrator{border-top:1px solid rgba(173,90,59,.25);padding-top:12px;font-size:15px;line-height:1.65;font-weight:700;color:var(--ink)}
+.ps-narrator{border-top:1px solid rgba(180,90,60,.25);padding-top:12px;font-size:15px;line-height:1.65;font-weight:700;color:var(--ink)}
 @media(max-width:700px){.ps-visual{grid-template-columns:1fr}}
 .tn-break{background:var(--deep);color:#fff;padding:36px 50px;margin:30px -50px 0}
 .tn-break .bb-label{color:var(--sun);text-align:center;display:block;margin-bottom:20px}
-.tn-payoff{font-family:'Roboto Slab',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;line-height:1.32;text-align:center;color:var(--sun);margin:0 auto 28px;max-width:720px}
+.tn-payoff{font-family:'Zilla Slab',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;line-height:1.32;text-align:center;color:var(--sun);margin:0 auto 28px;max-width:720px}
 .tn-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
 .tn-item{text-align:center}
-.tn-era-label{display:block;font-family:'Roboto Slab',serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--sun);margin-bottom:10px;font-weight:700}
-.tn-item img{width:100%;display:block;border:2px solid rgba(245,196,94,.42)}
-.tn-caption{font-family:'Roboto Slab',serif;font-size:12px;font-style:italic;color:rgba(255,249,239,.72);margin-top:8px;line-height:1.4}
-.tn-text-block{margin-top:24px;border-top:1px solid rgba(245,196,94,.25);padding-top:20px}
-.tn-text-block h3{font-family:'Roboto Slab',serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--sun);margin:18px 0 8px}
-.tn-text-block p{font-family:'Roboto Slab',serif;font-size:17px;line-height:1.65;margin-bottom:12px;color:#fff}
+.tn-era-label{display:block;font-family:'Zilla Slab',serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--sun);margin-bottom:10px;font-weight:700}
+.tn-item img{width:100%;display:block;border:2px solid rgba(240,184,74,.42)}
+.tn-caption{font-family:'Zilla Slab',serif;font-size:12px;font-style:italic;color:rgba(255,248,232,.72);margin-top:8px;line-height:1.4}
+.tn-text-block{margin-top:24px;border-top:1px solid rgba(240,184,74,.25);padding-top:20px}
+.tn-text-block h3{font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--sun);margin:18px 0 8px}
+.tn-text-block p{font-family:'Zilla Slab',serif;font-size:17px;line-height:1.65;margin-bottom:12px;color:#fff}
 img{opacity:0;transition:opacity .4s ease}img.loaded{opacity:1}
 .section-animate{opacity:0;transform:translateY(24px);transition:opacity .45s ease-out,transform .45s ease-out}
 .section-animate.visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){.section-animate{opacity:1;transform:none;transition:none}}
-footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padding:24px 30px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-top:5px solid var(--sun)}
-@media(max-width:880px){.page-wrap{border:0}main{padding:0 22px 50px}.header-inner{padding:44px 22px 42px}.brain-break,.ff-break,.as-break,.tn-break{margin:36px 0;padding:28px 22px;max-width:100%}.section-nav a{font-size:11px;padding:11px 8px}}
-@media(max-width:600px){.page-title{font-size:40px}.section-heading{font-size:30px}.ff-number{font-size:44px}.as-fact{font-size:18px}.tn-pair{grid-template-columns:1fr}.tn-break{padding:28px 22px;margin:30px 0 0}.bb-text{font-size:18px}}
+footer{background:var(--deep);color:rgba(255,248,232,.52);text-align:center;padding:24px 30px;font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border-top:5px solid var(--sun)}
+@media(max-width:880px){.page-wrap{border:0}main{padding:0 22px 50px}.header-inner{padding:44px 22px 42px}.brain-break,.ff-break,.as-break,.tn-break{margin:36px 0;padding:28px 22px;max-width:100%}.section-nav a{font-size:9px;padding:11px 8px}}
+@media(max-width:600px){.page-title{font-size:38px}.section-heading{font-size:28px}.ff-number{font-size:44px}.as-fact{font-size:18px}.tn-pair{grid-template-columns:1fr}.tn-break{padding:28px 22px;margin:30px 0 0}.bb-text{font-size:18px}}
 @media(max-width:980px){.brain-break,.ff-break,.as-break,.tn-break{margin-left:0;margin-right:0;padding-left:28px;padding-right:28px;max-width:100%}}
 .dyk-break,.dyk-break p,.dyk-break span,.ff-break,.ff-break p,.ff-break span,.as-break,.as-break p,.as-break span,.tn-break,.tn-break p,.tn-break span{color:#fff}
 </style>
@@ -157,14 +141,14 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
 
 <header class="site-header">
   <!--
-    FILENAME: L09_CityHeightsStreet.jpg
+    FILENAME: L09_CityHeightsWeAreOneMural.jpg
     PLACE IN: images/L09/
     PRIORITY: ESSENTIAL
-    FIND: City Heights San Diego University Avenue street scene with storefronts, signs, and pedestrians showing local neighborhood life
-    SEARCH: City Heights San Diego University Avenue diverse storefronts Wikimedia Commons
-    LINK: Suggested: https://commons.wikimedia.org/wiki/City_Heights,_San_Diego
+    FIND: We Are One mural in City Heights, San Diego, showing public art and community identity
+    SEARCH: City Heights We Are One mural San Diego photo
+    LINK: Suggested: local community photography or City Heights public art source
   -->
-  <img src="images/L09/L09_CityHeightsStreet.jpg" alt="University Avenue in City Heights, San Diego, with storefronts and neighborhood life" class="header-bg">
+  <img src="images/L09/L09_CityHeightsWeAreOneMural.jpg" alt="We Are One mural in City Heights, San Diego" class="header-bg">
   <div class="header-inner">
     <p class="course-label">Ethnic Studies | Lesson 09 | Local Community Studies</p>
     <h1 class="page-title">San Diego's<br>Hidden<br>Communities</h1>
@@ -178,8 +162,9 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
 <nav class="section-nav">
   <a href="#introduction">INTRODUCTION</a>
   <a href="#historical-context">HOW THEY GOT HERE</a>
-  <a href="#resistance-agency">WHAT THEY BUILT</a>
-  <a href="#present-reality">WHO THEY ARE NOW</a>
+  <a href="#resistance-agency">WHAT THEY CARRIED</a>
+  <a href="#present-reality">WHAT THEY BUILT</a>
+  <a href="#community-now">SAN DIEGO NOW</a>
   <a href="#primary-source-moment">SOURCE</a>
   <a href="#then-now">THEN AND NOW</a>
 </nav>
@@ -188,8 +173,9 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
   <span class="toc-label">ON THIS PAGE</span>
   <a href="#introduction">Introduction</a>
   <a href="#historical-context">How They Got Here</a>
-  <a href="#resistance-agency">What They Built</a>
-  <a href="#present-reality">Who They Are Now</a>
+  <a href="#resistance-agency">What They Carried</a>
+  <a href="#present-reality">What They Built</a>
+  <a href="#community-now">San Diego Now</a>
   <a href="#primary-source-moment">Source</a>
   <a href="#then-now">Then &amp; Now</a>
 </aside>
@@ -198,103 +184,95 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
 <button id="lexile-toggle" type="button">SIMPLIFY TEXT</button>
 
 <section class="intro-section section-animate" id="introduction">
-  <p class="para-standard">On a Saturday morning in City Heights, University Avenue can feel like a map you can walk through. A family steps out of a Somali market with bags of rice and tea. A few doors away, someone orders Vietnamese pho, while another family stops for pan dulce or tacos before heading home. The signs, languages, foods, churches, mosques, and stores all tell stories. This lesson asks why those stories are here, in San Diego, and how American decisions in other parts of the world helped shape the neighborhoods students pass every day.</p>
-  <p class="para-simple">On a Saturday morning in City Heights, University Avenue can feel like a map you can walk through. A family leaves a Somali market with rice and tea. Nearby, people buy Vietnamese food, pan dulce, or tacos. The signs, languages, foods, churches, mosques, and stores all tell stories. This lesson asks why those stories are here in San Diego.</p>
+  <p class="para-standard">On a Saturday morning in City Heights, San Diego can feel like a world map you can walk through. A family may pass a Somali market, a Vietnamese restaurant, a Mexican bakery, and a mosque within a few blocks. Those places did not appear by accident. They connect to war, empire, labor, refugee resettlement, family networks, and the choices people made after being pushed across borders. This lesson keeps the camera on San Diego while using larger images from world history to explain how these communities arrived.</p>
+  <p class="para-simple">On a Saturday morning in City Heights, San Diego can feel like a world map you can walk through. A family might pass a Somali market, a Vietnamese restaurant, a Mexican bakery, and a mosque in a few blocks. Those places did not appear by accident. They connect to war, empire, labor, refugees, and family networks. This lesson keeps the focus on San Diego while showing the history that brought people here.</p>
 
   <!--
     FILENAME: L09_SanDiegoNeighborhoodMap.jpg
     PLACE IN: images/L09/
     PRIORITY: SUPPORTING
-    FIND: San Diego neighborhood map showing City Heights, National City, Chula Vista, Linda Vista, and El Cajon
-    SEARCH: San Diego neighborhood map City Heights National City Linda Vista El Cajon Wikimedia Commons
-    LINK: Suggested: https://commons.wikimedia.org/wiki/San_Diego
+    FIND: teacher-created or public map showing City Heights, Linda Vista, National City, Chula Vista, and El Cajon
+    SEARCH: San Diego neighborhoods map City Heights Linda Vista National City Chula Vista El Cajon
+    LINK: Suggested: teacher-created map using public domain base map
   -->
   <figure>
-    <img src="images/L09/L09_SanDiegoNeighborhoodMap.jpg" alt="Map of San Diego neighborhoods connected to the lesson">
-    <figcaption>San Diego neighborhoods connected to this lesson: City Heights, Linda Vista, El Cajon, National City, and Chula Vista. Wikimedia Commons or teacher-created map.</figcaption>
+    <img src="images/L09/L09_SanDiegoNeighborhoodMap.jpg" alt="Map of San Diego neighborhoods connected to Filipino, Somali, Hmong, and Chaldean communities">
+    <figcaption>San Diego neighborhoods connected to this lesson: City Heights, Linda Vista, El Cajon, National City, and Chula Vista. Teacher-created or public-domain base map.</figcaption>
   </figure>
 </section>
 
 <section class="content-section clearfix section-animate" id="historical-context">
-  <span class="section-kicker">PHASE ONE</span>
+  <span class="section-kicker">SECTION ONE</span>
   <h2 class="section-heading">HOW THEY GOT HERE</h2>
 
-  <h3 class="scene-label">THE SOUTH BAY: NAVY ROUTES AND FILIPINO FAMILY ROOTS</h3>
+  <h3 class="scene-label">FILIPINO SAN DIEGO: NAVY ROUTES AND U.S. EMPIRE</h3>
   <div class="community-tag">Filipino | National City and Chula Vista</div>
-  <div class="causality-box">
-    <p>Filipino American roots in San Diego were shaped by <strong>1898</strong>: U.S. rule in the Philippines, Navy recruitment, and migration across the Pacific.</p>
-  </div>
+  <div class="causality-box"><p><strong>1898 matters:</strong> U.S. rule in the Philippines helped create the Navy pathway that connected Filipino families to San Diego.</p></div>
   <!--
-    FILENAME: L09_FilipinoNavyFamilies.jpg
+    FILENAME: L09_FilipinoNavyStewards.jpg
     PLACE IN: images/L09/
     PRIORITY: ESSENTIAL
-    FIND: Filipino American Navy families or Filipino Navy stewards connected to San Diego, National City, or Chula Vista, 1920s to 1940s
-    SEARCH: Filipino American Navy San Diego National City 1920s 1940s photograph Wikimedia Commons Library of Congress
-    LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Filipino_Americans
+    FIND: Filipino Navy stewards or mess attendants in the U.S. Navy, early twentieth century; official Navy or archival photo
+    SEARCH: Filipino Navy stewards mess attendants United States Navy early 1900s photograph
+    LINK: Suggested: Naval History and Heritage Command or Wikimedia Commons
   -->
   <figure class="img-right">
-    <img src="images/L09/L09_FilipinoNavyFamilies.jpg" alt="Filipino American Navy families or sailors in the San Diego area, early twentieth century">
-    <figcaption>Filipino American Navy families and sailors, early twentieth century. Navy service helped connect Filipino families to San Diego and the South Bay. Wikimedia Commons or Library of Congress.</figcaption>
+    <img src="images/L09/L09_FilipinoNavyStewards.jpg" alt="Filipino Navy stewards or mess attendants in the United States Navy">
+    <figcaption>Filipino men serving as stewards or mess attendants in the U.S. Navy, early twentieth century. This image connects empire, labor, and San Diego's naval history. Naval History and Heritage Command or Wikimedia Commons.</figcaption>
   </figure>
-  <p class="para-standard">Many Filipino American families in the South Bay can trace their local history to the Navy. After the United States took control of the Philippines in 1898, Filipinos became American <span class="vocab" tabindex="0">nationals<span class="tip">People under a country's power, but not full citizens.</span></span>, which meant they were tied to the United States without receiving full citizenship. The U.S. Navy began recruiting Filipino men in 1901, often limiting them to service jobs such as stewards and mess attendants. San Diego's naval bases made the region a place where Filipino sailors, workers, and families built roots over generations. That is why Filipino American history in National City and Chula Vista is not only an immigration story. It is also a story of empire, labor, military service, and family life.</p>
-  <p class="para-simple">Many Filipino American families in the South Bay connect to the Navy. After 1898, the United States controlled the Philippines. Filipinos were tied to the United States, but they were not full citizens. The Navy recruited Filipino men starting in 1901, often for service jobs. San Diego's naval bases helped Filipino families settle in National City and Chula Vista.</p>
+  <p class="para-standard">Many Filipino American families in the South Bay can trace their local history to the Navy. After the United States took control of the Philippines in 1898, Filipinos were tied to the United States without receiving full citizenship. The U.S. Navy began recruiting Filipino men in 1901, often limiting them to service jobs such as stewards and mess attendants. San Diego's naval bases made the region a place where Filipino sailors, workers, and families built roots over generations. Filipino American history in National City and Chula Vista is therefore not only an immigration story. It is also a story of empire, labor, military service, and family life.</p>
+  <p class="para-simple">Many Filipino American families in the South Bay connect to the Navy. After 1898, the United States controlled the Philippines. Filipinos were tied to the United States, but they were not full citizens. The Navy recruited Filipino men starting in 1901, often for service jobs. San Diego's naval bases helped Filipino families settle in National City and Chula Vista. Their story connects immigration, empire, labor, and family life.</p>
 
-  <h3 class="scene-label">CITY HEIGHTS: UNIVERSITY AVENUE AND SOMALI RESETTLEMENT</h3>
+  <h3 class="scene-label">SOMALI CITY HEIGHTS: WAR, RESETTLEMENT, AND REBUILDING</h3>
   <div class="community-tag">Somali | City Heights</div>
-  <div class="causality-box">
-    <p>Somali American life in San Diego was shaped by <strong>1991 and 1993</strong>: civil war, U.S. military intervention, refugee resettlement, and rebuilding in City Heights.</p>
-  </div>
+  <div class="causality-box"><p><strong>1991 and 1993 matter:</strong> Somalia's civil war, U.S. intervention, and refugee resettlement helped make City Heights a home for Somali families.</p></div>
   <!--
-    FILENAME: L09_UniversityAvenueSomaliBusinesses.jpg
+    FILENAME: L09_SomaliRefugeeCamp.jpg
     PLACE IN: images/L09/
     PRIORITY: ESSENTIAL
-    FIND: Somali-owned businesses near 50th Street and University Avenue in City Heights, San Diego, showing markets, restaurants, or storefronts
-    SEARCH: 50th Street University Avenue Somali businesses City Heights San Diego photo
-    LINK: Suggested: https://www.cityheightscdc.org/stories/50thnbspst-amp-university-ave-complete-streets-amp-complete-communities
+    FIND: Somali refugees in Kenya or Ethiopia after the Somali civil war, early 1990s; UNHCR or public domain archival image
+    SEARCH: Somali refugees 1991 1992 Kenya camp UNHCR photograph
+    LINK: Suggested: UNHCR archival image or Wikimedia Commons
   -->
   <figure class="img-left">
-    <img src="images/L09/L09_UniversityAvenueSomaliBusinesses.jpg" alt="Somali-owned businesses near University Avenue in City Heights">
-    <figcaption>University Avenue in City Heights, where Somali-owned businesses have helped anchor community life since the 1990s. CC license or local community photography.</figcaption>
+    <img src="images/L09/L09_SomaliRefugeeCamp.jpg" alt="Somali refugees after the civil war in the early 1990s">
+    <figcaption>Somali refugees after civil war displaced families in the early 1990s. This wider history helps explain Somali resettlement in City Heights. UNHCR or Wikimedia Commons.</figcaption>
   </figure>
   <p class="para-standard">City Heights became a home for Somali families after Somalia's government collapsed in 1991 and war displaced millions of people. The United States intervened militarily in Somalia in 1993, then withdrew while the conflict continued. Somali <span class="vocab" tabindex="0">refugees<span class="tip">People forced to leave their country because returning home is unsafe.</span></span> were later resettled in American cities, including San Diego. In City Heights, families built markets, restaurants, tea houses, mosques, youth programs, and social service organizations. The neighborhood became more than a place of arrival. It became a place where East African families could find food, language, help, and community.</p>
   <p class="para-simple">Somali families came to San Diego after war made Somalia unsafe. Somalia's government collapsed in 1991. The United States sent troops in 1993, then left while the conflict continued. Somali refugees were later resettled in American cities, including San Diego. In City Heights, families built markets, restaurants, mosques, tea houses, and support groups.</p>
 
-  <h3 class="scene-label">LINDA VISTA: APARTMENTS, REFUGEES, AND HMONG MEMORY</h3>
+  <h3 class="scene-label">HMONG LINDA VISTA: THE SECRET WAR AND REFUGEE CAMPS</h3>
   <div class="community-tag">Hmong | Linda Vista</div>
-  <div class="causality-box">
-    <p>Hmong American life in San Diego was shaped by <strong>1961 to 1975</strong>: the Secret War in Laos, refugee camps, and resettlement in neighborhoods like Linda Vista.</p>
-  </div>
+  <div class="causality-box"><p><strong>1961 to 1975 matters:</strong> the Secret War in Laos made many Hmong families U.S. allies, then refugees.</p></div>
   <!--
-    FILENAME: L09_LindaVistaApartments.jpg
-    PLACE IN: images/L09/
-    PRIORITY: SUPPORTING
-    FIND: Linda Vista San Diego apartment housing or neighborhood street scene, connecting to refugee resettlement and community rebuilding
-    SEARCH: Linda Vista San Diego apartment neighborhood street Wikimedia Commons
-    LINK: Suggested: https://commons.wikimedia.org/wiki/Linda_Vista,_San_Diego
-  -->
-  <figure class="img-right">
-    <img src="images/L09/L09_LindaVistaApartments.jpg" alt="Apartment housing in Linda Vista, San Diego">
-    <figcaption>Linda Vista, San Diego. The neighborhood received many Southeast Asian refugee families in the late 1970s and 1980s. Wikimedia Commons or city planning source.</figcaption>
-  </figure>
-  <p class="para-standard">The Hmong story in San Diego begins in the mountains of Laos, far from Linda Vista. During the Cold War, the CIA recruited many Hmong people to fight a secret <span class="vocab" tabindex="0">proxy war<span class="tip">A war where a powerful country supports local fighters instead of fighting openly.</span></span> against communist forces. When the United States withdrew from Southeast Asia in 1975, many Hmong families were targeted as enemies and fled to refugee camps in Thailand. Some later came to San Diego and rebuilt their lives near other Southeast Asian refugee communities. Linda Vista became one of the places where children grew up between two worlds: American schools and Hmong family memory.</p>
-  <p class="para-simple">The Hmong story in San Diego begins in Laos. During the Cold War, the CIA recruited many Hmong people to fight a secret war. When the United States left Southeast Asia in 1975, many Hmong families were targeted. They fled to refugee camps in Thailand. Some later came to San Diego and rebuilt their lives in places like Linda Vista.</p>
-
-  <h3 class="scene-label">EL CAJON: MAIN STREET AND LITTLE BAGHDAD</h3>
-  <div class="community-tag">Chaldean | El Cajon</div>
-  <div class="causality-box">
-    <p>Chaldean American life in El Cajon was shaped by <strong>2003</strong>: the U.S. invasion of Iraq, rising sectarian violence, and the search for safety.</p>
-  </div>
-  <!--
-    FILENAME: L09_ElCajonMainStreet.jpg
+    FILENAME: L09_HmongSecretWarLaos.jpg
     PLACE IN: images/L09/
     PRIORITY: ESSENTIAL
-    FIND: El Cajon Main Street or downtown El Cajon storefronts showing Iraqi Chaldean businesses, markets, churches, or community life
-    SEARCH: El Cajon Main Street Little Baghdad Chaldean businesses photograph
-    LINK: Suggested: https://calmatters.org/california-divide/2019/12/large-chaldean-iraqi-population-el-cajon/
+    FIND: Hmong soldiers or Hmong allies with American advisers in Laos during the Secret War
+    SEARCH: Hmong soldiers CIA advisers Laos Secret War photograph
+    LINK: Suggested: Wikimedia Commons or archival educational source
+  -->
+  <figure class="img-right">
+    <img src="images/L09/L09_HmongSecretWarLaos.jpg" alt="Hmong soldiers or allies during the Secret War in Laos">
+    <figcaption>Hmong allies during the Secret War in Laos. Many Hmong families later fled because of their connection to the United States. Archival educational source or Wikimedia Commons.</figcaption>
+  </figure>
+  <p class="para-standard">The Hmong story in San Diego begins in the mountains of Laos, far from Linda Vista. During the Cold War, the CIA recruited many Hmong people to fight a secret <span class="vocab" tabindex="0">proxy war<span class="tip">A war where a powerful country supports local fighters instead of fighting openly.</span></span> against communist forces. When the United States withdrew from Southeast Asia in 1975, many Hmong families were targeted as enemies and fled to refugee camps in Thailand. Some later came to San Diego and rebuilt their lives near other Southeast Asian refugee communities. Linda Vista became one of the places where children grew up between American schools and Hmong family memory.</p>
+  <p class="para-simple">The Hmong story in San Diego begins in Laos. During the Cold War, the CIA recruited many Hmong people to fight a secret war. When the United States left Southeast Asia in 1975, many Hmong families were targeted. They fled to refugee camps in Thailand. Some later came to San Diego and rebuilt their lives in places like Linda Vista.</p>
+
+  <h3 class="scene-label">CHALDEAN EL CAJON: IRAQ, FAITH, AND SAFETY</h3>
+  <div class="community-tag">Chaldean | El Cajon</div>
+  <div class="causality-box"><p><strong>2003 matters:</strong> the U.S. invasion of Iraq and later violence helped push many Chaldean families toward El Cajon.</p></div>
+  <!--
+    FILENAME: L09_IraqiChristianRefugees.jpg
+    PLACE IN: images/L09/
+    PRIORITY: ESSENTIAL
+    FIND: Iraqi Christian or Chaldean refugees after 2003, families displaced by sectarian violence
+    SEARCH: Iraqi Christian refugees Chaldean refugees after 2003 photograph
+    LINK: Suggested: UNHCR, Wikimedia Commons, or public humanitarian source
   -->
   <figure class="img-left">
-    <img src="images/L09/L09_ElCajonMainStreet.jpg" alt="Main Street in El Cajon, connected to the Chaldean community">
-    <figcaption>Main Street in El Cajon. The city became known locally as Little Baghdad because of its large Iraqi Chaldean community. CC license or local community photography.</figcaption>
+    <img src="images/L09/L09_IraqiChristianRefugees.jpg" alt="Iraqi Christian or Chaldean refugees displaced after the Iraq War">
+    <figcaption>Iraqi Christian families displaced after the Iraq War and later violence. This history helps explain why El Cajon became a major Chaldean community center. UNHCR or public humanitarian source.</figcaption>
   </figure>
   <p class="para-standard"><span class="vocab" tabindex="0">Chaldeans<span class="tip">An ancient Christian community from Iraq with roots in Mesopotamia.</span></span> are an ancient Christian people from Iraq. Many speak Neo-Aramaic, a language connected to Aramaic, the language spoken in the time of Jesus. After the United States invaded Iraq in 2003, central authority weakened and violence against religious minorities increased. Churches were attacked, leaders were kidnapped, and many families no longer felt safe. El Cajon received many Chaldean refugees and immigrants. Over time, churches, bakeries, markets, restaurants, and family businesses made the city feel like a new center of Chaldean life.</p>
   <p class="para-simple">Chaldeans are an ancient Christian people from Iraq. Many speak Neo-Aramaic, a language connected to Aramaic. After the United States invaded Iraq in 2003, violence against religious minorities increased. Many Chaldean families no longer felt safe. El Cajon became a major home for Chaldean churches, markets, restaurants, and family businesses.</p>
@@ -305,61 +283,147 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
   <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;">
     <div style="flex:1;min-width:200px;">
       <!--
-        FILENAME: L09_50thUniversityIntersection.jpg
+        FILENAME: L09_HmongStoryCloth.jpg
         PLACE IN: images/L09/
-        PRIORITY: SUPPORTING
-        FIND: 50th Street and University Avenue in City Heights, San Diego, showing the intersection near Somali-owned businesses and community pedestrian safety activism
-        SEARCH: 50th Street University Avenue City Heights Somali businesses pedestrian safety photo
-        LINK: Suggested: https://www.cityheightscdc.org/stories/50thnbspst-amp-university-ave-complete-streets-amp-complete-communities
+        PRIORITY: ESSENTIAL
+        FIND: Hmong story cloth paj ntaub showing refugee journey, war memory, or village life
+        SEARCH: Hmong story cloth refugee journey paj ntaub Wikimedia Commons
+        LINK: Suggested: Wikimedia Commons or museum collection
       -->
-      <img src="images/L09/L09_50thUniversityIntersection.jpg" alt="50th Street and University Avenue in City Heights" style="width:100%;display:block;border:3px solid var(--lime);box-shadow:0 4px 18px rgba(0,0,0,.32);">
-      <p style="font-size:12px;margin-top:8px;opacity:.8;font-family:'Roboto Slab',serif;">50th Street and University Avenue in City Heights, a community hub connected to Somali-owned businesses and pedestrian safety organizing.</p>
+      <img src="images/L09/L09_HmongStoryCloth.jpg" alt="Hmong story cloth showing memory, migration, or village life" style="width:100%;display:block;border:3px solid var(--marigold);box-shadow:0 4px 18px rgba(0,0,0,.32);">
+      <p style="font-size:12px;margin-top:8px;opacity:.8;font-family:'Zilla Slab',serif;">Hmong story cloths, or paj ntaub, can record war, migration, village life, and family memory through stitched scenes.</p>
     </div>
-    <p class="bb-text" style="flex:1;min-width:200px;">One corner in City Heights can tell a whole city story. Around 50th Street and University Avenue, Somali-owned businesses helped turn an ordinary intersection into a community hub. When safety became a concern, residents did not just complain: they organized for a street that worked better for the people who actually lived and walked there.</p>
+    <p class="bb-text" style="flex:1;min-width:200px;">Some Hmong families carried history in cloth. Story cloths could show villages, soldiers, refugee camps, rivers, animals, and journeys. For students in San Diego, a story cloth can work like a visual textbook: it shows how memory survives when people are forced to leave home quickly.</p>
   </div>
 </div>
 
 <section class="content-section section-animate" id="resistance-agency">
-  <span class="section-kicker">PHASE TWO</span>
-  <h2 class="section-heading">WHAT THEY BUILT</h2>
+  <span class="section-kicker">SECTION TWO</span>
+  <h2 class="section-heading">WHAT THEY CARRIED</h2>
 
-  <p class="para-standard">The communities in this lesson did not arrive as blank pages. They brought languages, recipes, prayers, business skills, family networks, memories, and ways of helping each other survive. In San Diego, those gifts became local institutions. A store became a place to hear your language. A church or mosque became a place to grieve and celebrate. A cultural festival became a way for children to learn that their family history belonged in public.</p>
-  <p class="para-simple">The communities in this lesson did not arrive with nothing. They brought languages, food, faith, skills, family ties, and memories. In San Diego, they used those things to build local institutions. A store could become a place to hear your language. A church, mosque, or festival could help children feel proud of their family history.</p>
+  <p class="para-standard">The communities in this lesson did not arrive as blank pages. They brought languages, recipes, prayers, music, business skills, military experience, family networks, and ways of helping each other survive. Some carried official documents. Others carried memories, clothing, photographs, songs, or religious objects. These things mattered because they helped people rebuild identity in a new place. In Ethnic Studies, culture is not decoration. It is evidence of how communities preserve memory and adapt.</p>
+  <p class="para-simple">The communities in this lesson did not arrive with nothing. They brought languages, food, prayers, music, skills, family ties, and memories. Some carried documents. Others carried clothing, photos, songs, or religious objects. These things helped people rebuild identity in a new place. In Ethnic Studies, culture is evidence.</p>
 
-  <div class="local-grid">
-    <div class="local-card">
+  <div class="object-grid">
+    <div class="object-card">
       <figure>
         <!--
-          FILENAME: L09_FilipinoChurchNationalCity.jpg
+          FILENAME: L09_JeepneyArt.jpg
           PLACE IN: images/L09/
           PRIORITY: SUPPORTING
-          FIND: Filipino American church or community institution in National City or Chula Vista showing South Bay Filipino community roots
-          SEARCH: Filipino American church National City Chula Vista San Diego community Wikimedia Commons
-          LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Filipino_Americans_in_California
+          FIND: Filipino jeepney art, colorful jeepney, or jeepney design showing postwar Filipino public culture and mobility
+          SEARCH: Filipino jeepney art Wikimedia Commons
+          LINK: Suggested: Wikimedia Commons
         -->
-        <img src="images/L09/L09_FilipinoChurchNationalCity.jpg" alt="Filipino American community institution in National City or Chula Vista">
-        <figcaption>Filipino American community institution in the South Bay. Wikimedia Commons or local public source.</figcaption>
+        <img src="images/L09/L09_JeepneyArt.jpg" alt="Colorful Filipino jeepney art">
+        <figcaption>Jeepney art in the Philippines. Jeepneys grew from postwar vehicles into symbols of Filipino creativity and public life. Wikimedia Commons.</figcaption>
+      </figure>
+      <h3>FILIPINO MATERIAL CULTURE</h3>
+      <p>Jeepney art, Navy uniforms, family photos, and balikbayan boxes can all tell stories about movement, labor, and connection across the Pacific.</p>
+    </div>
+    <div class="object-card">
+      <figure>
+        <!--
+          FILENAME: L09_SomaliAqal.jpg
+          PLACE IN: images/L09/
+          PRIORITY: SUPPORTING
+          FIND: Somali aqal traditional nomadic home or Somali woven cultural object
+          SEARCH: Somali aqal traditional nomadic house Wikimedia Commons
+          LINK: Suggested: Wikimedia Commons
+        -->
+        <img src="images/L09/L09_SomaliAqal.jpg" alt="Somali aqal traditional nomadic home">
+        <figcaption>A Somali aqal, a traditional portable home. Material culture helps students see the world people came from, not only the crisis that displaced them. Wikimedia Commons.</figcaption>
+      </figure>
+      <h3>SOMALI CULTURAL GEOGRAPHY</h3>
+      <p>Somali culture includes poetry, tea, Islam, nomadic traditions, city life, trade, family networks, and stories carried into City Heights.</p>
+    </div>
+    <div class="object-card">
+      <figure>
+        <!--
+          FILENAME: L09_HmongPajNtaubDetail.jpg
+          PLACE IN: images/L09/
+          PRIORITY: SUPPORTING
+          FIND: close-up Hmong paj ntaub embroidery pattern or story cloth detail
+          SEARCH: Hmong paj ntaub embroidery detail Wikimedia Commons
+          LINK: Suggested: Wikimedia Commons or museum collection
+        -->
+        <img src="images/L09/L09_HmongPajNtaubDetail.jpg" alt="Hmong paj ntaub embroidery detail">
+        <figcaption>Paj ntaub embroidery carries Hmong design, memory, and family tradition. Wikimedia Commons or museum collection.</figcaption>
+      </figure>
+      <h3>HMONG MEMORY IN THREAD</h3>
+      <p>Story cloths and embroidery helped preserve memory after war, displacement, and refugee camps changed family life.</p>
+    </div>
+    <div class="object-card">
+      <figure>
+        <!--
+          FILENAME: L09_ChaldeanManuscriptOrIcon.jpg
+          PLACE IN: images/L09/
+          PRIORITY: SUPPORTING
+          FIND: Chaldean Christian manuscript, Syriac manuscript, church icon, or liturgical object connected to Iraqi Christian heritage
+          SEARCH: Chaldean Syriac Christian manuscript icon Wikimedia Commons
+          LINK: Suggested: Wikimedia Commons or museum collection
+        -->
+        <img src="images/L09/L09_ChaldeanManuscriptOrIcon.jpg" alt="Chaldean or Syriac Christian manuscript or icon">
+        <figcaption>A Chaldean or Syriac Christian manuscript or religious image. These traditions connect El Cajon's Chaldean community to ancient Mesopotamian Christian history. Wikimedia Commons or museum collection.</figcaption>
+      </figure>
+      <h3>CHALDEAN FAITH AND LANGUAGE</h3>
+      <p>Neo-Aramaic language, church traditions, icons, and liturgy help Chaldean families preserve identity after leaving Iraq.</p>
+    </div>
+  </div>
+</section>
+
+<div class="brain-break ff-break section-animate">
+  <span class="bb-label">FAST FACTS</span>
+  <p class="ff-context">HOW GLOBAL DECISIONS BECAME LOCAL SAN DIEGO STORIES</p>
+  <div class="ff-grid">
+    <div class="ff-item"><span class="ff-number">1898</span><span class="ff-desc">the year U.S. rule in the Philippines began, helping create the Navy pathway that tied many Filipino families to San Diego</span></div>
+    <div class="ff-item"><span class="ff-number">1975</span><span class="ff-desc">the year U.S. withdrawal from Southeast Asia left many Hmong allies in danger and pushed families toward refugee camps</span></div>
+    <div class="ff-item"><span class="ff-number">1990s</span><span class="ff-desc">the decade when Somali refugee resettlement helped make City Heights a major East African community hub</span></div>
+    <div class="ff-item"><span class="ff-number">2003</span><span class="ff-desc">the year the U.S. invasion of Iraq helped trigger new violence and displacement for Chaldean Christian families</span></div>
+  </div>
+</div>
+
+<section class="content-section section-animate" id="present-reality">
+  <span class="section-kicker">SECTION THREE</span>
+  <h2 class="section-heading">WHAT THEY BUILT IN SAN DIEGO</h2>
+
+  <p class="para-standard">Once families arrived, they had to build more than homes. They built institutions. A market could help someone find familiar food and hear a familiar language. A church or mosque could help families celebrate, grieve, and organize. A youth program could help children translate two worlds: family memory and American school life. Across San Diego, these communities built support systems that made survival possible and belonging visible.</p>
+  <p class="para-simple">Once families arrived, they had to build more than homes. They built institutions. A market could help people find familiar food and language. A church or mosque could help families celebrate, grieve, and organize. A youth program could help children move between family memory and American school life. These support systems made belonging visible.</p>
+
+  <div class="object-grid">
+    <div class="object-card">
+      <figure>
+        <!--
+          FILENAME: L09_FilipinoLandingDayNationalCity.jpg
+          PLACE IN: images/L09/
+          PRIORITY: ESSENTIAL
+          FIND: Filipino Landing Day or Filipino American community event in National City or San Diego South Bay
+          SEARCH: Filipino Landing Day National City San Diego photo
+          LINK: Suggested: local event photography or public community source
+        -->
+        <img src="images/L09/L09_FilipinoLandingDayNationalCity.jpg" alt="Filipino Landing Day or Filipino American community event in National City">
+        <figcaption>Filipino Landing Day or Filipino American community event in the South Bay. Local community source.</figcaption>
       </figure>
       <h3>SOUTH BAY FAMILY NETWORKS</h3>
-      <p>Filipino American families built churches, civic groups, veterans networks, and political leadership in National City and Chula Vista.</p>
+      <p>Filipino American families built churches, veterans networks, civic groups, festivals, businesses, and political leadership in National City and Chula Vista.</p>
     </div>
-    <div class="local-card">
+    <div class="object-card">
       <figure>
         <!--
           FILENAME: L09_SomaliFamilyService.jpg
           PLACE IN: images/L09/
-          PRIORITY: SUPPORTING
+          PRIORITY: ESSENTIAL
           FIND: Somali Family Service of San Diego or East African community organization in City Heights
           SEARCH: Somali Family Service San Diego City Heights community organization photograph
           LINK: Suggested: https://somalifamilyservice.org/
         -->
-        <img src="images/L09/L09_SomaliFamilyService.jpg" alt="Somali or East African community organization in City Heights">
+        <img src="images/L09/L09_SomaliFamilyService.jpg" alt="Somali Family Service of San Diego or East African community organization">
         <figcaption>Somali and East African community organizations help refugee families navigate life in San Diego. Local community source.</figcaption>
       </figure>
       <h3>CITY HEIGHTS SUPPORT SYSTEMS</h3>
       <p>Somali and East African organizations built services for translation, youth support, health, housing, and refugee family needs.</p>
     </div>
-    <div class="local-card">
+    <div class="object-card">
       <figure>
         <!--
           FILENAME: L09_HmongNewYearSanDiego.jpg
@@ -367,23 +431,23 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
           PRIORITY: SUPPORTING
           FIND: Hmong New Year celebration or Hmong cultural celebration in San Diego showing clothing, dance, and community gathering
           SEARCH: Hmong New Year San Diego community celebration CC licensed photo
-          LINK: Suggested: CC-licensed photography acceptable.
+          LINK: Suggested: CC-licensed or local community photography
         -->
         <img src="images/L09/L09_HmongNewYearSanDiego.jpg" alt="Hmong community cultural celebration in San Diego">
-        <figcaption>Hmong cultural celebrations in San Diego help younger generations learn language, clothing, music, and memory. CC license.</figcaption>
+        <figcaption>Hmong New Year celebrations help younger generations learn language, clothing, music, and memory. CC license or local community source.</figcaption>
       </figure>
       <h3>HMONG MEMORY IN PUBLIC</h3>
       <p>Hmong families preserved culture through language programs, celebrations, clothing, food, music, and story cloth traditions.</p>
     </div>
-    <div class="local-card">
+    <div class="object-card">
       <figure>
         <!--
           FILENAME: L09_StPeterChaldeanCathedral.jpg
           PLACE IN: images/L09/
           PRIORITY: ESSENTIAL
           FIND: St. Peter Chaldean Catholic Cathedral in El Cajon or Chaldean Catholic church community life
-          SEARCH: St Peter Chaldean Catholic Cathedral El Cajon photograph Wikimedia Commons
-          LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Chaldean_Catholic_churches
+          SEARCH: St Peter Chaldean Catholic Cathedral El Cajon photograph
+          LINK: Suggested: Wikimedia Commons or local public source
         -->
         <img src="images/L09/L09_StPeterChaldeanCathedral.jpg" alt="St. Peter Chaldean Catholic Cathedral in El Cajon">
         <figcaption>St. Peter Chaldean Catholic Cathedral in El Cajon, a major religious institution for the local Chaldean community. Wikimedia Commons or local public source.</figcaption>
@@ -394,51 +458,28 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
   </div>
 </section>
 
-<div class="brain-break ff-break section-animate">
-  <span class="bb-label">FAST FACTS</span>
-  <p class="ff-context">HOW GLOBAL DECISIONS BECAME LOCAL SAN DIEGO STORIES</p>
-  <div class="ff-grid">
-    <div class="ff-item">
-      <span class="ff-number">1898</span>
-      <span class="ff-desc">the year U.S. rule in the Philippines began, helping create the Navy pathway that tied many Filipino families to San Diego</span>
-    </div>
-    <div class="ff-item">
-      <span class="ff-number">1990s</span>
-      <span class="ff-desc">the decade when Somali refugee resettlement helped make City Heights a major East African community hub</span>
-    </div>
-    <div class="ff-item">
-      <span class="ff-number">1975</span>
-      <span class="ff-desc">the year U.S. withdrawal from Southeast Asia left many Hmong allies in danger and pushed families toward refugee camps</span>
-    </div>
-    <div class="ff-item">
-      <span class="ff-number">2003</span>
-      <span class="ff-desc">the year the U.S. invasion of Iraq helped trigger new violence and displacement for Chaldean Christian families</span>
-    </div>
-  </div>
-</div>
-
-<section class="content-section clearfix section-animate" id="present-reality">
-  <span class="section-kicker">PHASE THREE</span>
-  <h2 class="section-heading">WHO THEY ARE NOW</h2>
+<section class="content-section clearfix section-animate" id="community-now">
+  <span class="section-kicker">SECTION FOUR</span>
+  <h2 class="section-heading">SAN DIEGO NOW</h2>
 
   <!--
-    FILENAME: L09_CityHeightsCommunity.jpg
+    FILENAME: L09_CityHeightsCommunityAction.jpg
     PLACE IN: images/L09/
     PRIORITY: ESSENTIAL
-    FIND: City Heights community event or neighborhood gathering showing families, youth, businesses, and community presence
-    SEARCH: City Heights San Diego community event diverse neighborhood residents CC license
-    LINK: Suggested: https://commons.wikimedia.org/wiki/City_Heights,_San_Diego
+    FIND: City Heights community action, residents at a meeting, street safety campaign, mural event, youth organizing, or neighborhood advocacy
+    SEARCH: City Heights San Diego community organizing residents meeting youth advocacy photo
+    LINK: Suggested: City Heights CDC or local community source
   -->
   <figure class="img-left">
-    <img src="images/L09/L09_CityHeightsCommunity.jpg" alt="Community members in City Heights, San Diego at a neighborhood event">
-    <figcaption>Community members in City Heights, San Diego. The neighborhood's diversity is part of daily life, not just a statistic. CC license.</figcaption>
+    <img src="images/L09/L09_CityHeightsCommunityAction.jpg" alt="City Heights residents or youth participating in community action">
+    <figcaption>City Heights community action. Modern local history includes residents organizing for safer streets, youth services, housing, language access, and neighborhood resources. Local community source.</figcaption>
   </figure>
 
   <p class="para-standard">Today, the children and grandchildren of these communities are San Diegans in the fullest sense. They go to local schools, play on local teams, work in hospitals, restaurants, stores, offices, military bases, and family businesses. Some speak only English. Some move between English and a family language at home. Some feel proud of their history, while others feel tired of being asked where they are "really" from. Their lives show that San Diego is not separate from world history. It is one of the places where world history became local.</p>
   <p class="para-simple">Today, the children and grandchildren of these communities are San Diegans. They go to local schools and work in local jobs. Some speak only English. Some speak English and another family language. Some feel proud of their history, while others are tired of being asked where they are "really" from. Their lives show that world history became local in San Diego.</p>
 
   <p class="para-standard">Understanding these communities means looking beyond simple labels like immigrant, refugee, or minority. Filipino American roots in the South Bay connect to U.S. empire and Navy labor. Somali life in City Heights connects to civil war, refugee resettlement, and neighborhood organizing. Hmong life in Linda Vista connects to a secret war and the work of preserving memory. Chaldean life in El Cajon connects to the Iraq War and the rebuilding of an ancient Christian community. Each story is different, but all of them ask students to see their own city with sharper eyes.</p>
-  <p class="para-simple">These communities cannot be explained with simple labels. Filipino American roots in the South Bay connect to U.S. empire and Navy labor. Somali life in City Heights connects to war, resettlement, and organizing. Hmong life in Linda Vista connects to a secret war and cultural memory. Chaldean life in El Cajon connects to Iraq and the rebuilding of an ancient Christian community. Each story is different, but each helps students see San Diego more clearly.</p>
+  <p class="para-simple">These communities cannot be explained with simple labels. Filipino American roots in the South Bay connect to U.S. empire and Navy labor. Somali life in City Heights connects to war, resettlement, and organizing. Hmong life in Linda Vista connects to a secret war and cultural memory. Chaldean life in El Cajon connects to Iraq and the rebuilding of an ancient Christian community. Each story helps students see San Diego more clearly.</p>
 </section>
 
 <div class="brain-break as-break section-animate">
@@ -448,8 +489,8 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
       FILENAME: L09_GintongKasaysayanMural.jpg
       PLACE IN: images/L09/
       PRIORITY: ESSENTIAL
-      FIND: Gintong Kasaysayan, Gintong Pamana mural by Eliseo Art Silva, 1995, Historic Filipinotown Los Angeles, Filipino American historical mural
-      SEARCH: Gintong Kasaysayan Gintong Pamana Eliseo Art Silva 1995 mural Wikimedia Commons
+      FIND: Gintong Kasaysayan, Gintong Pamana mural by Eliseo Art Silva, 1995, Historic Filipinotown Los Angeles
+      SEARCH: Gintong Kasaysayan Gintong Pamana Eliseo Art Silva 1995 mural
       LINK: Suggested: https://sparcinla.org/silva/
     -->
     <img src="images/L09/L09_GintongKasaysayanMural.jpg" alt="Gintong Kasaysayan, Gintong Pamana mural by Eliseo Art Silva" class="as-image">
@@ -466,20 +507,20 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
   <div class="ps-visual">
     <figure>
       <!--
-        FILENAME: L09_PhilipVeraCruz.jpg
+        FILENAME: L09_PhilipVeraCruzUFW.jpg
         PLACE IN: images/L09/
         PRIORITY: ESSENTIAL
-        FIND: Philip Vera Cruz, Filipino American labor organizer and United Farm Workers leader, portrait or labor movement photograph
-        SEARCH: Philip Vera Cruz United Farm Workers Filipino American labor organizer photograph Wikimedia Commons
-        LINK: Suggested: https://www.nps.gov/people/philip-vera-cruz.htm
+        FIND: Philip Vera Cruz with United Farm Workers or Delano Grape Strike organizing, preferably in action rather than a plain portrait
+        SEARCH: Philip Vera Cruz United Farm Workers Delano Grape Strike photograph
+        LINK: Suggested: National Park Service or labor history archive
       -->
-      <img src="images/L09/L09_PhilipVeraCruz.jpg" alt="Philip Vera Cruz, Filipino American labor organizer and United Farm Workers leader">
-      <figcaption>Philip Vera Cruz, Filipino American labor organizer and United Farm Workers leader. Wikimedia Commons or National Park Service.</figcaption>
+      <img src="images/L09/L09_PhilipVeraCruzUFW.jpg" alt="Philip Vera Cruz with United Farm Workers or Delano Grape Strike organizing">
+      <figcaption>Philip Vera Cruz, Filipino American labor organizer and United Farm Workers leader. National Park Service or labor history archive.</figcaption>
     </figure>
     <div>
       <p class="ps-quote">"My life within the union, my life now outside the union, are all one: my continual struggle to improve my life and the lives of my fellow workers. But our struggle never stops."</p>
       <p class="ps-attribution">Philip Vera Cruz, quoted in labor history accounts of his life and work, 1990s</p>
-      <p class="ps-narrator">WHY THIS MATTERS: Vera Cruz connects personal life to community struggle. He does not describe labor organizing as one event that ended. He describes it as a continuing responsibility. His words help students see that local communities are not only shaped by U.S. decisions. They also respond, organize, and build power.</p>
+      <p class="ps-narrator">WHY THIS MATTERS: Vera Cruz connects personal life to community struggle. He does not describe organizing as one event that ended. He describes it as a continuing responsibility. His words help students see that communities are not only shaped by U.S. decisions. They also respond, organize, and build power.</p>
     </div>
   </div>
 </div>
@@ -496,10 +537,10 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
         PRIORITY: ESSENTIAL
         FIND: Filipino men serving in the U.S. Navy as stewards or mess attendants in the early twentieth century
         SEARCH: Filipino Navy stewards mess attendants United States Navy early 1900s Wikimedia Commons Library of Congress
-        LINK: Suggested: https://commons.wikimedia.org/wiki/Category:Filipino_American_history
+        LINK: Suggested: Naval History and Heritage Command or Wikimedia Commons
       -->
       <img src="images/L09/L09_ThenFilipinoNavyStewards.jpg" alt="Filipino men serving in the United States Navy as stewards or mess attendants">
-      <p class="tn-caption">Filipino men serving in the U.S. Navy, early twentieth century. Navy recruitment helped connect Filipino families to San Diego and the South Bay. Wikimedia Commons or Library of Congress.</p>
+      <p class="tn-caption">Filipino men serving in the U.S. Navy, early twentieth century. Navy recruitment helped connect Filipino families to San Diego and the South Bay. Naval History and Heritage Command or Wikimedia Commons.</p>
     </div>
     <div class="tn-item">
       <span class="tn-era-label">NOW</span>
@@ -509,10 +550,10 @@ footer{background:var(--deep);color:rgba(255,249,239,.52);text-align:center;padd
         PRIORITY: ESSENTIAL
         FIND: Filipino American community celebration, civic event, or cultural festival in National City or Chula Vista showing community presence and multigenerational life
         SEARCH: Filipino American community festival National City Chula Vista San Diego South Bay CC licensed photo
-        LINK: Suggested: CC-licensed local photography acceptable.
+        LINK: Suggested: CC-licensed local photography acceptable
       -->
       <img src="images/L09/L09_NowSouthBayFilipinoCommunity.jpg" alt="Filipino American community members at a South Bay cultural or civic event">
-      <p class="tn-caption">Filipino American community life in San Diego's South Bay today. The community's local roots connect to more than a century of U.S. rule, labor, military service, and migration. CC license.</p>
+      <p class="tn-caption">Filipino American community life in San Diego's South Bay today. Local roots connect to more than a century of U.S. rule, labor, military service, and migration. CC license or local community source.</p>
     </div>
   </div>
   <div class="tn-text-block">
@@ -539,7 +580,7 @@ document.addEventListener('click',function(){document.querySelectorAll('.vocab.a
 const tocObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{const id=entry.target.getAttribute('id');const tl=document.querySelector('.toc-sidebar a[href="#'+id+'"]');const nl=document.querySelector('.section-nav a[href="#'+id+'"]');if(entry.isIntersecting){if(tl)tl.classList.add('active');if(nl)nl.classList.add('active');}else{if(tl)tl.classList.remove('active');if(nl)nl.classList.remove('active');}});},{threshold:.25});
 document.querySelectorAll('section[id],div[id="then-now"]').forEach(el=>tocObserver.observe(el));
 (function(){var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');ao.unobserve(entry.target);}});},{threshold:.08});document.querySelectorAll('.section-animate').forEach(function(el){ao.observe(el);});})();
-document.querySelectorAll('img').forEach(function(img){if(img.complete&&img.naturalWidth>0){img.classList.add('loaded');}else{img.addEventListener('load',function(){img.classList.add('loaded');});img.addEventListener('error',function(){img.style.opacity='0.15';img.style.border='2px dashed rgba(45,111,115,0.28)';});}});
+document.querySelectorAll('img').forEach(function(img){if(img.complete&&img.naturalWidth>0){img.classList.add('loaded');}else{img.addEventListener('load',function(){img.classList.add('loaded');});img.addEventListener('error',function(){img.style.opacity='0.15';img.style.border='2px dashed rgba(22,107,116,0.28)';});}});
 </script>
 </body>
 </html>
